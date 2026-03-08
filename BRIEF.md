@@ -144,3 +144,10 @@ tenex-italy/
 
 ## When done
 Run: `openclaw system event --text "Done: Tenex Italy website built and ready for Netlify deploy" --mode now`
+
+## Agent Activation (for future Claude Code spawns)
+When spawning for this project, activate the relevant agent:
+- Website/UI work → "Activate Frontend Developer mode"
+- API/backend → "Activate Backend Architect mode"
+- Performance check → "Activate Performance Benchmarker mode"
+- Design review → "Activate UI Designer mode"
