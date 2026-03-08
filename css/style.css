@@ -316,3 +316,11 @@ background-size:40px 40px}
 
   .prefooter-buttons{flex-direction:column;align-items:center}
 }
+
+/* ===== GSAP ANIMATION SAFETY FALLBACK ===== */
+/* Ensure nothing stays invisible if GSAP/ScrollTrigger fails to fire */
+.bento-card,.stats-band-item,.pe-split,.pe-left,.pe-right,
+.process-step,.ai-not-card,.testimonial-card,.faq-item,
+.cta-inner,.pre-footer-inner,.how-it-works,.ai-not-scary {
+  will-change: opacity, transform;
+}

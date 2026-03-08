@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Bento cards entrance */
     document.querySelectorAll('.bento-card').forEach(card => {
-      gsap.fromTo(card, {opacity:0,y:30},{
+      gsap.from(card, {
         opacity: 0,
         y: 40,
         duration: 0.7,
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* AI scary cards */
     document.querySelectorAll('.ai-scary-card').forEach(card => {
-      gsap.fromTo(card, {opacity:0,y:30},{
+      gsap.from(card, {
         opacity: 0,
         y: 40,
         duration: 0.7,
@@ -220,11 +220,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
-
-// Safety: ensure all animated elements become visible after 1.5s
-setTimeout(() => {
-  document.querySelectorAll('[style*="opacity: 0"], [style*="opacity:0"]').forEach(el => {
-    el.style.opacity = '';
-    el.style.transform = '';
-  });
-}, 1500);
