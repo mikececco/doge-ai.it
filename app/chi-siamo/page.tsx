@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SectionWrapper from "@/components/ui/SectionWrapper";
+import Button from "@/components/ui/Button";
 import Label from "@/components/ui/Label";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import AnimatedUnderline from "@/components/animations/AnimatedUnderline";
@@ -114,14 +115,9 @@ export default function ChiSiamoPage() {
             nell&rsquo;AI.
           </h2>
           <div className="mt-8">
-            <a
-              href="https://stabilidea.it/it/careers"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-semibold text-sm bg-giallo text-nero px-5 py-2.5 rounded-button hover:bg-giallo-hover active:scale-[0.98] transition-all duration-300"
-            >
+            <Button href="https://stabilidea.it/it/careers" external>
               Vedi le posizioni aperte →
-            </a>
+            </Button>
           </div>
         </FadeInOnScroll>
       </SectionWrapper>

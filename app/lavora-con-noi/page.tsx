@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import Label from "@/components/ui/Label";
@@ -103,12 +104,13 @@ export default function LavoraConNoi() {
                     ))}
                   </ul>
                 </div>
-                <a
-                  href="mailto:dogedivenezia.ai@gmail.com?subject=Candidatura: {pos.title}"
-                  className="inline-flex items-center gap-2 font-semibold text-sm bg-giallo text-nero px-5 py-2.5 rounded-button hover:bg-giallo-hover active:scale-[0.98] transition-all duration-300 mt-6 self-start"
+                <Button
+                  href={`mailto:dogedivenezia.ai@gmail.com?subject=Candidatura: ${pos.title}`}
+                  external
+                  className="mt-6 self-start"
                 >
                   Candidati →
-                </a>
+                </Button>
               </div>
             </FadeInOnScroll>
           ))}
