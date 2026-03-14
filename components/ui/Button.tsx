@@ -28,7 +28,7 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-giallo text-nero px-5 py-2.5 rounded-button hover:bg-giallo-hover active:scale-[0.98]",
+      "bg-giallo text-nero px-5 py-2.5 hover:bg-giallo-hover active:scale-[0.98]",
     secondary:
       "text-nero hover:text-giallo-hover group",
   };

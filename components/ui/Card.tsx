@@ -26,16 +26,16 @@ export default function Card({
       viewport={{ once: true, margin: "-50px" }}
       custom={index}
       className={`
-        rounded-card p-7 transition-all duration-300
+        p-7 transition-all duration-200
         ${dark
-          ? "bg-nero/80 text-bianco border border-white/10"
-          : "bg-bianco shadow-card"
+          ? "bg-nero text-bianco border border-white/10"
+          : "bg-bianco border border-[#E8E8E8]"
         }
         ${highlight
           ? "bg-giallo text-nero border-none"
           : ""
         }
-        hover:shadow-card-hover hover:-translate-y-0.5
+        hover:-translate-y-1
         hover:border-l-[3px] hover:border-l-giallo
         ${className}
       `}

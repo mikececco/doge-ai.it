@@ -16,9 +16,9 @@ function TeamCard({ member, index }: { member: TeamMember; index: number }) {
   return (
     <motion.div variants={fadeInUp} custom={index}>
       {imgError ? (
-        <div className="aspect-square bg-grigio-chiaro rounded-lg" />
+        <div className="aspect-square bg-grigio-chiaro " />
       ) : (
-        <div className="aspect-square relative rounded-lg overflow-hidden bg-grigio-chiaro">
+        <div className="aspect-square relative  overflow-hidden bg-grigio-chiaro">
           <Image
             src={member.image}
             alt={member.name}

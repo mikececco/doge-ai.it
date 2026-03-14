@@ -199,7 +199,7 @@ export default function AziendePage() {
             <motion.span
               key={settore}
               variants={fadeInUp}
-              className="bg-grigio-chiaro px-5 py-2.5 rounded text-sm font-bold hover:bg-giallo transition-colors cursor-default"
+              className="bg-grigio-chiaro px-5 py-2.5 text-sm font-bold hover:bg-giallo transition-colors cursor-default"
             >
               {settore}
             </motion.span>
@@ -217,7 +217,7 @@ export default function AziendePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           <FadeInOnScroll>
-            <div className="rounded-card bg-bianco p-8 shadow-card h-full">
+            <div className="bg-bianco border border-[#E8E8E8] p-8 h-full">
               <h3 className="text-lg font-bold mb-2">
                 Difesa &mdash; Proteggi i margini
               </h3>
@@ -239,7 +239,7 @@ export default function AziendePage() {
           </FadeInOnScroll>
 
           <FadeInOnScroll>
-            <div className="rounded-card bg-nero p-8 text-bianco h-full">
+            <div className="bg-nero border border-white/10 p-8 text-bianco h-full">
               <h3 className="text-lg font-bold text-giallo mb-2">
                 Attacco &mdash; Crea nuovo valore
               </h3>

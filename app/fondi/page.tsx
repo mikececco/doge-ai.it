@@ -173,7 +173,7 @@ export default function FondiPage() {
         </FadeInOnScroll>
 
         <FadeInOnScroll>
-          <div className="bg-[#2A2A2A] rounded-lg p-10 mt-10">
+          <div className="bg-[#2A2A2A] p-10 mt-10">
             <div className="space-y-6">
               {VALUATION_ROWS.map((row) => (
                 <div

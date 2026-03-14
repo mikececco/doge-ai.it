@@ -46,7 +46,7 @@ export default function ContattiPage() {
   }
 
   const inputClass =
-    "w-full border border-[#DDDDDD] rounded p-3 text-base focus:border-nero outline-none transition-colors";
+    "w-full border border-[#DDDDDD] p-3 text-base focus:border-nero outline-none transition-colors";
   const labelClass = "block text-xs font-bold uppercase tracking-wider text-grigio-medio mb-2";
   const errorClass = "text-red-500 text-xs mt-1";
 
@@ -75,7 +75,7 @@ export default function ContattiPage() {
           <div className="lg:col-span-3">
             {submitted ? (
               <FadeInOnScroll>
-                <div className="bg-grigio-chiaro rounded-card p-12 text-center">
+                <div className="bg-grigio-chiaro p-12 text-center">
                   <h2 className="text-2xl font-bold">Messaggio inviato.</h2>
                   <p className="text-grigio-scuro mt-4">
                     Ti risponderemo entro 24 ore.

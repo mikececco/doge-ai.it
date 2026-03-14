@@ -31,7 +31,7 @@ export default function DifesaAttacco() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
         <FadeInOnScroll>
-          <div className="rounded-card bg-bianco p-8 shadow-card">
+          <div className=" bg-bianco p-8 ">
             <h3 className="text-lg font-bold text-grigio-medio mb-4">
               🛡 Difesa <span className="text-sm font-normal">(quello che fanno tutti)</span>
             </h3>
@@ -47,7 +47,7 @@ export default function DifesaAttacco() {
         </FadeInOnScroll>
 
         <FadeInOnScroll>
-          <div className="rounded-card bg-nero p-8 text-bianco">
+          <div className=" bg-nero p-8 text-bianco">
             <h3 className="text-lg font-bold text-giallo mb-4">
               ⚔ Attacco <span className="text-sm font-normal text-bianco/60">(quello che facciamo noi)</span>
             </h3>

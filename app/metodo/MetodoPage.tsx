@@ -153,7 +153,7 @@ export default function MetodoPage() {
         {/* Risk cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
           <FadeInOnScroll>
-            <div className="bg-grigio-chiaro rounded-card p-6 h-full">
+            <div className="bg-grigio-chiaro  p-6 h-full">
               <h3 className="text-lg font-bold mb-3">
                 &#9888; La paura di essere rimpiazzati
               </h3>
@@ -171,7 +171,7 @@ export default function MetodoPage() {
           </FadeInOnScroll>
 
           <FadeInOnScroll>
-            <div className="bg-grigio-chiaro rounded-card p-6 h-full">
+            <div className="bg-grigio-chiaro  p-6 h-full">
               <h3 className="text-lg font-bold mb-3">
                 &#9888; La disillusione da tool gi&agrave; provati
               </h3>

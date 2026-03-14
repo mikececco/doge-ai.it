@@ -42,13 +42,13 @@ const config: Config = {
         "section-mobile": "64px",
       },
       borderRadius: {
-        card: "6px",
-        button: "6px",
+        card: "0px",
+        button: "0px",
       },
       boxShadow: {
-        card: "0 2px 12px rgba(0, 0, 0, 0.06)",
-        "card-hover": "0 6px 24px rgba(0, 0, 0, 0.10)",
-        navbar: "0 2px 12px rgba(0, 0, 0, 0.08)",
+        card: "none",
+        "card-hover": "none",
+        navbar: "0 1px 0 rgba(0, 0, 0, 0.08)",
       },
     },
   },

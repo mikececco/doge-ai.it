@@ -67,7 +67,7 @@ export default function Navbar() {
                     </button>
                     {dropdownOpen && (
                       <div className="absolute top-full left-0 pt-2">
-                        <div className="bg-bianco rounded-card shadow-card-hover py-2 min-w-[180px]">
+                        <div className="bg-bianco   py-2 min-w-[180px]">
                           {item.children.map((child) => (
                             <Link
                               key={child.href}

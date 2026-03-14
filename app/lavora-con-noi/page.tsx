@@ -83,7 +83,7 @@ export default function LavoraConNoi() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
           {POSITIONS.map((pos, i) => (
             <FadeInOnScroll key={i}>
-              <div className="bg-bianco rounded-card shadow-card p-8 h-full flex flex-col hover:shadow-card-hover hover:-translate-y-0.5 hover:border-l-[3px] hover:border-l-giallo transition-all duration-300">
+              <div className="bg-bianco border border-[#E8E8E8] p-8 h-full flex flex-col hover:-translate-y-1 hover:border-l-[3px] hover:border-l-giallo transition-all duration-200">
                 <h3 className="text-xl font-bold">{pos.title}</h3>
                 <p className="text-body text-grigio-scuro mt-3 flex-1">
                   {pos.description}
