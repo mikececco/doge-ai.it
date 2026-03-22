@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Guida di Stile AI: Come Far Scrivere l'AI nel Tuo Stile (e Non Come Tutti gli Altri) — DOGE Italia</title>
+  <meta name="description" content="L'AI scrive in modo coerente per default. Il problema è che quel default suona uguale per tutti. Ecco come risolverlo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* ===== POST PAGE ===== */
+    .post-header {
+      padding: calc(var(--nav-height) + 5rem) 0 3rem;
+      border-bottom: .5px solid rgba(255,255,255,.08);
+      max-width: 760px;
+    }
+    .post-header .eyebrow { margin-bottom: 1.5rem; }
+    .post-header h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-style: italic;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .post-header .post-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      font-size: .8rem;
+      color: rgba(255,255,255,.35);
+    }
+    .post-header .post-meta strong { color: rgba(255,255,255,.6); font-weight: 500; }
+
+    .post-body-wrap {
+      padding: 4rem 0 8rem;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 5rem;
+      align-items: start;
+    }
+    .post-body {
+      max-width: 700px;
+    }
+    .post-body h2 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-style: italic;
+      margin: 3rem 0 1rem;
+      line-height: 1.2;
+    }
+    .post-body h3 {
+      font-size: 1.1rem;
+      font-style: normal;
+      margin: 2.5rem 0 .75rem;
+      color: #fff;
+    }
+    .post-body p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,.75);
+      margin-bottom: 1.5rem;
+    }
+    .post-body ul, .post-body ol {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+      list-style: disc;
+    }
+    .post-body li {
+      font-size: 1rem;
+      color: rgba(255,255,255,.7);
+      margin-bottom: .5rem;
+      line-height: 1.7;
+    }
+    .post-body strong { color: #fff; }
+    .post-body blockquote {
+      border-left: 3px solid #FAED26;
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      background: rgba(250,237,38,.05);
+    }
+    .post-body blockquote p {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: rgba(255,255,255,.85);
+    }
+    .post-body .highlight-box {
+      background: #111;
+      border: .5px solid rgba(255,255,255,.1);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .post-body .highlight-box p { margin: 0; }
+
+    /* Sidebar */
+    .post-sidebar { position: sticky; top: calc(var(--nav-height) + 2rem); }
+    .sidebar-card {
+      background: #111;
+      border: .5px solid rgba(255,255,255,.08);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .sidebar-card h4 {
+      font-size: .85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 1rem;
+    }
+    .sidebar-card p { font-size: .85rem; color: rgba(255,255,255,.55); margin-bottom: 1rem; }
+    .sidebar-card .btn-tile {
+      display: inline-block;
+      background: #FAED26;
+      color: #0a0a0a;
+      padding: .75rem 1.5rem;
+      font-size: .85rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: .02em;
+    }
+    .sidebar-source {
+      font-size: .75rem;
+      color: rgba(255,255,255,.25);
+      margin-top: 1rem;
+    }
+    .sidebar-source a { color: rgba(255,255,255,.4); text-decoration: underline; }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 2rem;
+      transition: color .3s;
+    }
+    .back-link:hover { color: #FAED26; }
+    .back-link::before { content: '←'; }
+
+    @media(max-width: 900px) {
+      .post-body-wrap { grid-template-columns: 1fr; gap: 3rem; }
+      .post-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body class="loaded">
+
+<!-- Nav -->
+<nav class="nav scrolled">
+  <div class="container">
+    <a href="/" class="nav-logo">DOGE</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/trasformazione-ai.html">Trasformazione AI</a>
+      <a href="/ingegneria-ai.html">Ingegneria AI</a>
+      <a href="/chi-siamo.html">Chi Siamo</a>
+      <a href="/blog/" style="color:#FAED26">Blog</a>
+      <a href="/inizia.html" class="btn btn-primary nav-cta">Inizia</a>
+    </div>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+  <div class="mobile-menu-blocks">
+    <div class="menu-block"></div><div class="menu-block"></div><div class="menu-block"></div>
+    <div class="menu-block"></div><div class="menu-block"></div><div class="menu-block"></div>
+  </div>
+  <div class="mobile-menu-content">
+    <a href="/">Home</a>
+    <a href="/trasformazione-ai.html">Trasformazione AI</a>
+    <a href="/ingegneria-ai.html">Ingegneria AI</a>
+    <a href="/chi-siamo.html">Chi Siamo</a>
+    <a href="/blog/">Blog</a>
+    <a href="/inizia.html">Inizia</a>
+  </div>
+</div>
+
+<!-- Post Header -->
+<div class="container">
+  <div class="post-header" style="padding-bottom: 3rem; margin-top: calc(var(--nav-height) + 3rem);">
+    <a href="/blog/" class="back-link">All posts</a>
+    <p class="eyebrow">AI Writing</p>
+    <h1>La Guida di Stile AI: Come Far Scrivere l'AI nel Tuo Stile (e Non Come Tutti gli Altri)</h1>
+    <div class="post-meta">
+      <span>By <strong>Mike Cecconello</strong></span>
+      <span>22 Marzo 2026</span>
+      <span>6 min read</span>
+    </div>
+  </div>
+</div>
+
+<!-- Post Body -->
+<div class="container">
+  <div class="post-body-wrap">
+    <article class="post-body">
+
+      <!-- CONTENT GOES HERE -->
+      <h2>Il Problema con l'AI Writing "Out of the Box"</h2>
+
+<p>Chiunque abbia usato ChatGPT, Claude o altri modelli per scrivere sa com'è: il testo è grammaticalmente corretto, logicamente ordinato, e suona come scritto da nessuno in particolare.</p>
+
+<p>Transizioni standardizzate. Frasi come "è importante sottolineare che…". Strutture a tre punti con titoli prevedibili. Una certa aria di competenza generica che non appartiene a nessuno specifico.</p>
+
+<p>Non è un difetto del modello. È esattamente ciò per cui è stato addestrato: produrre l'approssimazione più sicura e media di "buona scrittura". Senza indicazioni precise, l'AI converge verso la media. È matematicamente inevitabile.</p>
+
+<p>La soluzione non è un prompt migliore. È un sistema che viene prima del prompt.</p>
+
+<h2>Cos'è una Guida di Stile AI</h2>
+
+<p>Una guida di stile AI è il manuale operativo che dici al modello <em>come suonare</em> mentre esegue quello che gli chiedi.</p>
+
+<p>La distinzione è cruciale:</p>
+
+<ul>
+  <li><strong>Il prompt</strong> dice <em>cosa fare</em>: scrivi un articolo, riscrivi questo paragrafo, crea una email.</li>
+  <li><strong>La guida di stile</strong> dice <em>come farlo</em>: quali aperture preferisci, come strutturi gli argomenti, quali costruzioni eviti, che tipo di esempi usi, quanto sei formale.</li>
+</ul>
+
+<p>Una guida di stile è riutilizzabile. La includi una volta, e ogni prompt successivo beneficia di quel contesto. Non stai correggendo l'output ogni volta — stai tarando il sistema.</p>
+
+<h2>Cosa Mettere in una Guida di Stile AI</h2>
+
+<h3>1. Voce e Tono</h3>
+
+<p>Non fermarti agli aggettivi generici come "chiaro", "diretto", "conversazionale". Ogni professionista della comunicazione userebbe le stesse parole per descrivere stili completamente diversi.</p>
+
+<p>Funziona meglio rispondere a domande specifiche: <ul>   <li>Quanto sei formale? Con i clienti? Con il pubblico di un blog?</li>   <li>Usi l'ironia? Quando? Quanto?</li>   <li>Sei più partecipante o osservatore? Scrivi dall'interno delle cose o dall'esterno?</li>   <li>Cosa è completamente sbagliato per il tuo tono?</li> </ul></p>
+
+<p>L'obiettivo è dare al modello abbastanza specificità da poter sbagliare — e quindi poter correggere in modo mirato.</p>
+
+<h3>2. Struttura</h3>
+
+<p>Come organizzi le idee è spesso più riconoscibile del lessico che usi. L'AI deduce male le strutture implicite. Rendile esplicite.</p>
+
+<p>Alcune domande utili: <ul>   <li>Come apri di solito? Con un'aneddoto, un dato, un'osservazione provocatoria?</li>   <li>Quando arrivi al punto principale — subito o dopo aver costruito contesto?</li>   <li>Come concludi? Riassumi, estendi, lasci una domanda aperta?</li>   <li>Hai strutture ricorrenti che usi spesso? (es. "problema → perché non funziona la soluzione ovvia → cosa funziona invece")</li> </ul></p>
+
+<p>Descrivere queste strutture — anche solo 2-3 — dà al modello una grammatica del tuo pensiero, non solo del tuo lessico.</p>
+
+<h3>3. Preferenze a Livello di Frase</h3>
+
+<p>Qui si entra nel dettaglio che fa davvero la differenza. Non "scrivi frasi corte" — troppo vago. Ma cose come:</p>
+
+<ul>
+  <li>Preferisci verbi attivi o costruzioni passive? (quasi sempre: attivi)</li>
+  <li>Usi metafore? Di che tipo — concrete, fisiche, o più astratte?</li>
+  <li>Come gestisci la punteggiatura? Molte virgole, trattini, punti secchi?</li>
+  <li>Hai parole o costruzioni che usi spesso? ("il punto è", "in concreto", "la domanda giusta è")</li>
+</ul>
+
+<p>La chiave è dare esempi concreti, non solo regole. <em>"Usa linguaggio concreto: 'ho passato tre ore a correggere lo stesso bug' invece di 'ho ottimizzato il workflow'"</em> è immediatamente più utile di <em>"sii specifico"</em>.</p>
+
+<h3>4. Mosse Signature</h3>
+
+<p>Ogni scrittore ha movimenti ricorrenti — transizioni caratteristiche, modi di aprire i paragrafi, strutture argomentative preferite. Nominarle esplicitamente permette all'AI di replicarle.</p>
+
+<p>Esempi: "Parto spesso dal caso concreto e poi zoomo out alla pattern generale". Oppure: "Uso domande retoriche per aprire le sezioni, non per riempire". O ancora: "La mia mossa preferita è citare qualcosa che sembra ovvio e poi mostrare perché non lo è".</p>
+
+<p>Anche due o tre mosse signature cambiano sensibilmente la qualità dell'output.</p>
+
+<h3>5. Anti-Pattern (La Sezione Più Preziosa)</h3>
+
+<p>Questa è spesso la parte più utile di tutta la guida. Non solo definisci cosa vuoi — definisci esplicitamente cosa <strong>non</strong> vuoi.</p>
+
+<p>L'AI ha pattern che ripete costantemente se non le dici di evitarli:</p>
+
+<div style="overflow-x:auto;margin:2rem 0"><table style="width:100%;border-collapse:collapse;background:#111"><thead><tr style="background:rgba(250,237,38,.08)"><th style="padding:.75rem 1rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.1);color:#fff">Pattern da evitare</th><th style="padding:.75rem 1rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.1);color:#fff">Perché e come correggerlo</th></tr></thead><tbody><tr><td style="padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)">"È importante sottolineare che…"</td><td style="padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)">Elimina — se lo stai scrivendo è già importante</td></tr>
+<tr><td style="padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)">Costruzione "non X, ma Y"</td><td style="padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)">Riscrive: quasi sempre si può dire la cosa positiva direttamente</td></tr>
+<tr><td style="padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)">Domande retoriche come filler</td><td style="padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)">Taglia o trasforma in affermazione</td></tr>
+<tr><td style="padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)">Conclusioni che riassumono quello che hai già detto</td><td style="padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)">Termina estendendo o riformulando, non riassumendo</td></tr>
+<tr><td style="padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)">Aggettivi come "fondamentale", "cruciale", "essenziale"</td><td style="padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)">Mostra perché è importante invece di dirlo</td></tr>
+<tr><td style="padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)">Aperture con contesto storico o definizioni</td><td style="padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.7)">Inizia con la tensione, il problema, il momento concreto</td></tr></tbody></table></div>
+
+<p>Costruire questa lista — anche solo 5-6 voci — elimina una buona parte del generico che l'AI produce di default.</p>
+
+<h3>6. Esempi Positivi e Negativi</h3>
+
+<p>Le regole abbinate a esempi sono quasi sempre più utili delle regole sole.</p>
+
+<p>Prendi un paragrafo che hai scritto e che ti piace particolarmente. Prendine uno che suona AI-ish e spiega perché. Mettili entrambi nella guida. Il contrasto aiuta il modello a calibrarsi in modo molto più efficace di una descrizione astratta.</p>
+
+<h2>Come Costruire la Tua Guida di Stile</h2>
+
+<p>Il modo più rapido: usa l'AI stessa.</p>
+
+<p>Incolla 3-5 pezzi che hai scritto e che consideri rappresentativi del tuo stile migliore. Poi chiedi:</p>
+
+<p>> <em>"Analizza questi testi e identifica i pattern ricorrenti nella mia voce: struttura, tono, preferenze a livello di frase, costruzioni che evito, mosse signature. Poi costruisci una guida di stile AI che un modello potrebbe usare per replicare questo stile."</em></p>
+
+<p>Il risultato non sarà perfetto al primo tentativo. Leggi la guida prodotta, correggi dove non ti riconosci, aggiungi ciò che manca, specifica meglio dove è troppo vago. Dopo 2-3 iterazioni, avrai qualcosa di utilizzabile.</p>
+
+<h2>Come Usarla</h2>
+
+<p>Salva la guida come documento. Quando usi ChatGPT, Claude, o qualsiasi altro modello per scrivere, aggiungila come contesto prima del prompt operativo:</p>
+
+<p>> <em>"Usa questa guida di stile per tutto ciò che scrivi in questa conversazione: [guida]. Ora scrivi/riscrivi/rivedi [task specifico]."</em></p>
+
+<p>Con Claude e GPT-4o puoi salvarla come istruzione di sistema nei tuoi progetti, così non devi includerla manualmente ogni volta.</p>
+
+<h2>Una Nota Finale</h2>
+
+<p>Una guida di stile AI non è un trucco per far sembrare che tu abbia scritto qualcosa che non hai scritto. È uno strumento per far sì che quando l'AI ti assiste, lo faccia in un modo che suona come te — non come l'output medio di un modello che non ti conosce.</p>
+
+<p>La differenza tra chi usa l'AI per scrivere bene e chi ottiene output generici non è quasi mai nel modello. È in quanto contesto ha ricevuto su come si vuole suonare.</p>
+
+    </article>
+
+    <!-- Sidebar -->
+    <aside class="post-sidebar">
+      <div class="sidebar-card">
+        <h4>Trasforma la tua azienda</h4>
+        <p>Scopri come possiamo portare l'AI nella tua PMI in 6 settimane.</p>
+        <a href="/inizia.html" class="btn-tile">Prenota una call →</a>
+      </div>
+      <p class="sidebar-source">Source: <a href="https://linkedin.com" target="_blank" rel="noopener">Guida di Stile AI</a></p>
+    </aside>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-logo">DOGE</span>
+    <span style="font-size:.8rem;color:rgba(255,255,255,.3)">&copy; 2026 DOGE Italia. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="mailto:human@doge.it">human@doge.it</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
