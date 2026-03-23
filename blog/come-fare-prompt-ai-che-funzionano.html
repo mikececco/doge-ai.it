@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Come Fare Prompt AI che Funzionano (Davvero) — DOGE Italia</title>
+  <meta name="description" content="Le tecniche che separano i risultati dalla mediocrità. XML tag, self-evaluation loop, multi-persona debate, agent-mode prompting: la guida pratica al prompt engineering professionale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* ===== POST PAGE ===== */
+    .post-header {
+      padding: calc(var(--nav-height) + 5rem) 0 3rem;
+      border-bottom: .5px solid rgba(255,255,255,.08);
+      max-width: 760px;
+    }
+    .post-header .eyebrow { margin-bottom: 1.5rem; }
+    .post-header h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-style: italic;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .post-header .post-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      font-size: .8rem;
+      color: rgba(255,255,255,.35);
+    }
+    .post-header .post-meta strong { color: rgba(255,255,255,.6); font-weight: 500; }
+
+    .post-body-wrap {
+      padding: 4rem 0 8rem;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 5rem;
+      align-items: start;
+    }
+    .post-body {
+      max-width: 700px;
+    }
+    .post-body h2 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-style: italic;
+      margin: 3rem 0 1rem;
+      line-height: 1.2;
+    }
+    .post-body h3 {
+      font-size: 1.1rem;
+      font-style: normal;
+      margin: 2.5rem 0 .75rem;
+      color: #fff;
+    }
+    .post-body p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,.75);
+      margin-bottom: 1.5rem;
+    }
+    .post-body ul, .post-body ol {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+      list-style: disc;
+    }
+    .post-body li {
+      font-size: 1rem;
+      color: rgba(255,255,255,.7);
+      margin-bottom: .5rem;
+      line-height: 1.7;
+    }
+    .post-body strong { color: #fff; }
+    .post-body blockquote {
+      border-left: 3px solid #FAED26;
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      background: rgba(250,237,38,.05);
+    }
+    .post-body blockquote p {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: rgba(255,255,255,.85);
+    }
+    .post-body pre {
+      background: #111;
+      border: .5px solid rgba(255,255,255,.1);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      overflow-x: auto;
+      font-size: .875rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,.8);
+      font-family: 'Courier New', monospace;
+    }
+    .post-body code {
+      font-family: 'Courier New', monospace;
+      font-size: .875rem;
+      color: #FAED26;
+      background: rgba(250,237,38,.08);
+      padding: .1em .4em;
+      border-radius: 2px;
+    }
+    .post-body pre code {
+      background: none;
+      color: rgba(255,255,255,.8);
+      padding: 0;
+    }
+    .post-body .highlight-box {
+      background: #111;
+      border: .5px solid rgba(255,255,255,.1);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .post-body .highlight-box p { margin: 0; }
+
+    /* Sidebar */
+    .post-sidebar { position: sticky; top: calc(var(--nav-height) + 2rem); }
+    .sidebar-card {
+      background: #111;
+      border: .5px solid rgba(255,255,255,.08);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .sidebar-card h4 {
+      font-size: .85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 1rem;
+    }
+    .sidebar-card p { font-size: .85rem; color: rgba(255,255,255,.55); margin-bottom: 1rem; }
+    .sidebar-card .btn-tile {
+      display: inline-block;
+      background: #FAED26;
+      color: #0a0a0a;
+      padding: .75rem 1.5rem;
+      font-size: .85rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: .02em;
+    }
+    .sidebar-source {
+      font-size: .75rem;
+      color: rgba(255,255,255,.25);
+      margin-top: 1rem;
+    }
+    .sidebar-source a { color: rgba(255,255,255,.4); text-decoration: underline; }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 2rem;
+      transition: color .3s;
+    }
+    .back-link:hover { color: #FAED26; }
+    .back-link::before { content: '←'; }
+
+    @media(max-width: 900px) {
+      .post-body-wrap { grid-template-columns: 1fr; gap: 3rem; }
+      .post-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body class="loaded">
+
+<!-- Nav -->
+<nav class="nav scrolled">
+  <div class="container">
+    <a href="/" class="nav-logo">DOGE</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/trasformazione-ai.html">Trasformazione AI</a>
+      <a href="/ingegneria-ai.html">Ingegneria AI</a>
+      <a href="/chi-siamo.html">Chi Siamo</a>
+      <a href="/blog/" style="color:#FAED26">Blog</a>
+      <a href="/inizia.html" class="btn btn-primary nav-cta">Inizia</a>
+    </div>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+  <div class="mobile-menu-blocks">
+    <div class="menu-block"></div><div class="menu-block"></div><div class="menu-block"></div>
+    <div class="menu-block"></div><div class="menu-block"></div><div class="menu-block"></div>
+  </div>
+  <div class="mobile-menu-content">
+    <a href="/">Home</a>
+    <a href="/trasformazione-ai.html">Trasformazione AI</a>
+    <a href="/ingegneria-ai.html">Ingegneria AI</a>
+    <a href="/chi-siamo.html">Chi Siamo</a>
+    <a href="/blog/">Blog</a>
+    <a href="/inizia.html">Inizia</a>
+  </div>
+</div>
+
+<!-- Post Header -->
+<div class="container">
+  <div class="post-header" style="padding-bottom: 3rem; margin-top: calc(var(--nav-height) + 3rem);">
+    <a href="/blog/" class="back-link">All posts</a>
+    <p class="eyebrow">Prompt Engineering</p>
+    <h1>Come Fare Prompt AI che Funzionano (Davvero): Le Tecniche che Separano i Risultati dalla Mediocrità</h1>
+    <div class="post-meta">
+      <span>By <strong>Mike Cecconello</strong></span>
+      <span>23 Marzo 2026</span>
+      <span>8 min read</span>
+    </div>
+  </div>
+</div>
+
+<!-- Post Body -->
+<div class="container">
+  <div class="post-body-wrap">
+    <article class="post-body">
+
+      <blockquote>
+        <p>L'AI scrive il tuo codice. L'AI analizza i tuoi dati. L'AI redige le tue email. La domanda non è più "lo fa?" — è "sai dirglielo nel modo giusto?"</p>
+      </blockquote>
+
+      <h2>Il Problema che Nessuno Ammette</h2>
+
+      <p>Dario Amodei, CEO di Anthropic, al World Economic Forum di Davos 2026:</p>
+
+      <blockquote>
+        <p>"Siamo a 6-12 mesi da quando il modello farà la maggior parte — forse tutto — ciò che fa un ingegnere software end-to-end."</p>
+      </blockquote>
+
+      <p>Eppure la maggior parte delle persone usa questi strumenti come se stessero cercando su Google. "Riassumimi questo." "Scrivimi una email." "Aiutami con il report."</p>
+
+      <p>Il risultato: output generico, riciclo di un po' di lavoro, sensazione vaga che "l'AI non sia ancora pronta."</p>
+
+      <p>Non è l'AI che non è pronta. È il modo in cui la si istruisce.</p>
+
+      <h2>Perché il Prompting È Diventato un'Abilità Strategica</h2>
+
+      <p>I modelli moderni come Claude Opus 4.6 — con 1 milione di token di contesto, pari a circa 750.000 parole, l'equivalente di un intero codebase aziendale o un anno di documenti — non cercano di indovinare cosa vuoi. Eseguono letteralmente quello che descrivi. Niente di più, niente di meno.</p>
+
+      <p>Un prompt vago ottiene un output vago non perché il modello sia pigro, ma perché non ha abbastanza informazioni per fare di meglio. La differenza tra le due categorie di utenti non è l'abbonamento. È quanto bene sanno descrivere quello che vogliono.</p>
+
+      <h2>Parte 1: Le Fondamenta</h2>
+
+      <h3>1. Sii Esplicito, Non Vago</h3>
+
+      <p>Il test pratico: mostra il tuo prompt a un collega senza contesto. Se rimarrebbe confuso, anche il modello rimarrà confuso.</p>
+
+      <p><strong>Sbagliato:</strong> "Scrivi qualcosa di buono."<br>
+      <strong>Giusto:</strong> "Scrivi una descrizione prodotto di 200 parole per una landing page B2B SaaS rivolta a CTO, tono conversazionale, zero buzzword."</p>
+
+      <h3>2. XML Tag: Il Linguaggio Nativo di Claude</h3>
+
+      <p>Claude è addestrato internamente con strutture XML. Usarle non è un trucco — è come il modello elabora le informazioni. I test di Anthropic mostrano miglioramenti fino al 30% nella qualità dell'output.</p>
+
+      <pre><code>&lt;task&gt;Analizza questo dataset e trova i trend principali&lt;/task&gt;
+&lt;context&gt;Dati vendite Q4 2025 per mercati europei&lt;/context&gt;
+&lt;constraints&gt;Focus su crescita YoY. Ignora mercati sotto $1M&lt;/constraints&gt;
+&lt;output_format&gt;Tabella top 5 mercati, poi 2 paragrafi di analisi&lt;/output_format&gt;</code></pre>
+
+      <h3>3. Prima il Contesto, Poi l'Istruzione</h3>
+
+      <p>Metti i documenti lunghi e i dati <strong>sopra</strong> la tua domanda, non dopo. Posizionare la query a fine prompt, dopo il materiale di riferimento, migliora consistentemente la qualità delle risposte.</p>
+
+      <h3>4. Esempi Battono gli Aggettivi</h3>
+
+      <p>Un buon esempio vale dieci descrizioni. Il modello replica il pattern che vede. Tre-cinque esempi diversi coprono i casi limite — il modello generalizza dai pattern, non dagli aggettivi.</p>
+
+      <h3>5. Vincoli Negativi e Permesso di Non Sapere</h3>
+
+      <p>Due istruzioni che quasi nessuno usa e che cambiano sensibilmente la qualità:</p>
+
+      <blockquote>
+        <p>"NON usare: gergo corporate, frasi come 'nel mondo frenetico di oggi', conclusioni che riassumono quello che hai già detto."</p>
+      </blockquote>
+
+      <blockquote>
+        <p>"Se i dati sono insufficienti per trarre conclusioni, dillo invece di speculare."</p>
+      </blockquote>
+
+      <p>La seconda elimina la maggior parte delle allucinazioni. La prima elimina l'AI generico di default.</p>
+
+      <h2>Parte 2: Tecniche Avanzate</h2>
+
+      <h3>6. Il Sistema a Contratto</h3>
+
+      <p>Struttura il tuo system prompt come un contratto:</p>
+
+      <pre><code>You are: [ruolo — una riga]
+Goal: [come appare il successo]
+Constraints:
+- [vincolo 1]
+- [vincolo 2]
+If unsure: chiedi UNA domanda di chiarimento
+Output format: [formato esatto]</code></pre>
+
+      <p>Il modello sa cosa fare, cosa non fare, e cosa fare quando è incerto. È la differenza tra un collaboratore che esegue e uno che indovina.</p>
+
+      <h3>7. Il Brainstorming Inverso</h3>
+
+      <p>Invece di chiedere "come raggiungiamo questo obiettivo?", chiedi:</p>
+
+      <blockquote>
+        <p>"Vogliamo [OBIETTIVO]. Prima, identifica 10 modi per garantire il fallimento. Per ciascuno, inverti il modo di fallimento in strategia di successo. Segnala le 3 strategie più controintuitive con il potenziale più alto."</p>
+      </blockquote>
+
+      <p>Questo produce analisi genuinamente sorprendenti. Il modello ragiona sui meccanismi di fallimento — che spesso conosce meglio di quelli di successo — e li ribalta.</p>
+
+      <h3>8. Self-Evaluation Loop</h3>
+
+      <p>Fai valutare al modello il proprio output prima che lo veda tu:</p>
+
+      <blockquote>
+        <p>"Valuta la tua risposta da 1 a 10 su accuratezza, completezza e chiarezza. Poi migliorala sulla base della tua valutazione. Mostrami solo la versione migliorata."</p>
+      </blockquote>
+
+      <p>Cattura errori in modo affidabile, soprattutto su coding e analisi dati. Alternativa: "Prima di concludere, verifica la tua risposta contro questi criteri: [criteri]."</p>
+
+      <h3>9. Multi-Persona Debate</h3>
+
+      <p>Per decisioni importanti, fai ragionare il modello con se stesso da più prospettive:</p>
+
+      <blockquote>
+        <p>"Analizza questa decisione aziendale da tre prospettive:<br>
+        1. Il founder ottimista che vuole muoversi veloce<br>
+        2. Il CFO prudente attento al burn rate<br>
+        3. Il cliente che non si preoccupa dei tuoi problemi<br><br>
+        Ogni persona argomenta in 2-3 frasi. Poi sintetizza in una raccomandazione finale."</p>
+      </blockquote>
+
+      <p>Produce analisi sensibilmente più profonde di un singolo punto di vista.</p>
+
+      <h3>10. Agent-Mode Prompting</h3>
+
+      <p>Il loop che porta il prompting a livello di sistema: Plan → Act → Verify → Iterate.</p>
+
+      <blockquote>
+        <p>"Il mio obiettivo è [OBIETTIVO]. Prima, crea un piano con massimo 5 step. Per ogni step, esegui usando gli strumenti disponibili. Dopo ogni step, verifica che il risultato soddisfi i criteri. Se non li soddisfa, itera. Passa allo step successivo solo quando quello corrente supera la verifica."</p>
+      </blockquote>
+
+      <p>Questo è prompting per agenti, non per chatbot. La differenza è architetturale.</p>
+
+      <h2>Parte 3: Template Pronti all'Uso</h2>
+
+      <p>Questi funzionano. Sostituisci le parti tra parentesi quadre.</p>
+
+      <h3>Ricerca e Analisi</h3>
+      <pre><code>Ricerca [ARGOMENTO] e produci un'analisi strutturata.
+Struttura:
+1. Executive summary (max 3 frasi)
+2. 5 finding principali con evidenza a supporto
+3. Rischi e incognite
+4. Prossimi passi raccomandati
+Cita fonti dove possibile. Se i dati sono insufficienti, dillo.</code></pre>
+
+      <h3>Email e Comunicazione</h3>
+      <pre><code>Scrivi una email.
+A: [DESTINATARIO + RELAZIONE]
+Obiettivo: [COSA VUOI CHE FACCIA]
+Tono: [professionale / diretto / collaborativo]
+Lunghezza: sotto [X] frasi
+Contesto: [SITUAZIONE]
+Non suonare: [apologetico / aggressivo / vago]</code></pre>
+
+      <h3>Il Template Universale</h3>
+      <pre><code>Voglio [TASK] in modo che [CRITERIO DI SUCCESSO].
+Riferimento di stile: [file o esempio]
+Contesto rilevante: [informazioni di background]
+Vincoli: [cosa NON fare]
+Output: [formato esatto]</code></pre>
+
+      <h2>Il Vero Unlock: Smettere di Ripeterti</h2>
+
+      <p>La tecnica più sottovalutata in assoluto. Invece di spiegare le tue regole in ogni prompt, mettile in un file — <code>rules.md</code>, <code>style.md</code>, <code>context.md</code>.</p>
+
+      <p>Includilo una volta all'inizio della sessione con: <em>"Leggi questo file completamente prima di iniziare. Se stai per violare una delle mie regole, fermati e dimmelo."</em></p>
+
+      <p>Il modello lo applica all'intera conversazione. Se lavori con un team, questo file diventa lo standard condiviso — tutti ottengono output coerenti dallo stesso modello, indipendentemente dall'abilità individuale di prompting.</p>
+
+      <p>Come diceva Andrej Karpathy: non stai più scrivendo prompt. Stai configurando un agente.</p>
+
+      <h2>Cosa Significa per un'Organizzazione</h2>
+
+      <p>Le tecniche sopra non sono curiosità per sviluppatori. Sono la differenza tra un'organizzazione che usa l'AI per risparmiare un po' di tempo e una che lo usa per moltiplicare la capacità operativa.</p>
+
+      <p>Un team che sa dare istruzioni precise ottiene output pronti all'uso. Un team che non sa farlo ottiene bozze da correggere — e a quel punto il vantaggio di efficienza è quasi zero. La barriera all'adozione AI non è quasi mai il tool. È la formazione su come usarlo bene.</p>
+
+      <p><em>Se stai valutando come strutturare l'adozione AI nella tua organizzazione — non solo come strumento individuale, ma come infrastruttura operativa — <a href="https://doge-ai.it/" target="_blank" rel="noopener">il Doge di Venezia</a> lavora esattamente su questo, per PMI e fondi di investimento.</em></p>
+
+      <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+      <p style="font-size:.85rem;color:rgba(255,255,255,.35);">
+        <strong style="color:rgba(255,255,255,.5);">Fonti:</strong><br>
+        <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener" style="color:rgba(255,255,255,.4);">Anthropic Prompt Engineering Guide</a> ·
+        <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener" style="color:rgba(255,255,255,.4);">McKinsey: The state of AI in early 2025</a> ·
+        <a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener" style="color:rgba(255,255,255,.4);">Stanford HAI: AI Index Report 2024</a>
+      </p>
+
+      <p style="font-size:.75rem;color:rgba(255,255,255,.2);margin-top:2rem;">
+        Tag: prompt engineering italiano, come usare Claude, tecniche prompting AI, AI per aziende italiane, intelligenza artificiale PMI, Claude Opus prompt, guida prompt AI italiano, come fare prompt AI, AI transformation Italia, agenti AI aziende, MCP server, n8n AI, LangGraph, system prompt template
+      </p>
+
+    </article>
+
+    <!-- Sidebar -->
+    <aside class="post-sidebar">
+      <div class="sidebar-card">
+        <h4>Trasforma la tua azienda</h4>
+        <p>Scopri come portare l'AI nella tua PMI come infrastruttura operativa — non come tool individuale.</p>
+        <a href="/inizia.html" class="btn-tile">Prenota una call →</a>
+      </div>
+      <div class="sidebar-card">
+        <h4>Approfondisci</h4>
+        <p>Come costruire un sistema AI aziendale che scala.</p>
+        <a href="/blog/agenti-ai-per-aziende-guida-pratica.html" style="font-size:.85rem;color:#FAED26;text-decoration:none;">Leggi il post →</a>
+      </div>
+      <p class="sidebar-source">Fonti: <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener">Anthropic Prompt Engineering Docs</a></p>
+    </aside>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-logo">DOGE</span>
+    <span style="font-size:.8rem;color:rgba(255,255,255,.3)">&copy; 2026 DOGE Italia. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="mailto:human@doge.it">human@doge.it</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
