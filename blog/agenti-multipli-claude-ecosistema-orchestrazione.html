@@ -137,35 +137,30 @@
       <meta itemprop="datePublished" content="2026-03-23">
       <meta itemprop="author" content="Mike Cecconello">
       <div itemprop="articleBody">
-<p><em>Un solo modello AI che risponde a domande è uno strumento. Cinque agenti che lavorano in parallelo su task diversi è un'infrastruttura. La differenza non è tecnica — è operativa.</em></p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <h2>Il Salto che Pochi Hanno Fatto</h2>
 <p>Usare Claude come assistente è ormai diffuso. Ma c'è un livello successivo che la maggior parte delle organizzazioni non ha ancora toccato: l'orchestrazione multi-agente.</p>
-<p>Non si tratta di avere più finestre di chat aperte. Si tratta di sistemi dove un agente principale scompone un obiettivo complesso, delega a sub-agenti specializzati, raccoglie i risultati e produce un output finale — il tutto con supervisione umana minima o nulla.</p>
+<p>Non si tratta di avere più finestre di chat aperte. Si tratta di sistemi dove un agente principale scompone un obiettivo complesso, delega a sub-agenti specializzati, raccoglie i risultati e produce un output finale, il tutto con supervisione umana minima o nulla.</p>
 <p>Nell'ultimo anno, su GitHub sono emersi decine di progetti open source che costruiscono esattamente questo tipo di architettura. Ecco i più rilevanti per chi vuole capire dove sta andando il lavoro tecnico ad alto valore.</p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <h2>I Tool che Contano</h2>
 <h3>Team Virtuale di Ingegneria</h3>
-<p><strong>gstack</strong> trasforma Claude Code in un team virtuale di ingegneria. Invece di un agente che scrive codice in sequenza, coordina più istanze che lavorano su parti diverse del problema in parallelo — come avere tre sviluppatori sullo stesso codebase, senza i costi fissi di tre sviluppatori.</p>
+<p><strong>gstack</strong> trasforma Claude Code in un team virtuale di ingegneria. Invece di un agente che scrive codice in sequenza, coordina più istanze che lavorano su parti diverse del problema in parallelo, come avere tre sviluppatori sullo stesso codebase, senza i costi fissi di tre sviluppatori.</p>
 <p><strong>SWE-AF</strong> (Agent Field) va ancora oltre: una singola API call è sufficiente per istanziare un team di ingegneri AI completo, con ruoli definiti e flusso di lavoro strutturato. Output di un team, latenza di un singolo agente.</p>
 <h3>Parallelizzazione dei Task</h3>
-<p><strong>cmux</strong> e <strong>claude-squad</strong> affrontano il problema da angolazioni diverse: entrambi permettono di eseguire più agenti Claude in parallelo, rispettivamente in ambiente web e terminale. Il risultato pratico è che task che normalmente si eseguono in sequenza — ricerca, analisi, redazione, revisione — diventano concorrenti.</p>
+<p><strong>cmux</strong> e <strong>claude-squad</strong> affrontano il problema da angolazioni diverse: entrambi permettono di eseguire più agenti Claude in parallelo, rispettivamente in ambiente web e terminale. Il risultato pratico è che task che normalmente si eseguono in sequenza, ricerca, analisi, redazione, revisione, diventano concorrenti.</p>
 <p><strong>figaro</strong> porta l'orchestrazione di fleet di agenti sul desktop, rendendo accessibile la gestione di processi multi-agente complessi senza infrastruttura cloud dedicata.</p>
 <h3>Sub-agenti e Sandbox</h3>
 <p><strong>deer-flow</strong> di ByteDance introduce il concetto di sub-agenti attivabili attraverso skill predefinite, ciascuno eseguito in sandbox isolata. La separazione tra agenti riduce il rischio di contaminazione del contesto e aumenta la predicibilità degli output su task lunghi.</p>
 <p><strong>Allice</strong> e <strong>Agent Alchemy</strong> completano il quadro: il primo mappa task complessi in architetture di agenti dinamiche; il secondo combina Claude Code con plugin e gestione di task per workflow personalizzabili.</p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <h2>Cosa Significa in Pratica</h2>
 <p>Questi strumenti non sono giocattoli per sviluppatori. Sono i prototipi delle infrastrutture operative che tra due anni saranno standard nelle organizzazioni tech.</p>
 <p>Il pattern comune è chiaro: <strong>la produttività non scala aumentando il numero di persone che usano AI individualmente. Scala costruendo sistemi dove gli agenti collaborano.</strong></p>
 <p>Per una PMI o un fondo che sta valutando come strutturare l'adozione AI, la domanda non è più "quale modello usiamo?" ma "quanti processi possiamo parallelizzare, e chi li supervisiona?"</p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <h2>Il Vincolo che Rimane Umano</h2>
-<p>La complessità di questi sistemi non sta nell'AI — sta nella definizione degli obiettivi e nella supervisione degli output. Un agente che lavora su istruzioni vaghe in un sistema multi-agente amplifica il problema, non lo risolve.</p>
+<p>La complessità di questi sistemi non sta nell'AI, sta nella definizione degli obiettivi e nella supervisione degli output. Un agente che lavora su istruzioni vaghe in un sistema multi-agente amplifica il problema, non lo risolve.</p>
 <p>Le organizzazioni che stanno costruendo vantaggio reale con questi strumenti hanno risolto prima il problema a monte: sanno descrivere con precisione cosa vogliono, come appare il successo, e quali sono i criteri di verifica. Solo allora l'orchestrazione multi-agente diventa un moltiplicatore.</p>
 <p>Senza quella base, è complessità aggiunta senza beneficio proporzionale.</p>
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
-<p><em>Costruire questa base — definizione degli obiettivi, architettura delle istruzioni, supervisione degli agenti — è esattamente il lavoro che <a href="https://doge-ai.it/" target="_blank" rel="noopener">il Doge di Venezia</a> fa con PMI e fondi che vogliono andare oltre l'uso individuale dell'AI.</em></p>
+<p><em>Costruire questa base, definizione degli obiettivi, architettura delle istruzioni, supervisione degli agenti, è esattamente il lavoro che <a href="https://doge-ai.it/" target="_blank" rel="noopener">il Doge di Venezia</a> fa con PMI e fondi che vogliono andare oltre l'uso individuale dell'AI.</em></p>
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <p><strong>Fonti e approfondimenti:</strong> <ul><li><a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener">Anthropic: Claude Code documentation</a></li><li><a href="https://github.com/garrytan/gstack" target="_blank" rel="noopener">GitHub: gstack</a></li><li><a href="https://github.com/smtg-ai/claude-squad" target="_blank" rel="noopener">GitHub: claude-squad</a></li><li><a href="https://github.com/bytedance/deer-flow" target="_blank" rel="noopener">GitHub: deer-flow (ByteDance)</a></li><li><a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener">Stanford HAI: AI Index Report 2024</a></li></ul> <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;"></p>
 <p><em>Tag: agenti AI multipli, Claude Code orchestrazione, multi-agent AI italiano, gstack claude, claude-squad, deer-flow bytedance, AI per aziende italiane, architettura multi-agente, automazione AI PMI, intelligenza artificiale team virtuale, orchestrazione agenti AI, AI transformation Italia</em></p>

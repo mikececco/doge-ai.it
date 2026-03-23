@@ -137,41 +137,34 @@
       <meta itemprop="datePublished" content="2026-03-23">
       <meta itemprop="author" content="Mike Cecconello">
       <div itemprop="articleBody">
-<p><em>Costruire un agente AI che funziona nella demo è semplice. Costruirne uno che funziona in produzione da sei mesi, con milioni di richieste, su casi limite che non avevi previsto: è un'altra cosa.</em></p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <h2>La Trappola della Demo</h2>
-<p>Il pattern è ricorrente: un'azienda costruisce un agente AI, lo testa in un ambiente controllato con dati puliti e casi perfetti, ottiene risultati eccellenti, lo lancia in produzione — e poi inizia il degrado.</p>
+<p>Il pattern è ricorrente: un'azienda costruisce un agente AI, lo testa in un ambiente controllato con dati puliti e casi perfetti, ottiene risultati eccellenti, lo lancia in produzione, e poi inizia il degrado.</p>
 <p>L'output che era ottimo nella demo diventa inconsistente. I casi limite che non erano stati considerati si accumulano. La fiducia degli utenti cala. Il progetto viene ridimensionato o abbandonato.</p>
-<p>Il problema non è il modello. È l'assenza di un sistema di valutazione — quello che nel mondo dell'ingegneria AI si chiama <strong>eval</strong>.</p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+<p>Il problema non è il modello. È l'assenza di un sistema di valutazione, quello che nel mondo dell'ingegneria AI si chiama <strong>eval</strong>.</p>
 <h2>Cosa Sono gli Eval</h2>
 <p>Un eval è un test ripetibile che misura il comportamento di un sistema AI in modo sistematico. È la risposta dell'AI engineering ai test suite del software tradizionale: CI/CD per i sistemi intelligenti.</p>
 <p>Tre componenti definiscono un eval:</p>
-<p><strong>Un test ripetibile</strong>: la stessa richiesta, inviata al sistema 100 volte, dovrebbe produrre output consistenti. Se non lo fa, il sistema non è production-ready.</p>
-<p><strong>Un punteggio deterministico</strong>: una metrica misurabile — accuratezza, completezza, aderenza al formato, correttezza del ragionamento — che permette di confrontare versioni diverse del sistema nel tempo.</p>
-<p><strong>Una rete di sicurezza</strong>: un sistema che gira periodicamente per rilevare il cosiddetto "performance drift" — il degrado graduale della qualità che spesso non viene notato fino a quando non è già significativo.</p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+<p>Un test ripetibile: la stessa richiesta, inviata al sistema 100 volte, dovrebbe produrre output consistenti. Se non lo fa, il sistema non è production-ready.</p>
+<p>Un punteggio deterministico: una metrica misurabile, accuratezza, completezza, aderenza al formato, correttezza del ragionamento, che permette di confrontare versioni diverse del sistema nel tempo.</p>
+<p>Una rete di sicurezza: un sistema che gira periodicamente per rilevare il cosiddetto "performance drift", il degrado graduale della qualità che spesso non viene notato fino a quando non è già significativo.</p>
 <h2>Eval Oggettivi e Soggettivi</h2>
 <p>La domanda più comune quando si introducono gli eval: "ma il mio output è soggettivo, come faccio a misurarlo?"</p>
-<p>La risposta è che la soggettività non preclude la misurazione. Preclude solo la misurazione automatica — non la misurazione in sé.</p>
+<p>La risposta è che la soggettività non preclude la misurazione. Preclude solo la misurazione automatica, non la misurazione in sé.</p>
 <p>Un sistema che genera contenuti editoriali può essere valutato con una rubrica esplicita: il tono è corretto? La struttura è quella richiesta? I fatti sono verificabili? Un esperto umano può applicare questa rubrica su un campione periodico di output e produrre un punteggio comparabile nel tempo.</p>
 <p>La combinazione di eval automatici (per gli aspetti oggettivi) e eval con human-in-the-loop (per gli aspetti soggettivi) è lo standard per i sistemi AI che devono essere affidabili in produzione.</p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <h2>Dove Inserire gli Eval nel Sistema</h2>
 <p>Gli eval non si inseriscono solo alla fine del processo. Si inseriscono a ogni step critico.</p>
 <p>Un agente che recupera informazioni da un database, le analizza e genera un report ha almeno tre punti di eval: la qualità del retrieval (ha trovato le informazioni giuste?), la qualità dell'analisi (ha ragionato correttamente su di esse?), la qualità dell'output finale (il report risponde alla domanda originale?).</p>
 <p>Ogni step è un potenziale punto di fallimento silenzioso. Gli eval lo rendono visibile prima che il problema si accumuli.</p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <h2>Il Loop di Miglioramento</h2>
 <p>Il valore degli eval non è solo diagnostico. È iterativo.</p>
-<p>Una volta stabilita una baseline — il punteggio del sistema nella sua versione corrente — ogni modifica al sistema (cambio di prompt, cambio di modello, cambio di tool) viene misurata contro quella baseline. Il miglioramento o il peggioramento è quantificabile, non percettivo.</p>
+<p>Una volta stabilita una baseline, il punteggio del sistema nella sua versione corrente, ogni modifica al sistema (cambio di prompt, cambio di modello, cambio di tool) viene misurata contro quella baseline. Il miglioramento o il peggioramento è quantificabile, non percettivo.</p>
 <p>Questo trasforma lo sviluppo di sistemi AI da arte a ingegneria: si può ottimizzare in modo sistematico, con evidenza, invece di procedere per intuizione.</p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <h2>La Distinzione che Conta per le PMI</h2>
 <p>Per un'azienda che sta valutando l'adozione di sistemi AI, la distinzione rilevante è questa: un prototipo senza eval è un esperimento. Un sistema con eval è un asset operativo.</p>
 <p>La differenza non è solo tecnica. È di rischio: un sistema senza eval può degradare in modo silenzioso, producendo output scorretti che nessuno rileva finché non è tardi. Un sistema con eval fa sapere quando qualcosa va storto, prima che il problema diventi un danno.</p>
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
-<p><em>Costruire sistemi AI affidabili in produzione — non solo demo convincenti — è uno dei servizi core di <a href="https://doge-ai.it/" target="_blank" rel="noopener">il Doge di Venezia</a> per PMI e fondi che vogliono investire in infrastruttura AI duratura.</em></p>
+<p><em>Costruire sistemi AI affidabili in produzione, non solo demo convincenti, è uno dei servizi core di <a href="https://doge-ai.it/" target="_blank" rel="noopener">il Doge di Venezia</a> per PMI e fondi che vogliono investire in infrastruttura AI duratura.</em></p>
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <p><strong>Fonti:</strong> <ul><li><a href="https://docs.anthropic.com/en/docs/test-and-evaluate" target="_blank" rel="noopener">Anthropic: Evaluations and reliability</a></li><li><a href="https://www.nist.gov/artificial-intelligence" target="_blank" rel="noopener">NIST: AI Risk Management Framework</a></li><li><a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener">Stanford HAI: AI Index Report 2024</a></li></ul> <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;"></p>
 <p><em>Tag: eval AI italiano, affidabilità sistemi AI, AI in produzione, test AI aziende, AI reliability PMI, sistemi AI scalabili, valutazione agenti AI, AI quality assurance, intelligenza artificiale produzione Italia, eval agenti AI, AI testing framework, AI transformation affidabile</em></p>

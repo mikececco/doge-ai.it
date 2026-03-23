@@ -137,36 +137,30 @@
       <meta itemprop="datePublished" content="2026-03-23">
       <meta itemprop="author" content="Mike Cecconello">
       <div itemprop="articleBody">
-<p><em>Un agente AI sempre attivo, accessibile da qualsiasi dispositivo, con i tuoi dati al sicuro — senza dipendere da provider cloud costosi. Il setup che in pochi stanno già usando.</em></p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <h2>Il Problema con i Tool AI "as a Service"</h2>
-<p>La maggior parte dei tool AI consumer risolve il problema immediato — avere un assistente AI accessibile — introducendo una serie di dipendenze: costi mensili crescenti, dati sensibili su server di terzi, limiti di personalizzazione, e la necessità di ripetere il contesto ogni volta che si riapre una sessione.</p>
-<p>L'alternativa, sempre più accessibile, è costruire la propria infrastruttura AI su un VPS — un server virtuale privato — che gira H24, è completamente configurabile, e costa una frazione di un abbonamento enterprise.</p>
+<p>La maggior parte dei tool AI consumer risolve il problema immediato, avere un assistente AI accessibile, introducendo una serie di dipendenze: costi mensili crescenti, dati sensibili su server di terzi, limiti di personalizzazione, e la necessità di ripetere il contesto ogni volta che si riapre una sessione.</p>
+<p>L'alternativa, sempre più accessibile, è costruire la propria infrastruttura AI su un VPS, un server virtuale privato, che gira H24, è completamente configurabile, e costa una frazione di un abbonamento enterprise.</p>
 <p>Il setup descritto in questo articolo porta un agente AI completo online per circa 5-10 euro al mese, con un livello di sicurezza superiore alla media dei tool consumer.</p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <h2>I Componenti del Sistema</h2>
-<p><strong>Il server</strong>: un VPS su Hetzner (provider europeo, datacenter in Germania e Finlandia) con 4-8GB di RAM è sufficiente per la maggior parte dei casi d'uso. Il costo: 5-10 euro al mese. L'Ubuntu Linux viene preinstallato; il setup richiede circa un'ora.</p>
-<p><strong>La rete privata</strong>: Tailscale trasforma il server da macchina accessibile su internet pubblico a dispositivo in una rete privata virtuale. Solo i dispositivi che hai autorizzato — il tuo laptop, il tuo telefono — possono raggiungere il server. Dall'esterno, il server è invisibile.</p>
+<p>Il server: un VPS su Hetzner (provider europeo, datacenter in Germania e Finlandia) con 4-8GB di RAM è sufficiente per la maggior parte dei casi d'uso. Il costo: 5-10 euro al mese. L'Ubuntu Linux viene preinstallato; il setup richiede circa un'ora.</p>
+<p>La rete privata: Tailscale trasforma il server da macchina accessibile su internet pubblico a dispositivo in una rete privata virtuale. Solo i dispositivi che hai autorizzato, il tuo laptop, il tuo telefono, possono raggiungere il server. Dall'esterno, il server è invisibile.</p>
 <p>Questa è la differenza tra avere l'indirizzo di casa pubblicato su Google Maps e vivere in un condominio con portiere: tecnicamente accessibile a chi conosce il percorso, invisibile a tutti gli altri.</p>
-<p><strong>L'orchestratore AI</strong>: sulla macchina gira un sistema come OpenClaw o un setup equivalente che permette di interagire con l'agente tramite Telegram (o altri canali di messaggistica), configurare comportamenti personalizzati, e connettere strumenti come Claude Code, GPT, o altri modelli via API key.</p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+<p>L'orchestratore AI: sulla macchina gira un sistema come OpenClaw o un setup equivalente che permette di interagire con l'agente tramite Telegram (o altri canali di messaggistica), configurare comportamenti personalizzati, e connettere strumenti come Claude Code, GPT, o altri modelli via API key.</p>
 <h2>La Security in Pratica</h2>
 <p>Il rischio principale di qualsiasi macchina connessa a internet è che venga attaccata da bot automatici nelle prime ore dopo il provisioning. La finestra tra "server online" e "server protetto" è il momento più vulnerabile.</p>
 <p>Il processo di hardening riduce questa finestra a zero: configurare Tailscale prima di esporre qualsiasi porta, disabilitare l'accesso SSH dall'internet pubblico, usare chiavi SSH invece di password, aggiornare immediatamente tutti i pacchetti di sistema.</p>
-<p>Con questi passaggi, il server diventa praticamente invisibile agli scanner automatici — riducendo l'attack surface alla sola rete Tailscale, che è crittografata end-to-end.</p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+<p>Con questi passaggi, il server diventa praticamente invisibile agli scanner automatici, riducendo l'attack surface alla sola rete Tailscale, che è crittografata end-to-end.</p>
 <h2>Cosa Si Guadagna con Questa Setup</h2>
-<p><strong>Persistenza del contesto</strong>: l'agente ricorda le conversazioni precedenti, i documenti caricati, le preferenze configurate — senza doverle ripetere ogni sessione.</p>
-<p><strong>Personalizzazione profonda</strong>: il comportamento dell'agente, le sue istruzioni base, i tool a cui ha accesso, i canali di messaggistica supportati — tutto è configurabile nel dettaglio, senza i limiti di un prodotto consumer.</p>
-<p><strong>Privacy dei dati</strong>: documenti sensibili, dati aziendali, conversazioni private rimangono sul server sotto il tuo controllo — non su infrastruttura di terzi.</p>
-<p><strong>Costo prevedibile</strong>: 5-10 euro al mese, indipendentemente da quante richieste vengono processate.</p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+<p>Persistenza del contesto: l'agente ricorda le conversazioni precedenti, i documenti caricati, le preferenze configurate, senza doverle ripetere ogni sessione.</p>
+<p>Personalizzazione profonda: il comportamento dell'agente, le sue istruzioni base, i tool a cui ha accesso, i canali di messaggistica supportati, tutto è configurabile nel dettaglio, senza i limiti di un prodotto consumer.</p>
+<p>Privacy dei dati: documenti sensibili, dati aziendali, conversazioni private rimangono sul server sotto il tuo controllo, non su infrastruttura di terzi.</p>
+<p>Costo prevedibile: 5-10 euro al mese, indipendentemente da quante richieste vengono processate.</p>
 <h2>Chi Dovrebbe Fare Questo Setup</h2>
-<p>Questo approccio ha senso per chi usa l'AI in modo intensivo e vuole un sistema configurato su misura per il proprio workflow specifico — non per chi usa un chatbot occasionalmente.</p>
+<p>Questo approccio ha senso per chi usa l'AI in modo intensivo e vuole un sistema configurato su misura per il proprio workflow specifico, non per chi usa un chatbot occasionalmente.</p>
 <p>Il target pratico: professionisti e manager che interagiscono con strumenti AI più volte al giorno, che hanno dati sensibili da proteggere, e che vogliono un agente che conosca il loro contesto senza dover ripetere ogni volta le stesse istruzioni.</p>
 <p>Il tempo di setup: 1-2 ore per chi ha familiarità di base con terminali e shell. Meno per chi segue una guida passo per passo.</p>
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
-<p><em><a href="https://doge-ai.it/" target="_blank" rel="noopener">Il Doge di Venezia</a> aiuta le aziende a costruire infrastrutture AI sicure e scalabili — dalla configurazione tecnica alla definizione dei workflow operativi.</em></p>
+<p><em><a href="https://doge-ai.it/" target="_blank" rel="noopener">Il Doge di Venezia</a> aiuta le aziende a costruire infrastrutture AI sicure e scalabili, dalla configurazione tecnica alla definizione dei workflow operativi.</em></p>
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
 <p><strong>Fonti:</strong> <ul><li><a href="https://www.hetzner.com/cloud" target="_blank" rel="noopener">Hetzner Cloud</a></li><li><a href="https://tailscale.com" target="_blank" rel="noopener">Tailscale: Zero-trust networking</a></li><li><a href="https://docs.anthropic.com" target="_blank" rel="noopener">Anthropic: Claude API</a></li></ul> <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;"></p>
 <p><em>Tag: VPS AI italiano, infrastruttura AI personale, agente AI server privato, Tailscale sicurezza AI, Hetzner VPS AI, setup AI sicuro, AI privacy aziende, server AI 5 euro, OpenClaw setup, agente AI H24, AI infrastructure Italia, intelligenza artificiale server privato</em></p>
