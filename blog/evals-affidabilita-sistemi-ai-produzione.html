@@ -1,45 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Il Problema che Nessuno Vuole Affrontare: Come Rendere un Sistema AI Affidabile in Produzione — DOGE Italia</title>
-  <meta name="description" content="Costruire un agente AI che funziona nella demo è semplice. Farlo funzionare in produzione da sei mesi è un'altra cosa. Evals, testing sistematico, e il loop di miglioramento.">
+
+  <!-- Primary Meta -->
+  <title>Il Problema che Nessuno Vuole Affrontare: Come Rendere un Sistema AI Affidabile in Produzione — il Doge di Venezia</title>
+  <meta name="description" content="La differenza tra un prototipo AI convincente e un asset operativo affidabile sono gli eval. Test ripetibili, punteggi deterministici, safety net contro il performance drift: la guida pratica.">
+  <meta name="keywords" content="eval AI italiano, affidabilità sistemi AI, AI testing aziende, AI produzione PMI, sistemi AI scalabili, valutazione agenti AI qualità">
+  <meta name="author" content="Mike Cecconello">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://doge-ai.it/blog/evals-affidabilita-sistemi-ai-produzione.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Il Problema che Nessuno Vuole Affrontare: Come Rendere un Sistema AI Affidabile in Produzione">
+  <meta property="og:description" content="La differenza tra un prototipo AI convincente e un asset operativo affidabile sono gli eval. Test ripetibili, punteggi deterministici, safety net contro il performance drift: la guida pratica.">
+  <meta property="og:url" content="https://doge-ai.it/blog/evals-affidabilita-sistemi-ai-produzione.html">
+  <meta property="og:image" content="https://doge-ai.it/css/og-default.jpg">
+  <meta property="og:site_name" content="il Doge di Venezia">
+  <meta property="og:locale" content="it_IT">
+  <meta property="article:published_time" content="2026-03-23">
+  <meta property="article:author" content="Mike Cecconello">
+  <meta property="article:section" content="Ingegneria AI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Il Problema che Nessuno Vuole Affrontare: Come Rendere un Sistema AI Affidabile in Produzione">
+  <meta name="twitter:description" content="La differenza tra un prototipo AI convincente e un asset operativo affidabile sono gli eval. Test ripetibili, punteggi deterministici, safety net contro il performance drift: la guida pratica.">
+  <meta name="twitter:image" content="https://doge-ai.it/css/og-default.jpg">
+  <meta name="twitter:site" content="@dogeai_it">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Il Problema che Nessuno Vuole Affrontare: Come Rendere un Sistema AI Affidabile in Produzione","description":"La differenza tra un prototipo AI convincente e un asset operativo affidabile sono gli eval. Test ripetibili, punteggi deterministici, safety net contro il performance drift: la guida pratica.","author":{"@type":"Person","name":"Mike Cecconello"},"publisher":{"@type":"Organization","name":"il Doge di Venezia","url":"https://doge-ai.it"},"datePublished":"2026-03-23","dateModified":"2026-03-23","url":"https://doge-ai.it/blog/evals-affidabilita-sistemi-ai-produzione.html","image":"https://doge-ai.it/css/og-default.jpg","inLanguage":"it-IT","keywords":"eval AI italiano, affidabilità sistemi AI, AI testing aziende, AI produzione PMI, sistemi AI scalabili, valutazione agenti AI qualità"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://doge-ai.it"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://doge-ai.it/blog/"},{"@type":"ListItem","position":3,"name":"Il Problema che Nessuno Vuole Affrontare: Come Rendere un Sistema AI Affidabile in Produzione","item":"https://doge-ai.it/blog/evals-affidabilita-sistemi-ai-produzione.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Cosa sono gli eval nei sistemi AI?","acceptedAnswer":{"@type":"Answer","text":"Un eval è un test ripetibile che misura il comportamento di un sistema AI in modo sistematico. È composto da tre elementi: un test ripetibile (stessa richiesta, output consistente), un punteggio deterministico (metrica misurabile), e una safety net che rileva il performance drift nel tempo."}},{"@type":"Question","name":"Perché i sistemi AI degradano in produzione?","acceptedAnswer":{"@type":"Answer","text":"Il degrado può avvenire per cambiamenti nei dati di input, aggiornamenti del modello sottostante, accumulo di casi limite non previsti, o deriva graduale della qualità che nessuno rileva. Senza eval che monitorano il comportamento nel tempo, questo degrado rimane invisibile fino a quando non causa danni."}},{"@type":"Question","name":"Come si implementano gli eval per output soggettivi?","acceptedAnswer":{"@type":"Answer","text":"Per output soggettivi (contenuti editoriali, tono di voce, qualità creativa) si definisce una rubrica esplicita con criteri misurabili: aderenza al tono, struttura corretta, accuratezza fattuale. Un esperto umano applica periodicamente questa rubrica su un campione di output, producendo un punteggio comparabile nel tempo."}},{"@type":"Question","name":"Qual è la differenza tra un prototipo AI e un sistema AI production-ready?","acceptedAnswer":{"@type":"Answer","text":"Un prototipo funziona in condizioni controllate con dati puliti. Un sistema production-ready funziona con gli stessi risultati su milioni di richieste, con dati rumorosi e casi limite non previsti. La differenza è il testing sistematico: eval end-to-end e eval intermedi a ogni step critico del processo."}}]}</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <style>
-    .post-header { padding: calc(var(--nav-height) + 5rem) 0 3rem; border-bottom: .5px solid rgba(255,255,255,.08); max-width: 760px; }
-    .post-header .eyebrow { margin-bottom: 1.5rem; }
-    .post-header h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-style: italic; line-height: 1.1; margin-bottom: 1.5rem; }
-    .post-header .post-meta { display: flex; gap: 1.5rem; align-items: center; font-size: .8rem; color: rgba(255,255,255,.35); }
-    .post-header .post-meta strong { color: rgba(255,255,255,.6); font-weight: 500; }
-    .post-body-wrap { padding: 4rem 0 8rem; display: grid; grid-template-columns: 1fr 280px; gap: 5rem; align-items: start; }
-    .post-body { max-width: 700px; }
-    .post-body h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-style: italic; margin: 3rem 0 1rem; line-height: 1.2; }
-    .post-body h3 { font-size: 1.1rem; margin: 2.5rem 0 .75rem; color: #fff; }
-    .post-body p { font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,.75); margin-bottom: 1.5rem; }
-    .post-body ul { margin: 1.5rem 0; padding-left: 1.5rem; list-style: disc; }
-    .post-body li { font-size: 1rem; color: rgba(255,255,255,.7); margin-bottom: .5rem; line-height: 1.7; }
-    .post-body strong { color: #fff; }
-    .post-body blockquote { border-left: 3px solid #FAED26; padding: 1rem 1.5rem; margin: 2rem 0; background: rgba(250,237,38,.05); }
-    .post-body blockquote p { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 1.2rem; color: rgba(255,255,255,.85); }
-    .post-body pre { background: #111; border: .5px solid rgba(255,255,255,.1); padding: 1.5rem 2rem; margin: 2rem 0; overflow-x: auto; font-size: .875rem; line-height: 1.6; color: rgba(255,255,255,.8); font-family: monospace; }
-    .post-body code { font-family: monospace; font-size: .875rem; color: #FAED26; background: rgba(250,237,38,.08); padding: .1em .4em; }
-    .post-body pre code { background: none; color: rgba(255,255,255,.8); padding: 0; }
-    .post-sidebar { position: sticky; top: calc(var(--nav-height) + 2rem); }
-    .sidebar-card { background: #111; border: .5px solid rgba(255,255,255,.08); padding: 2rem; margin-bottom: 1.5rem; }
-    .sidebar-card h4 { font-size: .85rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.4); margin-bottom: 1rem; }
-    .sidebar-card p { font-size: .85rem; color: rgba(255,255,255,.55); margin-bottom: 1rem; }
-    .sidebar-card .btn-tile { display: inline-block; background: #FAED26; color: #0a0a0a; padding: .75rem 1.5rem; font-size: .85rem; font-weight: 700; text-decoration: none; letter-spacing: .02em; }
-    .back-link { display: inline-flex; align-items: center; gap: .5rem; font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.4); margin-bottom: 2rem; transition: color .3s; text-decoration: none; }
-    .back-link:hover { color: #FAED26; }
-    .back-link::before { content: '←'; }
-    @media(max-width: 900px) { .post-body-wrap { grid-template-columns: 1fr; gap: 3rem; } .post-sidebar { position: static; } }
+    .post-header{padding:calc(var(--nav-height) + 5rem) 0 3rem;border-bottom:.5px solid rgba(255,255,255,.08);max-width:760px}
+    .post-header .eyebrow{margin-bottom:1.5rem}
+    .post-header h1{font-size:clamp(2.2rem,5vw,3.8rem);font-style:italic;line-height:1.1;margin-bottom:1.5rem}
+    .post-header .post-meta{display:flex;gap:1.5rem;align-items:center;font-size:.8rem;color:rgba(255,255,255,.35)}
+    .post-header .post-meta strong{color:rgba(255,255,255,.6);font-weight:500}
+    .post-body-wrap{padding:4rem 0 8rem;display:grid;grid-template-columns:1fr 280px;gap:5rem;align-items:start}
+    .post-body{max-width:700px}
+    .post-body h2{font-size:clamp(1.4rem,2.5vw,2rem);font-style:italic;margin:3rem 0 1rem;line-height:1.2}
+    .post-body h3{font-size:1.1rem;margin:2.5rem 0 .75rem;color:#fff}
+    .post-body p{font-size:1.05rem;line-height:1.8;color:rgba(255,255,255,.75);margin-bottom:1.5rem}
+    .post-body ul{margin:1.5rem 0;padding-left:1.5rem;list-style:disc}
+    .post-body li{font-size:1rem;color:rgba(255,255,255,.7);margin-bottom:.5rem;line-height:1.7}
+    .post-body strong{color:#fff}
+    .post-body blockquote{border-left:3px solid #FAED26;padding:1rem 1.5rem;margin:2rem 0;background:rgba(250,237,38,.05)}
+    .post-body blockquote p{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:rgba(255,255,255,.85)}
+    .post-body pre{background:#111;border:.5px solid rgba(255,255,255,.1);padding:1.5rem 2rem;margin:2rem 0;overflow-x:auto;font-size:.875rem;line-height:1.6;color:rgba(255,255,255,.8);font-family:monospace}
+    .post-body code{font-family:monospace;font-size:.875rem;color:#FAED26;background:rgba(250,237,38,.08);padding:.1em .4em}
+    .post-body pre code{background:none;color:rgba(255,255,255,.8);padding:0}
+    .faq-section{margin-top:4rem;padding-top:2rem;border-top:.5px solid rgba(255,255,255,.08)}
+    .faq-section h2{font-size:clamp(1.4rem,2.5vw,2rem);font-style:italic;margin-bottom:2rem}
+    .faq-item{margin-bottom:2rem;padding-bottom:2rem;border-bottom:.5px solid rgba(255,255,255,.06)}
+    .faq-item:last-child{border-bottom:none}
+    .faq-item h3{font-size:1rem;font-weight:600;color:#fff;margin-bottom:.75rem}
+    .faq-item p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.7;margin:0}
+    .post-sidebar{position:sticky;top:calc(var(--nav-height) + 2rem)}
+    .sidebar-card{background:#111;border:.5px solid rgba(255,255,255,.08);padding:2rem;margin-bottom:1.5rem}
+    .sidebar-card h4{font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:1rem}
+    .sidebar-card p{font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:1rem}
+    .sidebar-card .btn-tile{display:inline-block;background:#FAED26;color:#0a0a0a;padding:.75rem 1.5rem;font-size:.85rem;font-weight:700;text-decoration:none;letter-spacing:.02em}
+    .back-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:2rem;transition:color .3s;text-decoration:none}
+    .back-link:hover{color:#FAED26}
+    .back-link::before{content:'←'}
+    @media(max-width:900px){.post-body-wrap{grid-template-columns:1fr;gap:3rem}.post-sidebar{position:static}}
   </style>
 </head>
 <body class="loaded">
+
 <nav class="nav scrolled">
   <div class="container">
     <a href="/" class="nav-logo">DOGE</a>
@@ -65,8 +103,21 @@
     <a href="/blog/">Blog</a><a href="/inizia.html">Inizia</a>
   </div>
 </div>
+
+<!-- Breadcrumb (visible) -->
+<div class="container" style="padding-top:calc(var(--nav-height) + 1.5rem)">
+  <nav aria-label="Breadcrumb" style="font-size:.75rem;color:rgba(255,255,255,.3)">
+    <a href="/" style="color:rgba(255,255,255,.4);text-decoration:none">Home</a>
+    <span style="margin:0 .5rem">/</span>
+    <a href="/blog/" style="color:rgba(255,255,255,.4);text-decoration:none">Blog</a>
+    <span style="margin:0 .5rem">/</span>
+    <span style="color:rgba(255,255,255,.5)">Ingegneria AI</span>
+  </nav>
+</div>
+
+<!-- Post Header -->
 <div class="container">
-  <div class="post-header" style="padding-bottom:3rem;margin-top:calc(var(--nav-height) + 3rem);">
+  <div class="post-header" style="padding-top:2rem;margin-top:0">
     <a href="/blog/" class="back-link">All posts</a>
     <p class="eyebrow">Ingegneria AI</p>
     <h1>Il Problema che Nessuno Vuole Affrontare: Come Rendere un Sistema AI Affidabile in Produzione</h1>
@@ -77,105 +128,111 @@
     </div>
   </div>
 </div>
+
+<!-- Post Body -->
 <div class="container">
   <div class="post-body-wrap">
-    <article class="post-body">
-
-
+    <article class="post-body" itemscope itemtype="https://schema.org/BlogPosting">
+      <meta itemprop="headline" content="Il Problema che Nessuno Vuole Affrontare: Come Rendere un Sistema AI Affidabile in Produzione">
+      <meta itemprop="datePublished" content="2026-03-23">
+      <meta itemprop="author" content="Mike Cecconello">
+      <div itemprop="articleBody">
 <p><em>Costruire un agente AI che funziona nella demo è semplice. Costruirne uno che funziona in produzione da sei mesi, con milioni di richieste, su casi limite che non avevi previsto: è un'altra cosa.</em></p>
-
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
-
 <h2>La Trappola della Demo</h2>
-
-<p>Il pattern è ricorrente: un'azienda costruisce un agente AI, lo testa in un ambiente controllato con dati puliti e casi perfetti, ottiene risultati eccellenti, lo lancia in produzione — e poi inizia il degrado.
-</p>
-<p>L'output che era ottimo nella demo diventa inconsistente. I casi limite che non erano stati considerati si accumulano. La fiducia degli utenti cala. Il progetto viene ridimensionato o abbandonato.
-</p>
-<p>Il problema non è il modello. È l'assenza di un sistema di valutazione — quello che nel mondo dell'ingegneria AI si chiama <strong>eval</strong>.
-
+<p>Il pattern è ricorrente: un'azienda costruisce un agente AI, lo testa in un ambiente controllato con dati puliti e casi perfetti, ottiene risultati eccellenti, lo lancia in produzione — e poi inizia il degrado.</p>
+<p>L'output che era ottimo nella demo diventa inconsistente. I casi limite che non erano stati considerati si accumulano. La fiducia degli utenti cala. Il progetto viene ridimensionato o abbandonato.</p>
+<p>Il problema non è il modello. È l'assenza di un sistema di valutazione — quello che nel mondo dell'ingegneria AI si chiama <strong>eval</strong>.</p>
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
-
 <h2>Cosa Sono gli Eval</h2>
-
-<p>Un eval è un test ripetibile che misura il comportamento di un sistema AI in modo sistematico. È la risposta dell'AI engineering ai test suite del software tradizionale: CI/CD per i sistemi intelligenti.
-</p>
-<p>Tre componenti definiscono un eval:
-</p>
-<p><strong>Un test ripetibile</strong>: la stessa richiesta, inviata al sistema 100 volte, dovrebbe produrre output consistenti. Se non lo fa, il sistema non è production-ready.
-
+<p>Un eval è un test ripetibile che misura il comportamento di un sistema AI in modo sistematico. È la risposta dell'AI engineering ai test suite del software tradizionale: CI/CD per i sistemi intelligenti.</p>
+<p>Tre componenti definiscono un eval:</p>
+<p><strong>Un test ripetibile</strong>: la stessa richiesta, inviata al sistema 100 volte, dovrebbe produrre output consistenti. Se non lo fa, il sistema non è production-ready.</p>
 <p><strong>Un punteggio deterministico</strong>: una metrica misurabile — accuratezza, completezza, aderenza al formato, correttezza del ragionamento — che permette di confrontare versioni diverse del sistema nel tempo.</p>
-
 <p><strong>Una rete di sicurezza</strong>: un sistema che gira periodicamente per rilevare il cosiddetto "performance drift" — il degrado graduale della qualità che spesso non viene notato fino a quando non è già significativo.</p>
-
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
-
 <h2>Eval Oggettivi e Soggettivi</h2>
-
-<p>La domanda più comune quando si introducono gli eval: "ma il mio output è soggettivo, come faccio a misurarlo?"
-</p>
-<p>La risposta è che la soggettività non preclude la misurazione. Preclude solo la misurazione automatica — non la misurazione in sé.
-</p>
-<p>Un sistema che genera contenuti editoriali può essere valutato con una rubrica esplicita: il tono è corretto? La struttura è quella richiesta? I fatti sono verificabili? Un esperto umano può applicare questa rubrica su un campione periodico di output e produrre un punteggio comparabile nel tempo.
-</p>
-<p>La combinazione di eval automatici (per gli aspetti oggettivi) e eval con human-in-the-loop (per gli aspetti soggettivi) è lo standard per i sistemi AI che devono essere affidabili in produzione.
-</p>
+<p>La domanda più comune quando si introducono gli eval: "ma il mio output è soggettivo, come faccio a misurarlo?"</p>
+<p>La risposta è che la soggettività non preclude la misurazione. Preclude solo la misurazione automatica — non la misurazione in sé.</p>
+<p>Un sistema che genera contenuti editoriali può essere valutato con una rubrica esplicita: il tono è corretto? La struttura è quella richiesta? I fatti sono verificabili? Un esperto umano può applicare questa rubrica su un campione periodico di output e produrre un punteggio comparabile nel tempo.</p>
+<p>La combinazione di eval automatici (per gli aspetti oggettivi) e eval con human-in-the-loop (per gli aspetti soggettivi) è lo standard per i sistemi AI che devono essere affidabili in produzione.</p>
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
-
 <h2>Dove Inserire gli Eval nel Sistema</h2>
-
-<p>Gli eval non si inseriscono solo alla fine del processo. Si inseriscono a ogni step critico.
-</p>
-<p>Un agente che recupera informazioni da un database, le analizza e genera un report ha almeno tre punti di eval: la qualità del retrieval (ha trovato le informazioni giuste?), la qualità dell'analisi (ha ragionato correttamente su di esse?), la qualità dell'output finale (il report risponde alla domanda originale?).
-</p>
-<p>Ogni step è un potenziale punto di fallimento silenzioso. Gli eval lo rendono visibile prima che il problema si accumuli.
-</p>
+<p>Gli eval non si inseriscono solo alla fine del processo. Si inseriscono a ogni step critico.</p>
+<p>Un agente che recupera informazioni da un database, le analizza e genera un report ha almeno tre punti di eval: la qualità del retrieval (ha trovato le informazioni giuste?), la qualità dell'analisi (ha ragionato correttamente su di esse?), la qualità dell'output finale (il report risponde alla domanda originale?).</p>
+<p>Ogni step è un potenziale punto di fallimento silenzioso. Gli eval lo rendono visibile prima che il problema si accumuli.</p>
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
-
 <h2>Il Loop di Miglioramento</h2>
-
-<p>Il valore degli eval non è solo diagnostico. È iterativo.
-</p>
-<p>Una volta stabilita una baseline — il punteggio del sistema nella sua versione corrente — ogni modifica al sistema (cambio di prompt, cambio di modello, cambio di tool) viene misurata contro quella baseline. Il miglioramento o il peggioramento è quantificabile, non percettivo.
-</p>
-<p>Questo trasforma lo sviluppo di sistemi AI da arte a ingegneria: si può ottimizzare in modo sistematico, con evidenza, invece di procedere per intuizione.
-</p>
+<p>Il valore degli eval non è solo diagnostico. È iterativo.</p>
+<p>Una volta stabilita una baseline — il punteggio del sistema nella sua versione corrente — ogni modifica al sistema (cambio di prompt, cambio di modello, cambio di tool) viene misurata contro quella baseline. Il miglioramento o il peggioramento è quantificabile, non percettivo.</p>
+<p>Questo trasforma lo sviluppo di sistemi AI da arte a ingegneria: si può ottimizzare in modo sistematico, con evidenza, invece di procedere per intuizione.</p>
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
-
 <h2>La Distinzione che Conta per le PMI</h2>
-
-<p>Per un'azienda che sta valutando l'adozione di sistemi AI, la distinzione rilevante è questa: un prototipo senza eval è un esperimento. Un sistema con eval è un asset operativo.
-</p>
-<p>La differenza non è solo tecnica. È di rischio: un sistema senza eval può degradare in modo silenzioso, producendo output scorretti che nessuno rileva finché non è tardi. Un sistema con eval fa sapere quando qualcosa va storto, prima che il problema diventi un danno.
-</p>
+<p>Per un'azienda che sta valutando l'adozione di sistemi AI, la distinzione rilevante è questa: un prototipo senza eval è un esperimento. Un sistema con eval è un asset operativo.</p>
+<p>La differenza non è solo tecnica. È di rischio: un sistema senza eval può degradare in modo silenzioso, producendo output scorretti che nessuno rileva finché non è tardi. Un sistema con eval fa sapere quando qualcosa va storto, prima che il problema diventi un danno.</p>
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
-
 <p><em>Costruire sistemi AI affidabili in produzione — non solo demo convincenti — è uno dei servizi core di <a href="https://doge-ai.it/" target="_blank" rel="noopener">il Doge di Venezia</a> per PMI e fondi che vogliono investire in infrastruttura AI duratura.</em></p>
-
 <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+<p><strong>Fonti:</strong> <ul><li><a href="https://docs.anthropic.com/en/docs/test-and-evaluate" target="_blank" rel="noopener">Anthropic: Evaluations and reliability</a></li><li><a href="https://www.nist.gov/artificial-intelligence" target="_blank" rel="noopener">NIST: AI Risk Management Framework</a></li><li><a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener">Stanford HAI: AI Index Report 2024</a></li></ul> <hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;"></p>
+<p><em>Tag: eval AI italiano, affidabilità sistemi AI, AI in produzione, test AI aziende, AI reliability PMI, sistemi AI scalabili, valutazione agenti AI, AI quality assurance, intelligenza artificiale produzione Italia, eval agenti AI, AI testing framework, AI transformation affidabile</em></p>
+      </div>
 
-<p><strong>Fonti:</strong></p>
-<ul><li><a href="https://docs.anthropic.com/en/docs/test-and-evaluate" target="_blank" rel="noopener">Anthropic: Evaluations and reliability</a></li>
-<p><li><a href="https://www.nist.gov/artificial-intelligence" target="_blank" rel="noopener">NIST: AI Risk Management Framework</a></li>
-<li><a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener">Stanford HAI: AI Index Report 2024</a></li></ul></p>
-<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+    <div class="related-posts" style="margin-top:4rem;padding-top:2rem;border-top:.5px solid rgba(255,255,255,.08);">
+      <h3 style="font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:1.5rem;">Articoli correlati</h3>
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li style="margin-bottom:.75rem;"><a href="/blog/ai-obbligo-non-opzione-claude-code.html" style="color:rgba(255,255,255,.6);font-size:.95rem;text-decoration:none;border-bottom:.5px solid rgba(255,255,255,.15);padding-bottom:.1em;">L'AI Non È un'Opzione: Cosa Succede Quando Diventa Obbligo Aziendale</a></li><li style="margin-bottom:.75rem;"><a href="/blog/agenti-multipli-claude-ecosistema-orchestrazione.html" style="color:rgba(255,255,255,.6);font-size:.95rem;text-decoration:none;border-bottom:.5px solid rgba(255,255,255,.15);padding-bottom:.1em;">Da Claude a un Team Virtuale: L'Ecosistema degli Agenti Multipli</a></li><li style="margin-bottom:.75rem;"><a href="/blog/insostituibili-era-ai-tre-cose.html" style="color:rgba(255,255,255,.6);font-size:.95rem;text-decoration:none;border-bottom:.5px solid rgba(255,255,255,.15);padding-bottom:.1em;">Insostituibili nell'Era dell'AI: Le Tre Cose che Contano</a></li>
+      </ul>
+    </div>
 
-<p><em>Tag: eval AI italiano, affidabilità sistemi AI, AI in produzione, test AI aziende, AI reliability PMI, sistemi AI scalabili, valutazione agenti AI, AI quality assurance, intelligenza artificiale produzione Italia, eval agenti AI, AI testing framework, AI transformation affidabile</em>
-</p>
+    <section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+      <h2>Domande Frequenti</h2>
+      
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Cosa sono gli eval nei sistemi AI?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Un eval è un test ripetibile che misura il comportamento di un sistema AI in modo sistematico. È composto da tre elementi: un test ripetibile (stessa richiesta, output consistente), un punteggio deterministico (metrica misurabile), e una safety net che rileva il performance drift nel tempo.</p>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Perché i sistemi AI degradano in produzione?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Il degrado può avvenire per cambiamenti nei dati di input, aggiornamenti del modello sottostante, accumulo di casi limite non previsti, o deriva graduale della qualità che nessuno rileva. Senza eval che monitorano il comportamento nel tempo, questo degrado rimane invisibile fino a quando non causa danni.</p>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Come si implementano gli eval per output soggettivi?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Per output soggettivi (contenuti editoriali, tono di voce, qualità creativa) si definisce una rubrica esplicita con criteri misurabili: aderenza al tono, struttura corretta, accuratezza fattuale. Un esperto umano applica periodicamente questa rubrica su un campione di output, producendo un punteggio comparabile nel tempo.</p>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Qual è la differenza tra un prototipo AI e un sistema AI production-ready?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Un prototipo funziona in condizioni controllate con dati puliti. Un sistema production-ready funziona con gli stessi risultati su milioni di richieste, con dati rumorosi e casi limite non previsti. La differenza è il testing sistematico: eval end-to-end e eval intermedi a ogni step critico del processo.</p>
+        </div>
+      </div>
+    </section>
     </article>
+
     <aside class="post-sidebar">
       <div class="sidebar-card">
         <h4>Trasforma la tua azienda</h4>
         <p>Scopri come portare l'AI nella tua PMI come infrastruttura operativa — non come tool individuale.</p>
         <a href="/inizia.html" class="btn-tile">Prenota una call →</a>
       </div>
+      <div class="sidebar-card">
+        <h4>Il Blog</h4>
+        <p>Tutti gli articoli su AI transformation per PMI e fondi italiani.</p>
+        <a href="/blog/" style="font-size:.85rem;color:#FAED26;text-decoration:none;">Vai al blog →</a>
+      </div>
     </aside>
   </div>
 </div>
+
 <footer class="footer">
   <div class="footer-inner">
     <span class="footer-logo">DOGE</span>
-    <span style="font-size:.8rem;color:rgba(255,255,255,.3)">&copy; 2026 DOGE Italia. All rights reserved.</span>
+    <span style="font-size:.8rem;color:rgba(255,255,255,.3)">&copy; 2026 il Doge di Venezia. All rights reserved.</span>
     <div class="footer-links">
       <a href="mailto:human@doge.it">human@doge.it</a>
       <a href="#">Twitter</a>
@@ -183,6 +240,7 @@
     </div>
   </div>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 <script src="../js/main.js"></script>
 </body>
