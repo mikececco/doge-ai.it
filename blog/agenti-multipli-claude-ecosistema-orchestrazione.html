@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Da Claude a un Team Virtuale: L'Ecosistema degli Agenti Multipli che Sta Cambiando il Lavoro Tecnico — DOGE Italia</title>
+  <meta name="description" content="gstack, cmux, claude-squad, deer-flow: i tool open source che trasformano un singolo modello AI in un team virtuale che lavora in parallelo. Una panoramica dei progetti più rilevanti.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .post-header { padding: calc(var(--nav-height) + 5rem) 0 3rem; border-bottom: .5px solid rgba(255,255,255,.08); max-width: 760px; }
+    .post-header .eyebrow { margin-bottom: 1.5rem; }
+    .post-header h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-style: italic; line-height: 1.1; margin-bottom: 1.5rem; }
+    .post-header .post-meta { display: flex; gap: 1.5rem; align-items: center; font-size: .8rem; color: rgba(255,255,255,.35); }
+    .post-header .post-meta strong { color: rgba(255,255,255,.6); font-weight: 500; }
+    .post-body-wrap { padding: 4rem 0 8rem; display: grid; grid-template-columns: 1fr 280px; gap: 5rem; align-items: start; }
+    .post-body { max-width: 700px; }
+    .post-body h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-style: italic; margin: 3rem 0 1rem; line-height: 1.2; }
+    .post-body h3 { font-size: 1.1rem; margin: 2.5rem 0 .75rem; color: #fff; }
+    .post-body p { font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,.75); margin-bottom: 1.5rem; }
+    .post-body ul { margin: 1.5rem 0; padding-left: 1.5rem; list-style: disc; }
+    .post-body li { font-size: 1rem; color: rgba(255,255,255,.7); margin-bottom: .5rem; line-height: 1.7; }
+    .post-body strong { color: #fff; }
+    .post-body blockquote { border-left: 3px solid #FAED26; padding: 1rem 1.5rem; margin: 2rem 0; background: rgba(250,237,38,.05); }
+    .post-body blockquote p { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 1.2rem; color: rgba(255,255,255,.85); }
+    .post-body pre { background: #111; border: .5px solid rgba(255,255,255,.1); padding: 1.5rem 2rem; margin: 2rem 0; overflow-x: auto; font-size: .875rem; line-height: 1.6; color: rgba(255,255,255,.8); font-family: monospace; }
+    .post-body code { font-family: monospace; font-size: .875rem; color: #FAED26; background: rgba(250,237,38,.08); padding: .1em .4em; }
+    .post-body pre code { background: none; color: rgba(255,255,255,.8); padding: 0; }
+    .post-sidebar { position: sticky; top: calc(var(--nav-height) + 2rem); }
+    .sidebar-card { background: #111; border: .5px solid rgba(255,255,255,.08); padding: 2rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-size: .85rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.4); margin-bottom: 1rem; }
+    .sidebar-card p { font-size: .85rem; color: rgba(255,255,255,.55); margin-bottom: 1rem; }
+    .sidebar-card .btn-tile { display: inline-block; background: #FAED26; color: #0a0a0a; padding: .75rem 1.5rem; font-size: .85rem; font-weight: 700; text-decoration: none; letter-spacing: .02em; }
+    .back-link { display: inline-flex; align-items: center; gap: .5rem; font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.4); margin-bottom: 2rem; transition: color .3s; text-decoration: none; }
+    .back-link:hover { color: #FAED26; }
+    .back-link::before { content: '←'; }
+    @media(max-width: 900px) { .post-body-wrap { grid-template-columns: 1fr; gap: 3rem; } .post-sidebar { position: static; } }
+  </style>
+</head>
+<body class="loaded">
+<nav class="nav scrolled">
+  <div class="container">
+    <a href="/" class="nav-logo">DOGE</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/trasformazione-ai.html">Trasformazione AI</a>
+      <a href="/ingegneria-ai.html">Ingegneria AI</a>
+      <a href="/chi-siamo.html">Chi Siamo</a>
+      <a href="/blog/" style="color:#FAED26">Blog</a>
+      <a href="/inizia.html" class="btn btn-primary nav-cta">Inizia</a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <div class="mobile-menu-blocks">
+    <div class="menu-block"></div><div class="menu-block"></div><div class="menu-block"></div>
+    <div class="menu-block"></div><div class="menu-block"></div><div class="menu-block"></div>
+  </div>
+  <div class="mobile-menu-content">
+    <a href="/">Home</a><a href="/trasformazione-ai.html">Trasformazione AI</a>
+    <a href="/ingegneria-ai.html">Ingegneria AI</a><a href="/chi-siamo.html">Chi Siamo</a>
+    <a href="/blog/">Blog</a><a href="/inizia.html">Inizia</a>
+  </div>
+</div>
+<div class="container">
+  <div class="post-header" style="padding-bottom:3rem;margin-top:calc(var(--nav-height) + 3rem);">
+    <a href="/blog/" class="back-link">All posts</a>
+    <p class="eyebrow">Architettura AI</p>
+    <h1>Da Claude a un Team Virtuale: L'Ecosistema degli Agenti Multipli che Sta Cambiando il Lavoro Tecnico</h1>
+    <div class="post-meta">
+      <span>By <strong>Mike Cecconello</strong></span>
+      <span>23 Marzo 2026</span>
+      <span>6 min read</span>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="post-body-wrap">
+    <article class="post-body">
+
+
+<p><em>Un solo modello AI che risponde a domande è uno strumento. Cinque agenti che lavorano in parallelo su task diversi è un'infrastruttura. La differenza non è tecnica — è operativa.</em></p>
+
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<h2>Il Salto che Pochi Hanno Fatto</h2>
+
+<p>Usare Claude come assistente è ormai diffuso. Ma c'è un livello successivo che la maggior parte delle organizzazioni non ha ancora toccato: l'orchestrazione multi-agente.
+</p>
+<p>Non si tratta di avere più finestre di chat aperte. Si tratta di sistemi dove un agente principale scompone un obiettivo complesso, delega a sub-agenti specializzati, raccoglie i risultati e produce un output finale — il tutto con supervisione umana minima o nulla.
+</p>
+<p>Nell'ultimo anno, su GitHub sono emersi decine di progetti open source che costruiscono esattamente questo tipo di architettura. Ecco i più rilevanti per chi vuole capire dove sta andando il lavoro tecnico ad alto valore.
+</p>
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<h2>I Tool che Contano</h2>
+
+<h3>Team Virtuale di Ingegneria</h3>
+
+<p><strong>gstack</strong> trasforma Claude Code in un team virtuale di ingegneria. Invece di un agente che scrive codice in sequenza, coordina più istanze che lavorano su parti diverse del problema in parallelo — come avere tre sviluppatori sullo stesso codebase, senza i costi fissi di tre sviluppatori.</p>
+
+<p><strong>SWE-AF</strong> (Agent Field) va ancora oltre: una singola API call è sufficiente per istanziare un team di ingegneri AI completo, con ruoli definiti e flusso di lavoro strutturato. Output di un team, latenza di un singolo agente.</p>
+
+<h3>Parallelizzazione dei Task</h3>
+
+<p><strong>cmux</strong> e <strong>claude-squad</strong> affrontano il problema da angolazioni diverse: entrambi permettono di eseguire più agenti Claude in parallelo, rispettivamente in ambiente web e terminale. Il risultato pratico è che task che normalmente si eseguono in sequenza — ricerca, analisi, redazione, revisione — diventano concorrenti.</p>
+
+<p><strong>figaro</strong> porta l'orchestrazione di fleet di agenti sul desktop, rendendo accessibile la gestione di processi multi-agente complessi senza infrastruttura cloud dedicata.</p>
+
+<h3>Sub-agenti e Sandbox</h3>
+
+<p><strong>deer-flow</strong> di ByteDance introduce il concetto di sub-agenti attivabili attraverso skill predefinite, ciascuno eseguito in sandbox isolata. La separazione tra agenti riduce il rischio di contaminazione del contesto e aumenta la predicibilità degli output su task lunghi.</p>
+
+<p><strong>Allice</strong> e <strong>Agent Alchemy</strong> completano il quadro: il primo mappa task complessi in architetture di agenti dinamiche; il secondo combina Claude Code con plugin e gestione di task per workflow personalizzabili.</p>
+
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<h2>Cosa Significa in Pratica</h2>
+
+<p>Questi strumenti non sono giocattoli per sviluppatori. Sono i prototipi delle infrastrutture operative che tra due anni saranno standard nelle organizzazioni tech.
+</p>
+<p>Il pattern comune è chiaro: <strong>la produttività non scala aumentando il numero di persone che usano AI individualmente. Scala costruendo sistemi dove gli agenti collaborano.</strong>
+
+<p>Per una PMI o un fondo che sta valutando come strutturare l'adozione AI, la domanda non è più "quale modello usiamo?" ma "quanti processi possiamo parallelizzare, e chi li supervisiona?"
+</p>
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<h2>Il Vincolo che Rimane Umano</h2>
+
+<p>La complessità di questi sistemi non sta nell'AI — sta nella definizione degli obiettivi e nella supervisione degli output. Un agente che lavora su istruzioni vaghe in un sistema multi-agente amplifica il problema, non lo risolve.
+</p>
+<p>Le organizzazioni che stanno costruendo vantaggio reale con questi strumenti hanno risolto prima il problema a monte: sanno descrivere con precisione cosa vogliono, come appare il successo, e quali sono i criteri di verifica. Solo allora l'orchestrazione multi-agente diventa un moltiplicatore.
+</p>
+<p>Senza quella base, è complessità aggiunta senza beneficio proporzionale.
+</p>
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<p><em>Costruire questa base — definizione degli obiettivi, architettura delle istruzioni, supervisione degli agenti — è esattamente il lavoro che <a href="https://doge-ai.it/" target="_blank" rel="noopener">il Doge di Venezia</a> fa con PMI e fondi che vogliono andare oltre l'uso individuale dell'AI.</em></p>
+
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<p><strong>Fonti e approfondimenti:</strong></p>
+<ul><li><a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener">Anthropic: Claude Code documentation</a></li>
+<p><li><a href="https://github.com/garrytan/gstack" target="_blank" rel="noopener">GitHub: gstack</a></li>
+<li><a href="https://github.com/smtg-ai/claude-squad" target="_blank" rel="noopener">GitHub: claude-squad</a></li>
+<li><a href="https://github.com/bytedance/deer-flow" target="_blank" rel="noopener">GitHub: deer-flow (ByteDance)</a></li>
+<li><a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener">Stanford HAI: AI Index Report 2024</a></li></ul></p>
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<p><em>Tag: agenti AI multipli, Claude Code orchestrazione, multi-agent AI italiano, gstack claude, claude-squad, deer-flow bytedance, AI per aziende italiane, architettura multi-agente, automazione AI PMI, intelligenza artificiale team virtuale, orchestrazione agenti AI, AI transformation Italia</em>
+</p>
+    </article>
+    <aside class="post-sidebar">
+      <div class="sidebar-card">
+        <h4>Trasforma la tua azienda</h4>
+        <p>Scopri come portare l'AI nella tua PMI come infrastruttura operativa — non come tool individuale.</p>
+        <a href="/inizia.html" class="btn-tile">Prenota una call →</a>
+      </div>
+    </aside>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-logo">DOGE</span>
+    <span style="font-size:.8rem;color:rgba(255,255,255,.3)">&copy; 2026 DOGE Italia. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="mailto:human@doge.it">human@doge.it</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

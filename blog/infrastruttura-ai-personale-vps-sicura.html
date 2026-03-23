@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Tua Infrastruttura AI Personale a 5 Euro al Mese: Come Costruirla in Modo Sicuro — DOGE Italia</title>
+  <meta name="description" content="Un agente AI sempre attivo, dati sotto il tuo controllo, zero dipendenze da provider cloud costosi. Il setup con VPS Hetzner + Tailscale + OpenClaw per chi usa l'AI in modo intensivo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .post-header { padding: calc(var(--nav-height) + 5rem) 0 3rem; border-bottom: .5px solid rgba(255,255,255,.08); max-width: 760px; }
+    .post-header .eyebrow { margin-bottom: 1.5rem; }
+    .post-header h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-style: italic; line-height: 1.1; margin-bottom: 1.5rem; }
+    .post-header .post-meta { display: flex; gap: 1.5rem; align-items: center; font-size: .8rem; color: rgba(255,255,255,.35); }
+    .post-header .post-meta strong { color: rgba(255,255,255,.6); font-weight: 500; }
+    .post-body-wrap { padding: 4rem 0 8rem; display: grid; grid-template-columns: 1fr 280px; gap: 5rem; align-items: start; }
+    .post-body { max-width: 700px; }
+    .post-body h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-style: italic; margin: 3rem 0 1rem; line-height: 1.2; }
+    .post-body h3 { font-size: 1.1rem; margin: 2.5rem 0 .75rem; color: #fff; }
+    .post-body p { font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,.75); margin-bottom: 1.5rem; }
+    .post-body ul { margin: 1.5rem 0; padding-left: 1.5rem; list-style: disc; }
+    .post-body li { font-size: 1rem; color: rgba(255,255,255,.7); margin-bottom: .5rem; line-height: 1.7; }
+    .post-body strong { color: #fff; }
+    .post-body blockquote { border-left: 3px solid #FAED26; padding: 1rem 1.5rem; margin: 2rem 0; background: rgba(250,237,38,.05); }
+    .post-body blockquote p { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 1.2rem; color: rgba(255,255,255,.85); }
+    .post-body pre { background: #111; border: .5px solid rgba(255,255,255,.1); padding: 1.5rem 2rem; margin: 2rem 0; overflow-x: auto; font-size: .875rem; line-height: 1.6; color: rgba(255,255,255,.8); font-family: monospace; }
+    .post-body code { font-family: monospace; font-size: .875rem; color: #FAED26; background: rgba(250,237,38,.08); padding: .1em .4em; }
+    .post-body pre code { background: none; color: rgba(255,255,255,.8); padding: 0; }
+    .post-sidebar { position: sticky; top: calc(var(--nav-height) + 2rem); }
+    .sidebar-card { background: #111; border: .5px solid rgba(255,255,255,.08); padding: 2rem; margin-bottom: 1.5rem; }
+    .sidebar-card h4 { font-size: .85rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.4); margin-bottom: 1rem; }
+    .sidebar-card p { font-size: .85rem; color: rgba(255,255,255,.55); margin-bottom: 1rem; }
+    .sidebar-card .btn-tile { display: inline-block; background: #FAED26; color: #0a0a0a; padding: .75rem 1.5rem; font-size: .85rem; font-weight: 700; text-decoration: none; letter-spacing: .02em; }
+    .back-link { display: inline-flex; align-items: center; gap: .5rem; font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.4); margin-bottom: 2rem; transition: color .3s; text-decoration: none; }
+    .back-link:hover { color: #FAED26; }
+    .back-link::before { content: '←'; }
+    @media(max-width: 900px) { .post-body-wrap { grid-template-columns: 1fr; gap: 3rem; } .post-sidebar { position: static; } }
+  </style>
+</head>
+<body class="loaded">
+<nav class="nav scrolled">
+  <div class="container">
+    <a href="/" class="nav-logo">DOGE</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/trasformazione-ai.html">Trasformazione AI</a>
+      <a href="/ingegneria-ai.html">Ingegneria AI</a>
+      <a href="/chi-siamo.html">Chi Siamo</a>
+      <a href="/blog/" style="color:#FAED26">Blog</a>
+      <a href="/inizia.html" class="btn btn-primary nav-cta">Inizia</a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <div class="mobile-menu-blocks">
+    <div class="menu-block"></div><div class="menu-block"></div><div class="menu-block"></div>
+    <div class="menu-block"></div><div class="menu-block"></div><div class="menu-block"></div>
+  </div>
+  <div class="mobile-menu-content">
+    <a href="/">Home</a><a href="/trasformazione-ai.html">Trasformazione AI</a>
+    <a href="/ingegneria-ai.html">Ingegneria AI</a><a href="/chi-siamo.html">Chi Siamo</a>
+    <a href="/blog/">Blog</a><a href="/inizia.html">Inizia</a>
+  </div>
+</div>
+<div class="container">
+  <div class="post-header" style="padding-bottom:3rem;margin-top:calc(var(--nav-height) + 3rem);">
+    <a href="/blog/" class="back-link">All posts</a>
+    <p class="eyebrow">Infrastruttura AI</p>
+    <h1>La Tua Infrastruttura AI Personale a 5 Euro al Mese: Come Costruirla in Modo Sicuro</h1>
+    <div class="post-meta">
+      <span>By <strong>Mike Cecconello</strong></span>
+      <span>23 Marzo 2026</span>
+      <span>5 min read</span>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="post-body-wrap">
+    <article class="post-body">
+
+
+<p><em>Un agente AI sempre attivo, accessibile da qualsiasi dispositivo, con i tuoi dati al sicuro — senza dipendere da provider cloud costosi. Il setup che in pochi stanno già usando.</em></p>
+
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<h2>Il Problema con i Tool AI "as a Service"</h2>
+
+<p>La maggior parte dei tool AI consumer risolve il problema immediato — avere un assistente AI accessibile — introducendo una serie di dipendenze: costi mensili crescenti, dati sensibili su server di terzi, limiti di personalizzazione, e la necessità di ripetere il contesto ogni volta che si riapre una sessione.
+</p>
+<p>L'alternativa, sempre più accessibile, è costruire la propria infrastruttura AI su un VPS — un server virtuale privato — che gira H24, è completamente configurabile, e costa una frazione di un abbonamento enterprise.
+</p>
+<p>Il setup descritto in questo articolo porta un agente AI completo online per circa 5-10 euro al mese, con un livello di sicurezza superiore alla media dei tool consumer.
+</p>
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<h2>I Componenti del Sistema</h2>
+
+<p><strong>Il server</strong>: un VPS su Hetzner (provider europeo, datacenter in Germania e Finlandia) con 4-8GB di RAM è sufficiente per la maggior parte dei casi d'uso. Il costo: 5-10 euro al mese. L'Ubuntu Linux viene preinstallato; il setup richiede circa un'ora.</p>
+
+<p><strong>La rete privata</strong>: Tailscale trasforma il server da macchina accessibile su internet pubblico a dispositivo in una rete privata virtuale. Solo i dispositivi che hai autorizzato — il tuo laptop, il tuo telefono — possono raggiungere il server. Dall'esterno, il server è invisibile.</p>
+
+<p>Questa è la differenza tra avere l'indirizzo di casa pubblicato su Google Maps e vivere in un condominio con portiere: tecnicamente accessibile a chi conosce il percorso, invisibile a tutti gli altri.
+</p>
+<p><strong>L'orchestratore AI</strong>: sulla macchina gira un sistema come OpenClaw o un setup equivalente che permette di interagire con l'agente tramite Telegram (o altri canali di messaggistica), configurare comportamenti personalizzati, e connettere strumenti come Claude Code, GPT, o altri modelli via API key.
+
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<h2>La Security in Pratica</h2>
+
+<p>Il rischio principale di qualsiasi macchina connessa a internet è che venga attaccata da bot automatici nelle prime ore dopo il provisioning. La finestra tra "server online" e "server protetto" è il momento più vulnerabile.
+</p>
+<p>Il processo di hardening riduce questa finestra a zero: configurare Tailscale prima di esporre qualsiasi porta, disabilitare l'accesso SSH dall'internet pubblico, usare chiavi SSH invece di password, aggiornare immediatamente tutti i pacchetti di sistema.
+</p>
+<p>Con questi passaggi, il server diventa praticamente invisibile agli scanner automatici — riducendo l'attack surface alla sola rete Tailscale, che è crittografata end-to-end.
+</p>
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<h2>Cosa Si Guadagna con Questa Setup</h2>
+
+<p><strong>Persistenza del contesto</strong>: l'agente ricorda le conversazioni precedenti, i documenti caricati, le preferenze configurate — senza doverle ripetere ogni sessione.</p>
+
+<p><strong>Personalizzazione profonda</strong>: il comportamento dell'agente, le sue istruzioni base, i tool a cui ha accesso, i canali di messaggistica supportati — tutto è configurabile nel dettaglio, senza i limiti di un prodotto consumer.</p>
+
+<p><strong>Privacy dei dati</strong>: documenti sensibili, dati aziendali, conversazioni private rimangono sul server sotto il tuo controllo — non su infrastruttura di terzi.</p>
+
+<p><strong>Costo prevedibile</strong>: 5-10 euro al mese, indipendentemente da quante richieste vengono processate.</p>
+
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<h2>Chi Dovrebbe Fare Questo Setup</h2>
+
+<p>Questo approccio ha senso per chi usa l'AI in modo intensivo e vuole un sistema configurato su misura per il proprio workflow specifico — non per chi usa un chatbot occasionalmente.
+</p>
+<p>Il target pratico: professionisti e manager che interagiscono con strumenti AI più volte al giorno, che hanno dati sensibili da proteggere, e che vogliono un agente che conosca il loro contesto senza dover ripetere ogni volta le stesse istruzioni.
+</p>
+<p>Il tempo di setup: 1-2 ore per chi ha familiarità di base con terminali e shell. Meno per chi segue una guida passo per passo.
+</p>
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<p><em><a href="https://doge-ai.it/" target="_blank" rel="noopener">Il Doge di Venezia</a> aiuta le aziende a costruire infrastrutture AI sicure e scalabili — dalla configurazione tecnica alla definizione dei workflow operativi.</em></p>
+
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<p><strong>Fonti:</strong></p>
+<ul><li><a href="https://www.hetzner.com/cloud" target="_blank" rel="noopener">Hetzner Cloud</a></li>
+<p><li><a href="https://tailscale.com" target="_blank" rel="noopener">Tailscale: Zero-trust networking</a></li>
+<li><a href="https://docs.anthropic.com" target="_blank" rel="noopener">Anthropic: Claude API</a></li></ul></p>
+<hr style="border:none;border-top:.5px solid rgba(255,255,255,.08);margin:3rem 0;">
+
+<p><em>Tag: VPS AI italiano, infrastruttura AI personale, agente AI server privato, Tailscale sicurezza AI, Hetzner VPS AI, setup AI sicuro, AI privacy aziende, server AI 5 euro, OpenClaw setup, agente AI H24, AI infrastructure Italia, intelligenza artificiale server privato</em>
+</p>
+    </article>
+    <aside class="post-sidebar">
+      <div class="sidebar-card">
+        <h4>Trasforma la tua azienda</h4>
+        <p>Scopri come portare l'AI nella tua PMI come infrastruttura operativa — non come tool individuale.</p>
+        <a href="/inizia.html" class="btn-tile">Prenota una call →</a>
+      </div>
+    </aside>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-logo">DOGE</span>
+    <span style="font-size:.8rem;color:rgba(255,255,255,.3)">&copy; 2026 DOGE Italia. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="mailto:human@doge.it">human@doge.it</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
