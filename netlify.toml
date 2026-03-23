@@ -1,6 +1,18 @@
 [build]
   publish = "."
 
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+  [plugins.inputs]
+    buildDir = "."
+    prettyURLs = false
+    trailingSlash = false
+    homepage = "https://doge-ai.it"
+    exclude = [
+      "/blog/post-template.html",
+      "/BRIEF.md"
+    ]
+
 [[redirects]]
   from = "/blog"
   to = "/blog/"
