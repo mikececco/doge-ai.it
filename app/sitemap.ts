@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { SOLUZIONI_PAGES } from "@/lib/soluzioni-data";
+import { CITIES } from "@/lib/cities-data";
 
 const BASE_URL = "https://doge-ai.it";
 
@@ -40,5 +41,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...blogPosts, ...soluzioniPages];
+  const consulenzaAIIndex: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/consulenza-ai`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+  ];
+
+  const consulenzaAICities: MetadataRoute.Sitemap = CITIES.map((city) => ({
+    url: `${BASE_URL}/consulenza-ai/${city.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...blogPosts, ...soluzioniPages, ...consulenzaAIIndex, ...consulenzaAICities];
 }

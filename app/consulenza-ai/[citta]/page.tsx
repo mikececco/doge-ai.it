@@ -1,0 +1,272 @@
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import Link from "next/link";
+import Label from "@/components/ui/Label";
+import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
+import CtaFinale from "@/components/sections/CtaFinale";
+import { CITIES } from "@/lib/cities-data";
+
+const BASE_URL = "https://doge-ai.it";
+
+type Props = {
+  params: { citta: string };
+};
+
+export function generateStaticParams() {
+  return CITIES.map((city) => ({ citta: city.slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const city = CITIES.find((c) => c.slug === params.citta);
+  if (!city) return {};
+
+  const canonicalUrl = `${BASE_URL}/consulenza-ai/${city.slug}`;
+  const title = `Consulenza AI a ${city.name} | DOGE di Venezia`;
+  const description = `Consulenza AI per le PMI di ${city.name} (${city.region}). Specializzati in ${city.industries.join(", ")}. Strategia, implementazione agenti e automazione processi con tecnologia Anthropic/Claude.`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      type: "website",
+      siteName: "DOGE di Venezia",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
+
+const SERVICES = [
+  {
+    title: "Strategia AI",
+    description:
+      "Definiamo insieme la roadmap di adozione dell'AI per la tua azienda: priorità, casi d'uso concreti, ROI atteso e piano di implementazione. Zero teoria, solo azioni.",
+  },
+  {
+    title: "Implementazione Agenti",
+    description:
+      "Costruiamo agenti AI personalizzati con tecnologia Anthropic/Claude per automatizzare compiti ripetitivi, analizzare dati e supportare le decisioni del tuo team.",
+  },
+  {
+    title: "Automazione Processi",
+    description:
+      "Identifichiamo i processi aziendali ad alto impatto e li automatizziamo con AI: dalla gestione ordini alla customer care, dall'analisi documenti al reporting.",
+  },
+  {
+    title: "Formazione Team",
+    description:
+      "Formiamo il tuo team per lavorare con l'AI in modo efficace: prompt engineering, utilizzo degli strumenti, integrazione nei flussi di lavoro quotidiani.",
+  },
+];
+
+const DIFFERENTIATORS = [
+  {
+    title: "Esperti Anthropic / Claude",
+    description:
+      "Siamo specializzati nell'ecosistema Anthropic, i creatori di Claude — il modello AI più capace e affidabile per applicazioni business. Non usiamo tutto, usiamo il meglio.",
+  },
+  {
+    title: "Approccio italiano",
+    description:
+      "Parliamo la tua lingua — letteralmente e metaforicamente. Conosciamo le PMI italiane, le loro strutture, le loro sfide e il loro potenziale. Niente consulenze generiche.",
+  },
+  {
+    title: "Focus PMI",
+    description:
+      "Non siamo una grande consulting firm che adatta template enterprise. Lavoriamo esclusivamente con PMI e family office italiani, con soluzioni su misura e investimenti proporzionati.",
+  },
+];
+
+export default function ConsulenzaAICittaPage({ params }: Props) {
+  const city = CITIES.find((c) => c.slug === params.citta);
+  if (!city) notFound();
+
+  const canonicalUrl = `${BASE_URL}/consulenza-ai/${city.slug}`;
+
+  const localBusinessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "DOGE di Venezia",
+    description: `Consulenza AI per le imprese di ${city.name} e ${city.region}`,
+    url: BASE_URL,
+    areaServed: {
+      "@type": "City",
+      name: city.name,
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Venezia",
+      addressRegion: "Veneto",
+      addressCountry: "IT",
+    },
+    sameAs: BASE_URL,
+  };
+
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `Consulenza AI a ${city.name}`,
+    description: `Servizi di consulenza, implementazione e formazione AI per le PMI di ${city.name} nei settori ${city.industries.join(", ")}.`,
+    url: canonicalUrl,
+    provider: {
+      "@type": "Organization",
+      name: "DOGE di Venezia",
+      url: BASE_URL,
+    },
+    areaServed: {
+      "@type": "City",
+      name: city.name,
+    },
+    serviceType: "Consulenza AI",
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+
+      {/* Hero */}
+      <section className="bg-nero text-bianco pt-40 pb-20">
+        <div className="container-site">
+          <FadeInOnScroll>
+            <Label className="text-giallo">CONSULENZA AI</Label>
+          </FadeInOnScroll>
+          <FadeInOnScroll>
+            <h1 className="text-hero mt-4 max-w-3xl">
+              Consulenza AI a {city.name}
+            </h1>
+          </FadeInOnScroll>
+          <FadeInOnScroll>
+            <p className="text-subheadline text-bianco/70 mt-6 max-w-[640px] leading-relaxed">
+              Aiutiamo le imprese di {city.name} ad adottare l&apos;AI in modo concreto e misurabile.
+              Dalla strategia all&apos;implementazione, con tecnologia Anthropic/Claude.
+            </p>
+          </FadeInOnScroll>
+          <FadeInOnScroll>
+            <div className="mt-10">
+              <Link
+                href="/contatti"
+                className="inline-block bg-giallo text-nero font-semibold px-8 py-4 text-base hover:bg-giallo/90 transition-colors"
+              >
+                Parla con noi →
+              </Link>
+            </div>
+          </FadeInOnScroll>
+        </div>
+      </section>
+
+      {/* Local Context */}
+      <section className="bg-bianco py-20">
+        <div className="container-site">
+          <div className="max-w-3xl">
+            <FadeInOnScroll>
+              <h2 className="text-section text-nero mb-6">
+                Il contesto imprenditoriale di {city.name}
+              </h2>
+            </FadeInOnScroll>
+            <FadeInOnScroll>
+              <p className="text-body text-grigio-scuro leading-relaxed mb-8">
+                {city.description}
+              </p>
+            </FadeInOnScroll>
+            <FadeInOnScroll>
+              <div className="flex flex-wrap gap-3">
+                {city.industries.map((industry) => (
+                  <span
+                    key={industry}
+                    className="bg-giallo text-nero text-sm font-semibold px-4 py-2"
+                  >
+                    {industry}
+                  </span>
+                ))}
+              </div>
+            </FadeInOnScroll>
+            <FadeInOnScroll>
+              <p className="text-body text-grigio-scuro leading-relaxed mt-8">
+                Le aziende di {city.name} che operano in questi settori hanno
+                oggi l&apos;opportunità concreta di integrare l&apos;intelligenza artificiale
+                nei propri processi — ridurre i costi operativi, aumentare la
+                produttività e aprire nuovi canali di crescita. Il momento è
+                adesso.
+              </p>
+            </FadeInOnScroll>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="bg-grigio-chiaro py-20">
+        <div className="container-site">
+          <FadeInOnScroll>
+            <h2 className="text-section text-nero mb-12">
+              I nostri servizi per le imprese di {city.region}
+            </h2>
+          </FadeInOnScroll>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {SERVICES.map((service) => (
+              <FadeInOnScroll key={service.title}>
+                <div className="bg-bianco border border-grigio-chiaro p-8 h-full">
+                  <h3 className="text-xl font-bold text-nero mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-body text-grigio-scuro leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </FadeInOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why DOGE */}
+      <section className="bg-bianco py-20">
+        <div className="container-site">
+          <FadeInOnScroll>
+            <h2 className="text-section text-nero mb-12">
+              Perché scegliere DOGE di Venezia
+            </h2>
+          </FadeInOnScroll>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {DIFFERENTIATORS.map((diff) => (
+              <FadeInOnScroll key={diff.title}>
+                <div className="border-l-4 border-giallo pl-6">
+                  <h3 className="text-lg font-bold text-nero mb-3">
+                    {diff.title}
+                  </h3>
+                  <p className="text-body text-grigio-scuro leading-relaxed">
+                    {diff.description}
+                  </p>
+                </div>
+              </FadeInOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Finale */}
+      <CtaFinale
+        dark
+        title={`Porta l'AI nella tua azienda a ${city.name}`}
+        subtitle="La prima conversazione è gratuita. Nessun impegno, solo chiarezza su cosa l'AI può fare per te."
+        buttonText="Parla con noi →"
+        buttonHref="/contatti"
+      />
+    </>
+  );
+}
