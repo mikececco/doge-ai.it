@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
-const BASE_URL = "https://dogedivenezia.ai";
+const BASE_URL = "https://doge-ai.it";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
