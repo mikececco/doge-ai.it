@@ -10,6 +10,7 @@ export const NAV_ITEMS = [
   { label: "Il Codice del Doge", href: "/metodo" },
   { label: "Casi d'Uso", href: "/casi-duso" },
   { label: "Blog", href: "/blog" },
+  { label: "Soluzioni", href: "/soluzioni" },
   { label: "Lavora con Noi", href: "/lavora-con-noi" },
 ] as const;
 
@@ -21,6 +22,7 @@ export const FOOTER_LINKS = {
     { label: "Il Codice del Doge", href: "/metodo" },
     { label: "Casi d'Uso", href: "/casi-duso" },
     { label: "Blog", href: "/blog" },
+    { label: "Soluzioni", href: "/soluzioni" },
     { label: "Lavora con Noi", href: "/lavora-con-noi" },
     { label: "Contatti", href: "/contatti" },
   ],

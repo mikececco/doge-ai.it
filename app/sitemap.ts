@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/lib/blog-data";
+import { SOLUZIONI_PAGES } from "@/lib/soluzioni-data";
 
 const BASE_URL = "https://doge-ai.it";
 
@@ -12,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/metodo",
     "/casi-duso",
     "/blog",
+    "/soluzioni",
     "/contatti",
     "/privacy",
     "/cookie-policy",
@@ -31,5 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...blogPosts];
+  const soluzioniPages: MetadataRoute.Sitemap = SOLUZIONI_PAGES.map((page) => ({
+    url: `${BASE_URL}/soluzioni/${page.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...blogPosts, ...soluzioniPages];
 }
