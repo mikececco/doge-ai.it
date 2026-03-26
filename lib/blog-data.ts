@@ -5,6 +5,7 @@ export type BlogPost = {
   date: string;
   readTime: string;
   category: string;
+  tags: string[];
   content: string;
 };
 
@@ -17,6 +18,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "10 Mar 2025",
     readTime: "7 min",
     category: "AI & PMI",
+    tags: ["PMI", "Manifattura", "Automazione", "ROI"],
     content: `
 <h2>Il cambiamento è già in atto</h2>
 <p>Nel 2025, l'adozione dell'intelligenza artificiale nelle piccole e medie imprese italiane ha superato il punto di non ritorno. Non si parla più di sperimentazione o di piloti isolati: si parla di trasformazione operativa reale, misurabile, con impatti diretti su costi, produttività e competitività.</p>
@@ -79,6 +81,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "12 Mar 2025",
     readTime: "6 min",
     category: "Automazione",
+    tags: ["Automazione", "PMI", "Procurement", "Customer service"],
     content: `
 <h2>La trappola del progetto pilota infinito</h2>
 <p>Molte PMI italiane si trovano bloccate in una fase di "esplorazione perpetua". Hanno capito che l'AI e l'automazione possono fare la differenza, ma faticano a passare dall'interesse all'azione concreta. Il risultato è una serie di piloti che non scalano, demo che non diventano produzione, investimenti che non generano ROI misurabile.</p>
@@ -138,6 +141,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "13 Mar 2025",
     readTime: "8 min",
     category: "Manifattura",
+    tags: ["Manifattura", "ROI", "Automazione industriale"],
     content: `
 <h2>La manifattura italiana davanti all'AI</h2>
 <p>Il manifatturiero è il cuore pulsante dell'economia italiana. Con oltre 400.000 imprese, 4 milioni di addetti e un contributo al PIL che supera il 15%, è il settore dove la trasformazione AI può avere l'impatto economico più significativo per il paese.</p>
@@ -199,6 +203,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "14 Mar 2025",
     readTime: "7 min",
     category: "Tecnologia",
+    tags: ["Agenti AI", "Tecnologia", "PMI"],
     content: `
 <h2>La differenza che conta</h2>
 <p>Quando la maggior parte delle persone pensa all'AI in azienda, pensa a un chatbot. Qualcosa che risponde alle domande, genera testi, riassume documenti. Utile, certo — ma limitato.</p>
@@ -252,6 +257,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "15 Mar 2025",
     readTime: "6 min",
     category: "Strategia",
+    tags: ["ROI", "PMI", "Strategia"],
     content: `
 <h2>Il problema della misurazione</h2>
 <p>Molte PMI italiane si trovano in una situazione paradossale: hanno implementato soluzioni AI, percepiscono che funzionano, ma non riescono a quantificare con precisione il valore generato. Questo crea problemi su due fronti: rende difficile giustificare investimenti aggiuntivi all'interno dell'azienda, e impedisce di ottimizzare ciò che si è già costruito.</p>
@@ -324,6 +330,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "16 Mar 2025",
     readTime: "7 min",
     category: "Compliance",
+    tags: ["Compliance", "GDPR", "PMI"],
     content: `
 <h2>Il mito del GDPR come ostacolo</h2>
 <p>Nelle conversazioni con gli imprenditori italiani, il GDPR emerge spesso come uno dei freni principali all'adozione dell'AI. "Non possiamo usare i dati dei clienti perché c'è il GDPR." "Non possiamo implementare AI nel HR perché ci sono problemi di privacy." "Non possiamo fare nulla senza consultare il nostro DPO prima."</p>
@@ -369,6 +376,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "17 Mar 2025",
     readTime: "6 min",
     category: "Automazione",
+    tags: ["Automazione", "PMI", "Logistica"],
     content: `
 <h2>La domanda che ricevo più spesso</h2>
 <p>Nelle conversazioni con le PMI che vogliono iniziare ad automatizzare i processi, la domanda "n8n o Power Automate?" emerge con una frequenza sorprendente. È diventata, in un certo senso, la domanda entry-level dell'automazione aziendale.</p>
@@ -418,6 +426,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "18 Mar 2025",
     readTime: "8 min",
     category: "Strategia",
+    tags: ["Formazione", "PMI", "Strategia"],
     content: `
 <h2>Il cimitero dei progetti AI</h2>
 <p>Nel panorama aziendale italiano, esiste un fenomeno che chi lavora nel settore conosce bene ma che raramente viene discusso pubblicamente: il cimitero dei progetti AI.</p>
@@ -472,6 +481,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "19 Mar 2025",
     readTime: "7 min",
     category: "AI & PMI",
+    tags: ["Procurement", "PMI", "Automazione"],
     content: `
 <h2>Il problema nascosto nel procurement</h2>
 <p>In una PMI manifatturiera italiana media, il procurement — la gestione degli acquisti — assorbe tra il 60% e il 75% del fatturato in costi di materiali e servizi. È, di gran lunga, la principale voce di costo aziendale. Eppure, nella maggior parte delle PMI, il processo di acquisto è ancora gestito con strumenti degli anni '90: telefonate, email, fogli Excel, e conoscenza tacita nelle teste dei responsabili acquisti.</p>
@@ -516,6 +526,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "20 Mar 2025",
     readTime: "6 min",
     category: "Automazione",
+    tags: ["Customer service", "PMI", "Automazione"],
     content: `
 <h2>Il numero che sorprende tutti</h2>
 <p>Quando condividiamo i dati sul ROI dei sistemi di customer service AI, la reazione più comune è scetticismo. "250% ROI? Impossibile." "Sembra marketing."</p>
@@ -575,6 +586,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "15 Gen 2025",
     readTime: "4 min",
     category: "Strategia",
+    tags: ["Marketing", "Strategia", "PMI"],
     content: `
 <h2>Il Cambiamento che Molti Stanno Ignorando</h2>
 <p>ChatGPT conta 800 milioni di utenti attivi settimanali. Non è ancora Google, ma è sulla traiettoria di raggiungerne le dimensioni nei prossimi 36 mesi, con un tasso di crescita che Google non ha visto dai suoi anni di espansione iniziale.</p>
@@ -617,6 +629,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "20 Gen 2025",
     readTime: "4 min",
     category: "Tecnologia",
+    tags: ["Agenti AI", "Tecnologia", "Automazione"],
     content: `
 <h2>Il Salto che Pochi Hanno Fatto</h2>
 <p>Usare Claude come assistente è ormai diffuso. Ma c'è un livello successivo che la maggior parte delle organizzazioni non ha ancora toccato: l'orchestrazione multi-agente.</p>
@@ -650,6 +663,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "25 Gen 2025",
     readTime: "3 min",
     category: "Strategia",
+    tags: ["Strategia", "PMI", "Tecnologia"],
     content: `
 <h2>Il Vantaggio che Si Accumula</h2>
 <p>Obie Fernandez, CTO di ZAR, autore di "The Rails Way", trent'anni di sviluppo software, ha scritto qualcosa di deceptively semplice:</p>
@@ -690,6 +704,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "1 Feb 2025",
     readTime: "3 min",
     category: "Automazione",
+    tags: ["Automazione", "PMI", "Tecnologia"],
     content: `
 <h2>Il Collo di Bottiglia che Blocca l'Innovazione Interna</h2>
 <p>In qualsiasi organizzazione strutturata, il ciclo di vita di un'idea segue un percorso che può durare mesi: proposta informale, discussione con il manager, richiesta di risorse al design, attesa del prototipo, presentazione al leadership, approvazione (o no), assegnazione al team di sviluppo.</p>
@@ -723,6 +738,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "5 Feb 2025",
     readTime: "4 min",
     category: "AI & PMI",
+    tags: ["Agenti AI", "PMI", "Automazione"],
     content: `
 <h2>Dalla Demo alla Realtà Operativa</h2>
 <p>Claude Code esiste da mesi. Gli ingegneri lo usano per costruire software, analizzare codebase, automatizzare pipeline di sviluppo. La barriera di ingresso: devi sapere usare un terminale.</p>
@@ -761,6 +777,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "10 Feb 2025",
     readTime: "5 min",
     category: "Strategia",
+    tags: ["Strategia", "PMI", "Tecnologia"],
     content: `
 <h2>L'Assunzione che Nessuno Interroga</h2>
 <p>L'intera architettura dei mercati di capitali moderni poggia su un'assunzione raramente messa in discussione: i vantaggi competitivi si accumulano nel tempo. I moat persistono. I brand durano. Gli effetti di rete difendono.</p>
@@ -801,6 +818,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "15 Feb 2025",
     readTime: "7 min",
     category: "Tecnologia",
+    tags: ["Formazione", "PMI", "Tecnologia"],
     content: `
 <h2>Il Problema che Nessuno Ammette</h2>
 <p>Dario Amodei, CEO di Anthropic, al World Economic Forum di Davos 2026:</p>
@@ -871,6 +889,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "18 Feb 2025",
     readTime: "4 min",
     category: "AI & PMI",
+    tags: ["Agenti AI", "PMI", "Formazione"],
     content: `
 <h2>Il Problema con la Parola "Agente"</h2>
 <p>"Agente AI" è diventata una di quelle espressioni che significano tutto e quindi niente. Zapier lo usa. Salesforce lo usa. Chiunque stia costruendo qualcosa su un LLM lo chiama agente.</p>
@@ -902,6 +921,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "22 Feb 2025",
     readTime: "4 min",
     category: "Tecnologia",
+    tags: ["Tecnologia", "Agenti AI", "Automazione"],
     content: `
 <h2>La Trappola della Demo</h2>
 <p>Il pattern è ricorrente: un'azienda costruisce un agente AI, lo testa in un ambiente controllato con dati puliti e casi perfetti, ottiene risultati eccellenti, lo lancia in produzione, e poi inizia il degrado.</p>
@@ -939,6 +959,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "25 Feb 2025",
     readTime: "3 min",
     category: "Strategia",
+    tags: ["Marketing", "Strategia", "Automazione"],
     content: `
 <h2>Cosa Sta Succedendo nel Go-to-Market</h2>
 <p>Nel 2023, GTM engineering significava una cosa: trattare l'outbound come software: sprint settimanali, dati, processi replicabili invece di campagne episodiche.</p>
@@ -969,6 +990,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "1 Mar 2025",
     readTime: "4 min",
     category: "Tecnologia",
+    tags: ["Tecnologia", "PMI", "Compliance"],
     content: `
 <h2>Il Problema con i Tool AI "as a Service"</h2>
 <p>La maggior parte dei tool AI consumer risolve il problema immediato, avere un assistente AI accessibile, introducendo una serie di dipendenze: costi mensili crescenti, dati sensibili su server di terzi, limiti di personalizzazione, e la necessità di ripetere il contesto ogni volta che si riapre una sessione.</p>
@@ -1002,6 +1024,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "5 Mar 2025",
     readTime: "5 min",
     category: "Strategia",
+    tags: ["Strategia", "PMI", "Formazione"],
     content: `
 <h2>Due Gruppi. Una Scelta.</h2>
 <p>Quasi tutti rientrano in uno di due gruppi.</p>
@@ -1040,6 +1063,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "10 Mar 2025",
     readTime: "4 min",
     category: "Automazione",
+    tags: ["Automazione", "Agenti AI", "PMI"],
     content: `
 <h2>Il Problema che Lindy Risolve</h2>
 <p>Chi ha cercato di implementare agenti AI in azienda conosce il pattern: si scopre un workflow su YouTube o LinkedIn, si salva il video con le migliori intenzioni, e non lo si rivede mai. La barriera tra "vedere che è possibile" e "farlo davvero" è rimasta troppo alta per la maggior parte delle organizzazioni non tecniche.</p>
@@ -1072,6 +1096,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "3 Mar 2025",
     readTime: "8 min",
     category: "Tecnologia",
+    tags: ["Tecnologia", "PMI", "Agenti AI"],
     content: `
 <h2>Prima di tutto: cosa sono, in poche parole</h2>
 <p>Sia Claude (fatto da Anthropic) sia ChatGPT (fatto da OpenAI) sono assistenti AI basati su modelli linguistici avanzati. Puoi parlarci in italiano, dargli documenti da analizzare, farti scrivere testi, rispondere a domande complesse.</p>
@@ -1120,6 +1145,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "6 Mar 2025",
     readTime: "7 min",
     category: "Tecnologia",
+    tags: ["Tecnologia", "PMI", "Automazione"],
     content: `
 <h2>La domanda giusta da porsi</h2>
 <p>Se la tua azienda usa Office 365 — e la stragrande maggioranza delle PMI italiane lo fa — Microsoft Copilot probabilmente è già incluso nel tuo abbonamento, o ti viene offerto come upgrade a circa 30 euro per utente al mese.</p>
@@ -1162,6 +1188,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "9 Mar 2025",
     readTime: "6 min",
     category: "AI & PMI",
+    tags: ["PMI", "ROI", "Tecnologia"],
     content: `
 <h2>Cosa cambia davvero tra gratis e a pagamento</h2>
 <p>Le versioni gratuite di ChatGPT e Claude funzionano. Ma hanno limiti concreti che diventano evidenti dopo pochi giorni di uso intensivo: modello meno potente, limite di messaggi al giorno (spesso raggiungi il tetto nel tardo pomeriggio), nessun accesso ai documenti allegati, velocità ridotta nelle ore di punta.</p>
@@ -1206,6 +1233,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "11 Mar 2025",
     readTime: "7 min",
     category: "Automazione",
+    tags: ["Automazione", "PMI", "Logistica"],
     content: `
 <h2>Cosa fanno questi strumenti (in 30 secondi)</h2>
 <p>Tutti e tre servono a <strong>connettere applicazioni diverse e automatizzare sequenze di azioni</strong> senza scrivere codice. Esempio classico: ogni volta che ricevo un ordine nel mio e-commerce, aggiorno il gestionale, invio una conferma al cliente su WhatsApp, e avviso il magazzino su Telegram. Senza automazione: qualcuno fa queste cose a mano. Con Zapier, Make o n8n: succede in automatico.</p>
@@ -1256,6 +1284,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "14 Mar 2025",
     readTime: "8 min",
     category: "AI & PMI",
+    tags: ["PMI", "ROI", "Strategia"],
     content: `
 <h2>I quattro costi da mettere in conto</h2>
 <p>Implementare l'AI in azienda ha quattro componenti di costo. Ignorarne uno significa arrivare al progetto con aspettative sbagliate. Eccoli tutti e quattro, con numeri reali.</p>
@@ -1324,6 +1353,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "15 Mar 2025",
     readTime: "4 min",
     category: "Tecnologia",
+    tags: ["Marketing", "Tecnologia", "Ecommerce"],
     content: `
 <h2>L'Arbitraggio che Esiste Adesso</h2>
 <p>PJ Ace, CEO di Genre.ai, non sta descrivendo una possibilità futura. Sta descrivendo quello che la sua agenzia sta già consegnando ai brand più grandi del mercato americano: commercial di qualità "Hollywood" prodotti interamente con AI, a una frazione del costo tradizionale.</p>
@@ -1349,6 +1379,526 @@ export const BLOG_POSTS: BlogPost[] = [
 <p><em><a href="https://doge-ai.it/">Il Doge di Venezia</a> aiuta le aziende italiane a identificare dove la produzione AI può sostituire o affiancare la produzione tradizionale, abbattendo i costi di contenuto senza sacrificare la qualità.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
     `,
   },
+  {
+    slug: "cosa-e-claude-guida-imprenditori",
+    title: "Cos'è Claude: La Guida per Chi Deve Decidere, Non per Chi Vuole Impressionarsi",
+    excerpt:
+      "Tutti ne parlano, pochi sanno rispondere alla domanda base. Cos'è Claude, chi lo ha fatto, come funziona davvero, e perché la distinzione con ChatGPT conta per le aziende italiane.",
+    date: "26 Mar 2026",
+    readTime: "6 min",
+    category: "Tecnologia",
+    tags: ["Tecnologia", "PMI", "Agenti AI"],
+    content: `
+<h2>Perché ne parlano tutti (e perché molti non sanno rispondere alla domanda base)</h2>
+<p>Se lavori in un'azienda e segui anche solo di striscio le conversazioni sull'AI, hai sentito il nome "Claude" con crescente frequenza. Nel 2026 è diventato uno dei tre nomi che chiunque nel settore pronuncia — insieme a ChatGPT e Gemini.</p>
+<p>Eppure, quando si chiede alle persone cosa sia Claude concretamente, le risposte oscillano tra "un chatbot come gli altri" e vaghi riferimenti a qualcosa di "più sicuro" o "più intelligente". Né l'una né l'altra risposta è utile per prendere decisioni aziendali.</p>
+
+<h2>Chi lo ha fatto e perché conta</h2>
+<p>Claude è sviluppato da <strong>Anthropic</strong>, un'azienda fondata nel 2021 da Dario Amodei, Daniela Amodei, e altri ex-ricercatori di OpenAI — la società che ha fatto ChatGPT. La separazione nasce su una divergenza di priorità riguardo alla sicurezza dei sistemi AI.</p>
+<p>Anthropic ha raccolto investimenti significativi da Amazon e Google con una traiettoria diversa: ricerca sulla sicurezza dei modelli come principio fondante, non come aggiunta successiva.</p>
+<p>Per un'azienda che sta valutando di integrare AI nei propri processi, questa distinzione ha implicazioni pratiche: le politiche di utilizzo dei dati, la trasparenza sui comportamenti del modello, la gestione delle situazioni ambigue sono trattate con approcci diversi da chi pone la sicurezza al centro fin dall'inizio.</p>
+
+<h2>Come funziona: la versione utile (non quella da manuale)</h2>
+<p>Claude è un <strong>large language model</strong> (LLM): un sistema addestrato su enormi quantità di testo che ha sviluppato la capacità di comprendere contesti complessi, ragionare su problemi, e generare testo coerente e pertinente. Fin qui, non è diverso da ChatGPT o Gemini nella struttura di base.</p>
+<p>La differenza operativa più rilevante per chi lo usa professionalmente è il <strong>contesto</strong>: Claude nella versione Pro gestisce finestre di testo molto ampie — fino a centinaia di pagine in una sola sessione. Puoi caricare un contratto di 80 pagine, un anno di email con un fornitore, un intero dataset di vendite, e lavorarci senza dover spezzare in sessioni separate.</p>
+<p>Il secondo elemento distintivo è il <strong>ragionamento su testi complessi</strong>: Claude tende a rispondere con meno "allucinazioni" su testi tecnici e contesti ambigui, ed è più propenso a dire "non ho abbastanza informazioni" invece di inventare una risposta convincente.</p>
+
+<h2>I modelli: cosa cambia tra Haiku, Sonnet e Opus</h2>
+<p>Anthropic ha rilasciato versioni con nomi che indicano il livello di capacità:</p>
+<ul>
+  <li><strong>Haiku</strong>: il modello più veloce e leggero, ideale per task ad alto volume e bassa complessità (classificare email, rispondere a FAQ, estrarre dati strutturati)</li>
+  <li><strong>Sonnet</strong>: il punto di equilibrio tra velocità e capacità ragionativa, usato dalla maggior parte delle applicazioni business</li>
+  <li><strong>Opus</strong>: il modello più capace, per ragionamento complesso e analisi approfondite — più lento e più costoso</li>
+</ul>
+<p>Nella pratica: per uso quotidiano come assistente, Sonnet è la scelta giusta. Per sistemi automatizzati ad alto volume, Haiku costa meno con risultati spesso equivalenti. Opus serve quando il ragionamento profondo conta più della velocità.</p>
+
+<h2>Dove si usa Claude</h2>
+<p><strong>Claude.ai</strong>: l'interfaccia web e mobile, l'equivalente di ChatGPT.com. Abbonamento Pro a circa 20 euro al mese. Da qui si accede a chat, caricamento documenti, e progetti con memoria persistente.</p>
+<p><strong>API</strong>: per chi vuole integrare Claude in sistemi e applicazioni proprie. È il backend di decine di prodotti che non lo dichiarano esplicitamente.</p>
+<p><strong>Claude for Business / Enterprise</strong>: versione con garanzie contrattuali GDPR, dati non usati per il training, gestione centralizzata degli accessi per team.</p>
+
+<h2>La domanda che vale la pena porsi</h2>
+<p>Non "Claude è meglio di ChatGPT?" — quella è la domanda sbagliata, perché dipende dal task. La domanda utile è: <strong>quali processi nella tua azienda richiedono comprensione di testi complessi, ragionamento su contesti ambigui, o redazione di contenuto in italiano di qualità?</strong></p>
+<p>Quella lista è il punto di partenza. Claude, in quei contesti, è spesso lo strumento che richiede meno lavoro di correzione e supervisione.</p>
+<p>Se vuoi capire dove Claude può fare la differenza nella tua organizzazione, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+    `,
+  },
+  {
+    slug: "claude-code-tasks-cowork-ai-che-agisce",
+    title: "Claude Code, Tasks e Cowork: Quando l'AI Smette di Rispondere e Inizia ad Agire",
+    excerpt:
+      "Tre prodotti di Anthropic che cambiano il paradigma: non più AI che risponde, ma AI che esegue. Cosa sono Claude Code, Claude Tasks e Claude Cowork, e cosa significano per le aziende che non scrivono codice.",
+    date: "26 Mar 2026",
+    readTime: "7 min",
+    category: "Tecnologia",
+    tags: ["Agenti AI", "Tecnologia", "Automazione"],
+    content: `
+<h2>La distinzione che conta</h2>
+<p>Finora, l'AI generativa si è presentata alle aziende come uno strumento di risposta: fai una domanda, ottieni un'elaborazione. Utile, ma fondamentalmente passivo. Tu devi ancora decidere cosa fare dell'output, copiarlo, incollarlo, applicarlo.</p>
+<p>Anthropic ha spostato il modello su un piano diverso con tre prodotti: <strong>Claude Code</strong>, <strong>Claude Tasks</strong>, e <strong>Claude Cowork</strong>. Ognuno risolve un livello diverso del problema, ma condividono una direzione: l'AI non risponde, esegue.</p>
+
+<h2>Claude Code: per chi costruisce (o vuole costruire) sistemi</h2>
+<p>Claude Code è uno strumento da riga di comando per sviluppatori — accede direttamente al filesystem, legge il codice, lo modifica, esegue comandi, testa i risultati.</p>
+<p>Perché interessa anche a chi non è sviluppatore? Perché cambia il costo e la velocità di costruire automazioni personalizzate. Un consulente o un developer junior può costruire con Claude Code un agente personalizzato per l'azienda in un tempo che fino a 18 mesi fa richiedeva settimane di sviluppo.</p>
+<p>I casi d'uso dove Claude Code cambia le regole:</p>
+<ul>
+  <li>Automazione di processi interni che richiedono accesso a dati e sistemi aziendali</li>
+  <li>Prototipazione rapida per verificare la fattibilità di un'idea prima di investire in sviluppo completo</li>
+  <li>Analisi e manutenzione di codice legacy ("nessuno capisce più questo sistema" è uno dei problemi più comuni nelle PMI)</li>
+</ul>
+
+<h2>Claude Tasks: assegna e dimentica</h2>
+<p>Claude Tasks permette di assegnare obiettivi complessi e lasciarli girare in autonomia. Funziona così: descrivi un task con un obiettivo definito, Claude lo scompone in passaggi, li esegue sequenzialmente usando i tool disponibili, e ti consegna il risultato quando ha finito.</p>
+<p>La differenza con una normale sessione di chat è l'autonomia operativa: Claude Tasks gestisce l'incertezza intermedia, risolve i blocchi minori, e non si ferma chiedendo conferma a ogni passaggio — a meno che non incontri qualcosa che richieda davvero una decisione umana.</p>
+<p>Esempi pratici:</p>
+<ul>
+  <li>"Ricerca i principali competitor che hanno lanciato prodotti in questo segmento negli ultimi 6 mesi e prepara un documento riassuntivo" — Claude lavora autonomamente per 20-30 minuti</li>
+  <li>"Analizza questi 15 contratti, estrai le clausole di recesso e le penali per ritardo, e confrontale in una tabella" — lavoro che richiederebbe ore a un collaboratore umano</li>
+  <li>"Monitora questo sito ogni giorno alle 8 e avvisami se cambiano i prezzi" — task ricorrente senza attenzione umana continuativa</li>
+</ul>
+
+<h2>Claude Cowork: il dipendente digitale che usa gli stessi strumenti tuoi</h2>
+<p>Claude Cowork è il prodotto più ambizioso: Claude accede a strumenti reali che tu già usi. Google Calendar, Google Drive, LinkedIn, il browser web, file aziendali. Non attraverso API predefinite, ma in modo più diretto.</p>
+<p>Un manager assegna tre task simultaneamente — preparare i profili dei candidati da intervistare (accedendo al calendario e cercando su LinkedIn), costruire una web app per il tracking degli obiettivi aziendali, elaborare una strategia di marketing dal feedback del trimestre. Claude esegue i tre task in parallelo, senza che il manager stia al computer.</p>
+<p>Cosa non è Cowork: non è un robot che fa tutto da solo. Claude chiede conferma prima di eseguire azioni su sistemi esterni, mostra cosa sta per fare, e si ferma quando trova ambiguità che richiedono decisione umana.</p>
+
+<h2>Cosa significa per le aziende che non scrivono codice</h2>
+<p>Claude Tasks e Cowork sono già accessibili a qualsiasi abbonato Pro — non richiedono competenze tecniche per i task base. La barriera è capire come descrivere bene un obiettivo, non come programmare.</p>
+<p>Claude Code richiede ancora qualcuno che sappia usare un terminale. Non è uno strumento per l'utente finale generico — è uno strumento per chi costruisce sistemi. Ma abbassa significativamente il costo di costruire automazioni su misura.</p>
+<p>Il pattern che emerge: un singolo professionista con competenza tecnica media riesce a costruire con Claude Code soluzioni che prima richiedevano team dedicati. Per le PMI che vogliono soluzioni su misura senza i costi di una software house, questa è la novità strutturale.</p>
+<p>Se vuoi capire quali processi della tua azienda si prestano all'esecuzione autonoma, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+    `,
+  },
+  {
+    slug: "claude-controlla-computer-remoto",
+    title: "Claude Può Controllare il Tuo Computer da Remoto: Cosa È, Come Funziona, e Cosa Non Delegare Mai",
+    excerpt:
+      "Anthropic ha lanciato una funzione che fa girare la testa: Claude controlla il tuo Mac da remoto, esegue task autonomamente, e ti consegna il lavoro finito. Cosa funziona, cosa non fare, e perché è diverso da tutto ciò che è venuto prima.",
+    date: "26 Mar 2026",
+    readTime: "6 min",
+    category: "Tecnologia",
+    tags: ["Agenti AI", "Tecnologia", "Automazione"],
+    content: `
+<h2>La funzione che ha fatto girare la testa a tutti</h2>
+<p>A fine marzo 2026, Anthropic ha lanciato una funzione che ha immediatamente generato video virali e titoli da tabloid: Claude può ora controllare il tuo computer da remoto.</p>
+<p>Non è un'esagerazione. Funziona esattamente come sembra: dai a Claude accesso al tuo Mac, assegni un task dal tuo telefono, e Claude — usando il desktop della tua macchina — esegue il lavoro: apre applicazioni, usa il browser, clicca, digita, scarica file, li elabora, li sposta.</p>
+<p>Tu nel frattempo puoi fare altro. Quando Claude ha finito, il lavoro è lì ad aspettarti.</p>
+
+<h2>Come funziona tecnicamente (senza complicarsi la vita)</h2>
+<p>L'architettura si chiama <strong>Dispatch + Computer Use</strong> e ha due componenti:</p>
+<p><strong>Computer Use</strong>: Claude può usare il mouse e la tastiera del tuo computer per interagire con qualsiasi applicazione aperta. Scorrere, cliccare, aprire file, compilare moduli, navigare nel browser. Non usa API predefinite — usa l'interfaccia grafica come farebbe un essere umano.</p>
+<p><strong>Dispatch</strong>: il sistema che permette di assegnare task a Claude da un dispositivo remoto — tipicamente il telefono. Assegni il lavoro da fuori, Claude lo esegue sul desktop, e quando torni trovi il risultato.</p>
+<p>La logica di esecuzione è ordinata: Claude prova prima a usare le connessioni native (Slack, Google Calendar, Gmail). Solo se non ci sono integrazioni disponibili, passa al controllo diretto del computer.</p>
+
+<h2>I casi d'uso concreti che funzionano davvero</h2>
+<p>Anthropic ha mostrato tre esempi nel video di lancio:</p>
+<ul>
+  <li><strong>Esportare un PDF e allegarlo a un invito di calendario</strong>: tre applicazioni diverse, un flusso continuo. Claude lo fa in autonomia.</li>
+  <li><strong>Avviare un server di sviluppo e mandare uno screenshot di una pagina specifica</strong>: uso del terminale, browser, invio immagine. Per un team tecnico, questo tipo di task è ricorrente e noioso. Completamente delegabile.</li>
+  <li><strong>Batch edit di foto con ridimensionamento e watermark</strong>: elaborare un numero elevato di immagini con parametri uniformi. Zero decisioni — esattamente il lavoro che si dovrebbe già delegare.</li>
+</ul>
+<p>Al di là di questi esempi, i contesti aziendali più rilevanti sono quelli con task ad alto volume su applicazioni che non hanno API esposte: portali fornitori, gestionali legacy, software verticali di settore.</p>
+
+<h2>I limiti che Anthropic stessa ti dice di rispettare</h2>
+<p>Anthropic ha pubblicato esplicitamente cosa Claude è addestrato a non fare quando controlla il computer:</p>
+<ul>
+  <li>Non esegue operazioni finanziarie (stock trading, transazioni)</li>
+  <li>Non inserisce dati sensibili (password, numeri di carte)</li>
+  <li>Non raccoglie o fa scraping di immagini di volti</li>
+</ul>
+<p>E raccomanda di non dare accesso ad applicazioni finanziarie, legali, o mediche. Il modello di sicurezza è basato su permessi granulari: controlli a quali applicazioni Claude può accedere, puoi fermare il processo in qualsiasi momento, e il computer deve essere acceso e attivo.</p>
+
+<h2>Perché questa funzione è diversa da tutto ciò che è venuto prima</h2>
+<p>Finora, un agente AI poteva automatizzare un processo aziendale solo se quel processo aveva integrazioni API disponibili. Questo escludeva la grande maggioranza dei software gestionali usati dalle PMI italiane: sistemi legacy, applicazioni proprietarie, portali fornitori.</p>
+<p>Claude che usa il computer non ha questo vincolo. Se un essere umano può interagire con quell'applicazione usando mouse e tastiera, anche Claude può farlo. Questo apre scenari che prima erano fuori portata: automatizzare processi su software gestionali che non si aggiorneranno mai, interagire con portali pubblici senza API, operare su applicazioni desktop legacy.</p>
+
+<h2>Come iniziare a testarlo</h2>
+<p>La funzione è disponibile su Claude Pro (~20€/mese) e Claude Max (~100€/mese), solo su macOS per ora. La barriera di ingresso è bassa — il rischio principale non è tecnico, è la qualità delle istruzioni.</p>
+<p>Il modo più utile per testarlo: identifica 2-3 task ricorrenti nella tua giornata che richiedono di aprire più applicazioni in sequenza con operazioni ripetibili. Descrivili a Claude in modo dettagliato. Se il risultato è utilizzabile senza correzioni, hai appena trovato ore di lavoro recuperabili ogni settimana.</p>
+<p>Se vuoi capire come integrare questa funzione nei processi della tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+    `,
+  },
+  {
+    slug: "automazione-backoffice-ia",
+    title: "Automazione del Back Office con l'AI: Dove Iniziare e Quanto Si Risparmia",
+    excerpt:
+      "Il 60-70% delle attività back office nelle PMI è tecnicamente automatizzabile oggi. Email, fatture, report, gestione ordini: i quattro processi con il maggiore potenziale e i numeri reali delle implementazioni.",
+    date: "26 Mar 2026",
+    readTime: "7 min",
+    category: "Automazione",
+    tags: ["Automazione", "PMI", "Back Office"],
+    content: `
+<h2>Il back office è il posto dove va a morire la produttività</h2>
+<p>In quasi ogni PMI italiana esiste una zona grigia: il back office. Fatture da inserire, email da smistare, ordini da aggiornare nel gestionale, report da costruire su Excel, conferme da inviare ai clienti. Lavoro necessario, ripetitivo, consumatore di ore che potrebbero essere usate per qualcosa che crea valore reale.</p>
+<p>Secondo una stima del McKinsey Global Institute, il 60-70% delle attività back office nelle aziende medie è tecnicamente automatizzabile con tecnologie già disponibili oggi. L'AI non è l'unica risposta — ma è diventata quella con il miglior rapporto tra costo di implementazione e flessibilità di applicazione.</p>
+
+<h2>I quattro processi back office con il maggior potenziale</h2>
+<h3>1. Gestione email e comunicazioni in entrata</h3>
+<p>Una casella email aziendale che riceve 50-200 messaggi al giorno è uno dei colli di bottiglia più costosi nelle PMI. Classificare le email per tipo (ordine, reclamo, richiesta informazioni, preventivo), smistarle al responsabile giusto, generare una bozza di risposta per le tipologie ricorrenti: queste tre azioni da sole possono recuperare 1-2 ore al giorno per persona.</p>
+<p>Con un sistema AI configurato su Claude, questo workflow si implementa in 2-4 settimane e costa meno di un mese di lavoro del collaboratore che oggi lo fa manualmente.</p>
+<h3>2. Elaborazione documenti e data entry</h3>
+<p>Fatture passive, ordini di acquisto, DDT, note spese. In molte PMI questi documenti arrivano in PDF, vengono aperti da un operatore, e i dati vengono trascritti a mano nel gestionale. I modelli di estrazione dati da documenti hanno raggiunto tassi di accuratezza del 95-98% su documenti strutturati.</p>
+<p>Risultato tipico: riduzione del 70-80% del tempo dedicato al data entry documentale. Payback: 2-4 mesi.</p>
+<h3>3. Reportistica e monitoraggio KPI</h3>
+<p>Il controller di una PMI trascorre spesso 4-8 ore al mese a raccogliere dati da sistemi diversi e costruire il report di gestione. Con un sistema automatizzato, questo processo diventa un agente che gira ogni lunedì: raccoglie i dati, costruisce il report nel formato standard, lo invia ai destinatari, e segnala le anomalie. Poi è autonomo.</p>
+<h3>4. Gestione ordini e logistica documentale</h3>
+<p>Ricezione ordine → verifica disponibilità → conferma ordine → aggiornamento ERP → notifica magazzino → conferma al cliente. In molte PMI questo ciclo richiede 15-30 minuti di lavoro manuale per ordine. Un agente AI gestisce l'intero ciclo in autonomia per gli ordini standard, e porta all'attenzione umana solo le eccezioni.</p>
+
+<h2>Come si costruisce un sistema di automazione back office</h2>
+<ol>
+  <li><strong>Mappatura (1 settimana):</strong> identificare i 3 processi back office con il maggior volume di ore manuali. Non stimare: misurare davvero.</li>
+  <li><strong>Business case (2-3 giorni):</strong> per ogni processo, calcolare il costo attuale (ore × costo orario) e la riduzione stimata. Se il payback supera 12 mesi, scartare.</li>
+  <li><strong>Implementazione pilota (3-4 settimane):</strong> costruire e testare il primo workflow su un processo a basso rischio. Non partire dall'automazione della fatturazione attiva il primo giorno.</li>
+  <li><strong>Validazione e scala (4-8 settimane):</strong> misurare i risultati, correggere, estendere agli altri processi.</li>
+</ol>
+
+<h2>I numeri che si trovano nella pratica</h2>
+<p>In una PMI manifatturiera con 30-60 dipendenti che ha completato un progetto di automazione back office:</p>
+<ul>
+  <li>Riduzione delle ore back office: 40-60% nei processi automatizzati</li>
+  <li>Risparmio annuo tipico: €30.000-€80.000 in costo del lavoro</li>
+  <li>Costo di implementazione: €10.000-€25.000</li>
+  <li>Payback: 3-6 mesi</li>
+</ul>
+
+<h2>Il prerequisito che nessuno vuole sentire</h2>
+<p>L'automazione amplifica ciò che trova. Un processo manuale caotico, automatizzato, diventa un processo caotico veloce. Il prerequisito non è la tecnologia: è avere una descrizione chiara di come il processo dovrebbe funzionare in uno scenario ottimale. Solo da quella base si costruisce un sistema che funziona in produzione.</p>
+<p>Se vuoi capire quali processi back office nella tua azienda hanno il maggiore potenziale, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+    `,
+  },
+  {
+    slug: "claude-come-usarlo-pmi",
+    title: "Come Usare Claude in una PMI: Dal Primo Accesso ai Workflow Operativi",
+    excerpt:
+      "\"Inizia a usare l'AI\" è un consiglio inutile. Come iniziare, su quali task, con quale approccio: una guida in tre livelli per portare Claude dall'abbonamento individuale ai workflow automatizzati.",
+    date: "26 Mar 2026",
+    readTime: "8 min",
+    category: "AI & PMI",
+    tags: ["PMI", "Tecnologia", "Formazione"],
+    content: `
+<h2>Il problema con "inizia a usare l'AI"</h2>
+<p>"Inizia a usare l'AI" è un consiglio inutile. Come iniziare, con quale obiettivo, su quali task, con quale approccio: queste sono le domande che nessuno risponde in modo concreto, soprattutto per chi gestisce un'azienda e non ha ore da dedicare alla sperimentazione casuale.</p>
+<p>Questa guida risponde a quelle domande per Claude specificamente, con un percorso in tre livelli: uso individuale, integrazione nel team, workflow automatizzati.</p>
+
+<h2>Livello 1: L'uso individuale (settimana 1-2)</h2>
+<p>Prima di coinvolgere il team o costruire sistemi, bisogna capire Claude dall'interno. Apri <a href="https://claude.ai" target="_blank">claude.ai</a>, crea un account, prendi l'abbonamento Pro (20€/mese). Non iniziare con la versione gratuita — ha limiti che distorcono la valutazione del prodotto.</p>
+<p><strong>I task per i primi 5 giorni:</strong></p>
+<ul>
+  <li><strong>Giorno 1 — Email difficile:</strong> prendi l'email più scomoda che hai da scrivere. Descrivi a Claude il contesto, il tono voluto, cosa non dire. Usa la risposta come bozza.</li>
+  <li><strong>Giorno 2 — Documento da leggere:</strong> carica un contratto o capitolato che hai rimandato. Chiedi a Claude di riassumere i punti critici e le clausole rischiose.</li>
+  <li><strong>Giorno 3 — Report da costruire:</strong> descrivi cosa ti serve comunicare, a chi, in quale formato. Usa la struttura che suggerisce come punto di partenza.</li>
+  <li><strong>Giorno 4 — Ricerca competitiva:</strong> chiedi un'analisi di un tema di mercato rilevante per la tua azienda, con implicazioni pratiche.</li>
+  <li><strong>Giorno 5 — Meeting difficile:</strong> descrivi la situazione, gli obiettivi, le obiezioni prevedibili. Chiedi a Claude di aiutarti a strutturare la conversazione.</li>
+</ul>
+<p>Dopo 5 giorni hai già un'idea chiara di dove Claude ti fa risparmiare tempo e dove la sua utilità è marginale.</p>
+
+<h2>I Progetti: la funzione che fa la differenza</h2>
+<p>La funzione <strong>Progetti</strong> di Claude è quella che trasforma uno strumento che usi quando ci pensi in uno su cui fai affidamento. Un Progetto è una sessione con memoria persistente e istruzioni fisse. Puoi configurare:</p>
+<ul>
+  <li>Chi sei (ruolo, azienda, settore)</li>
+  <li>Come deve risponderti (tono, formato, lingua, lunghezza ideale)</li>
+  <li>Documenti di riferimento fissi (listino prezzi, catalogo prodotti, FAQ)</li>
+  <li>Regole specifiche ("scrivi sempre in italiano formale", "non proporre soluzioni sopra X euro")</li>
+</ul>
+<p>Il risultato: ogni volta che apri quel Progetto, Claude già sa chi sei, conosce la tua azienda, ha i tuoi documenti. Niente contesto da riscrivere ogni volta.</p>
+
+<h2>Livello 2: Il team (settimana 3-4)</h2>
+<p>I profili con il maggiore ROI iniziale:</p>
+<ul>
+  <li>Chi gestisce comunicazioni in entrata (email, richieste commerciali)</li>
+  <li>Chi prepara preventivi e offerte</li>
+  <li>Chi fa reportistica periodica</li>
+  <li>Chi gestisce fornitori e acquisti</li>
+</ul>
+<p>Non è necessario dare accesso a tutti subito. Inizia con 2-3 persone su task ad alto volume. Misura le ore risparmiate dopo 2 settimane. Poi decidi come estendere.</p>
+<p><strong>La formazione minima che serve:</strong> 2-3 ore di workshop pratico su come costruire prompt efficaci, con i task reali del team. Le persone che partecipano al workshop iniziano a usarlo subito. Quelle che non partecipano non lo usano. La formazione non è opzionale.</p>
+
+<h2>Livello 3: I workflow automatizzati (mese 2-3)</h2>
+<p>Il terzo livello è quello dove l'impatto si moltiplica: sistemi dove Claude lavora in modo autonomo senza che qualcuno avvii manualmente ogni sessione. Richiede l'uso dell'API di Anthropic e uno strumento di orchestrazione come n8n o Make.</p>
+<p>Tre workflow pratici per iniziare:</p>
+<ul>
+  <li><strong>Triage email automatico:</strong> ogni email classificata e con bozza di risposta. Il responsabile approva, non scrive da zero.</li>
+  <li><strong>Analisi documenti in entrata:</strong> ogni PDF processato, dati estratti e inviati al gestionale. Senza data entry manuale.</li>
+  <li><strong>Report settimanale automatico:</strong> ogni lunedì, dati raccolti, report costruito, inviato per email. Il controller riceve il report già fatto.</li>
+</ul>
+
+<h2>L'errore da evitare</h2>
+<p>Il più comune: comprare l'abbonamento Pro per tutti il primo giorno, senza formazione, sperando che le persone "capiscano da sole". Non funziona. Claude produce risultati proporzionali alla qualità delle istruzioni che riceve. Chi non sa costruire un prompt efficace otterrà risposte generiche e si convincerà che "l'AI non serve".</p>
+<p>Il percorso che funziona: inizia in piccolo, forma le persone sui task specifici del loro lavoro, misura i risultati, poi scala.</p>
+<p>Se vuoi capire come strutturare l'adozione di Claude nella tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+    `,
+  },
+  {
+    slug: "chatgpt-o-claude-quale-scegliere",
+    title: "ChatGPT o Claude? La Risposta Dipende da Cosa Fai (Non da Chi Ti Fa il Tifo)",
+    excerpt:
+      "Non esiste il migliore in assoluto. Esiste quello giusto per il tuo caso d'uso. Confronto diretto per scenario: analisi dati, scrittura in italiano, documenti lunghi, integrazione Office. Con matrice di decisione.",
+    date: "26 Mar 2026",
+    readTime: "6 min",
+    category: "Tecnologia",
+    tags: ["Tecnologia", "PMI", "Agenti AI"],
+    content: `
+<h2>La domanda che arriva quasi sempre</h2>
+<p>Ogni imprenditore italiano che inizia a guardare seriamente all'AI per la sua azienda prima o poi arriva alla stessa domanda: ChatGPT o Claude?</p>
+<p>È una domanda legittima, ma formulata nel modo sbagliato. Il modo giusto è: <em>per fare cosa?</em> Non esiste la risposta universale. Esiste la risposta giusta per il tuo caso d'uso specifico.</p>
+
+<h2>La differenza strutturale che conta</h2>
+<p><strong>ChatGPT</strong> è il prodotto di OpenAI — la più capitalizzata del settore, con un ecosistema molto ampio di integrazioni e partner. Il modello di punta è GPT-4o, con capacità multimodali (testo, immagini, voce, analisi dati). Abbonamento Plus: ~20€/mese.</p>
+<p><strong>Claude</strong> è il prodotto di Anthropic, nata con focus sulla sicurezza dei modelli AI. Il modello di punta è Claude Sonnet 4.x, con una finestra di contesto molto ampia e una tendenza a rispondere in modo più cauto e ragionato. Abbonamento Pro: ~20€/mese.</p>
+
+<h2>Dove vince ChatGPT</h2>
+<ul>
+  <li><strong>Analisi di dati numerici.</strong> ChatGPT con Code Interpreter può elaborare Excel, CSV, dataset, fare calcoli, produrre grafici. Per uso frequente con tabelle di numeri, vendite, KPI: ChatGPT è più completo.</li>
+  <li><strong>Integrazione con Microsoft 365.</strong> Se la tua azienda usa Teams, Outlook, SharePoint — Copilot (basato su GPT-4) si integra nativamente. L'AI è dove già lavori.</li>
+  <li><strong>Generazione di immagini.</strong> ChatGPT ha DALL-E integrato. Claude non genera immagini.</li>
+  <li><strong>Ampiezza delle integrazioni.</strong> L'ecosistema di plugin e connettori di OpenAI è più maturo.</li>
+</ul>
+
+<h2>Dove vince Claude</h2>
+<ul>
+  <li><strong>Scrittura in italiano di qualità.</strong> Claude produce testi in italiano più naturali, meno "tradotti dall'inglese". Per email commerciali, comunicazioni a clienti, testi per il sito: il risultato richiede meno ritocchi.</li>
+  <li><strong>Documenti lunghi.</strong> Claude gestisce fino a centinaia di pagine in una sola sessione. Un contratto di 60 pagine, un anno di email con un fornitore: si carica tutto e si lavora direttamente.</li>
+  <li><strong>Ragionamento su testi complessi.</strong> Su analisi legali, clausole contrattuali, testi tecnici ambigui, Claude tende a segnalare quando l'incertezza è alta invece di inventare una risposta convincente.</li>
+  <li><strong>Progetti con documenti fissi.</strong> Listino prezzi, FAQ, contratti tipo: Claude li conosce sempre in ogni sessione, senza ricaricarli ogni volta.</li>
+</ul>
+
+<h2>Il confronto per scenario</h2>
+<ul>
+  <li>Analisi Excel / dati numerici → <strong>ChatGPT</strong></li>
+  <li>Scrittura email in italiano → <strong>Claude</strong></li>
+  <li>Analisi contratto lungo → <strong>Claude</strong></li>
+  <li>Generazione immagini → <strong>ChatGPT</strong></li>
+  <li>Sei su Microsoft 365 → <strong>ChatGPT (Copilot)</strong></li>
+  <li>Elaborazione fatture e PDF → <strong>Claude</strong></li>
+  <li>Ricerca di mercato e sintesi → <strong>Claude</strong></li>
+  <li>Presentazioni e slide → <strong>ChatGPT</strong></li>
+  <li>Report di gestione automatizzati → <strong>Claude</strong></li>
+</ul>
+
+<h2>La risposta onesta a "quale è meglio"</h2>
+<p>Sono due strumenti con punti di forza diversi. Usarli come categorie mutuamente esclusive è un errore. Le aziende che ottengono i risultati migliori spesso usano entrambi: ChatGPT per l'integrazione con Office e l'analisi dati, Claude per tutto ciò che richiede elaborazione di testi complessi e scrittura in italiano.</p>
+<p>40€ al mese in totale per entrambe le versioni Pro è meno del costo di un'ora di consulenza. Se hai dubbi su quale ha più senso per i tuoi casi d'uso specifici, la risposta più rapida è provarli entrambi per 2 settimane sugli stessi task reali. La differenza diventa subito evidente.</p>
+<p>Se vuoi una valutazione strutturata su quale AI ha senso per la tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+    `,
+  },
+  {
+    slug: "privacy-dati-claude-aziende",
+    title: "I Tuoi Dati Aziendali Sono al Sicuro con Claude? La Risposta Onesta",
+    excerpt:
+      "Prima di caricare contratti, dati di vendita, o informazioni sui dipendenti, dovresti sapere esattamente cosa succede a quei dati. Tre domande, tre risposte dirette: versioni a confronto, GDPR, e quando serve l'Enterprise.",
+    date: "26 Mar 2026",
+    readTime: "6 min",
+    category: "Compliance",
+    tags: ["Compliance", "GDPR", "PMI"],
+    content: `
+<h2>La domanda che ogni imprenditore dovrebbe fare prima di iniziare</h2>
+<p>Prima di caricare su Claude il contratto con il tuo principale cliente, i dati di vendita del trimestre, o la lista dei tuoi dipendenti, dovresti sapere esattamente cosa succede a quei dati. La risposta non è semplice come "sì è sicuro" o "no non usarlo". Dipende da quale versione usi, come è configurata, e cosa si intende per "sicuro".</p>
+
+<h2>Domanda 1: Anthropic usa i miei dati per addestrare i modelli?</h2>
+<p><strong>Dipende dalla versione.</strong></p>
+<ul>
+  <li><strong>Versione gratuita:</strong> le conversazioni possono essere usate per migliorare i modelli, a meno che tu non disattivi l'opzione "Improve Claude for everyone" nelle impostazioni Account → Privacy.</li>
+  <li><strong>Versione Pro individuale (20€/mese):</strong> per impostazione predefinita, le conversazioni non vengono usate per il training. Anthropic lo dichiara esplicitamente nella privacy policy per gli abbonati Pro.</li>
+  <li><strong>Versione Teams/Business:</strong> garanzie esplicite che i dati non vengono usati per training. Include pannello di amministrazione e politiche centralizzate.</li>
+  <li><strong>Versione Enterprise:</strong> contratto DPA vincolante, processing su infrastruttura dedicata.</li>
+</ul>
+<p><strong>Regola pratica:</strong> usa Claude Pro o superiore per dati aziendali. La versione gratuita non è adatta all'uso professionale.</p>
+
+<h2>Domanda 2: Dove vengono salvate le conversazioni e chi può vederle?</h2>
+<p>Le conversazioni su Claude vengono salvate nei server di Anthropic, principalmente negli Stati Uniti. Per le aziende europee, questo ha implicazioni GDPR: il trasferimento di dati personali verso gli USA richiede garanzie specifiche.</p>
+<p>Anthropic offre questo attraverso le Standard Contractual Clauses (SCC) per i clienti Business ed Enterprise. Per la versione Pro individuale, Anthropic aderisce al Data Privacy Framework EU-USA.</p>
+<p><strong>Cosa significa nella pratica:</strong></p>
+<ul>
+  <li>Dati personali di clienti, dipendenti, o pazienti: usa Claude Business con DPA firmato, o evita di caricarli</li>
+  <li>Documenti commerciali non personali (preventivi, capitolati, analisi di mercato): la versione Pro è sufficiente per la maggior parte dei casi</li>
+  <li>Dati finanziari aziendali aggregati: generalmente gestibili con la versione Pro</li>
+</ul>
+
+<h2>Domanda 3: Cosa fare per essere conformi al GDPR?</h2>
+<p>Il GDPR si applica quando si trattano dati personali di persone nell'UE. Non tutti i dati che usi con Claude rientrano in questa categoria.</p>
+<p><strong>Dati che NON richiedono particolari precauzioni GDPR:</strong> analisi di mercato, documenti interni senza dati personali, testi commerciali, codice software.</p>
+<p><strong>Dati che richiedono attenzione:</strong> lista clienti con contatti, dati dipendenti (buste paga, contratti), dati medici o legali personali.</p>
+<p><strong>Il framework di compliance minimo:</strong></p>
+<ol>
+  <li>Usa la versione Pro o superiore — non la versione gratuita per dati aziendali</li>
+  <li>Firma il DPA di Anthropic se usi la versione Business o Enterprise</li>
+  <li>Aggiorna il Registro dei Trattamenti includendo Claude</li>
+  <li>Forma il team su cosa non caricare: dati personali di clienti, dipendenti, dati sanitari</li>
+  <li>Valuta una DPIA se usi Claude per processi ad alto rischio</li>
+</ol>
+
+<h2>La soluzione per chi vuole il controllo massimo</h2>
+<p>Esiste un'opzione per chi ha requisiti di riservatezza molto alti: usare Claude attraverso l'API di Anthropic su infrastruttura propria, con un server VPS self-hosted. In questo setup, i dati passano direttamente tra il tuo server e Anthropic, senza intermediari. Un VPS europeo costa 5-15€/mese.</p>
+<p>Per la maggior parte delle PMI non è necessario — la versione Business con DPA è sufficiente. Per studi legali, cliniche, o holding con dati sensibili di portafoglio, è la scelta più sicura.</p>
+
+<h2>La risposta in una riga</h2>
+<p><strong>Pro individuale:</strong> sicuro per documenti aziendali non personali, con impostazioni corrette. <strong>Business/Enterprise:</strong> sicuro anche per dati GDPR, con DPA firmato. <strong>Versione gratuita:</strong> non usarla per dati aziendali.</p>
+<p>Se vuoi capire quale configurazione è adatta alla tua azienda e ai tuoi requisiti di compliance, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+    `,
+  },
+  {
+    slug: "claude-quanto-costa",
+    title: "Claude: Quanto Costa e Quando Vale la Pena Pagare",
+    excerpt:
+      "I prezzi reali di Claude senza giri di parole: gratuito, Pro, Teams, Enterprise e API. Il calcolo del ROI, quando passare al livello successivo, e i costi nascosti che nessuno mette nel preventivo.",
+    date: "26 Mar 2026",
+    readTime: "5 min",
+    category: "AI & PMI",
+    tags: ["PMI", "ROI", "Tecnologia"],
+    content: `
+<h2>I prezzi reali, senza giri di parole</h2>
+<p>Claude ha quattro livelli di prezzo. Eccoli tutti, con cosa è incluso e per chi ha senso ciascuno.</p>
+<ul>
+  <li><strong>Gratis (€0/mese):</strong> accesso al modello con limiti significativi — tetto di messaggi giornaliero, nessuna priorità nelle ore di punta, funzionalità ridotte. Buono per provare, non per lavorarci seriamente.</li>
+  <li><strong>Claude Pro (~€20/mese):</strong> modello completo senza limitazioni pratiche, priorità di accesso, caricamento documenti e immagini, accesso ai Progetti. Il punto di ingresso per uso professionale individuale.</li>
+  <li><strong>Claude Teams (~€25-30/utente/mese):</strong> tutte le funzionalità di Pro, più pannello di amministrazione, politiche centralizzate, conversazioni non usate per training per definizione. Adatto per team di 3-50 persone.</li>
+  <li><strong>Claude Enterprise (€50-100+/utente/mese):</strong> tutto di Teams, più contratto DPA per GDPR, SSO, finestre di contesto ancora più ampie, supporto dedicato, SLA garantiti. Per aziende con requisiti di sicurezza elevati.</li>
+</ul>
+<p><strong>API (pay-per-use):</strong> per chi integra Claude in applicazioni proprie. Costi per milione di token: Haiku ~€0,25 input/€1,25 output; Sonnet ~€3/€15; Opus ~€15/€75. Un milione di token corrisponde a circa 750.000 parole.</p>
+
+<h2>Il calcolo che conta: quanto vale l'abbonamento?</h2>
+<p>Un abbonamento Pro a 20€/mese è conveniente se fa risparmiare più di 20€ al mese di lavoro. Il break-even è 45 minuti di lavoro risparmiato al mese al costo del lavoro italiano medio.</p>
+<p>In pratica: se usi Claude professionalmente anche solo due volte a settimana e ogni utilizzo ti fa risparmiare 20 minuti rispetto a fare le cose a mano, il ROI è ampiamente positivo dalla prima settimana.</p>
+
+<h2>Quando conviene passare da Pro a Teams?</h2>
+<p>Tre segnali chiari:</p>
+<ul>
+  <li>Più di 2-3 persone usano Claude con account separati — Teams è più economico e gestibile</li>
+  <li>Hai necessità di condividere documenti o configurazioni comuni tra i membri del team</li>
+  <li>Vuoi garanzie esplicite che le conversazioni aziendali non vengano mai usate per training</li>
+</ul>
+
+<h2>Quando conviene usare l'API invece dell'abbonamento?</h2>
+<p>L'abbonamento è per persone che usano Claude direttamente. L'API è per costruire sistemi. Se vuoi costruire un agente che analizza automaticamente le email in arrivo, o un sistema che processa le fatture: usi l'API. Il costo API per una PMI con uso moderato (es. 500 email al giorno) è spesso inferiore a 30-50€ al mese — molto meno dell'equivalente in lavoro umano.</p>
+
+<h2>La trappola dei costi nascosti</h2>
+<p>Il costo dell'abbonamento è solo una parte. Da mettere in conto:</p>
+<ul>
+  <li><strong>Costo di implementazione:</strong> costruire un sistema che usa l'API richiede sviluppo. Per sistemi semplici, €2.000-8.000. Una tantum.</li>
+  <li><strong>Costo di formazione:</strong> un abbonamento senza formazione produce adozione bassa. Conta 2-4 ore per persona.</li>
+  <li><strong>Costo del tempo interno:</strong> qualcuno deve gestire il progetto, testare, correggere. Non è zero.</li>
+</ul>
+<p>Il totale del primo anno per una PMI di 20 persone che adotta Claude seriamente: €5.000-15.000. Il valore recuperato se l'adozione funziona: 3-5 volte tanto.</p>
+
+<h2>La raccomandazione diretta</h2>
+<ul>
+  <li><strong>Sei un singolo imprenditore o manager:</strong> Claude Pro a 20€/mese. Se dopo 30 giorni lo usi ogni giorno, hai già il ROI.</li>
+  <li><strong>Hai un team di 3-20 persone:</strong> Claude Teams. Gestione centralizzata, garanzie di privacy, scala con il team.</li>
+  <li><strong>Vuoi costruire automazioni:</strong> API di Anthropic con n8n o Make.</li>
+  <li><strong>Hai requisiti GDPR stringenti:</strong> Enterprise, con DPA firmato.</li>
+</ul>
+<p>Se vuoi capire quale configurazione ha senso per la tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+    `,
+  },
+  {
+    slug: "automazioni-con-claude",
+    title: "Automazioni con Claude: 7 Casi d'Uso Pratici per le PMI Italiane",
+    excerpt:
+      "Da Claude come assistente individuale a Claude come motore di sistemi automatizzati. Sette casi d'uso reali, ordinati per difficoltà crescente: email, fatture, report, supporto commerciale, analisi offerte, customer service H24, monitoraggio contratti.",
+    date: "26 Mar 2026",
+    readTime: "7 min",
+    category: "Automazione",
+    tags: ["Automazione", "PMI", "Agenti AI"],
+    content: `
+<h2>Dalla chat al sistema che gira da solo</h2>
+<p>Claude come assistente in chat è utile. Claude come motore di un sistema automatizzato è un'altra cosa. La differenza è strutturale: nella chat, sei tu che avvii ogni interazione. In un sistema automatizzato, Claude lavora quando si verificano condizioni predefinite — un'email arriva, un file appare, un orario viene raggiunto.</p>
+<p>Questi 7 casi d'uso sono reali, implementabili, e ordinati per difficoltà crescente.</p>
+
+<h2>1. Triage e risposta automatica alle email (difficoltà: bassa)</h2>
+<p><strong>Il problema:</strong> l'80% delle email in entrata appartiene a 5-10 tipologie ricorrenti (richiesta preventivo, tracking ordine, informazioni prodotto, reclamo standard).</p>
+<p><strong>L'automazione:</strong> ogni email viene analizzata da Claude, classificata per tipo, e riceve una bozza di risposta contestualizzata. Il responsabile vede solo le bozze — le approva o corregge dove necessario.</p>
+<p><strong>Strumenti:</strong> Claude API + n8n o Make (trigger: email in entrata).</p>
+<p><strong>Risultato tipico:</strong> riduzione del 50-60% del tempo dedicato alla gestione email.</p>
+
+<h2>2. Elaborazione automatica di fatture e documenti (difficoltà: bassa)</h2>
+<p><strong>Il problema:</strong> le fatture passive arrivano in PDF. Qualcuno le apre, trascrive i dati nel gestionale, le archivia. Lavoro puro senza valore aggiunto.</p>
+<p><strong>L'automazione:</strong> ogni PDF viene inviato a Claude che estrae fornitore, data, numero fattura, importi, e scadenza. I dati strutturati vengono inviati al gestionale via API. Claude segnala le anomalie.</p>
+<p><strong>Risultato tipico:</strong> 80% del data entry eliminato. Errori di trascrizione a zero. Payback: 2-4 mesi.</p>
+
+<h2>3. Report settimanale automatico (difficoltà: bassa)</h2>
+<p><strong>Il problema:</strong> ogni settimana qualcuno raccoglie dati da 3-4 fonti e costruisce il report. 2-4 ore di lavoro ripetitivo.</p>
+<p><strong>L'automazione:</strong> un workflow che gira ogni lunedì raccoglie i dati, li passa a Claude con un template, e Claude costruisce il documento nel formato standard. Il report arriva per email senza intervento umano.</p>
+<p><strong>Risultato tipico:</strong> 2-4 ore di lavoro eliminate ogni settimana.</p>
+
+<h2>4. Supporto commerciale automatizzato (difficoltà: media)</h2>
+<p><strong>Il problema:</strong> i commerciali trascorrono ore a rispondere alle stesse domande sui prodotti invece di fare attività commerciale vera.</p>
+<p><strong>L'automazione:</strong> un agente Claude addestrato sul catalogo prodotti, listino, e FAQ risponde autonomamente via email, WhatsApp, o chat sul sito. Scala al commerciale umano solo le richieste che richiedono negoziazione.</p>
+<p><strong>Risultato tipico:</strong> 60-70% delle richieste standard gestite autonomamente.</p>
+
+<h2>5. Analisi offerte fornitori (difficoltà: media)</h2>
+<p><strong>Il problema:</strong> quando arrivano 3-4 offerte per lo stesso acquisto, costruire la tabella di confronto richiede attenzione ma poca intelligenza.</p>
+<p><strong>L'automazione:</strong> le offerte in PDF vengono analizzate da Claude che estrae i dati rilevanti e costruisce automaticamente la tabella comparativa nel formato standard dell'azienda.</p>
+<p><strong>Risultato tipico:</strong> tempo di analisi offerte ridotto del 70%. Il responsabile acquisti decide invece di raccogliere dati.</p>
+
+<h2>6. Agente di customer service H24 (difficoltà: media-alta)</h2>
+<p><strong>Il problema:</strong> i clienti fanno domande fuori orario. Chi risponde? Spesso nessuno — con perdita di soddisfazione e opportunità commerciali.</p>
+<p><strong>L'automazione:</strong> un agente Claude configurato con tutte le informazioni necessarie gestisce le richieste su WhatsApp o email 24/7. Le eccezioni vengono gestite il giorno successivo con tutto il contesto disponibile.</p>
+<p><strong>Risultato tipico:</strong> copertura H24 a una frazione del costo di un turno notturno. NPS in miglioramento.</p>
+
+<h2>7. Monitoraggio contratti e scadenze (difficoltà: alta)</h2>
+<p><strong>Il problema:</strong> i contratti con fornitori e clienti hanno scadenze, rinnovi automatici, opzioni di recesso. Chi tiene traccia di tutto?</p>
+<p><strong>L'automazione:</strong> tutti i contratti vengono analizzati da Claude che estrae scadenze e clausole chiave. Un workflow automatico invia alert 60-90 giorni prima di ogni scadenza critica, con il riassunto delle opzioni disponibili.</p>
+<p><strong>Risultato tipico:</strong> zero scadenze perse. Zero rinnovi automatici indesiderati.</p>
+
+<h2>Come scegliere da dove iniziare</h2>
+<p>Non iniziare dall'automazione più complessa. Inizia da quella con il miglior rapporto tra ore recuperate e rischio di errore. I casi 1, 2 e 3 (email, fatture, report) sono quelli con il payback più rapido e il rischio più basso — e danno al team la prima esperienza concreta con l'AI che lavora in autonomia.</p>
+<p>Se vuoi capire quale di questi casi d'uso ha più senso per la tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+    `,
+  },
+  {
+    slug: "automazione-ia-pmi-guida",
+    title: "Automazione AI per PMI: La Guida Concreta per Iniziare nel 2026",
+    excerpt:
+      "La domanda non è più 'funziona?' — funziona. È 'da dove iniziamo, quanto ci costa, e quanto ci mettiamo a vedere risultati?'. Tre livelli di automazione AI, metodo di scelta, numeri reali.",
+    date: "26 Mar 2026",
+    readTime: "7 min",
+    category: "AI & PMI",
+    tags: ["Automazione", "PMI", "Strategia"],
+    content: `
+<h2>Il punto in cui siamo</h2>
+<p>Nel 2026, l'automazione AI non è più un progetto sperimentale per le PMI italiane. È un'opzione concreta, con strumenti accessibili, costi in calo, e casi d'uso documentati in ogni settore. La domanda non è più "funziona?" — funziona. La domanda è "da dove iniziamo, quanto ci costa, e quanto ci mettiamo a vedere risultati?"</p>
+
+<h2>Automazione tradizionale vs automazione AI: la differenza che conta</h2>
+<p><strong>L'automazione tradizionale</strong> (Zapier, Power Automate, script) funziona su regole fisse: SE succede X, FAI Y. Potente per processi completamente strutturati, ma si inceppa su tutto ciò che esce dalle regole prestabilite.</p>
+<p><strong>L'automazione AI</strong> (basata su Claude o GPT-4) gestisce l'ambiguità: capisce il contesto, interpreta richieste in linguaggio naturale, gestisce le eccezioni senza regole esplicite per ogni caso. È più flessibile, ma più costosa per task ripetitivi e prevedibili.</p>
+<p>La scelta non è "tradizionale o AI" — è capire quale tipo di task richiede quale tipo di automazione.</p>
+
+<h2>I tre livelli di automazione AI nelle PMI</h2>
+<h3>Livello 1: Assistenza (nessuna automazione tecnica)</h3>
+<p>L'AI come strumento individuale: scrivere email, analizzare documenti, fare ricerche. Non richiede integrazione tecnica, solo accesso agli strumenti (Claude Pro, 20€/mese per utente).</p>
+<p>Risultati: 30-90 minuti risparmiati per persona al giorno. Tempo per vedere l'effetto: settimane.</p>
+<h3>Livello 2: Workflow automatizzati</h3>
+<p>Processi specifici vengono automatizzati: l'AI lavora in modo autonomo quando si verifica un trigger. Esempi: triage email, elaborazione fatture, report automatici.</p>
+<p>Investimento: €5.000-25.000 di implementazione + €200-800 al mese di tool. Risultati: eliminazione di 5-20 ore di lavoro manuale settimanale. Tempo per vedere l'effetto: 4-8 settimane.</p>
+<h3>Livello 3: Agenti AI operativi</h3>
+<p>L'AI gestisce interi processi aziendali: riceve obiettivi complessi, li scompone in passi, usa strumenti reali, e porta all'attenzione umana solo le eccezioni. Esempi: customer service H24, gestione ordini, supporto commerciale.</p>
+<p>Investimento: €15.000-60.000 + €500-2.000 al mese. Risultati: copertura di funzioni aziendali con supervisione ridotta. Tempo per vedere l'effetto: 2-4 mesi.</p>
+
+<h2>Il metodo per scegliere da dove iniziare</h2>
+<ol>
+  <li><strong>Lista dei processi ripetitivi:</strong> fai elencare a ogni persona le attività che fa più di 5 volte a settimana. Non le più importanti — le più ripetitive.</li>
+  <li><strong>Quantificazione del tempo:</strong> per ogni attività, stima le ore mensili totali. Ordina dalla più costosa alla meno costosa.</li>
+  <li><strong>Analisi dell'adattabilità:</strong> le prime 5 per costo: hanno regole chiare? I dati sono digitali? L'output è verificabile? Se sì, sono candidate.</li>
+  <li><strong>Business case:</strong> calcola risparmio annuo vs costo di implementazione. Prioritizza con payback inferiore a 6 mesi.</li>
+</ol>
+
+<h2>I numeri che si trovano nella pratica</h2>
+<p>Una PMI manifatturiera da 40 dipendenti, automazione su email + documenti + report:</p>
+<ul>
+  <li>Ore manuali eliminate: 120/mese</li>
+  <li>Costo del lavoro recuperato: €3.000/mese</li>
+  <li>Costo dell'implementazione: €18.000 (una tantum)</li>
+  <li>Costo mensile dei tool: €400</li>
+  <li>Payback: 6 mesi</li>
+  <li>ROI al 2° anno: €30.000 netti</li>
+</ul>
+
+<h2>L'errore che costa di più</h2>
+<p>Il progetto di automazione AI che fallisce quasi sempre fallisce per la stessa ragione: si è partiti senza una baseline di misurazione. Se non sai quanto tempo costa il processo oggi, non puoi dimostrare quanto lo stai migliorando — e non puoi giustificare il prossimo investimento.</p>
+<p>La regola prima di iniziare: metti un numero su quanto costa il processo adesso. Anche approssimativo. Poi misura di nuovo dopo 3 mesi. La differenza è il ROI.</p>
+<p>Se vuoi capire da dove iniziare nella tua azienda con un approccio strutturato, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+    `,
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
@@ -1356,5 +1906,17 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
 }
 
 export function getRelatedPosts(slug: string, count = 3): BlogPost[] {
-  return BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, count);
+  const current = BLOG_POSTS.find((p) => p.slug === slug);
+  if (!current) return [];
+
+  return BLOG_POSTS.filter((p) => p.slug !== slug)
+    .map((p) => ({
+      post: p,
+      score:
+        (p.category === current.category ? 3 : 0) +
+        p.tags.filter((t) => current.tags.includes(t)).length,
+    }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, count)
+    .map((x) => x.post);
 }
