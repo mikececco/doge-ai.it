@@ -4,94 +4,216 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import Label from "@/components/ui/Label";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
-import Badge from "@/components/ui/Badge";
-import NumberedCard from "@/components/ui/NumberedCard";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
-import AnimatedUnderline from "@/components/animations/AnimatedUnderline";
+import Counter from "@/components/animations/Counter";
+import TimelineAnimated from "@/components/animations/TimelineAnimated";
+import SectorOverlay from "@/components/animations/SectorOverlay";
 import CtaFinale from "@/components/sections/CtaFinale";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
 
 /* ─── Data ─────────────────────────────────────────────── */
 
-const FASI = [
+const METRICS = [
+  { value: 4, suffix: "", label: "AZIENDE", sub: "seguite" },
+  { prefix: "<", value: 3, suffix: "", label: "MESI", sub: "per primo progetto" },
+  { prefix: "<", value: 60, suffix: "K", label: "INVESTIMENTO", sub: "anno 1" },
+];
+
+const SUCCESSI = [
   {
-    number: "01",
+    title: "Automazione ordini B2B",
+    result: "Da 4h/giorno a 20 minuti",
+    detail:
+      "Un distributore food riceveva ordini via email, PDF e WhatsApp. Abbiamo automatizzato il parsing e il caricamento sul gestionale.",
+    type: "successo",
+  },
+  {
+    title: "Customer service AI",
+    result: "80% ticket gestiti senza umani",
+    detail:
+      "Un&rsquo;azienda manifatturiera con 200+ richieste/giorno. Chatbot addestrato sui manuali tecnici e lo storico ticket.",
+    type: "successo",
+  },
+  {
+    title: "Configuratore prodotto complesso",
+    result: "Progetto fermato dopo 3 mesi",
+    detail:
+      "I dati di prodotto erano frammentati su 6 sistemi diversi. Abbiamo imparato che senza dati puliti, l&rsquo;AI non fa miracoli. Ora partiamo sempre dal data audit.",
+    type: "insuccesso",
+  },
+  {
+    title: "Demand planning predittivo",
+    result: "ROI non misurabile nel breve",
+    detail:
+      "Lo storico ordini era troppo corto per un modello affidabile. Lezione: non tutto si risolve con l&rsquo;AI. A volte servono prima i fondamentali.",
+    type: "insuccesso",
+  },
+];
+
+const PROTEGGERE_ESPANDERE = [
+  "Automatizzare il lavoro ripetitivo che vi costa 3-4 FTE all&rsquo;anno",
+  "Ridurre errori operativi del 60-80% nei processi critici",
+  "Dare a ogni dipendente un copilota AI che moltiplica la produttivit&agrave;",
+  "Scalare il customer service senza assumere",
+  "Trasformare i dati che gi&agrave; avete in decisioni migliori",
+];
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const SETTORI_PROBLEMI = [
+  {
+    settore: "Manifattura",
+    problema: "Hai un backlog di ordini che gestisci su Excel?",
+    icon: "&#9881;",
+  },
+  {
+    settore: "Food & Beverage",
+    problema:
+      "Ricevi ordini via email, PDF ed EDI e li carichi sul gestionale a mano?",
+    icon: "&#127828;",
+  },
+  {
+    settore: "Logistica",
+    problema:
+      "Calcoli le rotte a mano e il 20% delle consegne arriva in ritardo?",
+    icon: "&#128666;",
+  },
+  {
+    settore: "Distribuzione B2B",
+    problema:
+      "I tuoi commerciali passano pi&ugrave; tempo a fare data entry che a vendere?",
+    icon: "&#128230;",
+  },
+  {
+    settore: "Moda & Lusso",
+    problema:
+      "Il campionario &egrave; ancora un processo manuale che dura mesi?",
+    icon: "&#128090;",
+  },
+  {
+    settore: "Healthcare",
+    problema:
+      "Gestite documentazione clinica e compliance con processi manuali?",
+    icon: "&#9764;",
+  },
+];
+
+const SETTORI_TABELLA = [
+  {
+    settore: "Manifattura",
+    applicazione: "Automazione ordini, quality control predittivo, manutenzione preventiva",
+  },
+  {
+    settore: "Food & Beverage",
+    applicazione: "Parsing ordini multi-canale, demand forecasting, tracciabilit&agrave; automatica",
+  },
+  {
+    settore: "Logistica",
+    applicazione: "Ottimizzazione rotte, gestione magazzino intelligente, tracking predittivo",
+  },
+  {
+    settore: "Distribuzione B2B",
+    applicazione: "CRM intelligente, automazione offerte, analisi credito clienti",
+  },
+  {
+    settore: "Moda & Lusso",
+    applicazione: "Configuratori prodotto, trend analysis, personalizzazione clienteling",
+  },
+  {
+    settore: "Healthcare",
+    applicazione: "Documentazione clinica AI, compliance automatizzata, scheduling intelligente",
+  },
+  {
+    settore: "Costruzioni",
+    applicazione: "Project management predittivo, analisi cantiere, procurement intelligence",
+  },
+  {
+    settore: "Retail",
+    applicazione: "Pricing dinamico, inventory optimization, customer service omnicanale",
+  },
+];
+
+const TIMELINE_ITEMS = [
+  {
     title: "Assessment",
-    description:
-      "4–6 settimane. Audit per funzione aziendale, mappatura processi, quantificazione costo attuale. Business case chiaro prima di scrivere una riga di codice.",
+    description: "Mappiamo processi e inefficienze in 2 settimane",
   },
   {
-    number: "02",
     title: "Quick Wins",
-    description:
-      "30–90 giorni. 2–3 implementazioni ad alto impatto e bassa complessità. Il primo risultato concreto entro 30 giorni. Non uno studio. Un sistema che funziona.",
+    description: "Primi risultati concreti entro 30 giorni",
   },
   {
-    number: "03",
-    title: "Trasformazione",
-    description:
-      "3–18 mesi. 5–8 use case prioritizzati. Implementazione end-to-end con change management incluso.",
+    title: "Implementazione",
+    description: "Soluzioni AI integrate nei vostri sistemi",
+  },
+  {
+    title: "Autonomia",
+    description: "Il vostro team gestisce tutto in autonomia",
   },
 ];
 
-const LIVELLI = [
+const SETTORI_OVERLAY = [
   {
-    level: "01",
-    title: "Single-player tools",
-    description:
-      "Ogni dipendente ha accesso ai migliori modelli AI (ChatGPT, Claude, Gemini) attraverso un’unica interfaccia. Basso costo, vittoria immediata.",
-    timeline: "1–2 settimane",
+    title: "Manifattura",
+    problem: "Hai un backlog di ordini che gestisci su Excel?",
+    bullets: [
+      "Automazione ordini e caricamento gestionale",
+      "Quality control predittivo con computer vision",
+      "Manutenzione preventiva basata su dati IoT",
+    ],
   },
   {
-    level: "02",
-    title: "Single-player processes",
-    description:
-      "Automatizziamo il lavoro di una singola persona o funzione: il customer service manager, l’ufficio acquisti, chi gestisce le email.",
-    timeline: "30–60 giorni",
+    title: "Food & Beverage",
+    problem: "Ricevi ordini via email, PDF ed EDI e li carichi a mano?",
+    bullets: [
+      "Parsing automatico ordini multi-canale",
+      "Demand forecasting per ridurre sprechi",
+      "Tracciabilit\u00E0 automatica end-to-end",
+    ],
   },
   {
-    level: "03",
-    title: "Multi-player single function",
-    description:
-      "Ottimizziamo un intero dipartimento: tutto il funnel di vendita, tutta la supply chain, tutto il customer service. Sistemi che comunicano tra loro.",
-    timeline: "2–4 mesi",
+    title: "Logistica",
+    problem: "Calcoli le rotte a mano e il 20% delle consegne arriva in ritardo?",
+    bullets: [
+      "Ottimizzazione rotte con AI predittiva",
+      "Gestione magazzino intelligente",
+      "Tracking predittivo per clienti e operations",
+    ],
   },
   {
-    level: "04",
-    title: "Multi-player multi-function",
-    description:
-      "Riprogettazione dei processi cross-funzionali. Il livello più complesso e più trasformativo. Richiede fondamenta solide dai livelli precedenti.",
-    timeline: "6–18 mesi",
+    title: "Distribuzione B2B",
+    problem: "I tuoi commerciali passano pi\u00F9 tempo a fare data entry che a vendere?",
+    bullets: [
+      "CRM intelligente con suggerimenti AI",
+      "Automazione offerte e pricing dinamico",
+      "Analisi credito clienti in tempo reale",
+    ],
+  },
+  {
+    title: "Moda & Lusso",
+    problem: "Il campionario \u00E8 ancora un processo manuale che dura mesi?",
+    bullets: [
+      "Configuratori prodotto con AI generativa",
+      "Trend analysis predittiva",
+      "Personalizzazione clienteling omnicanale",
+    ],
+  },
+  {
+    title: "Healthcare",
+    problem: "Gestite documentazione clinica e compliance con processi manuali?",
+    bullets: [
+      "Documentazione clinica AI-assisted",
+      "Compliance automatizzata e audit trail",
+      "Scheduling intelligente risorse e pazienti",
+    ],
   },
 ];
 
-const SETTORI = [
-  "Logistica & Trasporti",
-  "Manifattura & Meccanica",
-  "Distribuzione B2B",
-  "Moda & Lusso",
-  "Alimentare & Vitivinicolo",
-  "Healthcare & Medical Devices",
-  "Costruzioni & Real Estate",
-  "Retail & E-commerce",
-  "Servizi Professionali",
-];
-
-const DIFESA = [
-  "Customer service automatizzato (80% richieste gestite da AI)",
-  "Automazione documenti e data entry",
-  "Ottimizzazione operativa (rotte, magazzino, ordini)",
-  "Reporting e KPI real-time senza effort manuale",
-  "Procurement intelligence e controllo fornitori",
-];
-
-const ATTACCO = [
-  "Configuratori AI per prodotti complessi",
-  "Analisi predittiva per vendite e demand planning",
-  "Nuovi canali di acquisizione con agenti conversazionali",
-  "Pricing power da funzionalità AI uniche nel prodotto",
-  "Nuovi servizi premium non scalabili senza AI",
+const STATS_BAR = [
+  { prefix: "", value: 30, suffix: "%", label: "costo operativo medio risparmiato" },
+  { prefix: "-", value: 3, suffix: "", label: "FTE equivalenti liberati" },
+  { prefix: "<", value: 60, suffix: "K", label: "investimento primo anno" },
+  { prefix: "+", value: 80, suffix: "%", label: "processi automatizzabili" },
 ];
 
 /* ─── Page ─────────────────────────────────────────────── */
@@ -99,183 +221,234 @@ const ATTACCO = [
 export default function AziendePage() {
   return (
     <>
-      {/* ── Section 1: Hero ────────────────────────────── */}
-      <SectionWrapper bg="white" className="!pt-40 !pb-20">
+      {/* ── Section 1: Hero (Yellow) ─────────────────────── */}
+      <SectionWrapper bg="giallo" className="!pt-40 !pb-16">
         <FadeInOnScroll>
-          <Label>PER LE AZIENDE</Label>
-          <h1 className="text-hero mt-4">
-            La tua azienda{" "}
-            <AnimatedUnderline>vale di più</AnimatedUnderline> di quello
-            che rende oggi.
+          <Label className="!text-nero/60">PER LE AZIENDE</Label>
+          <h1 className="text-hero mt-4 max-w-4xl">
+            S&igrave;, puoi fare di pi&ugrave;. Il nostro AI, ripensare il
+            personale, anzi meglio!
           </h1>
-          <p className="text-subheadline text-grigio-scuro mt-6 max-w-[620px]">
-            L&apos;AI non è solo efficienza. È la chiave per fare
-            cose che prima erano economicamente impossibili: nuovi servizi,
-            nuovi mercati, nuovi modelli di business.
+          <p className="text-subheadline text-nero/70 mt-6 max-w-[680px]">
+            Non vendiamo software. Entriamo nella tua azienda, capiamo dove
+            perdi tempo e soldi, e costruiamo soluzioni AI che funzionano
+            davvero. In meno di 3 mesi.
           </p>
           <div className="mt-10">
-            <Button href="/contatti">Parla con noi &rarr;</Button>
+            <Button href="/contatti" className="!bg-nero !text-giallo hover:!bg-grigio-scuro">
+              Parla con noi &rarr;
+            </Button>
+          </div>
+        </FadeInOnScroll>
+
+        {/* Metrics row */}
+        <FadeInOnScroll className="mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-nero/20 pt-10">
+            {METRICS.map((m, i) => (
+              <motion.div
+                key={m.label}
+                variants={fadeInUp}
+                custom={i}
+                className="text-center md:text-left"
+              >
+                <div className="flex items-baseline justify-center md:justify-start gap-1">
+                  {m.prefix && (
+                    <span className="text-metric">{m.prefix}</span>
+                  )}
+                  <Counter target={m.value} suffix={m.suffix} />
+                </div>
+                <p className="text-sm font-bold mt-1 uppercase tracking-wider">
+                  {m.label}
+                </p>
+                <p className="text-sm text-nero/60">{m.sub}</p>
+              </motion.div>
+            ))}
           </div>
         </FadeInOnScroll>
       </SectionWrapper>
 
-      {/* ── Section 2: La Domanda Giusta ───────────────── */}
-      <SectionWrapper bg="light">
-        <FadeInOnScroll className="text-center max-w-[800px] mx-auto">
-          <p className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold leading-tight">
-            &ldquo;Se potessi triplicare il numero di dipendenti senza
-            aumentare il costo del personale, cosa faresti? Espandere in nuovi
-            mercati? Lanciare nuovi prodotti? Servire più clienti?&rdquo;
-          </p>
-          <p className="text-lg text-grigio-scuro mt-8">
-            L&apos;AI ti dà esattamente quella capacità. Non è
-            solo cost reduction &mdash; è capacity expansion.
-          </p>
-        </FadeInOnScroll>
-      </SectionWrapper>
-
-      {/* ── Section 3: Il Processo in 4 Fasi ───────────── */}
+      {/* ── Section 2: Successi e Insuccessi ─────────────── */}
       <SectionWrapper bg="white">
         <FadeInOnScroll>
-          <h2 className="text-section">
-            Se iniziamo domani, cosa succede?
+          <Label>TRASPARENZA TOTALE</Label>
+          <h2 className="text-section mt-4">
+            Fare i conti con successi e insuccessi.
           </h2>
-        </FadeInOnScroll>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
-          {FASI.map((fase, i) => (
-            <NumberedCard
-              key={fase.number}
-              number={fase.number}
-              title={fase.title}
-              description={fase.description}
-              index={i}
-            />
-          ))}
-        </div>
-      </SectionWrapper>
-
-      {/* ── Section 4: I 4 Livelli ─────────────────────── */}
-      <SectionWrapper bg="light">
-        <FadeInOnScroll>
-          <h2 className="text-section">
-            Ogni azienda percorre 4 livelli. Non si salta.
-          </h2>
+          <p className="text-body text-grigio-scuro mt-4 max-w-[700px]">
+            Non tutto funziona al primo colpo. Vi raccontiamo cosa ha
+            funzionato e cosa no, perch&eacute; &egrave; cos&igrave; che si
+            costruisce fiducia.
+          </p>
         </FadeInOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-          {LIVELLI.map((livello, i) => (
-            <Card key={livello.level} index={i}>
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-label text-giallo">{livello.level}</span>
-                <Badge>{livello.timeline}</Badge>
+          {SUCCESSI.map((item, i) => (
+            <Card
+              key={item.title}
+              index={i}
+              dark={item.type === "insuccesso"}
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <span
+                  className={`text-xs font-bold uppercase tracking-wider px-3 py-1 ${
+                    item.type === "successo"
+                      ? "bg-giallo text-nero"
+                      : "bg-white/10 text-grigio-medio"
+                  }`}
+                >
+                  {item.type === "successo" ? "Successo" : "Lezione appresa"}
+                </span>
               </div>
-              <h3 className="text-xl font-bold">{livello.title}</h3>
-              <p className="text-body text-grigio-scuro mt-2">
-                {livello.description}
+              <h3 className="text-xl font-bold">{item.title}</h3>
+              <p
+                className={`text-lg font-semibold mt-1 ${
+                  item.type === "successo" ? "text-nero" : "text-giallo"
+                }`}
+              >
+                {item.result}
               </p>
+              <p
+                className={`text-body mt-3 ${
+                  item.type === "insuccesso"
+                    ? "text-bianco/70"
+                    : "text-grigio-scuro"
+                }`}
+                dangerouslySetInnerHTML={{ __html: item.detail }}
+              />
             </Card>
           ))}
         </div>
-
-        <FadeInOnScroll className="mt-10">
-          <p className="text-body text-grigio-scuro italic text-center max-w-[700px] mx-auto">
-            La maggior parte delle PMI italiane si trova ancora al Livello 0.
-            Il vantaggio competitivo si costruisce adesso.
-          </p>
-        </FadeInOnScroll>
       </SectionWrapper>
 
-      {/* ── Section 5: Settori ─────────────────────────── */}
+      {/* ── Section 3: Proteggere e Espandere ────────────── */}
+      <SectionWrapper bg="light">
+        <FadeInOnScroll>
+          <Label>IL METODO</Label>
+          <h2 className="text-section mt-4">
+            Proteggere e espandere: costruiamo partendo da qui.
+          </h2>
+          <p className="text-body text-grigio-scuro mt-4 max-w-[700px]">
+            Ogni azienda ha inefficienze nascoste che costano centinaia di
+            migliaia di euro all&rsquo;anno. Il nostro lavoro &egrave; trovarle
+            e risolverle.
+          </p>
+        </FadeInOnScroll>
+
+        {/* Animated Timeline */}
+        <TimelineAnimated items={TIMELINE_ITEMS} />
+
+        <div className="mt-12 space-y-0">
+          {PROTEGGERE_ESPANDERE.map((item, i) => (
+            <FadeInOnScroll key={i}>
+              <div className="flex items-start gap-4 py-5 border-b border-nero/10 last:border-0">
+                <span className="text-giallo text-xl font-bold mt-0.5 shrink-0">
+                  &rarr;
+                </span>
+                <p
+                  className="text-body text-nero"
+                  dangerouslySetInnerHTML={{ __html: item }}
+                />
+              </div>
+            </FadeInOnScroll>
+          ))}
+        </div>
+      </SectionWrapper>
+
+      {/* ── Section 4: Vedi se ti riconosci ──────────────── */}
       <SectionWrapper bg="white">
         <FadeInOnScroll>
-          <h2 className="text-section">
-            Lavoriamo con i settori che trainano il Made in Italy.
+          <Label>TI RICONOSCI?</Label>
+          <h2 className="text-section mt-4">
+            Vedi se siedi dove poter partire da qui.
+          </h2>
+          <p className="text-body text-grigio-scuro mt-4 max-w-[700px]">
+            Ogni settore ha i suoi problemi specifici. Se ti riconosci in uno
+            di questi, possiamo aiutarti.
+          </p>
+        </FadeInOnScroll>
+
+        <div className="mt-12">
+          <SectorOverlay sectors={SETTORI_OVERLAY} />
+        </div>
+      </SectionWrapper>
+
+      {/* ── Section 5: Settore + Applicazioni AI ─────────── */}
+      <SectionWrapper bg="dark">
+        <FadeInOnScroll>
+          <Label className="!text-giallo">COMPETENZA SETTORIALE</Label>
+          <h2 className="text-section text-bianco mt-4">
+            Il tuo settore ha un problema. Noi lo conosciamo gi&agrave;.
           </h2>
         </FadeInOnScroll>
 
-        <FadeInOnScroll className="flex flex-wrap gap-3 mt-10">
-          {SETTORI.map((settore) => (
-            <motion.span
-              key={settore}
+        <FadeInOnScroll className="mt-12">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="border-b border-white/20">
+                  <th className="text-label text-giallo pb-4 pr-8 uppercase tracking-wider">
+                    Settore
+                  </th>
+                  <th className="text-label text-giallo pb-4 uppercase tracking-wider">
+                    Applicazioni AI
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {SETTORI_TABELLA.map((row) => (
+                  <tr
+                    key={row.settore}
+                    className="border-b border-white/10 last:border-0"
+                  >
+                    <td className="text-bianco font-bold py-4 pr-8 whitespace-nowrap">
+                      {row.settore}
+                    </td>
+                    <td
+                      className="text-bianco/70 text-body py-4"
+                      dangerouslySetInnerHTML={{ __html: row.applicazione }}
+                    />
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </FadeInOnScroll>
+      </SectionWrapper>
+
+      {/* ── Section 6: Stats Bar ─────────────────────────── */}
+      <SectionWrapper bg="giallo" className="!py-12">
+        <FadeInOnScroll
+          className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          stagger
+        >
+          {STATS_BAR.map((stat, i) => (
+            <motion.div
+              key={stat.label}
               variants={fadeInUp}
-              className="bg-grigio-chiaro px-5 py-2.5 text-sm font-bold hover:bg-giallo transition-colors cursor-default"
+              custom={i}
+              className="text-center"
             >
-              {settore}
-            </motion.span>
+              <div className="flex items-baseline justify-center gap-0.5">
+                {stat.prefix && (
+                  <span className="text-metric">{stat.prefix}</span>
+                )}
+                <Counter target={stat.value} suffix={stat.suffix} />
+              </div>
+              <p className="text-sm font-medium text-nero/70 mt-1">
+                {stat.label}
+              </p>
+            </motion.div>
           ))}
         </FadeInOnScroll>
       </SectionWrapper>
 
-      {/* ── Section 6: Difesa vs Attacco ───────────────── */}
-      <SectionWrapper bg="light">
-        <FadeInOnScroll>
-          <h2 className="text-section">
-            Ogni implementazione AI rientra in una di due categorie.
-          </h2>
-        </FadeInOnScroll>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          <FadeInOnScroll>
-            <div className="bg-bianco border border-[#E8E8E8] p-8 h-full">
-              <h3 className="text-lg font-bold mb-2">
-                Difesa &mdash; Proteggi i margini
-              </h3>
-              <p className="text-body text-grigio-scuro mb-5">
-                Automazione dei processi core per ridurre i costi operativi.
-              </p>
-              <ul className="space-y-3">
-                {DIFESA.map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex items-start gap-3 text-body text-grigio-scuro"
-                  >
-                    <span className="text-grigio-medio mt-0.5">&mdash;</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </FadeInOnScroll>
-
-          <FadeInOnScroll>
-            <div className="bg-nero border border-white/10 p-8 text-bianco h-full">
-              <h3 className="text-lg font-bold text-giallo mb-2">
-                Attacco &mdash; Crea nuovo valore
-              </h3>
-              <p className="text-body text-bianco/70 mb-5">
-                Funzionalità AI che giustificano margini più alti.
-              </p>
-              <ul className="space-y-3">
-                {ATTACCO.map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex items-start gap-3 text-body text-bianco/80"
-                  >
-                    <span className="text-giallo mt-0.5">&rarr;</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </FadeInOnScroll>
-        </div>
-
-        <FadeInOnScroll className="mt-10">
-          <p className="text-body text-grigio-scuro text-center max-w-[720px] mx-auto">
-            Una trasformazione AI completa lavora su entrambi i fronti. Solo
-            difesa significa perdere la gara dell&apos;innovazione. Solo attacco
-            senza fondamenta operative è un castello di carte.
-          </p>
-        </FadeInOnScroll>
-      </SectionWrapper>
-
-      {/* ── Section 7: CTA Finale ──────────────────────── */}
+      {/* ── Section 7: CTA Finale ────────────────────────── */}
       <CtaFinale
-        title="L&rsquo;assessment è il punto di partenza."
-        subtitle="In 4–6 settimane ti diciamo esattamente quanto vale l&rsquo;AI per la tua azienda — con numeri alla mano."
-        buttonText="Prenota l&rsquo;assessment gratuito &rarr;"
+        title="Vinci la prossima decade."
+        subtitle="Non aspettare che lo facciano i tuoi concorrenti. Parla con noi, nessun impegno."
+        buttonText="Prenota una call &rarr;"
         buttonHref="/contatti"
+        dark
       />
     </>
   );

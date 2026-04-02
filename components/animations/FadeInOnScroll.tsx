@@ -20,7 +20,7 @@ export default function FadeInOnScroll({
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: true, amount: 0.2 }}
         className={className}
       >
         {children}
@@ -33,7 +33,7 @@ export default function FadeInOnScroll({
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, amount: 0.2 }}
       className={className}
     >
       {children}

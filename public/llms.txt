@@ -1,0 +1,51 @@
+# DOGE di Venezia
+
+> Consulenza AI per PMI italiane. Strategia, implementazione e formazione con tecnologia Anthropic/Claude.
+
+## Chi siamo
+
+DOGE di Venezia e una societa di consulenza AI specializzata nel supportare le piccole e medie imprese italiane nell'adozione dell'intelligenza artificiale. Lavoriamo esclusivamente con PMI e family office italiani.
+
+## Servizi
+
+- **Strategia AI**: Roadmap di adozione AI, priorita, casi d'uso concreti, ROI atteso
+- **Implementazione Agenti AI**: Agenti personalizzati con tecnologia Anthropic/Claude per automatizzare compiti ripetitivi
+- **Automazione Processi**: Dalla gestione ordini alla customer care, dall'analisi documenti al reporting
+- **Formazione Team**: Prompt engineering, utilizzo degli strumenti AI, integrazione nei flussi di lavoro
+- **Consulenza per Private Equity e Family Office**: Due diligence AI, ottimizzazione portfolio companies
+
+## Settori
+
+Manifattura, logistica, agroalimentare, turismo, moda, e-commerce, servizi professionali, retail.
+
+## Copertura geografica
+
+Operativi in tutta Italia con consulenze in 107+ province. Sede a Pieve del Grappa (TV), Veneto.
+
+## Risultati tipici
+
+- 40-60% riduzione tempo su attivita ripetitive
+- 250% ROI medio su automazione customer service
+- Primi sistemi operativi in 2-4 settimane
+- Payback investimento in meno di 5 mesi
+
+## Contatti
+
+- Sito web: https://doge-ai.it
+- Email: dogedivenezia.ai@gmail.com
+- Telefono: +39 345 9656145
+- Indirizzo: Via Giardino Generale 6, 31017 Pieve del Grappa (TV), Italia
+- P.IVA: IT04596950248
+
+## Pagine principali
+
+- [Homepage](https://doge-ai.it)
+- [Chi Siamo](https://doge-ai.it/chi-siamo)
+- [Per le Aziende](https://doge-ai.it/aziende)
+- [Per i Fondi PE](https://doge-ai.it/fondi)
+- [Il Codice del Doge (Metodo)](https://doge-ai.it/metodo)
+- [Casi d'Uso](https://doge-ai.it/casi-duso)
+- [Blog](https://doge-ai.it/blog)
+- [Soluzioni](https://doge-ai.it/soluzioni)
+- [Consulenza AI per citta](https://doge-ai.it/consulenza-ai)
+- [Contatti](https://doge-ai.it/contatti)

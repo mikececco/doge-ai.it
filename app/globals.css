@@ -113,4 +113,35 @@
   .mid-cta-btn {
     @apply inline-block mt-5 bg-giallo text-nero text-sm font-semibold px-5 py-2.5 hover:bg-giallo-hover transition-colors no-underline !important;
   }
+
+  /* ─── Card Flip 3D ───────────────────────────────────── */
+  .card-flip {
+    perspective: 1000px;
+  }
+
+  .card-inner {
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+  }
+
+  .card-flip:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .card-front {
+    position: relative;
+  }
+
+  .card-back {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+  }
 }

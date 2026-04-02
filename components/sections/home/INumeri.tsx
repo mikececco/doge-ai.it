@@ -7,51 +7,59 @@ const metrics = [
   {
     target: 30,
     suffix: "%",
-    prefix: "15–",
-    label: "Riduzione costi target",
+    prefix: "",
+    label: "Riduzione costi target, con ROI misurabile in 6 mesi.",
   },
   {
-    target: 30,
-    suffix: " GG",
-    prefix: "",
-    label: "Dal primo audit all’AI in produzione",
+    target: 3,
+    suffix: " MESI",
+    prefix: "<",
+    label: "Payback medio sull'investimento.",
   },
   {
-    target: 33,
-    suffix: "x",
-    prefix: "",
-    label: "Moltiplicatore sull’investimento",
+    target: 60,
+    suffix: " GIORNI",
+    prefix: "<",
+    label: "Dal primo audit all'AI in produzione.",
   },
   {
     target: 25,
     suffix: "",
     prefix: "+",
-    label: "Professionisti AI nel team",
+    label: "Professionisti da strategia a implementazione.",
+  },
+  {
+    target: 100,
+    suffix: "",
+    prefix: "+",
+    label: "Startup partner per accedere alle migliori soluzioni.",
   },
 ];
 
 export default function INumeri() {
   return (
-    <section className="bg-grigio-chiaro py-20" id="i-numeri">
-      <div className="container-site">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+    <section className="bg-giallo text-nero" id="i-numeri">
+      {/* Metrics grid with black border cells */}
+      <FadeInOnScroll>
+        <div className="grid grid-cols-2 md:grid-cols-5 border-b border-nero">
           {metrics.map((metric, i) => (
-            <FadeInOnScroll key={i}>
-              <div className="flex flex-col items-center gap-3">
-                <Counter
-                  target={metric.target}
-                  suffix={metric.suffix}
-                  prefix={metric.prefix}
-                  className="text-metric text-nero"
-                />
-                <span className="text-label uppercase text-grigio-medio tracking-widest">
-                  {metric.label}
-                </span>
-              </div>
-            </FadeInOnScroll>
+            <div
+              key={i}
+              className={`px-6 py-8 text-center ${i < metrics.length - 1 ? "md:border-r border-nero" : ""} ${i < metrics.length - 2 ? "border-b md:border-b-0 border-nero" : ""}`}
+            >
+              <Counter
+                target={metric.target}
+                suffix={metric.suffix}
+                prefix={metric.prefix}
+                className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold text-nero leading-none"
+              />
+              <p className="text-xs text-nero/70 mt-3 leading-snug">
+                {metric.label}
+              </p>
+            </div>
           ))}
         </div>
-      </div>
+      </FadeInOnScroll>
     </section>
   );
 }

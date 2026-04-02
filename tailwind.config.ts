@@ -50,6 +50,15 @@ const config: Config = {
         "card-hover": "none",
         navbar: "0 1px 0 rgba(0, 0, 0, 0.08)",
       },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee var(--marquee-speed, 40s) linear infinite",
+      },
     },
   },
   plugins: [],

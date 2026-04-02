@@ -4,7 +4,9 @@ import Link from "next/link";
 import Label from "@/components/ui/Label";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import CtaFinale from "@/components/sections/CtaFinale";
+import RelatedContent from "@/components/sections/RelatedContent";
 import { SOLUZIONI_PAGES } from "@/lib/soluzioni-data";
+import { getLinksForSoluzione } from "@/lib/internal-links";
 
 const BASE_URL = "https://doge-ai.it";
 
@@ -184,6 +186,30 @@ export default function SoluzioneSlugPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Related Blog Posts */}
+      <RelatedContent
+        label="ARTICOLI CORRELATI"
+        bg="light"
+        variant="cards"
+        items={getLinksForSoluzione(page.slug).blogPosts.map((post) => ({
+          href: `/blog/${post.slug}`,
+          title: post.title,
+          subtitle: post.category,
+          meta: `${post.readTime} lettura`,
+        }))}
+      />
+
+      {/* Related Cities */}
+      <RelatedContent
+        label="CONSULENZA AI SUL TERRITORIO"
+        bg="white"
+        variant="links"
+        items={getLinksForSoluzione(page.slug).cities.map((city) => ({
+          href: `/consulenza-ai/${city.slug}`,
+          title: `Consulenza AI a ${city.name}`,
+        }))}
+      />
 
       {/* CTA Finale */}
       <CtaFinale

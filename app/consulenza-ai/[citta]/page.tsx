@@ -4,7 +4,9 @@ import Link from "next/link";
 import Label from "@/components/ui/Label";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import CtaFinale from "@/components/sections/CtaFinale";
+import RelatedContent from "@/components/sections/RelatedContent";
 import { CITIES } from "@/lib/cities-data";
+import { getLinksForCity } from "@/lib/internal-links";
 
 const BASE_URL = "https://doge-ai.it";
 
@@ -258,6 +260,31 @@ export default function ConsulenzaAICittaPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Related Blog Posts */}
+      <RelatedContent
+        label="APPROFONDIMENTI"
+        bg="light"
+        variant="cards"
+        items={getLinksForCity(city.slug).blogPosts.map((post) => ({
+          href: `/blog/${post.slug}`,
+          title: post.title,
+          subtitle: post.category,
+          meta: `${post.readTime} lettura`,
+        }))}
+      />
+
+      {/* Related Solutions */}
+      <RelatedContent
+        label="SOLUZIONI"
+        bg="white"
+        variant="cards"
+        items={getLinksForCity(city.slug).soluzioni.map((sol) => ({
+          href: `/soluzioni/${sol.slug}`,
+          title: sol.h1,
+          subtitle: sol.category,
+        }))}
+      />
 
       {/* CTA Finale */}
       <CtaFinale

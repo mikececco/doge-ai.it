@@ -9,6 +9,7 @@ export const NAV_ITEMS = [
   },
   { label: "Il Codice del Doge", href: "/metodo" },
   { label: "Casi d'Uso", href: "/casi-duso" },
+  { label: "Settori", href: "/settori" },
   { label: "Blog", href: "/blog" },
   { label: "Soluzioni", href: "/soluzioni" },
   { label: "Lavora con Noi", href: "/lavora-con-noi" },
@@ -21,6 +22,7 @@ export const FOOTER_LINKS = {
     { label: "Per i Fondi PE", href: "/fondi" },
     { label: "Il Codice del Doge", href: "/metodo" },
     { label: "Casi d'Uso", href: "/casi-duso" },
+    { label: "Settori", href: "/settori" },
     { label: "Blog", href: "/blog" },
     { label: "Soluzioni", href: "/soluzioni" },
     { label: "Lavora con Noi", href: "/lavora-con-noi" },
@@ -34,8 +36,8 @@ export const FOOTER_LINKS = {
 
 export const CONTACT_INFO = {
   email: "dogedivenezia.ai@gmail.com",
-  phone: "+39 345 9656145",
-  address: "Via Giardino Generale, 6\n31017, Pieve del Grappa (TV)",
+  phone: "+39 346 8889545",
+  address: "Calle Polver del Fuoco 827/A\nVENEZIA",
   piva: "P.IVA IT04596950248",
 } as const;
 

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/home/HeroSection";
-import RealtaScomode from "@/components/sections/home/RealtaScomode";
-import CosaFacciamo from "@/components/sections/home/CosaFacciamo";
-import DuePercorsi from "@/components/sections/home/DuePercorsi";
+import TrasformazioneAI from "@/components/sections/home/TrasformazioneAI";
+import EntrareCorrereCostruire from "@/components/sections/home/EntrareCorrereCostruire";
 import INumeri from "@/components/sections/home/INumeri";
 import IlManifesto from "@/components/sections/home/IlManifesto";
+import RealtaScomode from "@/components/sections/home/RealtaScomode";
 import CtaFinale from "@/components/sections/CtaFinale";
 
 export const metadata: Metadata = {
@@ -23,14 +23,15 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <RealtaScomode />
-      <CosaFacciamo />
-      <DuePercorsi />
+      <TrasformazioneAI />
+      <EntrareCorrereCostruire />
       <INumeri />
       <IlManifesto />
+      <RealtaScomode />
       <CtaFinale
+        dark
         title="Vinci la prossima decade."
-        subtitle="Scopri quanto vale l'AI per la tua azienda — con numeri alla mano."
+        subtitle="Scopri dove l'AI ha il massimo impatto nella tua azienda."
         buttonText="Prenota una call →"
         buttonHref="/contatti"
       />

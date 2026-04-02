@@ -17,12 +17,12 @@ export const STAGGER = {
 
 // Framer Motion variants
 export const fadeInUp = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 30 },
   visible: (i: number = 0) => ({
     opacity: 1,
     y: 0,
     transition: {
-      duration: DURATION.normal,
+      duration: 0.6,
       delay: i * STAGGER.normal,
       ease: EASE,
     },

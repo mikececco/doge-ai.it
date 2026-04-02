@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 type ButtonProps = {
   variant?: "primary" | "secondary";
@@ -36,9 +37,7 @@ export default function Button({
   const cls = [base, variants[variant], extraClass].filter(Boolean).join(" ");
 
   const arrow = variant === "secondary" && (
-    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-      →
-    </span>
+    <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
   );
 
   if (href && external) {

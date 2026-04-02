@@ -1,24 +1,73 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
+import SectionWrapper from "@/components/ui/SectionWrapper";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
+
+const pillars = [
+  {
+    title: "Prodotti",
+    body: "Competenza tecnica verticale, mentalità AI-first. Off-the-shelf quando basta, custom quando crea vantaggio reale.",
+  },
+  {
+    title: "Processi",
+    body: "Entriamo nei flussi di lavoro reali, nei colli di bottiglia invisibili. Smontiamo, automatizziamo, restiamo fino a quando funziona.",
+  },
+  {
+    title: "Persone",
+    body: "Ogni individuo deve avere gli strumenti e l'autonomia per integrare l'AI nel proprio lavoro. Altrimenti è solo tecnologia che raccoglie polvere.",
+  },
+];
 
 export default function IlManifesto() {
   return (
-    <section className="bg-nero py-[120px]" id="manifesto">
-      <div className="container-site">
-        <FadeInOnScroll className="max-w-[800px] mx-auto text-center">
-          <h2 className="text-bianco text-[clamp(2.5rem,4vw,4rem)] font-bold leading-tight">
-            La finestra &egrave; aperta. Per altri 18 mesi.
+    <SectionWrapper bg="white" id="manifesto">
+      <FadeInOnScroll>
+        <div className="text-center mb-14">
+          <span className="text-label uppercase text-grigio-medio tracking-widest">
+            Tre leve. Zero compromessi.
+          </span>
+          <h2 className="text-section uppercase mt-4">
+            Chi cambia solo i tool non cambia niente.
           </h2>
-          <p className="text-bianco/60 text-xl leading-[1.7] mt-10">
-            L&rsquo;AI ha raggiunto l&rsquo;inflection point. I modelli del
-            2026 fanno cose che 12 mesi fa erano fantascienza. La maggior parte
-            delle PMI italiane &egrave; ferma. Chi si muove adesso costruisce un
-            vantaggio che diventa strutturale. Chi aspetta trova solo il costo di
-            stare nel mercato.
+          <p className="text-body text-nero/70 mt-4 max-w-[600px] mx-auto">
+            Ogni progetto agisce su prodotti, processi e persone. In parallelo,
+            non in sequenza.
           </p>
-        </FadeInOnScroll>
-      </div>
-    </section>
+        </div>
+      </FadeInOnScroll>
+
+      <FadeInOnScroll>
+        <div className="border border-nero">
+          <div className="grid grid-cols-1 md:grid-cols-3">
+            {pillars.map((p, i) => (
+              <div
+                key={i}
+                className={`px-8 py-8 ${i < 2 ? "md:border-r border-nero" : ""} border-b md:border-b-0 border-nero last:border-b-0`}
+              >
+                <h3 className="text-xl font-bold uppercase mb-4">
+                  <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
+                    {p.title}
+                  </span>
+                </h3>
+                <p className="text-body text-nero leading-relaxed">{p.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="border-t border-nero px-8 py-4 flex flex-col sm:flex-row items-center gap-4">
+            <p className="text-sm text-nero">
+              Vuoi capire i principi che guidano ogni nostro progetto?
+            </p>
+            <a
+              href="/metodo"
+              className="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 bg-giallo text-nero hover:bg-giallo-hover transition-colors duration-200 shrink-0"
+            >
+              Il Codice del Doge <ArrowRight size={16} className="inline-block" />
+            </a>
+          </div>
+        </div>
+      </FadeInOnScroll>
+    </SectionWrapper>
   );
 }
