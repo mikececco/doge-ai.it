@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Label from "@/components/ui/Label";
 import CtaFinale from "@/components/sections/CtaFinale";
+import RelatedContent from "@/components/sections/RelatedContent";
 import { BLOG_POSTS, getPostBySlug, getRelatedPosts } from "@/lib/blog-data";
+import { getLinksForBlog } from "@/lib/internal-links";
 import ReadingProgress from "./ReadingProgress";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -17,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  const url = `https://dogedivenezia.ai/blog/${post.slug}`;
+  const url = `https://doge-ai.it/blog/${post.slug}`;
 
   return {
     title: post.title,
@@ -29,7 +31,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       url,
       publishedTime: post.date,
-      authors: ["DOGE di Venezia"],
+      authors: ["il Doge di Venezia"],
+      siteName: "il Doge di Venezia",
     },
     twitter: {
       card: "summary_large_image",
@@ -46,6 +49,12 @@ const CATEGORY_COLORS: Record<string, string> = {
   Tecnologia: "bg-bianco/20 text-bianco",
   Strategia: "bg-giallo text-nero",
   Compliance: "bg-bianco/20 text-bianco",
+  "Analisi Dati e Intelligenza Artificiale": "bg-giallo text-nero",
+  "Ottimizzazione Flussi e Automazione Processi": "bg-bianco/20 text-bianco",
+  "Marketing e Acquisizione Clienti": "bg-giallo text-nero",
+  "Supporto e Relazione con il Cliente": "bg-bianco/20 text-bianco",
+  "Ottimizzazione Finanziaria e Tesoreria": "bg-giallo text-nero",
+  "Partnership e Canale AI": "bg-bianco/20 text-bianco",
 };
 
 function getCategoryClass(category: string) {
@@ -58,7 +67,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const related = getRelatedPosts(slug, 3);
-  const url = `https://dogedivenezia.ai/blog/${post.slug}`;
+  const url = `https://doge-ai.it/blog/${post.slug}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -69,15 +78,21 @@ export default async function BlogPostPage({ params }: Props) {
         headline: post.title,
         description: post.excerpt,
         datePublished: post.date,
+        inLanguage: "it-IT",
+        keywords: post.tags.join(", "),
         author: {
           "@type": "Organization",
-          name: "DOGE di Venezia",
-          url: "https://dogedivenezia.ai",
+          name: "il Doge di Venezia",
+          url: "https://doge-ai.it",
         },
         publisher: {
           "@type": "Organization",
-          name: "DOGE di Venezia",
-          url: "https://dogedivenezia.ai",
+          name: "il Doge di Venezia",
+          url: "https://doge-ai.it",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://doge-ai.it/logo.png",
+          },
         },
         mainEntityOfPage: { "@type": "WebPage", "@id": url },
       },
@@ -88,13 +103,13 @@ export default async function BlogPostPage({ params }: Props) {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: "https://dogedivenezia.ai",
+            item: "https://doge-ai.it",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Blog",
-            item: "https://dogedivenezia.ai/blog",
+            item: "https://doge-ai.it/blog",
           },
           {
             "@type": "ListItem",
@@ -285,6 +300,18 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {/* Related Solutions */}
+      <RelatedContent
+        label="SOLUZIONI CORRELATE"
+        bg="white"
+        variant="cards"
+        items={getLinksForBlog(slug).soluzioni.map((sol) => ({
+          href: `/soluzioni/${sol.slug}`,
+          title: sol.h1,
+          subtitle: sol.category,
+        }))}
+      />
 
       {/* CTA */}
       <CtaFinale

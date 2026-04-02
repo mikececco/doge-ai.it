@@ -27,12 +27,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: page === "" ? 1 : page === "/blog" ? 0.9 : 0.8,
   }));
 
-  const blogPosts: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
+  const coreSlugPatterns = [
+    "ai-pmi", "claude", "chatgpt", "agenti", "automazione", "agentic",
+    "n8n", "gtm", "consulenza-ai", "quanto-costa", "insostituibili",
+    "evals", "infrastruttura", "video-ai", "collasso", "prompt",
+  ];
+
+  const blogPosts: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => {
+    const isCore = coreSlugPatterns.some((p) => post.slug.includes(p));
+    return {
+      url: `${BASE_URL}/blog/${post.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: isCore ? 0.75 : 0.65,
+    };
+  });
 
   const soluzioniPages: MetadataRoute.Sitemap = SOLUZIONI_PAGES.map((page) => ({
     url: `${BASE_URL}/soluzioni/${page.slug}`,

@@ -3,6 +3,8 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import PageTransition from "@/components/animations/PageTransition";
+import CookieBanner from "@/components/CookieBanner";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -13,11 +15,41 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "DOGE di Venezia — Trasformazione Digitale per PMI",
-    template: "%s | DOGE di Venezia",
+    default: "il Doge di Venezia — Consulenza AI per PMI Italiane",
+    template: "%s | il Doge di Venezia",
   },
   description:
-    "Strategia e implementazione AI per PMI e fondi di investimento. Risultati misurabili in 30 giorni.",
+    "Strategia e implementazione AI per PMI e fondi di investimento italiani. Automazione, agenti AI, digital twin. Risultati misurabili in 30 giorni.",
+  metadataBase: new URL("https://doge-ai.it"),
+  alternates: {
+    canonical: "https://doge-ai.it",
+  },
+  openGraph: {
+    title: "il Doge di Venezia — Consulenza AI per PMI Italiane",
+    description:
+      "Strategia e implementazione AI per PMI e fondi di investimento italiani. Automazione, agenti AI, digital twin.",
+    url: "https://doge-ai.it",
+    siteName: "il Doge di Venezia",
+    locale: "it_IT",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "il Doge di Venezia — Consulenza AI per PMI Italiane",
+    description:
+      "Strategia e implementazione AI per PMI e fondi di investimento italiani.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -29,8 +61,11 @@ export default function RootLayout({
     <html lang="it" className={spaceGrotesk.variable}>
       <body className="font-sans">
         <Navbar />
-        <main>{children}</main>
+        <main>
+          <PageTransition>{children}</PageTransition>
+        </main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
