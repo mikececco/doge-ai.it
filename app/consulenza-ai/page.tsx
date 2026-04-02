@@ -21,6 +21,14 @@ export const metadata: Metadata = {
     url: `${BASE_URL}/consulenza-ai`,
     type: "website",
     siteName: "DOGE di Venezia",
+    images: [
+      {
+        url: "/icon/logoB-noBG.png",
+        width: 512,
+        height: 512,
+        alt: "il Doge di Venezia",
+      },
+    ],
   },
 };
 
@@ -175,7 +183,7 @@ export default function ConsulenzaAIPage() {
               <p className="text-body text-grigio-scuro leading-relaxed mb-6">
                 L&apos;Italia è fatta di distretti, di eccellenze locali, di imprenditori
                 che conoscono il loro mercato meglio di chiunque altro. Non
-                abbiamo bisogno di spiegarti il tuo settore — abbiamo bisogno di
+                abbiamo bisogno di spiegarti il tuo settore - abbiamo bisogno di
                 capire dove l&apos;AI può fare la differenza per te.
               </p>
             </FadeInOnScroll>

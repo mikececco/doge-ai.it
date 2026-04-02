@@ -23,7 +23,7 @@ export default function DuePercorsi() {
             </h3>
             <p className="text-grigio-scuro text-body mt-3 leading-relaxed">
               Dal customer service alla logistica, dalla manifattura alle
-              vendite &mdash; con risultati misurabili in 60 giorni.
+              vendite - con risultati misurabili in 60 giorni.
             </p>
           </div>
           <div className="mt-6">

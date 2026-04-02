@@ -27,7 +27,7 @@ export default function Footer() {
   return (
     <footer className="bg-nero text-bianco border-t border-bianco/10">
       <div className="container-site py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-bianco/10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-12 pb-12 border-b border-bianco/10">
           {/* Col 1: Logo + tagline + social */}
           <div>
             <div className="flex items-center gap-2">
@@ -40,7 +40,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3 mt-6">
               <a
-                href="https://www.linkedin.com/company/doge-di-venezia"
+                href="https://www.linkedin.com/company/il-doge-di-venezia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-bianco/50 hover:text-giallo transition-colors"

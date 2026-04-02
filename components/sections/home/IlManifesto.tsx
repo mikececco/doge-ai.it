@@ -43,7 +43,7 @@ export default function IlManifesto() {
             {pillars.map((p, i) => (
               <div
                 key={i}
-                className={`px-8 py-8 ${i < 2 ? "md:border-r border-nero" : ""} border-b md:border-b-0 border-nero last:border-b-0`}
+                className={`px-4 py-4 md:px-8 md:py-8 ${i < 2 ? "md:border-r border-nero" : ""} border-b md:border-b-0 border-nero last:border-b-0`}
               >
                 <h3 className="text-xl font-bold uppercase mb-4">
                   <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
@@ -55,7 +55,7 @@ export default function IlManifesto() {
             ))}
           </div>
 
-          <div className="border-t border-nero px-8 py-4 flex flex-col sm:flex-row items-center gap-4">
+          <div className="border-t border-nero px-4 py-3 md:px-8 md:py-4 flex flex-col sm:flex-row items-center gap-4">
             <p className="text-sm text-nero">
               Vuoi capire i principi che guidano ogni nostro progetto?
             </p>

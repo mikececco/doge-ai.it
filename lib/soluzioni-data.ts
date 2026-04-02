@@ -16,7 +16,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "consulente-ai-pmi",
     targetQuery: "consulente AI per PMI",
     category: "PMI",
-    title: "Consulente AI per PMI — DOGE di Venezia",
+    title: "Consulente AI per PMI - DOGE di Venezia",
     h1: "Il consulente AI che lavora come parte del tuo team",
     metaDescription:
       "Cerchi un consulente AI per la tua PMI? DOGE di Venezia affianca le piccole e medie imprese italiane con strategie AI concrete, implementazioni rapide e risultati misurabili in 30 giorni.",
@@ -65,7 +65,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
       {
         question: "In quanto tempo si vedono i primi risultati?",
         answer:
-          "I primi sistemi operativi in 2-4 settimane. I risultati misurabili — risparmio di ore, riduzione errori, aumento conversioni — emergono entro 30-60 giorni dall'implementazione.",
+          "I primi sistemi operativi in 2-4 settimane. I risultati misurabili - risparmio di ore, riduzione errori, aumento conversioni - emergono entro 30-60 giorni dall'implementazione.",
       },
     ],
   },
@@ -73,10 +73,10 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "consulenza-intelligenza-artificiale-aziende",
     targetQuery: "consulenza intelligenza artificiale aziende",
     category: "PMI",
-    title: "Consulenza Intelligenza Artificiale per Aziende — DOGE di Venezia",
+    title: "Consulenza Intelligenza Artificiale per Aziende - DOGE di Venezia",
     h1: "Consulenza AI per aziende: dalla strategia all'implementazione",
     metaDescription:
-      "Consulenza intelligenza artificiale per aziende italiane. Strategia, implementazione e formazione AI con risultati concreti. DOGE di Venezia — partner AI per PMI e imprese strutturate.",
+      "Consulenza intelligenza artificiale per aziende italiane. Strategia, implementazione e formazione AI con risultati concreti. DOGE di Venezia - partner AI per PMI e imprese strutturate.",
     intro:
       "La consulenza AI che serve alle aziende italiane non è teorica: è operativa. DOGE di Venezia accompagna imprese di ogni settore attraverso un percorso strutturato che parte dalla mappatura dei processi ad alto potenziale AI, costruisce sistemi funzionanti e misura il ritorno reale sull'investimento. Non vendiamo software: costruiamo capacità AI interna.",
     benefits: [
@@ -130,12 +130,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "implementare-ai-in-azienda",
     targetQuery: "come implementare AI in azienda",
     category: "PMI",
-    title: "Come Implementare l'AI in Azienda — Guida Pratica | DOGE di Venezia",
+    title: "Come Implementare l'AI in Azienda - Guida Pratica | DOGE di Venezia",
     h1: "Come implementare l'AI in azienda: il metodo che funziona davvero",
     metaDescription:
       "Vuoi implementare l'AI nella tua azienda ma non sai da dove partire? DOGE di Venezia ha sviluppato un metodo pratico in 4 fasi per portare l'intelligenza artificiale nei processi aziendali italiani.",
     intro:
-      "Implementare l'AI in azienda senza una guida esperta significa sprecare tempo e budget su strumenti che non cambiano nulla. Il problema non è la tecnologia — è sapere quali processi automatizzare, in quale ordine, e come misurare il successo. DOGE di Venezia ha sviluppato un metodo in 4 fasi testato su decine di PMI italiane: si parte sempre da un problema reale, non da una tecnologia da vendere.",
+      "Implementare l'AI in azienda senza una guida esperta significa sprecare tempo e budget su strumenti che non cambiano nulla. Il problema non è la tecnologia -è sapere quali processi automatizzare, in quale ordine, e come misurare il successo. DOGE di Venezia ha sviluppato un metodo in 4 fasi testato su decine di PMI italiane: si parte sempre da un problema reale, non da una tecnologia da vendere.",
     benefits: [
       {
         title: "Fase 1: Audit dei processi",
@@ -179,7 +179,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
       {
         question: "Cosa succede se l'implementazione non funziona?",
         answer:
-          "Lavoriamo con milestone chiare e KPI predefiniti. Se un prototipo non raggiunge gli obiettivi, lo iteriamo o cambiamo approccio — senza costi aggiuntivi per il cliente nella fase pilota.",
+          "Lavoriamo con milestone chiare e KPI predefiniti. Se un prototipo non raggiunge gli obiettivi, lo iteriamo o cambiamo approccio - senza costi aggiuntivi per il cliente nella fase pilota.",
       },
     ],
   },
@@ -187,12 +187,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "automazione-processi-aziendali-ai",
     targetQuery: "automazione processi aziendali con AI",
     category: "PMI",
-    title: "Automazione Processi Aziendali con AI — DOGE di Venezia",
+    title: "Automazione Processi Aziendali con AI - DOGE di Venezia",
     h1: "Automazione dei processi aziendali con AI: meno ore manuali, più crescita",
     metaDescription:
       "Automatizza i processi aziendali ripetitivi con l'intelligenza artificiale. DOGE di Venezia costruisce sistemi di automazione AI su misura per PMI italiane. Risparmio misurabile da subito.",
     intro:
-      "Ogni azienda ha processi che consumano ore di lavoro qualificato su compiti meccanici e ripetitivi: inserimento dati, gestione email, reportistica, riconciliazioni. L'AI moderna non richiede grandi investimenti per automatizzare questi flussi — richiede il giusto metodo. DOGE di Venezia identifica i processi ad alto impatto e li automatizza in settimane, non mesi.",
+      "Ogni azienda ha processi che consumano ore di lavoro qualificato su compiti meccanici e ripetitivi: inserimento dati, gestione email, reportistica, riconciliazioni. L'AI moderna non richiede grandi investimenti per automatizzare questi flussi - richiede il giusto metodo. DOGE di Venezia identifica i processi ad alto impatto e li automatizza in settimane, non mesi.",
     benefits: [
       {
         title: "Risparmio immediato di ore",
@@ -244,7 +244,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "agenzia-intelligenza-artificiale-italia",
     targetQuery: "agenzia intelligenza artificiale Italia",
     category: "PMI",
-    title: "Agenzia Intelligenza Artificiale Italia — DOGE di Venezia",
+    title: "Agenzia Intelligenza Artificiale Italia - DOGE di Venezia",
     h1: "L'agenzia AI italiana che costruisce sistemi che funzionano",
     metaDescription:
       "DOGE di Venezia è l'agenzia di intelligenza artificiale italiana per PMI e fondi. Strategie AI, agenti autonomi, automazione processi. Risultati misurabili, non promesse.",
@@ -301,12 +301,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "ai-per-manifattura-italiana",
     targetQuery: "AI per manifattura italiana",
     category: "Manifattura",
-    title: "AI per la Manifattura Italiana — DOGE di Venezia",
+    title: "AI per la Manifattura Italiana - DOGE di Venezia",
     h1: "AI per la manifattura italiana: efficienza operativa senza rivoluzioni",
     metaDescription:
-      "Soluzioni AI per aziende manifatturiere italiane. Ottimizzazione produzione, qualità, manutenzione predittiva e gestione supply chain. DOGE di Venezia — AI per il manifatturiero italiano.",
+      "Soluzioni AI per aziende manifatturiere italiane. Ottimizzazione produzione, qualità, manutenzione predittiva e gestione supply chain. DOGE di Venezia - AI per il manifatturiero italiano.",
     intro:
-      "Il manifatturiero italiano è tra i più competitivi al mondo, ma affronta pressioni crescenti su costi, qualità e velocità. L'AI non è la soluzione a tutto — ma in contesti specifici del ciclo produttivo può fare la differenza tra margini compressi e redditività sostenibile. DOGE di Venezia lavora con aziende manifatturiere italiane per identificare i nodi di processo dove l'AI porta il massimo valore senza disrupzione operativa.",
+      "Il manifatturiero italiano è tra i più competitivi al mondo, ma affronta pressioni crescenti su costi, qualità e velocità. L'AI non è la soluzione a tutto - ma in contesti specifici del ciclo produttivo può fare la differenza tra margini compressi e redditività sostenibile. DOGE di Venezia lavora con aziende manifatturiere italiane per identificare i nodi di processo dove l'AI porta il massimo valore senza disrupzione operativa.",
     benefits: [
       {
         title: "Controllo qualità potenziato",
@@ -358,10 +358,10 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "ai-per-family-office",
     targetQuery: "AI per family office",
     category: "PE/Family Office",
-    title: "AI per Family Office — DOGE di Venezia",
+    title: "AI per Family Office - DOGE di Venezia",
     h1: "AI per family office: intelligence patrimoniale e operatività aumentata",
     metaDescription:
-      "Soluzioni AI per family office italiani. Analisi portafoglio, due diligence AI, reporting automatico e gestione documentale. DOGE di Venezia — AI per la gestione patrimoniale.",
+      "Soluzioni AI per family office italiani. Analisi portafoglio, due diligence AI, reporting automatico e gestione documentale. DOGE di Venezia - AI per la gestione patrimoniale.",
     intro:
       "I family office gestiscono complessità crescente: asset class multiple, reporting multi-giurisdizionale, due diligence continue e una pressione costante sulla riservatezza. L'AI, applicata correttamente, riduce il carico operativo del team e aumenta la qualità delle analisi senza compromettere la discrezione che questo segmento richiede. DOGE di Venezia ha sviluppato soluzioni specifiche per la realtà dei family office italiani.",
     benefits: [
@@ -378,7 +378,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
       {
         title: "Knowledge base patrimoniale",
         description:
-          "Un sistema AI che centralizza la memoria storica del family office — decisioni passate, posizioni, note di analisi — e la rende interrogabile in linguaggio naturale.",
+          "Un sistema AI che centralizza la memoria storica del family office - decisioni passate, posizioni, note di analisi - e la rende interrogabile in linguaggio naturale.",
       },
       {
         title: "Gestione documentale sicura",
@@ -415,12 +415,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "ai-per-private-equity",
     targetQuery: "AI per private equity",
     category: "PE/Family Office",
-    title: "AI per Private Equity — DOGE di Venezia",
+    title: "AI per Private Equity - DOGE di Venezia",
     h1: "AI per il private equity: dal deal flow alla gestione del portafoglio",
     metaDescription:
-      "Soluzioni AI per fondi di private equity italiani. Screening deal flow, due diligence AI, monitoraggio portafoglio e reporting LP. DOGE di Venezia — AI per il PE italiano.",
+      "Soluzioni AI per fondi di private equity italiani. Screening deal flow, due diligence AI, monitoraggio portafoglio e reporting LP. DOGE di Venezia - AI per il PE italiano.",
     intro:
-      "I fondi PE italiani operano in un mercato sempre più competitivo dove la velocità e la qualità dell'analisi possono fare la differenza tra aggiudicarsi una transazione e perderla. L'AI applicata al workflow del private equity accelera lo screening, approfondisce la due diligence e migliora il monitoraggio del portafoglio — liberando i professionisti per il lavoro ad alto valore che solo loro possono fare.",
+      "I fondi PE italiani operano in un mercato sempre più competitivo dove la velocità e la qualità dell'analisi possono fare la differenza tra aggiudicarsi una transazione e perderla. L'AI applicata al workflow del private equity accelera lo screening, approfondisce la due diligence e migliora il monitoraggio del portafoglio - liberando i professionisti per il lavoro ad alto valore che solo loro possono fare.",
     benefits: [
       {
         title: "Screening deal flow accelerato",
@@ -459,7 +459,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
       {
         question: "Come si integra con il workflow esistente del fondo?",
         answer:
-          "Ci adattiamo agli strumenti in uso — che siano Excel, Notion, Salesforce o piattaforme dedicate al PE. Non chiediamo di cambiare workflow, lo potenziamo.",
+          "Ci adattiamo agli strumenti in uso - che siano Excel, Notion, Salesforce o piattaforme dedicate al PE. Non chiediamo di cambiare workflow, lo potenziamo.",
       },
       {
         question: "È adatto anche a fondi di dimensioni medie?",
@@ -472,12 +472,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "chatbot-aziendale-italiano",
     targetQuery: "chatbot aziendale italiano",
     category: "PMI",
-    title: "Chatbot Aziendale Italiano — DOGE di Venezia",
+    title: "Chatbot Aziendale Italiano - DOGE di Venezia",
     h1: "Chatbot aziendale in italiano: assistente AI per il tuo business",
     metaDescription:
       "Costruiamo chatbot aziendali in italiano per PMI. Customer service, supporto interno, qualificazione lead. Chatbot AI su misura integrati con i tuoi sistemi. DOGE di Venezia.",
     intro:
-      "Un chatbot aziendale non è un widget da mettere sul sito e dimenticare. Un chatbot ben costruito è un sistema intelligente che conosce la tua azienda, risponde in modo accurato nelle situazioni che contano e sa quando passare la conversazione a un operatore umano. DOGE di Venezia costruisce chatbot aziendali in italiano che funzionano sul campo — non nella demo.",
+      "Un chatbot aziendale non è un widget da mettere sul sito e dimenticare. Un chatbot ben costruito è un sistema intelligente che conosce la tua azienda, risponde in modo accurato nelle situazioni che contano e sa quando passare la conversazione a un operatore umano. DOGE di Venezia costruisce chatbot aziendali in italiano che funzionano sul campo - non nella demo.",
     benefits: [
       {
         title: "Addestrato sulla tua azienda",
@@ -529,12 +529,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "agenti-ai-per-aziende",
     targetQuery: "agenti AI per aziende",
     category: "PMI",
-    title: "Agenti AI per Aziende — DOGE di Venezia",
+    title: "Agenti AI per Aziende - DOGE di Venezia",
     h1: "Agenti AI per aziende: il tuo team digitale che lavora 24/7",
     metaDescription:
-      "Costruiamo agenti AI autonomi per aziende italiane. Agenti che eseguono task complessi, prendono decisioni e integrano sistemi diversi. DOGE di Venezia — AI agenti operativi.",
+      "Costruiamo agenti AI autonomi per aziende italiane. Agenti che eseguono task complessi, prendono decisioni e integrano sistemi diversi. DOGE di Venezia - AI agenti operativi.",
     intro:
-      "Un agente AI non è un chatbot. È un sistema autonomo che riceve un obiettivo, pianifica i passi necessari, usa strumenti digitali (email, database, API, browser) e produce risultati — senza supervisione costante. DOGE di Venezia costruisce agenti AI operativi per aziende italiane: sistemi che lavorano come un collaboratore digitale su processi definiti, liberando il team umano per decisioni strategiche.",
+      "Un agente AI non è un chatbot. È un sistema autonomo che riceve un obiettivo, pianifica i passi necessari, usa strumenti digitali (email, database, API, browser) e produce risultati - senza supervisione costante. DOGE di Venezia costruisce agenti AI operativi per aziende italiane: sistemi che lavorano come un collaboratore digitale su processi definiti, liberando il team umano per decisioni strategiche.",
     benefits: [
       {
         title: "Autonomia operativa reale",
@@ -544,7 +544,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
       {
         title: "Integrazione multi-sistema",
         description:
-          "Un agente può leggere email, aggiornare un CRM, cercare informazioni online, compilare report e inviare notifiche — tutto in un unico flusso autonomo.",
+          "Un agente può leggere email, aggiornare un CRM, cercare informazioni online, compilare report e inviare notifiche - tutto in un unico flusso autonomo.",
       },
       {
         title: "Scalabilità immediata",
@@ -554,7 +554,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
       {
         title: "Audit trail completo",
         description:
-          "Ogni azione dell'agente viene registrata. Sai esattamente cosa ha fatto, quando e perché — fondamentale per compliance e miglioramento continuo.",
+          "Ogni azione dell'agente viene registrata. Sai esattamente cosa ha fatto, quando e perché - fondamentale per compliance e miglioramento continuo.",
       },
     ],
     useCases: [
@@ -586,12 +586,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "roi-intelligenza-artificiale-pmi",
     targetQuery: "ROI intelligenza artificiale PMI",
     category: "PMI",
-    title: "ROI dell'Intelligenza Artificiale per le PMI — DOGE di Venezia",
+    title: "ROI dell'Intelligenza Artificiale per le PMI - DOGE di Venezia",
     h1: "Il ROI reale dell'AI nelle PMI italiane: numeri, non promesse",
     metaDescription:
       "Qual è il ritorno sull'investimento dell'AI per una PMI italiana? DOGE di Venezia analizza il ROI concreto delle implementazioni AI: risparmio ore, riduzione costi, aumento ricavi.",
     intro:
-      "Prima di investire in AI, ogni imprenditore fa la domanda giusta: ne vale la pena? La risposta dipende dal processo che si automatizza, dalla dimensione aziendale e dalla qualità dell'implementazione. DOGE di Venezia ha calcolato il ROI reale di decine di implementazioni AI nelle PMI italiane. I numeri sono incoraggianti — ma solo se si parte dal processo giusto.",
+      "Prima di investire in AI, ogni imprenditore fa la domanda giusta: ne vale la pena? La risposta dipende dal processo che si automatizza, dalla dimensione aziendale e dalla qualità dell'implementazione. DOGE di Venezia ha calcolato il ROI reale di decine di implementazioni AI nelle PMI italiane. I numeri sono incoraggianti - ma solo se si parte dal processo giusto.",
     benefits: [
       {
         title: "Risparmio sul lavoro manuale",
@@ -643,7 +643,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "trasformazione-digitale-ai-pmi",
     targetQuery: "trasformazione digitale AI PMI",
     category: "PMI",
-    title: "Trasformazione Digitale AI per PMI — DOGE di Venezia",
+    title: "Trasformazione Digitale AI per PMI - DOGE di Venezia",
     h1: "Trasformazione digitale con AI per PMI: il percorso pratico",
     metaDescription:
       "Guida alla trasformazione digitale AI per PMI italiane. Come integrare l'intelligenza artificiale nella strategia digitale aziendale con risultati concreti. DOGE di Venezia.",
@@ -700,12 +700,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "ai-per-customer-service-pmi",
     targetQuery: "AI per customer service PMI",
     category: "PMI",
-    title: "AI per il Customer Service delle PMI — DOGE di Venezia",
+    title: "AI per il Customer Service delle PMI - DOGE di Venezia",
     h1: "AI per il customer service delle PMI: più qualità, meno costi",
     metaDescription:
-      "Potenzia il customer service della tua PMI con l'AI. Chatbot, automazione ticket, risposte automatiche e analisi del sentiment. DOGE di Venezia — AI per il servizio clienti.",
+      "Potenzia il customer service della tua PMI con l'AI. Chatbot, automazione ticket, risposte automatiche e analisi del sentiment. DOGE di Venezia - AI per il servizio clienti.",
     intro:
-      "Il customer service è uno dei processi dove l'AI genera il ROI più rapido per le PMI italiane. Non perché l'AI sia superiore all'empatia umana — ma perché la maggior parte delle richieste cliente sono prevedibili e risolvibili in modo standardizzato. L'AI gestisce l'80% dei casi standard, lasciando al team umano il 20% che richiede davvero giudizio e relazione.",
+      "Il customer service è uno dei processi dove l'AI genera il ROI più rapido per le PMI italiane. Non perché l'AI sia superiore all'empatia umana - ma perché la maggior parte delle richieste cliente sono prevedibili e risolvibili in modo standardizzato. L'AI gestisce l'80% dei casi standard, lasciando al team umano il 20% che richiede davvero giudizio e relazione.",
     benefits: [
       {
         title: "Risposta immediata H24",
@@ -757,12 +757,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "ai-per-procurement-aziendale",
     targetQuery: "AI per procurement aziendale",
     category: "PMI",
-    title: "AI per il Procurement Aziendale — DOGE di Venezia",
+    title: "AI per il Procurement Aziendale - DOGE di Venezia",
     h1: "AI per il procurement: acquisti più intelligenti, costi più bassi",
     metaDescription:
       "Ottimizza il procurement aziendale con l'intelligenza artificiale. Analisi fornitori, gestione contratti, automazione RFQ e previsione costi. DOGE di Venezia.",
     intro:
-      "Il procurement è uno dei processi aziendali con il maggiore potenziale AI nelle PMI italiane: è ricco di dati strutturati, ha impatto diretto sui margini e coinvolge molta attività manuale a basso valore aggiunto. DOGE di Venezia porta l'AI nel processo di acquisto — dall'analisi dei fornitori alla gestione contrattuale — per ridurre i costi e aumentare l'affidabilità della supply chain.",
+      "Il procurement è uno dei processi aziendali con il maggiore potenziale AI nelle PMI italiane: è ricco di dati strutturati, ha impatto diretto sui margini e coinvolge molta attività manuale a basso valore aggiunto. DOGE di Venezia porta l'AI nel processo di acquisto - dall'analisi dei fornitori alla gestione contrattuale - per ridurre i costi e aumentare l'affidabilità della supply chain.",
     benefits: [
       {
         title: "Analisi fornitori automatizzata",
@@ -814,12 +814,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "ridurre-costi-con-ai",
     targetQuery: "ridurre costi aziendali con AI",
     category: "PMI",
-    title: "Ridurre i Costi Aziendali con l'AI — DOGE di Venezia",
+    title: "Ridurre i Costi Aziendali con l'AI - DOGE di Venezia",
     h1: "Come ridurre i costi aziendali con l'AI: dove intervenire prima",
     metaDescription:
       "Scopri come ridurre i costi aziendali con l'intelligenza artificiale. DOGE di Venezia identifica i processi ad alto impatto e costruisce soluzioni AI con ROI misurabile.",
     intro:
-      "L'AI non è solo crescita — è anche efficienza. Per molte PMI italiane, il business case più forte per l'AI non è aumentare i ricavi ma ridurre i costi operativi su processi che consumano risorse senza creare valore differenziante. DOGE di Venezia ha identificato i 5 aree dove l'AI riduce i costi più velocemente per le PMI italiane.",
+      "L'AI non è solo crescita -è anche efficienza. Per molte PMI italiane, il business case più forte per l'AI non è aumentare i ricavi ma ridurre i costi operativi su processi che consumano risorse senza creare valore differenziante. DOGE di Venezia ha identificato i 5 aree dove l'AI riduce i costi più velocemente per le PMI italiane.",
     benefits: [
       {
         title: "Costi del lavoro amministrativo",
@@ -858,7 +858,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
       {
         question: "L'AI porta sempre a riduzione del personale?",
         answer:
-          "Non necessariamente. Nella maggior parte dei nostri casi, l'AI redistribuisce il lavoro verso attività a maggiore valore senza ridurre il personale — spesso permettendo la crescita senza nuove assunzioni.",
+          "Non necessariamente. Nella maggior parte dei nostri casi, l'AI redistribuisce il lavoro verso attività a maggiore valore senza ridurre il personale - spesso permettendo la crescita senza nuove assunzioni.",
       },
       {
         question: "Dove si inizia per ridurre i costi con l'AI?",
@@ -871,7 +871,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "automazione-marketing-ai",
     targetQuery: "automazione marketing con AI",
     category: "PMI",
-    title: "Automazione Marketing con AI — DOGE di Venezia",
+    title: "Automazione Marketing con AI - DOGE di Venezia",
     h1: "Automazione del marketing con AI: più lead, meno ore",
     metaDescription:
       "Automatizza il marketing della tua azienda con l'intelligenza artificiale. Lead generation, email marketing AI, content automation e analisi campagne. DOGE di Venezia.",
@@ -928,12 +928,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "ai-per-logistica-distribuzione",
     targetQuery: "AI per logistica e distribuzione",
     category: "Settore",
-    title: "AI per Logistica e Distribuzione — DOGE di Venezia",
+    title: "AI per Logistica e Distribuzione - DOGE di Venezia",
     h1: "AI per la logistica: ottimizzare la distribuzione con l'intelligenza artificiale",
     metaDescription:
       "Soluzioni AI per aziende di logistica e distribuzione italiane. Ottimizzazione rotte, previsione domanda, gestione magazzino e tracking intelligente. DOGE di Venezia.",
     intro:
-      "La logistica e distribuzione italiana affronta pressioni crescenti: costi carburante, aspettative di consegna rapida, complessità della supply chain. L'AI applicata alla logistica non è fantascienza — è ottimizzazione concreta di rotte, previsione della domanda e gestione intelligente del magazzino. DOGE di Venezia costruisce sistemi AI per operatori logistici e aziende di distribuzione italiane.",
+      "La logistica e distribuzione italiana affronta pressioni crescenti: costi carburante, aspettative di consegna rapida, complessità della supply chain. L'AI applicata alla logistica non è fantascienza -è ottimizzazione concreta di rotte, previsione della domanda e gestione intelligente del magazzino. DOGE di Venezia costruisce sistemi AI per operatori logistici e aziende di distribuzione italiane.",
     benefits: [
       {
         title: "Ottimizzazione delle rotte",
@@ -985,7 +985,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "consulenza-ai-milano",
     targetQuery: "consulenza AI Milano",
     category: "Geo",
-    title: "Consulenza AI Milano — DOGE di Venezia",
+    title: "Consulenza AI Milano - DOGE di Venezia",
     h1: "Consulenza AI a Milano: il partner per la trasformazione intelligente",
     metaDescription:
       "Consulenza AI a Milano per PMI e aziende. DOGE di Venezia offre strategie AI, automazione processi e agenti AI per aziende milanesi e dell'hinterland. Risultati in 30 giorni.",
@@ -995,7 +995,7 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
       {
         title: "Presenza operativa nel Nord Italia",
         description:
-          "Il nostro team opera principalmente nel Nord Italia. Possiamo incontrare il vostro management di persona, visitare le operation e costruire una relazione diretta — non solo via video call.",
+          "Il nostro team opera principalmente nel Nord Italia. Possiamo incontrare il vostro management di persona, visitare le operation e costruire una relazione diretta - non solo via video call.",
       },
       {
         title: "Conoscenza del mercato milanese",
@@ -1042,12 +1042,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "consulenza-ai-nord-italia",
     targetQuery: "consulenza AI Nord Italia",
     category: "Geo",
-    title: "Consulenza AI Nord Italia — DOGE di Venezia",
+    title: "Consulenza AI Nord Italia - DOGE di Venezia",
     h1: "Consulenza AI nel Nord Italia: per le imprese che vogliono crescere con intelligenza",
     metaDescription:
-      "Consulenza AI per le PMI del Nord Italia. Veneto, Lombardia, Emilia, Piemonte, Trentino. DOGE di Venezia — partner AI per il tessuto imprenditoriale del Nord Est e Nord Ovest.",
+      "Consulenza AI per le PMI del Nord Italia. Veneto, Lombardia, Emilia, Piemonte, Trentino. DOGE di Venezia - partner AI per il tessuto imprenditoriale del Nord Est e Nord Ovest.",
     intro:
-      "Il Nord Italia è il motore manifatturiero, commerciale e finanziario del Paese. Le PMI del Veneto, Lombardia, Emilia-Romagna, Piemonte e Trentino hanno la struttura per adottare l'AI e beneficiarne rapidamente — ma spesso mancano di un partner che conosca sia la tecnologia sia la realtà operativa del tessuto produttivo locale. DOGE di Venezia è nata nel Nord Est per questo.",
+      "Il Nord Italia è il motore manifatturiero, commerciale e finanziario del Paese. Le PMI del Veneto, Lombardia, Emilia-Romagna, Piemonte e Trentino hanno la struttura per adottare l'AI e beneficiarne rapidamente - ma spesso mancano di un partner che conosca sia la tecnologia sia la realtà operativa del tessuto produttivo locale. DOGE di Venezia è nata nel Nord Est per questo.",
     benefits: [
       {
         title: "Radici nel tessuto produttivo nordestino",
@@ -1099,12 +1099,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "ai-per-hr-aziende",
     targetQuery: "AI per HR e risorse umane",
     category: "PMI",
-    title: "AI per HR e Risorse Umane — DOGE di Venezia",
+    title: "AI per HR e Risorse Umane - DOGE di Venezia",
     h1: "AI per le risorse umane: selezione più rapida, gestione più intelligente",
     metaDescription:
       "Soluzioni AI per HR e risorse umane nelle PMI italiane. Screening CV, onboarding automatizzato, analisi performance e gestione documentale HR. DOGE di Venezia.",
     intro:
-      "La funzione HR nelle PMI italiane è spesso sottodimensionata rispetto alle responsabilità che copre. L'AI non sostituisce la relazione umana nell'HR — ma automatizza l'80% dei task amministrativi e di screening che consumano il tempo del responsabile. DOGE di Venezia costruisce sistemi AI HR che fanno il lavoro di routine, lasciando alle persone il lavoro che conta.",
+      "La funzione HR nelle PMI italiane è spesso sottodimensionata rispetto alle responsabilità che copre. L'AI non sostituisce la relazione umana nell'HR - ma automatizza l'80% dei task amministrativi e di screening che consumano il tempo del responsabile. DOGE di Venezia costruisce sistemi AI HR che fanno il lavoro di routine, lasciando alle persone il lavoro che conta.",
     benefits: [
       {
         title: "Screening candidati accelerato",
@@ -1156,12 +1156,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "agente-ai-personalizzato-azienda",
     targetQuery: "agente AI personalizzato per azienda",
     category: "PMI",
-    title: "Agente AI Personalizzato per la Tua Azienda — DOGE di Venezia",
+    title: "Agente AI Personalizzato per la Tua Azienda - DOGE di Venezia",
     h1: "Agente AI su misura per la tua azienda: autonomo, integrato, tuo",
     metaDescription:
       "Costruiamo agenti AI personalizzati per aziende italiane. Agenti autonomi che conoscono la tua azienda, integrano i tuoi sistemi e lavorano secondo le tue regole. DOGE di Venezia.",
     intro:
-      "Un agente AI personalizzato non è un prodotto off-the-shelf: è un sistema costruito specificamente per la tua azienda, addestrato sui tuoi dati, integrato con i tuoi strumenti e configurato per le tue regole di business. DOGE di Venezia progetta e costruisce agenti AI aziendali che diventano una risorsa operativa permanente — non uno strumento da usare una volta e dimenticare.",
+      "Un agente AI personalizzato non è un prodotto off-the-shelf: è un sistema costruito specificamente per la tua azienda, addestrato sui tuoi dati, integrato con i tuoi strumenti e configurato per le tue regole di business. DOGE di Venezia progetta e costruisce agenti AI aziendali che diventano una risorsa operativa permanente - non uno strumento da usare una volta e dimenticare.",
     benefits: [
       {
         title: "Conosce la tua azienda",
@@ -1213,12 +1213,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "ai-per-analisi-dati-pmi",
     targetQuery: "AI per analisi dati PMI",
     category: "PMI",
-    title: "AI per l'Analisi Dati nelle PMI — DOGE di Venezia",
+    title: "AI per l'Analisi Dati nelle PMI - DOGE di Venezia",
     h1: "AI per l'analisi dati nelle PMI: trasforma i tuoi dati in decisioni",
     metaDescription:
       "Sfrutta i dati della tua PMI con l'intelligenza artificiale. Business intelligence AI, analisi predittiva, dashboard automatiche e insight operativi. DOGE di Venezia.",
     intro:
-      "Le PMI italiane producono enormi quantità di dati ogni giorno — ordini, movimenti di magazzino, interazioni cliente, dati di produzione — ma la maggior parte di questi dati non viene mai analizzata in modo sistematico. L'AI cambia questo: rende l'analisi dei dati accessibile anche senza un data scientist interno. DOGE di Venezia costruisce sistemi di analisi AI che trasformano i dati operativi in insight concreti per il management.",
+      "Le PMI italiane producono enormi quantità di dati ogni giorno -ordini, movimenti di magazzino, interazioni cliente, dati di produzione - ma la maggior parte di questi dati non viene mai analizzata in modo sistematico. L'AI cambia questo: rende l'analisi dei dati accessibile anche senza un data scientist interno. DOGE di Venezia costruisce sistemi di analisi AI che trasformano i dati operativi in insight concreti per il management.",
     benefits: [
       {
         title: "Dashboard intelligenti",
@@ -1270,10 +1270,10 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "formazione-ai-team-aziendale",
     targetQuery: "formazione AI team aziendale",
     category: "PMI",
-    title: "Formazione AI per il Team Aziendale — DOGE di Venezia",
+    title: "Formazione AI per il Team Aziendale - DOGE di Venezia",
     h1: "Formazione AI per il team: come usare davvero l'intelligenza artificiale in azienda",
     metaDescription:
-      "Programmi di formazione AI per team aziendali italiani. Workshop pratici, training su strumenti specifici e percorsi di upskilling AI. DOGE di Venezia — formazione AI concreta.",
+      "Programmi di formazione AI per team aziendali italiani. Workshop pratici, training su strumenti specifici e percorsi di upskilling AI. DOGE di Venezia - formazione AI concreta.",
     intro:
       "L'adozione AI fallisce quando la tecnologia è buona ma il team non sa usarla. La formazione AI aziendale non è un corso online generico: è un programma calibrato sugli strumenti e i processi specifici della tua azienda. DOGE di Venezia progetta ed eroga formazione AI pratica per team operativi, management e funzioni specialistiche.",
     benefits: [
@@ -1327,12 +1327,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "audit-processi-ai-azienda",
     targetQuery: "audit processi AI azienda",
     category: "PMI",
-    title: "Audit Processi AI per Aziende — DOGE di Venezia",
+    title: "Audit Processi AI per Aziende - DOGE di Venezia",
     h1: "Audit AI aziendale: scopri dove l'intelligenza artificiale vale di più nella tua azienda",
     metaDescription:
-      "Audit dei processi aziendali per l'implementazione AI. Mappa le opportunità AI, valuta la readiness e ricevi una roadmap prioritizzata. DOGE di Venezia — AI audit per PMI.",
+      "Audit dei processi aziendali per l'implementazione AI. Mappa le opportunità AI, valuta la readiness e ricevi una roadmap prioritizzata. DOGE di Venezia - AI audit per PMI.",
     intro:
-      "Ogni imprenditore sa che l'AI può aiutare la sua azienda — ma pochi sanno esattamente dove e come. L'audit AI di DOGE di Venezia è un'analisi strutturata dei processi aziendali che produce una mappa delle opportunità AI prioritizzata per impatto e fattibilità. In 2-3 giorni di lavoro, hai una roadmap concreta su cui costruire la tua strategia di trasformazione.",
+      "Ogni imprenditore sa che l'AI può aiutare la sua azienda - ma pochi sanno esattamente dove e come. L'audit AI di DOGE di Venezia è un'analisi strutturata dei processi aziendali che produce una mappa delle opportunità AI prioritizzata per impatto e fattibilità. In 2-3 giorni di lavoro, hai una roadmap concreta su cui costruire la tua strategia di trasformazione.",
     benefits: [
       {
         title: "Mappa completa delle opportunità",
@@ -1384,12 +1384,12 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "ai-per-ecommerce-italiano",
     targetQuery: "AI per e-commerce italiano",
     category: "Settore",
-    title: "AI per E-commerce Italiano — DOGE di Venezia",
+    title: "AI per E-commerce Italiano - DOGE di Venezia",
     h1: "AI per il tuo e-commerce: vendi di più, gestisci meno",
     metaDescription:
       "Soluzioni AI per e-commerce italiani. Personalizzazione, customer service AI, ottimizzazione prezzi, previsione domanda e automazione operativa. DOGE di Venezia.",
     intro:
-      "L'e-commerce italiano affronta una competizione crescente dai marketplace internazionali e aspettative sempre più alte degli acquirenti. L'AI applicata all'e-commerce non è un lusso — è la differenza tra un negozio online che performa e uno che lotta per la sopravvivenza. DOGE di Venezia porta soluzioni AI concrete per e-commerce italiani di tutte le dimensioni.",
+      "L'e-commerce italiano affronta una competizione crescente dai marketplace internazionali e aspettative sempre più alte degli acquirenti. L'AI applicata all'e-commerce non è un lusso -è la differenza tra un negozio online che performa e uno che lotta per la sopravvivenza. DOGE di Venezia porta soluzioni AI concrete per e-commerce italiani di tutte le dimensioni.",
     benefits: [
       {
         title: "Personalizzazione dell'esperienza",

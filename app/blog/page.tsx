@@ -5,14 +5,22 @@ import { BLOG_POSTS } from "@/lib/blog-data";
 import BlogSearch from "./BlogSearch";
 
 export const metadata: Metadata = {
-  title: "Blog — Insights AI per le PMI italiane",
+  title: "Blog - Insights AI per le PMI italiane",
   description:
     "Articoli, analisi e guide pratiche sull'adozione dell'AI nelle PMI italiane. Casi concreti, numeri reali, zero teoria inutile.",
   openGraph: {
-    title: "Blog — Insights AI per le PMI italiane",
+    title: "Blog - Insights AI per le PMI italiane",
     description:
       "Articoli, analisi e guide pratiche sull'adozione dell'AI nelle PMI italiane. Casi concreti, numeri reali, zero teoria inutile.",
     type: "website",
+    images: [
+      {
+        url: "/icon/logoB-noBG.png",
+        width: 512,
+        height: 512,
+        alt: "il Doge di Venezia",
+      },
+    ],
   },
 };
 
@@ -37,14 +45,14 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Articles Grid — Dark background */}
+      {/* Articles Grid - Dark background */}
       <section className="bg-nero py-12 pb-20">
         <div className="container-site">
           <BlogSearch posts={BLOG_POSTS} />
         </div>
       </section>
 
-      {/* CTA — Yellow style */}
+      {/* CTA - Yellow style */}
       <CtaFinale
         title="Vinci la prossima decade."
         subtitle="Parla con noi. Nessun impegno, solo chiarezza."

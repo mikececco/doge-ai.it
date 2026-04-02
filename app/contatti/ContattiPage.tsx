@@ -126,8 +126,8 @@ export default function ContattiPage() {
           </FadeInOnScroll>
 
           {/* Two-column layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-16">
-            {/* Left — Form / Success / Error */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mt-16">
+            {/* Left - Form / Success / Error */}
             <FadeInOnScroll>
               <AnimatePresence mode="wait">
                 {stage === "success" ? (
@@ -320,7 +320,7 @@ export default function ContattiPage() {
               </AnimatePresence>
             </FadeInOnScroll>
 
-            {/* Right — Contatto Diretto */}
+            {/* Right - Contatto Diretto */}
             <FadeInOnScroll>
               <div>
                 <h2 className="text-2xl font-bold uppercase">

@@ -15,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "il Doge di Venezia — Consulenza AI per PMI Italiane",
+    default: "il Doge di Venezia - Consulenza AI per PMI Italiane",
     template: "%s | il Doge di Venezia",
   },
   description:
@@ -23,19 +23,28 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://doge-ai.it"),
   alternates: {
     canonical: "https://doge-ai.it",
+    languages: { "it": "https://doge-ai.it" },
   },
   openGraph: {
-    title: "il Doge di Venezia — Consulenza AI per PMI Italiane",
+    title: "il Doge di Venezia - Consulenza AI per PMI Italiane",
     description:
       "Strategia e implementazione AI per PMI e fondi di investimento italiani. Automazione, agenti AI, digital twin.",
     url: "https://doge-ai.it",
     siteName: "il Doge di Venezia",
     locale: "it_IT",
     type: "website",
+    images: [
+      {
+        url: "/icon/logoB-noBG.png",
+        width: 512,
+        height: 512,
+        alt: "il Doge di Venezia",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "il Doge di Venezia — Consulenza AI per PMI Italiane",
+    title: "il Doge di Venezia - Consulenza AI per PMI Italiane",
     description:
       "Strategia e implementazione AI per PMI e fondi di investimento italiani.",
   },
@@ -49,6 +58,10 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-icon.png",
   },
 };
 

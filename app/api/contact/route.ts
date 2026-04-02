@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     // await resend.emails.send({
     //   from: 'DOGE Website <noreply@dogedivenezia.ai>',
     //   to: 'dogedivenezia.ai@gmail.com',
-    //   subject: `Nuovo contatto: ${data.nome} — ${data.azienda}`,
+    //   subject: `Nuovo contatto: ${data.nome} - ${data.azienda}`,
     //   html: `...`,
     // });
 

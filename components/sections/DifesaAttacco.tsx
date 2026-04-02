@@ -38,7 +38,7 @@ export default function DifesaAttacco() {
             <ul className="space-y-3">
               {DIFESA.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-body text-grigio-scuro">
-                  <span className="text-grigio-medio mt-0.5">—</span>
+                  <span className="text-grigio-medio mt-0.5">-</span>
                   {item}
                 </li>
               ))}

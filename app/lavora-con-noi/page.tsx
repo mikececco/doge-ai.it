@@ -6,7 +6,7 @@ import Label from "@/components/ui/Label";
 import CtaFinale from "@/components/sections/CtaFinale";
 
 export const metadata: Metadata = {
-  title: "Lavora con Noi — Il Doge di Venezia",
+  title: "Lavora con Noi - Il Doge di Venezia",
   description:
     "Posizioni aperte presso Il Doge di Venezia. Unisciti al team che sta ridefinendo l'AI per le PMI italiane.",
 };
@@ -68,7 +68,7 @@ export default function LavoraConNoi() {
             </h1>
             <p className="text-subheadline text-grigio-scuro mt-6 max-w-2xl">
               Cerchiamo persone che vogliono avere impatto reale sulle aziende
-              italiane. Niente burocrazia, niente slide — solo esecuzione.
+              italiane. Niente burocrazia, niente slide - solo esecuzione.
             </p>
           </FadeInOnScroll>
         </div>

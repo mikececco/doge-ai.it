@@ -141,6 +141,211 @@ export function getLinksForBlog(blogSlug: string): {
   return { soluzioni, cities };
 }
 
+/**
+ * Returns strategic internal links for blog article pages
+ * based on the post's category.
+ */
+export function getStrategicLinksForBlog(
+  category: string
+): { href: string; label: string }[] {
+  const links: { href: string; label: string }[] = [];
+
+  const cat = category.toLowerCase();
+
+  if (cat === "settori") {
+    links.push({ href: "/settori", label: "I settori in cui operiamo" });
+    links.push({ href: "/casi-duso", label: "Casi d'uso AI per settore" });
+  }
+
+  if (cat === "incentivi") {
+    links.push({
+      href: "/incentivi",
+      label: "Tutti gli incentivi per l'AI",
+    });
+    links.push({
+      href: "/casi-duso",
+      label: "Casi d'uso finanziabili",
+    });
+  }
+
+  if (cat === "ai & pmi") {
+    links.push({ href: "/aziende", label: "AI per le aziende italiane" });
+    links.push({ href: "/metodo", label: "Il nostro metodo" });
+    links.push({ href: "/casi-duso", label: "Casi d'uso AI concreti" });
+  }
+
+  if (cat === "automazione" || cat === "tecnologia") {
+    links.push({ href: "/casi-duso", label: "Casi d'uso AI per PMI" });
+    links.push({ href: "/metodo", label: "Il nostro processo" });
+  }
+
+  if (cat === "strategia") {
+    links.push({ href: "/metodo", label: "Il nostro metodo" });
+    links.push({ href: "/aziende", label: "AI per le aziende" });
+    links.push({ href: "/casi-duso", label: "Casi d'uso concreti" });
+  }
+
+  if (cat === "compliance") {
+    links.push({
+      href: "/casi-duso",
+      label: "Casi d'uso AI conformi",
+    });
+    links.push({ href: "/metodo", label: "Il nostro approccio" });
+  }
+
+  // Newer expanded categories
+  if (
+    cat.includes("analisi dati") ||
+    cat.includes("ottimizzazione f") ||
+    cat.includes("marketing e") ||
+    cat.includes("supporto e") ||
+    cat.includes("ottimizzazione finanziaria") ||
+    cat.includes("partnership")
+  ) {
+    links.push({ href: "/casi-duso", label: "Casi d'uso AI per PMI" });
+    links.push({ href: "/metodo", label: "Il nostro processo" });
+  }
+
+  // Always add contatti
+  links.push({ href: "/contatti", label: "Parla con un esperto" });
+
+  // Deduplicate by href
+  const seen = new Set<string>();
+  return links.filter((l) => {
+    if (seen.has(l.href)) return false;
+    seen.add(l.href);
+    return true;
+  });
+}
+
+/**
+ * Returns strategic internal links for caso d'uso detail pages
+ * based on the sector.
+ */
+export function getStrategicLinksForCasoDuso(
+  sector: string
+): { href: string; label: string }[] {
+  const links: { href: string; label: string }[] = [];
+
+  // Map sector to related blog article
+  const sectorBlogMap: Record<string, { slug: string; label: string }> = {
+    Manifattura: {
+      slug: "ai-manifattura-produzione",
+      label: "AI nella manifattura: guida completa",
+    },
+    "Logistica & Trasporti": {
+      slug: "ai-logistica-trasporti",
+      label: "AI nella logistica: guida completa",
+    },
+    "Food & Beverage": {
+      slug: "ai-food-beverage",
+      label: "AI nel food & beverage: guida completa",
+    },
+    "Retail & Fashion": {
+      slug: "ai-retail-fashion",
+      label: "AI nel retail e fashion: guida completa",
+    },
+    "Turismo & Ospitalita": {
+      slug: "ai-turismo-ospitalita",
+      label: "AI nel turismo: guida completa",
+    },
+    "Edilizia & Immobiliare": {
+      slug: "ai-edilizia-immobiliare",
+      label: "AI nell'edilizia: guida completa",
+    },
+    "Distribuzione B2B": {
+      slug: "ai-distribuzione-b2b",
+      label: "AI nella distribuzione B2B: guida completa",
+    },
+    "Servizi Professionali": {
+      slug: "ai-servizi-professionali",
+      label: "AI nei servizi professionali: guida completa",
+    },
+    Farmaceutica: {
+      slug: "ai-farmaceutica",
+      label: "AI nel farmaceutico: guida completa",
+    },
+    "Sanita Privata": {
+      slug: "ai-sanita-privata",
+      label: "AI nella sanita privata: guida completa",
+    },
+  };
+
+  const blogLink = sectorBlogMap[sector];
+  if (blogLink) {
+    links.push({
+      href: `/blog/${blogLink.slug}`,
+      label: blogLink.label,
+    });
+  }
+
+  links.push({
+    href: "/incentivi",
+    label: "Scopri come finanziare questo progetto",
+  });
+  links.push({ href: "/metodo", label: "Il nostro processo" });
+  links.push({ href: "/contatti", label: "Parla con un esperto" });
+
+  return links;
+}
+
+/**
+ * Returns strategic internal links for incentivi detail pages.
+ */
+export function getStrategicLinksForIncentivo(): {
+  href: string;
+  label: string;
+}[] {
+  return [
+    {
+      href: "/blog/finanziamenti-trasformazione-ai-guida",
+      label: "Guida pratica ai finanziamenti per l'AI",
+    },
+    {
+      href: "/casi-duso",
+      label: "Scopri i casi d'uso finanziabili",
+    },
+    { href: "/metodo", label: "Il nostro processo" },
+    { href: "/contatti", label: "Richiedi un'analisi gratuita" },
+  ];
+}
+
+/**
+ * Returns strategic internal links for soluzioni detail pages.
+ */
+export function getStrategicLinksForSoluzione(): {
+  href: string;
+  label: string;
+}[] {
+  return [
+    { href: "/casi-duso", label: "Tutti i casi d'uso AI" },
+    {
+      href: "/incentivi",
+      label: "Incentivi per finanziare il progetto",
+    },
+    { href: "/contatti", label: "Parla con un esperto" },
+  ];
+}
+
+/**
+ * Returns strategic internal links for consulenza-ai city pages.
+ */
+export function getStrategicLinksForCity(): {
+  href: string;
+  label: string;
+}[] {
+  return [
+    { href: "/settori", label: "I settori in cui operiamo" },
+    { href: "/casi-duso", label: "I nostri casi d'uso" },
+    {
+      href: "/incentivi",
+      label: "Incentivi disponibili nella tua regione",
+    },
+    { href: "/metodo", label: "Il nostro metodo di lavoro" },
+    { href: "/contatti", label: "Parla con un esperto" },
+  ];
+}
+
 export function getLinksForSoluzione(soluzioneSlug: string): {
   blogPosts: BlogPost[];
   cities: CityPage[];

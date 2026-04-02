@@ -1,446 +1,379 @@
 "use client";
 
+import Link from "next/link";
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import Label from "@/components/ui/Label";
-import Button from "@/components/ui/Button";
-import Card from "@/components/ui/Card";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
-import Counter from "@/components/animations/Counter";
-import TimelineAnimated from "@/components/animations/TimelineAnimated";
-import SectorOverlay from "@/components/animations/SectorOverlay";
+import ShieldAnimation from "@/components/animations/ShieldAnimation";
+import RocketAnimation from "@/components/animations/RocketAnimation";
+import { SETTORI } from "@/lib/settori-data";
+import INumeri from "@/components/sections/home/INumeri";
 import CtaFinale from "@/components/sections/CtaFinale";
-import { motion } from "framer-motion";
-import { fadeInUp } from "@/lib/animations";
-
-/* ─── Data ─────────────────────────────────────────────── */
-
-const METRICS = [
-  { value: 4, suffix: "", label: "AZIENDE", sub: "seguite" },
-  { prefix: "<", value: 3, suffix: "", label: "MESI", sub: "per primo progetto" },
-  { prefix: "<", value: 60, suffix: "K", label: "INVESTIMENTO", sub: "anno 1" },
-];
-
-const SUCCESSI = [
-  {
-    title: "Automazione ordini B2B",
-    result: "Da 4h/giorno a 20 minuti",
-    detail:
-      "Un distributore food riceveva ordini via email, PDF e WhatsApp. Abbiamo automatizzato il parsing e il caricamento sul gestionale.",
-    type: "successo",
-  },
-  {
-    title: "Customer service AI",
-    result: "80% ticket gestiti senza umani",
-    detail:
-      "Un&rsquo;azienda manifatturiera con 200+ richieste/giorno. Chatbot addestrato sui manuali tecnici e lo storico ticket.",
-    type: "successo",
-  },
-  {
-    title: "Configuratore prodotto complesso",
-    result: "Progetto fermato dopo 3 mesi",
-    detail:
-      "I dati di prodotto erano frammentati su 6 sistemi diversi. Abbiamo imparato che senza dati puliti, l&rsquo;AI non fa miracoli. Ora partiamo sempre dal data audit.",
-    type: "insuccesso",
-  },
-  {
-    title: "Demand planning predittivo",
-    result: "ROI non misurabile nel breve",
-    detail:
-      "Lo storico ordini era troppo corto per un modello affidabile. Lezione: non tutto si risolve con l&rsquo;AI. A volte servono prima i fondamentali.",
-    type: "insuccesso",
-  },
-];
-
-const PROTEGGERE_ESPANDERE = [
-  "Automatizzare il lavoro ripetitivo che vi costa 3-4 FTE all&rsquo;anno",
-  "Ridurre errori operativi del 60-80% nei processi critici",
-  "Dare a ogni dipendente un copilota AI che moltiplica la produttivit&agrave;",
-  "Scalare il customer service senza assumere",
-  "Trasformare i dati che gi&agrave; avete in decisioni migliori",
-];
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const SETTORI_PROBLEMI = [
-  {
-    settore: "Manifattura",
-    problema: "Hai un backlog di ordini che gestisci su Excel?",
-    icon: "&#9881;",
-  },
-  {
-    settore: "Food & Beverage",
-    problema:
-      "Ricevi ordini via email, PDF ed EDI e li carichi sul gestionale a mano?",
-    icon: "&#127828;",
-  },
-  {
-    settore: "Logistica",
-    problema:
-      "Calcoli le rotte a mano e il 20% delle consegne arriva in ritardo?",
-    icon: "&#128666;",
-  },
-  {
-    settore: "Distribuzione B2B",
-    problema:
-      "I tuoi commerciali passano pi&ugrave; tempo a fare data entry che a vendere?",
-    icon: "&#128230;",
-  },
-  {
-    settore: "Moda & Lusso",
-    problema:
-      "Il campionario &egrave; ancora un processo manuale che dura mesi?",
-    icon: "&#128090;",
-  },
-  {
-    settore: "Healthcare",
-    problema:
-      "Gestite documentazione clinica e compliance con processi manuali?",
-    icon: "&#9764;",
-  },
-];
-
-const SETTORI_TABELLA = [
-  {
-    settore: "Manifattura",
-    applicazione: "Automazione ordini, quality control predittivo, manutenzione preventiva",
-  },
-  {
-    settore: "Food & Beverage",
-    applicazione: "Parsing ordini multi-canale, demand forecasting, tracciabilit&agrave; automatica",
-  },
-  {
-    settore: "Logistica",
-    applicazione: "Ottimizzazione rotte, gestione magazzino intelligente, tracking predittivo",
-  },
-  {
-    settore: "Distribuzione B2B",
-    applicazione: "CRM intelligente, automazione offerte, analisi credito clienti",
-  },
-  {
-    settore: "Moda & Lusso",
-    applicazione: "Configuratori prodotto, trend analysis, personalizzazione clienteling",
-  },
-  {
-    settore: "Healthcare",
-    applicazione: "Documentazione clinica AI, compliance automatizzata, scheduling intelligente",
-  },
-  {
-    settore: "Costruzioni",
-    applicazione: "Project management predittivo, analisi cantiere, procurement intelligence",
-  },
-  {
-    settore: "Retail",
-    applicazione: "Pricing dinamico, inventory optimization, customer service omnicanale",
-  },
-];
-
-const TIMELINE_ITEMS = [
-  {
-    title: "Assessment",
-    description: "Mappiamo processi e inefficienze in 2 settimane",
-  },
-  {
-    title: "Quick Wins",
-    description: "Primi risultati concreti entro 30 giorni",
-  },
-  {
-    title: "Implementazione",
-    description: "Soluzioni AI integrate nei vostri sistemi",
-  },
-  {
-    title: "Autonomia",
-    description: "Il vostro team gestisce tutto in autonomia",
-  },
-];
-
-const SETTORI_OVERLAY = [
-  {
-    title: "Manifattura",
-    problem: "Hai un backlog di ordini che gestisci su Excel?",
-    bullets: [
-      "Automazione ordini e caricamento gestionale",
-      "Quality control predittivo con computer vision",
-      "Manutenzione preventiva basata su dati IoT",
-    ],
-  },
-  {
-    title: "Food & Beverage",
-    problem: "Ricevi ordini via email, PDF ed EDI e li carichi a mano?",
-    bullets: [
-      "Parsing automatico ordini multi-canale",
-      "Demand forecasting per ridurre sprechi",
-      "Tracciabilit\u00E0 automatica end-to-end",
-    ],
-  },
-  {
-    title: "Logistica",
-    problem: "Calcoli le rotte a mano e il 20% delle consegne arriva in ritardo?",
-    bullets: [
-      "Ottimizzazione rotte con AI predittiva",
-      "Gestione magazzino intelligente",
-      "Tracking predittivo per clienti e operations",
-    ],
-  },
-  {
-    title: "Distribuzione B2B",
-    problem: "I tuoi commerciali passano pi\u00F9 tempo a fare data entry che a vendere?",
-    bullets: [
-      "CRM intelligente con suggerimenti AI",
-      "Automazione offerte e pricing dinamico",
-      "Analisi credito clienti in tempo reale",
-    ],
-  },
-  {
-    title: "Moda & Lusso",
-    problem: "Il campionario \u00E8 ancora un processo manuale che dura mesi?",
-    bullets: [
-      "Configuratori prodotto con AI generativa",
-      "Trend analysis predittiva",
-      "Personalizzazione clienteling omnicanale",
-    ],
-  },
-  {
-    title: "Healthcare",
-    problem: "Gestite documentazione clinica e compliance con processi manuali?",
-    bullets: [
-      "Documentazione clinica AI-assisted",
-      "Compliance automatizzata e audit trail",
-      "Scheduling intelligente risorse e pazienti",
-    ],
-  },
-];
-
-const STATS_BAR = [
-  { prefix: "", value: 30, suffix: "%", label: "costo operativo medio risparmiato" },
-  { prefix: "-", value: 3, suffix: "", label: "FTE equivalenti liberati" },
-  { prefix: "<", value: 60, suffix: "K", label: "investimento primo anno" },
-  { prefix: "+", value: 80, suffix: "%", label: "processi automatizzabili" },
-];
 
 /* ─── Page ─────────────────────────────────────────────── */
 
 export default function AziendePage() {
   return (
     <>
-      {/* ── Section 1: Hero (Yellow) ─────────────────────── */}
-      <SectionWrapper bg="giallo" className="!pt-40 !pb-16">
+      {/* ── Section 1: Hero (Yellow + Venice skyline) ───── */}
+      <section className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
+        <div className="container-site relative z-10 text-center pt-24 pb-40 md:pb-48">
         <FadeInOnScroll>
-          <Label className="!text-nero/60">PER LE AZIENDE</Label>
-          <h1 className="text-hero mt-4 max-w-4xl">
-            S&igrave;, puoi fare di pi&ugrave;. Il nostro AI, ripensare il
-            personale, anzi meglio!
+          <span className="text-label uppercase text-nero/60 tracking-widest">Per le Aziende</span>
+          <h1 className="text-section uppercase mt-4 max-w-[900px] mx-auto">
+            Se potessi avere 3x i dipendenti senza aumentare il costo del personale, cosa faresti?
           </h1>
-          <p className="text-subheadline text-nero/70 mt-6 max-w-[680px]">
-            Non vendiamo software. Entriamo nella tua azienda, capiamo dove
-            perdi tempo e soldi, e costruiamo soluzioni AI che funzionano
-            davvero. In meno di 3 mesi.
+          <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
+            &Egrave; la domanda da cui partiamo con ogni cliente. E oggi, con l&apos;AI,
+            la risposta non &egrave; pi&ugrave; ipotetica. 3x la capacit&agrave;, non i costi.
           </p>
-          <div className="mt-10">
-            <Button href="/contatti" className="!bg-nero !text-giallo hover:!bg-grigio-scuro">
-              Parla con noi &rarr;
-            </Button>
+          <div className="mt-8">
+            <a
+              href="/contatti"
+              className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo-hover hover:text-nero transition-all duration-300 uppercase tracking-wider"
+            >
+              Parla con noi
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </FadeInOnScroll>
+        </div>
+
+        {/* Venice skyline at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
+          <img
+            src="/hero/landscape venezia (no-bg).png"
+            alt="Venice skyline"
+            className="w-full h-auto opacity-30"
+          />
+        </div>
+      </section>
+
+      {/* ── Section: La Scomoda Verità ─────────────────────── */}
+      <SectionWrapper bg="white">
+        <FadeInOnScroll>
+          <div className="text-center mb-14">
+            <span className="text-label uppercase text-grigio-medio tracking-widest">
+              La scomoda verit&agrave;
+            </span>
+            <h2 className="text-section uppercase mt-4">
+              Non &egrave; fantascienza. &Egrave; matematica.
+            </h2>
+            <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
+              I modelli AI oggi coprono il 70-80% delle mansioni di un dipendente medio, alla stessa qualit&agrave;.
+              Ogni azienda che inizia ad adottare l&apos;AI si ritrova con 3x le risorse operative.
+            </p>
           </div>
         </FadeInOnScroll>
 
-        {/* Metrics row */}
-        <FadeInOnScroll className="mt-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-nero/20 pt-10">
-            {METRICS.map((m, i) => (
-              <motion.div
-                key={m.label}
-                variants={fadeInUp}
-                custom={i}
-                className="text-center md:text-left"
-              >
-                <div className="flex items-baseline justify-center md:justify-start gap-1">
-                  {m.prefix && (
-                    <span className="text-metric">{m.prefix}</span>
-                  )}
-                  <Counter target={m.value} suffix={m.suffix} />
-                </div>
-                <p className="text-sm font-bold mt-1 uppercase tracking-wider">
-                  {m.label}
+        <FadeInOnScroll>
+          <div className="border border-nero">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {/* Left - Il Primo Impatto */}
+              <div className="md:border-r border-nero px-4 py-4 md:px-8 md:py-8">
+                <h3 className="text-xl font-bold uppercase mb-4">
+                  <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
+                    Il primo impatto
+                  </span>
+                </h3>
+                <p className="text-body text-nero leading-relaxed">
+                  &egrave; immediato e misurabile: automazione dei processi ad alto volume,
+                  eliminazione del lavoro ripetitivo, efficienza operativa. Cost reduction
+                  con numeri chiari.
                 </p>
-                <p className="text-sm text-nero/60">{m.sub}</p>
-              </motion.div>
-            ))}
-          </div>
-        </FadeInOnScroll>
-      </SectionWrapper>
+              </div>
 
-      {/* ── Section 2: Successi e Insuccessi ─────────────── */}
-      <SectionWrapper bg="white">
-        <FadeInOnScroll>
-          <Label>TRASPARENZA TOTALE</Label>
-          <h2 className="text-section mt-4">
-            Fare i conti con successi e insuccessi.
-          </h2>
-          <p className="text-body text-grigio-scuro mt-4 max-w-[700px]">
-            Non tutto funziona al primo colpo. Vi raccontiamo cosa ha
-            funzionato e cosa no, perch&eacute; &egrave; cos&igrave; che si
-            costruisce fiducia.
-          </p>
-        </FadeInOnScroll>
+              {/* Right - Il Vero Valore */}
+              <div className="px-4 py-4 md:px-8 md:py-8 border-t md:border-t-0 border-nero">
+                <h3 className="text-xl font-bold uppercase mb-4">
+                  <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
+                    Il vero valore
+                  </span>
+                </h3>
+                <p className="text-body text-nero leading-relaxed">
+                  &egrave; quello che sblocca: nuovi prodotti che prima erano economicamente
+                  non fattibili. Nuovi mercati che richiederebbero troppo personale.
+                  Modelli di business impossibili da scalare senza AI.
+                </p>
+              </div>
+            </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-          {SUCCESSI.map((item, i) => (
-            <Card
-              key={item.title}
-              index={i}
-              dark={item.type === "insuccesso"}
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <span
-                  className={`text-xs font-bold uppercase tracking-wider px-3 py-1 ${
-                    item.type === "successo"
-                      ? "bg-giallo text-nero"
-                      : "bg-white/10 text-grigio-medio"
-                  }`}
+            {/* Bottom bar */}
+            <div className="border-t border-nero px-4 py-6 md:px-8 md:py-8 text-center">
+              <p className="text-body font-bold text-nero max-w-[700px] mx-auto">
+                Quindi se potessi avere 3x i dipendenti senza aumentare il costo del
+                personale, quali opportunit&agrave; si aprirebbero? Espandere in nuovi mercati?
+                Lanciare nuovi prodotti? Servire pi&ugrave; clienti?
+              </p>
+              <div className="mt-6">
+                <a
+                  href="/contatti"
+                  className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo hover:text-nero transition-[background-color,color] duration-[250ms] uppercase tracking-wider"
                 >
-                  {item.type === "successo" ? "Successo" : "Lezione appresa"}
-                </span>
+                  Raccontacelo qui
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
               </div>
-              <h3 className="text-xl font-bold">{item.title}</h3>
-              <p
-                className={`text-lg font-semibold mt-1 ${
-                  item.type === "successo" ? "text-nero" : "text-giallo"
-                }`}
-              >
-                {item.result}
-              </p>
-              <p
-                className={`text-body mt-3 ${
-                  item.type === "insuccesso"
-                    ? "text-bianco/70"
-                    : "text-grigio-scuro"
-                }`}
-                dangerouslySetInnerHTML={{ __html: item.detail }}
-              />
-            </Card>
-          ))}
-        </div>
-      </SectionWrapper>
-
-      {/* ── Section 3: Proteggere e Espandere ────────────── */}
-      <SectionWrapper bg="light">
-        <FadeInOnScroll>
-          <Label>IL METODO</Label>
-          <h2 className="text-section mt-4">
-            Proteggere e espandere: costruiamo partendo da qui.
-          </h2>
-          <p className="text-body text-grigio-scuro mt-4 max-w-[700px]">
-            Ogni azienda ha inefficienze nascoste che costano centinaia di
-            migliaia di euro all&rsquo;anno. Il nostro lavoro &egrave; trovarle
-            e risolverle.
-          </p>
-        </FadeInOnScroll>
-
-        {/* Animated Timeline */}
-        <TimelineAnimated items={TIMELINE_ITEMS} />
-
-        <div className="mt-12 space-y-0">
-          {PROTEGGERE_ESPANDERE.map((item, i) => (
-            <FadeInOnScroll key={i}>
-              <div className="flex items-start gap-4 py-5 border-b border-nero/10 last:border-0">
-                <span className="text-giallo text-xl font-bold mt-0.5 shrink-0">
-                  &rarr;
-                </span>
-                <p
-                  className="text-body text-nero"
-                  dangerouslySetInnerHTML={{ __html: item }}
-                />
-              </div>
-            </FadeInOnScroll>
-          ))}
-        </div>
-      </SectionWrapper>
-
-      {/* ── Section 4: Vedi se ti riconosci ──────────────── */}
-      <SectionWrapper bg="white">
-        <FadeInOnScroll>
-          <Label>TI RICONOSCI?</Label>
-          <h2 className="text-section mt-4">
-            Vedi se siedi dove poter partire da qui.
-          </h2>
-          <p className="text-body text-grigio-scuro mt-4 max-w-[700px]">
-            Ogni settore ha i suoi problemi specifici. Se ti riconosci in uno
-            di questi, possiamo aiutarti.
-          </p>
-        </FadeInOnScroll>
-
-        <div className="mt-12">
-          <SectorOverlay sectors={SETTORI_OVERLAY} />
-        </div>
-      </SectionWrapper>
-
-      {/* ── Section 5: Settore + Applicazioni AI ─────────── */}
-      <SectionWrapper bg="dark">
-        <FadeInOnScroll>
-          <Label className="!text-giallo">COMPETENZA SETTORIALE</Label>
-          <h2 className="text-section text-bianco mt-4">
-            Il tuo settore ha un problema. Noi lo conosciamo gi&agrave;.
-          </h2>
-        </FadeInOnScroll>
-
-        <FadeInOnScroll className="mt-12">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="border-b border-white/20">
-                  <th className="text-label text-giallo pb-4 pr-8 uppercase tracking-wider">
-                    Settore
-                  </th>
-                  <th className="text-label text-giallo pb-4 uppercase tracking-wider">
-                    Applicazioni AI
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {SETTORI_TABELLA.map((row) => (
-                  <tr
-                    key={row.settore}
-                    className="border-b border-white/10 last:border-0"
-                  >
-                    <td className="text-bianco font-bold py-4 pr-8 whitespace-nowrap">
-                      {row.settore}
-                    </td>
-                    <td
-                      className="text-bianco/70 text-body py-4"
-                      dangerouslySetInnerHTML={{ __html: row.applicazione }}
-                    />
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            </div>
           </div>
         </FadeInOnScroll>
       </SectionWrapper>
 
-      {/* ── Section 6: Stats Bar ─────────────────────────── */}
-      <SectionWrapper bg="giallo" className="!py-12">
-        <FadeInOnScroll
-          className="grid grid-cols-2 md:grid-cols-4 gap-8"
-          stagger
-        >
-          {STATS_BAR.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              variants={fadeInUp}
-              custom={i}
-              className="text-center"
-            >
-              <div className="flex items-baseline justify-center gap-0.5">
-                {stat.prefix && (
-                  <span className="text-metric">{stat.prefix}</span>
-                )}
-                <Counter target={stat.value} suffix={stat.suffix} />
+      {/* ── Le Due Modalità ─────────────────────────────── */}
+      <SectionWrapper bg="giallo">
+        <FadeInOnScroll>
+          <div className="text-center mb-14">
+            <span className="text-label uppercase text-grigio-medio tracking-widest">
+              Le due modalit&agrave;
+            </span>
+            <h2 className="text-section uppercase mt-4">
+              Proteggere o espandersi. Entrambi partono da qui.
+            </h2>
+            <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
+              Alcune aziende hanno margini da proteggere. Altre hanno mercati da conquistare.
+              Le migliori fanno entrambe le cose, in sequenza.
+            </p>
+          </div>
+        </FadeInOnScroll>
+        <FadeInOnScroll>
+          <div className="border border-nero">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="md:border-r border-nero px-4 py-4 md:px-8 md:py-8">
+                <h3 className="text-xl font-bold uppercase mb-4">
+                  <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
+                    Implementazioni di difesa
+                  </span>
+                </h3>
+                <p className="text-body text-nero leading-relaxed">
+                  Parti da qui se hai processi ad alto costo, lavoro ripetitivo che consuma
+                  risorse, o competitor che si stanno muovendo. L&apos;obiettivo &egrave; ridurre i costi
+                  operativi, aumentare i margini, liberare tempo.
+                </p>
               </div>
-              <p className="text-sm font-medium text-nero/70 mt-1">
-                {stat.label}
-              </p>
-            </motion.div>
-          ))}
+              <div className="bg-nero/5 min-h-[200px] flex items-center justify-center border-t md:border-t-0 border-nero">
+                <ShieldAnimation />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 border-t border-nero">
+              <div className="bg-nero/5 min-h-[200px] flex items-center justify-center border-b md:border-b-0 md:border-r border-nero">
+                <RocketAnimation />
+              </div>
+              <div className="px-4 py-4 md:px-8 md:py-8">
+                <h3 className="text-xl font-bold uppercase mb-4">
+                  <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
+                    Implementazioni di attacco
+                  </span>
+                </h3>
+                <p className="text-body text-nero leading-relaxed">
+                  Parti da qui se vuoi fare cose che oggi non puoi permetterti. Nuovi mercati,
+                  nuovi prodotti, pi&ugrave; clienti, con la stessa struttura. L&apos;AI non aggiunge
+                  persone al tuo organico: moltiplica quello che gi&agrave; hai.
+                </p>
+              </div>
+            </div>
+          </div>
         </FadeInOnScroll>
       </SectionWrapper>
+
+      {/* ── Il Percorso ─────────────────────────────────── */}
+      <SectionWrapper bg="white">
+        <FadeInOnScroll>
+          <div className="text-center mb-14">
+            <span className="text-label uppercase text-grigio-medio tracking-widest">
+              Il percorso
+            </span>
+            <h2 className="text-section uppercase mt-4">
+              Dove sei oggi. Dove puoi arrivare.
+            </h2>
+            <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
+              Ogni azienda percorre questi livelli in sequenza. Non si salta, ma si costruisce ogni livello
+              sulle fondamenta del precedente. Il primo risultato concreto arriva entro 30 giorni.
+            </p>
+          </div>
+        </FadeInOnScroll>
+
+        {/* Timeline - horizontal desktop, vertical mobile */}
+        <FadeInOnScroll>
+          {/* Desktop: horizontal */}
+          <div className="hidden md:block relative">
+            <div className="grid grid-cols-4 gap-6 relative">
+              {[
+                { title: "Quick Wins", time: "0-90 GIORNI", body: "Identifichiamo 2-3 processi ad alto impatto e li automatizziamo. Dobbiamo creare momentum interno." },
+                { title: "Trasformazione Operativa", time: "3-6 MESI", body: "Espandiamo su tutte le aree chiave. Ogni implementazione è pianificata con numeri chiari." },
+                { title: "Operations AI-Native", time: "6-12 MESI", body: "L'AI non è più un progetto. È il modo in cui l'azienda lavora e i team diventano autonomi." },
+                { title: "Capacity Expansion", time: "12+ MESI", body: "Quello che prima era impossibile diventa il prossimo obiettivo: nuovi prodotti, mercati, modelli di business." },
+              ].map((step, i) => (
+                <div key={i} className="text-center">
+                  <h3 className="text-base font-bold uppercase">
+                    <span className="underline decoration-giallo decoration-[3px] underline-offset-4">{step.title}</span>
+                  </h3>
+                  <p className="text-xs uppercase tracking-wider text-nero/60 mt-1">{step.time}</p>
+                  <div className="relative flex justify-center my-4">
+                    <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-nero -translate-y-1/2" />
+                    <div className="w-4 h-4 bg-nero rounded-full relative z-10" />
+                    {i === 3 && (
+                      <div className="absolute top-1/2 -right-3 -translate-y-1/2 z-10">
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M7 0l5 5-5 5" stroke="#1A1A1A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </div>
+                    )}
+                  </div>
+                  <p className="text-sm text-nero/70 leading-relaxed">{step.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile: vertical */}
+          <div className="md:hidden relative pl-8">
+            <div className="absolute left-3 top-0 bottom-0 w-[2px] bg-nero" />
+            {[
+              { title: "Quick Wins", time: "0-90 GIORNI", body: "Identifichiamo 2-3 processi ad alto impatto e li automatizziamo. Dobbiamo creare momentum interno." },
+              { title: "Trasformazione Operativa", time: "3-6 MESI", body: "Espandiamo su tutte le aree chiave. Ogni implementazione è pianificata con numeri chiari." },
+              { title: "Operations AI-Native", time: "6-12 MESI", body: "L'AI non è più un progetto. È il modo in cui l'azienda lavora e i team diventano autonomi." },
+              { title: "Capacity Expansion", time: "12+ MESI", body: "Quello che prima era impossibile diventa il prossimo obiettivo: nuovi prodotti, mercati, modelli di business." },
+            ].map((step, i) => (
+              <div key={i} className="relative pb-8 last:pb-0">
+                <div className="absolute left-[-22px] top-1 w-4 h-4 bg-nero rounded-full z-10" />
+                <h3 className="text-base font-bold uppercase">
+                  <span className="underline decoration-giallo decoration-[3px] underline-offset-4">{step.title}</span>
+                </h3>
+                <p className="text-xs uppercase tracking-wider text-nero/60 mt-1">{step.time}</p>
+                <p className="text-sm text-nero/70 leading-relaxed mt-2">{step.body}</p>
+              </div>
+            ))}
+            <div className="absolute left-[7px] bottom-0">
+              <svg width="10" height="12" viewBox="0 0 10 12" fill="none"><path d="M0 7l5 5 5-5" stroke="#1A1A1A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </div>
+          </div>
+        </FadeInOnScroll>
+
+        {/* Bottom CTA */}
+        <FadeInOnScroll>
+          <div className="text-center mt-12">
+            <p className="text-body font-bold text-nero">
+              Tutto il nostro processo &egrave; aperto.
+            </p>
+            <div className="mt-4 flex items-center justify-center gap-3">
+              <span className="text-body text-nero">Leggi</span>
+              <a
+                href="/metodo"
+                className="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 bg-giallo text-nero hover:bg-giallo-hover transition-colors"
+              >
+                <img src="/icon/logoB-noBG.png" alt="" width={16} height={16} />
+                Il Codice del Doge
+              </a>
+            </div>
+          </div>
+        </FadeInOnScroll>
+      </SectionWrapper>
+
+      {/* ── Dove Operiamo ─────────────────────────────────── */}
+      <SectionWrapper bg="dark" className="min-h-screen flex flex-col justify-center">
+        <FadeInOnScroll>
+          <div className="text-center mb-14">
+            <span className="text-label uppercase text-grigio-medio tracking-widest">
+              Dove operiamo
+            </span>
+            <h2 className="text-section uppercase mt-4">
+              Il tuo settore ha un problema. Noi lo conosciamo gi&agrave;.
+            </h2>
+            <p className="text-body text-bianco/70 mt-6 max-w-[600px] mx-auto">
+              Non esistono soluzioni generiche. Ogni settore ha i suoi colli di bottiglia.
+            </p>
+          </div>
+        </FadeInOnScroll>
+
+        <FadeInOnScroll>
+          <div className="border border-bianco/20">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {/* Interleave: left col 01-05, right col 06-10 */}
+              {/* Left: 01-05, Right: 06-10 - interleaved for 2-col grid */}
+              {[
+                { idx: 0, num: "01", title: "Manifattura & Produzione", slug: "ai-manifattura-produzione" },
+                { idx: 8, num: "06", title: "Edilizia & Immobiliare", slug: "ai-edilizia-immobiliare" },
+                { idx: 4, num: "02", title: "Logistica & Trasporti", slug: "ai-logistica-trasporti" },
+                { idx: 2, num: "07", title: "Retail, Fashion & Design", slug: "ai-retail-fashion" },
+                { idx: 7, num: "03", title: "Food & Beverage", slug: "ai-food-beverage" },
+                { idx: 6, num: "08", title: "Farmaceutica & Dispositivi Medici", slug: "ai-farmaceutica" },
+                { idx: 1, num: "04", title: "Distribuzione B2B & Grossisti", slug: "ai-distribuzione-b2b" },
+                { idx: 8, num: "09", title: "Sanit\u00e0 Privata", slug: "ai-sanita-privata" },
+                { idx: 9, num: "05", title: "Servizi Professionali", slug: "ai-servizi-professionali" },
+                { idx: 3, num: "10", title: "Turismo & Ospitalit\u00e0", slug: "ai-turismo-ospitalita" },
+              ].map((s, i) => {
+                const settore = SETTORI[Math.min(s.idx, SETTORI.length - 1)];
+                return (
+                  <Link
+                    key={i}
+                    href={`/blog/${s.slug}`}
+                    className={`group relative block ${i < 8 ? "border-b border-bianco/20" : ""} ${i % 2 === 1 ? "md:border-l border-bianco/20" : ""}`}
+                  >
+                    <div className="flex items-center gap-4 px-6 py-5 md:px-8 md:py-6 cursor-pointer">
+                      <span className="text-3xl font-bold text-bianco shrink-0">
+                        {s.num}.
+                      </span>
+                      <span className="text-sm font-bold uppercase tracking-wide text-bianco">
+                        {s.title}
+                      </span>
+                      <svg className="ml-auto w-5 h-5 text-bianco transition-transform group-hover:rotate-90 duration-200 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                    </div>
+                    <div className="max-h-0 overflow-hidden group-hover:max-h-[180px] transition-[max-height] duration-700 ease-in-out">
+                      <div className="px-6 pb-5 md:px-8 md:pb-6 pl-16 md:pl-20">
+                        <ul className="space-y-2">
+                          {settore.useCases.map((uc, j) => (
+                            <li key={j} className="flex items-start gap-2 text-sm text-bianco/70">
+                              <span className="text-giallo mt-0.5 shrink-0">&rarr;</span>
+                              {uc}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </FadeInOnScroll>
+      </SectionWrapper>
+
+      {/* IN NUMERI - same as homepage */}
+      <INumeri />
+
+      {/* ── Incentivi e Agevolazioni ─────────────────────── */}
+      <SectionWrapper bg="white">
+        <FadeInOnScroll>
+          <div className="text-center max-w-[700px] mx-auto">
+            <span className="text-label uppercase text-grigio-medio tracking-widest">
+              Incentivi e agevolazioni
+            </span>
+            <h2 className="text-section uppercase mt-4">
+              L&apos;AI che si paga (in parte) da sola
+            </h2>
+            <p className="text-body text-nero/70 mt-6 leading-relaxed">
+              La trasformazione AI di un&apos;azienda pu&ograve; essere finanziata - in parte o
+              totalmente - attraverso <a href="/incentivi/credito-imposta-4-0" className="underline decoration-giallo decoration-2 underline-offset-2 hover:text-nero">incentivi fiscali &rarr;</a>, <a href="/incentivi" className="underline decoration-giallo decoration-2 underline-offset-2 hover:text-nero">bandi regionali &rarr;</a> e <a href="/incentivi/pnrr-digitalizzazione" className="underline decoration-giallo decoration-2 underline-offset-2 hover:text-nero">fondi europei &rarr;</a> oggi
+              disponibili per le PMI italiane.
+            </p>
+            <p className="text-body text-nero/70 mt-4 leading-relaxed">
+              Non &egrave; il nostro mestiere navigare la burocrazia, ma abbiamo un
+              ecosistema di partner, commercialisti e consulenti specializzati, che
+              affiancano i nostri clienti per identificare gli strumenti giusti e
+              massimizzare il ritorno sull&apos;investimento.
+            </p>
+            <div className="mt-8">
+              <a
+                href="/incentivi"
+                className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo hover:text-nero transition-[background-color,color] duration-[250ms] uppercase tracking-wider"
+              >
+                Scopri tutti gli incentivi
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </FadeInOnScroll>
+      </SectionWrapper>
+
+      {/* ── REMOVED: old metrics, successi, settori, stats ── */}
+      {/* All replaced by new sections above */}
 
       {/* ── Section 7: CTA Finale ────────────────────────── */}
       <CtaFinale

@@ -32,7 +32,7 @@ export default function HeroSection() {
       ref={sectionRef}
       className="relative bg-giallo min-h-screen flex flex-col justify-center overflow-hidden"
     >
-      {/* Venice skyline at bottom — parallax on desktop */}
+      {/* Venice skyline at bottom - parallax on desktop */}
       <motion.div
         className="absolute bottom-0 left-0 right-0 pointer-events-none opacity-30"
         style={isDesktop ? { y: skylineY } : undefined}
@@ -47,7 +47,7 @@ export default function HeroSection() {
         />
       </motion.div>
 
-      {/* Content — upper half */}
+      {/* Content - upper half */}
       <div className="container-site relative z-10 text-center pt-24 pb-40 md:pb-48">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

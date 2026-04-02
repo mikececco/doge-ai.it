@@ -13,7 +13,7 @@ export default function Navbar() {
   const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(!isHome);
   const [compact, setCompact] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
@@ -59,7 +59,7 @@ export default function Navbar() {
       >
         <div className="container-site flex items-center justify-between w-full">
           <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2">
-            <Image src="/icon/logoB-noBG.png" alt="Doge icon" width={28} height={28} />
+            <Image src="/icon/logoB-noBG.png" alt="Doge icon" width={28} height={28} priority />
             <DogeLogo />
           </Link>
 
@@ -72,8 +72,8 @@ export default function Navbar() {
                   <div
                     key={item.label}
                     className="relative"
-                    onMouseEnter={() => setDropdownOpen(true)}
-                    onMouseLeave={() => setDropdownOpen(false)}
+                    onMouseEnter={() => setOpenDropdown(item.label)}
+                    onMouseLeave={() => setOpenDropdown(null)}
                   >
                     <button
                       className={`text-sm font-medium transition-colors cursor-pointer pb-1 ${
@@ -85,7 +85,7 @@ export default function Navbar() {
                       {item.label}
                       <span className="ml-1 text-xs">▾</span>
                     </button>
-                    {dropdownOpen && (
+                    {openDropdown === item.label && (
                       <div className="absolute top-full left-0 pt-2">
                         <div className="bg-bianco   py-2 min-w-[180px]">
                           {item.children.map((child) => (

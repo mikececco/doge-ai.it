@@ -9,7 +9,7 @@ const topRow = [
   },
   {
     title: "L'AI eliminerà parte del lavoro umano.",
-    body: "L'AI può svolgere autonomamente il 70–80% delle mansioni di un dipendente medio, a qualità pari o superiore. Questa non è un'iperbole. È quello che sta succedendo adesso.",
+    body: "L'AI può svolgere autonomamente il 70-80% delle mansioni di un dipendente medio, a qualità pari o superiore. Questa non è un'iperbole. È quello che sta succedendo adesso.",
   },
   {
     title: "Non è solo cost reduction.",
@@ -48,13 +48,13 @@ export default function RealtaScomode() {
         </FadeInOnScroll>
 
         <FadeInOnScroll>
-          {/* Top row — 4 cards */}
+          {/* Top row - 4 cards */}
           <div className="border border-nero">
             <div className="grid grid-cols-1 md:grid-cols-4">
               {topRow.map((card, i) => (
                 <div
                   key={i}
-                  className={`px-8 py-8 ${i < topRow.length - 1 ? "md:border-r border-nero" : ""}`}
+                  className={`px-4 py-4 md:px-8 md:py-8 ${i < topRow.length - 1 ? "md:border-r border-nero" : ""}`}
                 >
                   <h3 className="text-base font-bold uppercase leading-snug mb-4">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
@@ -79,7 +79,7 @@ export default function RealtaScomode() {
               {bottomRow.map((card, i) => (
                 <div
                   key={i}
-                  className={`px-8 py-8 md:border-r border-nero`}
+                  className={`px-4 py-4 md:px-8 md:py-8 md:border-r border-nero`}
                 >
                   <h3 className="text-base font-bold uppercase leading-snug mb-4">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
@@ -92,8 +92,8 @@ export default function RealtaScomode() {
                 </div>
               ))}
 
-              {/* Special last card — black bg, bigger */}
-              <div className="px-8 py-8 bg-nero text-bianco flex flex-col justify-between min-h-[220px]">
+              {/* Special last card - black bg, bigger */}
+              <div className="px-4 py-4 md:px-8 md:py-8 bg-nero text-bianco flex flex-col justify-between min-h-[220px]">
                 <div>
                   <h3 className="text-2xl font-bold uppercase leading-tight">
                     L&apos;AI in azienda non fa paura.

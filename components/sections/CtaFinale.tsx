@@ -21,7 +21,7 @@ export default function CtaFinale({
 }: CtaFinaleProps) {
   if (dark) {
     return (
-      <section className="relative bg-nero text-bianco py-[120px] overflow-hidden">
+      <section className="relative bg-nero text-bianco py-16 md:py-[120px] overflow-hidden">
         {/* Venice canal gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-nero/90 via-nero/70 to-nero/90" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(30,40,50,0.8)_0%,_transparent_70%)]" />

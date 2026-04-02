@@ -14,7 +14,7 @@ const steps = [
   },
   {
     title: "ENGINEERING",
-    body: "Team tecnico orientato al risultato, non alle ore fatturate. Costruiamo solo quello che serve, off-the-shelf quando basta, custom quando crea vantaggio reale. Dall'audit all'AI in produzione: 30–60 giorni.",
+    body: "Team tecnico orientato al risultato, non alle ore fatturate. Costruiamo solo quello che serve, off-the-shelf quando basta, custom quando crea vantaggio reale. Dall'audit all'AI in produzione: 30-60 giorni.",
   },
 ];
 
@@ -22,7 +22,7 @@ export default function EntrareCorrereCostruire() {
   return (
     <section className="bg-bianco text-nero" id="metodo">
       {/* Header */}
-      <div className="container-site pt-[96px] pb-12">
+      <div className="container-site pt-16 md:pt-24 pb-12">
         <FadeInOnScroll>
           <div className="text-center">
             <span className="text-label uppercase text-grigio-medio tracking-widest">
@@ -53,7 +53,7 @@ export default function EntrareCorrereCostruire() {
                 className={`flex flex-col ${i < steps.length - 1 ? "md:border-r border-nero" : ""} border-b md:border-b-0 border-nero last:border-b-0`}
               >
                 {/* Title */}
-                <div className="border-b border-nero px-8 py-6">
+                <div className="border-b border-nero px-4 md:px-8 py-4 md:py-6">
                   <h3 className="text-xl font-bold uppercase">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                       {step.title}
@@ -62,7 +62,7 @@ export default function EntrareCorrereCostruire() {
                 </div>
 
                 {/* Body */}
-                <div className="px-8 py-8 flex-1">
+                <div className="px-4 md:px-8 py-6 md:py-8 flex-1">
                   <p className="text-body text-nero leading-relaxed">
                     {step.body}
                   </p>

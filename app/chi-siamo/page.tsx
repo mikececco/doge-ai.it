@@ -4,13 +4,22 @@ import Button from "@/components/ui/Button";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 
 export const metadata: Metadata = {
-  title: "Chi Siamo — Il Doge di Venezia",
+  title: "Chi Siamo - Il Doge di Venezia",
   description:
     "Il team dietro Il Doge di Venezia: AI strategy, engineering e design.",
   openGraph: {
-    title: "Chi Siamo — Il Doge di Venezia",
+    title: "Chi Siamo - Il Doge di Venezia",
     description:
       "Il team dietro Il Doge di Venezia: AI strategy, engineering e design.",
+    type: "website",
+    images: [
+      {
+        url: "/icon/logoB-noBG.png",
+        width: 512,
+        height: 512,
+        alt: "il Doge di Venezia",
+      },
+    ],
   },
 };
 
@@ -33,7 +42,7 @@ const HUSTLERS = [
 export default function ChiSiamoPage() {
   return (
     <>
-      {/* Section 1 — Yellow Hero: Manifesto */}
+      {/* Section 1 - Yellow Hero: Manifesto */}
       <section className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
         <div className="container-site relative z-10 text-center pt-24 pb-40 md:pb-48">
           <FadeInOnScroll>
@@ -82,7 +91,7 @@ export default function ChiSiamoPage() {
         </div>
       </section>
 
-      {/* Section 2 — Chi Siamo + Team */}
+      {/* Section 2 - Chi Siamo + Team */}
       <SectionWrapper bg="white">
         {/* Header */}
         <FadeInOnScroll>
@@ -100,9 +109,9 @@ export default function ChiSiamoPage() {
         <FadeInOnScroll>
           <div className="border border-nero">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              {/* Left — Team photos 2x2 */}
-              <div className="md:border-r border-nero p-8 flex items-center justify-center">
-                <div className="grid grid-cols-2 gap-3 max-w-[280px]">
+              {/* Left - Team photos 2x2 */}
+              <div className="md:border-r border-nero p-4 md:p-8 flex items-center justify-center">
+                <div className="grid grid-cols-2 gap-3 max-w-[200px] md:max-w-[280px]">
                   <img src="/team/image14.png" alt="Team member" className="w-full h-auto object-cover aspect-square grayscale" />
                   <img src="/team/image15.png" alt="Team member" className="w-full h-auto object-cover aspect-square grayscale" />
                   <img src="/team/image13.png" alt="Team member" className="w-full h-auto object-cover aspect-square grayscale" />
@@ -110,8 +119,8 @@ export default function ChiSiamoPage() {
                 </div>
               </div>
 
-              {/* Right — Text */}
-              <div className="px-8 py-8 flex flex-col justify-center">
+              {/* Right - Text */}
+              <div className="px-4 py-4 md:px-8 md:py-8 flex flex-col justify-center">
                 <p className="text-body text-nero leading-relaxed">
                   Strategia e codice nello stesso team. Non in sequenza, in
                   parallelo. Veniamo da fondi VC europei, startup AI
@@ -135,13 +144,13 @@ export default function ChiSiamoPage() {
         </FadeInOnScroll>
       </SectionWrapper>
 
-      {/* Section 4 — Lavora con Noi */}
+      {/* Section 4 - Lavora con Noi */}
       <SectionWrapper bg="white">
         <FadeInOnScroll>
           <h2 className="text-section uppercase mb-12">Lavora con noi</h2>
         </FadeInOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 lg:gap-16">
           {/* Builders */}
           <FadeInOnScroll>
             <div>

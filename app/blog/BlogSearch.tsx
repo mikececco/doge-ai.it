@@ -52,8 +52,8 @@ export default function BlogSearch({ posts }: { posts: BlogPost[] }) {
   return (
     <>
       {/* Search + Filters */}
-      <div className="mb-10 flex flex-col sm:flex-row gap-4">
-        <div className="relative flex-1">
+      <div className="mb-10 flex flex-col gap-4">
+        <div className="relative">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -106,7 +106,7 @@ export default function BlogSearch({ posts }: { posts: BlogPost[] }) {
         </div>
       </div>
 
-      {/* Results — Dark Cards */}
+      {/* Results - Dark Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filtered.map((post) => (
           <Link
@@ -114,13 +114,13 @@ export default function BlogSearch({ posts }: { posts: BlogPost[] }) {
             href={`/blog/${post.slug}`}
             className="group flex flex-col h-full bg-nero border border-bianco/10 hover:border-giallo hover:bg-giallo transition-[background,border-color] duration-[250ms] ease-[ease] hover:-translate-y-1"
           >
-            <div className="p-8 flex flex-col h-full">
+            <div className="p-4 md:p-8 flex flex-col h-full">
               <span
                 className={`self-start text-label uppercase px-2 py-1 text-xs font-semibold tracking-wider ${getCategoryClass(post.category)} group-hover:bg-nero group-hover:text-giallo transition-[background,color] duration-[250ms] ease-[ease]`}
               >
                 {post.category}
               </span>
-              <h2 className="mt-4 text-[22px] font-bold leading-tight text-bianco group-hover:text-nero transition-[color] duration-[250ms] ease-[ease]">
+              <h2 className="mt-4 text-lg md:text-[22px] font-bold leading-tight text-bianco group-hover:text-nero transition-[color] duration-[250ms] ease-[ease]">
                 {post.title}
               </h2>
               <p className="mt-3 text-body text-bianco/60 group-hover:text-nero/70 leading-relaxed flex-1 transition-[color] duration-[250ms] ease-[ease]">

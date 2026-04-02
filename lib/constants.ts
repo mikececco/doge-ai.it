@@ -8,11 +8,16 @@ export const NAV_ITEMS = [
     ],
   },
   { label: "Il Codice del Doge", href: "/metodo" },
-  { label: "Casi d'Uso", href: "/casi-duso" },
-  { label: "Settori", href: "/settori" },
-  { label: "Blog", href: "/blog" },
-  { label: "Soluzioni", href: "/soluzioni" },
-  { label: "Lavora con Noi", href: "/lavora-con-noi" },
+  {
+    label: "Risorse",
+    children: [
+      { label: "Casi d'Uso", href: "/casi-duso" },
+      { label: "Settori", href: "/settori" },
+      { label: "Incentivi", href: "/incentivi" },
+      { label: "Blog", href: "/blog" },
+      { label: "Soluzioni", href: "/soluzioni" },
+    ],
+  },
 ] as const;
 
 export const FOOTER_LINKS = {
@@ -25,6 +30,7 @@ export const FOOTER_LINKS = {
     { label: "Settori", href: "/settori" },
     { label: "Blog", href: "/blog" },
     { label: "Soluzioni", href: "/soluzioni" },
+    { label: "Incentivi", href: "/incentivi" },
     { label: "Lavora con Noi", href: "/lavora-con-noi" },
     { label: "Contatti", href: "/contatti" },
   ],
@@ -61,7 +67,7 @@ export const TEAM_MEMBERS = [
     role: "Product Manager",
     flags: "\u{1F1EE}\u{1F1F9} \u{1F1E8}\u{1F1ED}",
     image: "/team/gianmaria.webp",
-    bio: "Designer con esperienza in UX/UI per prodotti complessi. Focus sull'adozione reale — non solo sul funzionamento tecnico.",
+    bio: "Designer con esperienza in UX/UI per prodotti complessi. Focus sull'adozione reale - non solo sul funzionamento tecnico.",
   },
   {
     name: "Marcello Gamberale",

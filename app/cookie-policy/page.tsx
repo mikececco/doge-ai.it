@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy — Il Doge di Venezia",
+  title: "Cookie Policy - Il Doge di Venezia",
   description:
     "Informativa sull'utilizzo dei cookie sul sito doge-ai.it de Il Doge di Venezia.",
 };
@@ -171,7 +171,7 @@ export default function CookiePolicy() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Google — Privacy Policy
+                Google - Privacy Policy
               </a>
             </li>
             <li>
@@ -180,7 +180,7 @@ export default function CookiePolicy() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Google — Utilizzo dei cookie
+                Google - Utilizzo dei cookie
               </a>
             </li>
             <li>
@@ -189,7 +189,7 @@ export default function CookiePolicy() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Netlify — Privacy Policy
+                Netlify - Privacy Policy
               </a>
             </li>
           </ul>

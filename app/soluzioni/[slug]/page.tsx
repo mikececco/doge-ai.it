@@ -6,7 +6,11 @@ import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import CtaFinale from "@/components/sections/CtaFinale";
 import RelatedContent from "@/components/sections/RelatedContent";
 import { SOLUZIONI_PAGES } from "@/lib/soluzioni-data";
-import { getLinksForSoluzione } from "@/lib/internal-links";
+import {
+  getLinksForSoluzione,
+  getStrategicLinksForSoluzione,
+} from "@/lib/internal-links";
+import RisorseCorrelate from "@/components/sections/RisorseCorrelate";
 
 const BASE_URL = "https://doge-ai.it";
 
@@ -209,6 +213,11 @@ export default function SoluzioneSlugPage({ params }: Props) {
           href: `/consulenza-ai/${city.slug}`,
           title: `Consulenza AI a ${city.name}`,
         }))}
+      />
+
+      {/* Risorse Correlate */}
+      <RisorseCorrelate
+        links={getStrategicLinksForSoluzione()}
       />
 
       {/* CTA Finale */}

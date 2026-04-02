@@ -2,14 +2,22 @@ import type { Metadata } from "next";
 import CasiDusoPage from "./CasiDusoPage";
 
 export const metadata: Metadata = {
-  title: "Cosa Possiamo Fare — Il Doge di Venezia",
+  title: "Casi d'Uso AI - Il Doge di Venezia",
   description:
-    "10 casi d'uso concreti di AI transformation per le PMI italiane.",
+    "50+ casi d'uso concreti di AI per PMI italiane. Cerca per settore, reparto o funzione.",
   openGraph: {
-    title: "Cosa Possiamo Fare — Il Doge di Venezia",
+    title: "Casi d'Uso AI - Il Doge di Venezia",
     description:
-      "10 casi d'uso concreti di AI transformation per le PMI italiane.",
+      "50+ casi d'uso concreti di AI per PMI italiane. Cerca per settore, reparto o funzione.",
     type: "website",
+    images: [
+      {
+        url: "/icon/logoB-noBG.png",
+        width: 512,
+        height: 512,
+        alt: "il Doge di Venezia",
+      },
+    ],
   },
 };
 

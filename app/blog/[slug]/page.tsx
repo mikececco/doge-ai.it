@@ -5,7 +5,8 @@ import Label from "@/components/ui/Label";
 import CtaFinale from "@/components/sections/CtaFinale";
 import RelatedContent from "@/components/sections/RelatedContent";
 import { BLOG_POSTS, getPostBySlug, getRelatedPosts } from "@/lib/blog-data";
-import { getLinksForBlog } from "@/lib/internal-links";
+import { getLinksForBlog, getStrategicLinksForBlog } from "@/lib/internal-links";
+import RisorseCorrelate from "@/components/sections/RisorseCorrelate";
 import ReadingProgress from "./ReadingProgress";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -73,7 +74,7 @@ export default async function BlogPostPage({ params }: Props) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "BlogPosting",
+        "@type": "Article",
         "@id": url,
         headline: post.title,
         description: post.excerpt,
@@ -91,7 +92,7 @@ export default async function BlogPostPage({ params }: Props) {
           url: "https://doge-ai.it",
           logo: {
             "@type": "ImageObject",
-            url: "https://doge-ai.it/logo.png",
+            url: "https://doge-ai.it/icon/logoB-noBG.png",
           },
         },
         mainEntityOfPage: { "@type": "WebPage", "@id": url },
@@ -312,6 +313,9 @@ export default async function BlogPostPage({ params }: Props) {
           subtitle: sol.category,
         }))}
       />
+
+      {/* Risorse Correlate - Strategic Internal Links */}
+      <RisorseCorrelate links={getStrategicLinksForBlog(post.category)} />
 
       {/* CTA */}
       <CtaFinale

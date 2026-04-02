@@ -6,7 +6,11 @@ import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import CtaFinale from "@/components/sections/CtaFinale";
 import RelatedContent from "@/components/sections/RelatedContent";
 import { CITIES } from "@/lib/cities-data";
-import { getLinksForCity } from "@/lib/internal-links";
+import {
+  getLinksForCity,
+  getStrategicLinksForCity,
+} from "@/lib/internal-links";
+import RisorseCorrelate from "@/components/sections/RisorseCorrelate";
 
 const BASE_URL = "https://doge-ai.it";
 
@@ -38,6 +42,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: canonicalUrl,
       type: "website",
       siteName: "DOGE di Venezia",
+      images: [
+        {
+          url: "/icon/logoB-noBG.png",
+          width: 512,
+          height: 512,
+          alt: "il Doge di Venezia",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -74,12 +86,12 @@ const DIFFERENTIATORS = [
   {
     title: "Esperti Anthropic / Claude",
     description:
-      "Siamo specializzati nell'ecosistema Anthropic, i creatori di Claude — il modello AI più capace e affidabile per applicazioni business. Non usiamo tutto, usiamo il meglio.",
+      "Siamo specializzati nell'ecosistema Anthropic, i creatori di Claude - il modello AI più capace e affidabile per applicazioni business. Non usiamo tutto, usiamo il meglio.",
   },
   {
     title: "Approccio italiano",
     description:
-      "Parliamo la tua lingua — letteralmente e metaforicamente. Conosciamo le PMI italiane, le loro strutture, le loro sfide e il loro potenziale. Niente consulenze generiche.",
+      "Parliamo la tua lingua - letteralmente e metaforicamente. Conosciamo le PMI italiane, le loro strutture, le loro sfide e il loro potenziale. Niente consulenze generiche.",
   },
   {
     title: "Focus PMI",
@@ -97,20 +109,19 @@ export default function ConsulenzaAICittaPage({ params }: Props) {
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "DOGE di Venezia",
+    name: `il Doge di Venezia - Consulenza AI ${city.name}`,
     description: `Consulenza AI per le imprese di ${city.name} e ${city.region}`,
-    url: BASE_URL,
+    url: canonicalUrl,
     areaServed: {
       "@type": "City",
       name: city.name,
     },
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Venezia",
-      addressRegion: "Veneto",
+      addressLocality: city.name,
       addressCountry: "IT",
     },
-    sameAs: BASE_URL,
+    sameAs: ["https://www.linkedin.com/company/il-doge-di-venezia"],
   };
 
   const serviceJsonLd = {
@@ -202,7 +213,7 @@ export default function ConsulenzaAICittaPage({ params }: Props) {
               <p className="text-body text-grigio-scuro leading-relaxed mt-8">
                 Le aziende di {city.name} che operano in questi settori hanno
                 oggi l&apos;opportunità concreta di integrare l&apos;intelligenza artificiale
-                nei propri processi — ridurre i costi operativi, aumentare la
+                nei propri processi - ridurre i costi operativi, aumentare la
                 produttività e aprire nuovi canali di crescita. Il momento è
                 adesso.
               </p>
@@ -285,6 +296,9 @@ export default function ConsulenzaAICittaPage({ params }: Props) {
           subtitle: sol.category,
         }))}
       />
+
+      {/* Risorse Correlate */}
+      <RisorseCorrelate links={getStrategicLinksForCity()} />
 
       {/* CTA Finale */}
       <CtaFinale

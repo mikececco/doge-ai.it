@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Il Doge di Venezia",
+  title: "Privacy Policy - Il Doge di Venezia",
   description:
     "Informativa sulla privacy ai sensi del Regolamento UE 2016/679 (GDPR) de Il Doge di Venezia.",
 };
@@ -135,17 +135,17 @@ export default function Privacy() {
           </p>
           <ul>
             <li>
-              <strong>Netlify, Inc.</strong> — servizio di hosting del sito web
+              <strong>Netlify, Inc.</strong> - servizio di hosting del sito web
               (server situati nell&apos;UE/USA, conforme alle Standard
               Contractual Clauses).
             </li>
             <li>
-              <strong>Google LLC (Google Analytics)</strong> — servizio di
+              <strong>Google LLC (Google Analytics)</strong> - servizio di
               analisi web con IP anonimizzato (conforme alle Standard Contractual
               Clauses).
             </li>
             <li>
-              <strong>Consulenti e professionisti</strong> — ove necessario per
+              <strong>Consulenti e professionisti</strong> - ove necessario per
               adempimenti fiscali, legali o contabili.
             </li>
           </ul>

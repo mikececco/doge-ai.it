@@ -12,7 +12,7 @@ const services = [
   },
   {
     title: "Implementazione",
-    body: "Sviluppiamo e mettiamo in produzione agenti AI operativi, automazioni, integrazioni con i tuoi sistemi, in 30–60 giorni.",
+    body: "Sviluppiamo e mettiamo in produzione agenti AI operativi, automazioni, integrazioni con i tuoi sistemi, in 30-60 giorni.",
   },
   {
     title: "Risultati",

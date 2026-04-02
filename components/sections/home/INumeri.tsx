@@ -45,7 +45,7 @@ export default function INumeri() {
           {metrics.map((metric, i) => (
             <div
               key={i}
-              className={`px-6 py-8 text-center ${i < metrics.length - 1 ? "md:border-r border-nero" : ""} ${i < metrics.length - 2 ? "border-b md:border-b-0 border-nero" : ""}`}
+              className={`px-3 py-4 md:px-6 md:py-8 text-center ${i < metrics.length - 1 ? "md:border-r border-nero" : ""} ${i < metrics.length - 2 ? "border-b md:border-b-0 border-nero" : ""}`}
             >
               <Counter
                 target={metric.target}

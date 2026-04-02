@@ -14,7 +14,7 @@ export default function CardFlip({
   hasCase = true,
 }: CardFlipProps) {
   if (!hasCase) {
-    // No flip, standard cursor — just render front
+    // No flip, standard cursor - just render front
     return (
       <div className="relative w-full h-full">
         <div className="w-full h-full">{front}</div>

@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { SOLUZIONI_PAGES } from "@/lib/soluzioni-data";
 import { CITIES } from "@/lib/cities-data";
+import { INCENTIVI, REGIONI } from "@/lib/incentivi-data";
+import { CASI_DUSO } from "@/lib/casi-duso-data";
 
 const BASE_URL = "https://doge-ai.it";
 
@@ -15,6 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/casi-duso",
     "/blog",
     "/soluzioni",
+    "/settori",
+    "/incentivi",
+    "/lavora-con-noi",
     "/contatti",
     "/privacy",
     "/cookie-policy",
@@ -66,5 +71,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...blogPosts, ...soluzioniPages, ...consulenzaAIIndex, ...consulenzaAICities];
+  const incentiviPages: MetadataRoute.Sitemap = [...INCENTIVI, ...REGIONI].map((item) => ({
+    url: `${BASE_URL}/incentivi/${item.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const casiDusoPages: MetadataRoute.Sitemap = CASI_DUSO.map((caso) => ({
+    url: `${BASE_URL}/casi-duso/${caso.id}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  }));
+
+  return [
+    ...staticPages,
+    ...blogPosts,
+    ...soluzioniPages,
+    ...consulenzaAIIndex,
+    ...consulenzaAICities,
+    ...incentiviPages,
+    ...casiDusoPages,
+  ];
 }

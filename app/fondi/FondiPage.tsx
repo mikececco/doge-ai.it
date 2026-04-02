@@ -2,35 +2,12 @@
 
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Label from "@/components/ui/Label";
-import Button from "@/components/ui/Button";
-import Card from "@/components/ui/Card";
-import NumberedCard from "@/components/ui/NumberedCard";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
-import TimelineAnimated from "@/components/animations/TimelineAnimated";
 import CtaFinale from "@/components/sections/CtaFinale";
+import EbitdaCalculator from "@/components/EbitdaCalculator";
 
 /* ─── Data ─────────────────────────────────────────────── */
 
-const VALUATION_ROWS = [
-  {
-    label: "INVESTIMENTO AI TRANSFORMATION",
-    value: "\u20AC150.000",
-  },
-  {
-    label: "SAVINGS ANNUI GENERATI",
-    value: "\u20AC500.000",
-  },
-  {
-    label: "IMPATTO SULLA VALUATION (10x EBITDA)",
-    value: "\u20AC5.000.000",
-    highlight: true,
-  },
-  {
-    label: "MOLTIPLICATORE SULL\u2019INVESTIMENTO",
-    value: "33x",
-    highlight: true,
-  },
-];
 
 const GAPS = [
   {
@@ -49,71 +26,10 @@ const GAPS = [
     number: "03",
     title: "Timing Gap",
     description:
-      "I primi 12\u201318 mesi post-deal sono il momento migliore per la transformation. Ma non c\u2019\u00E8 nessuno che lo fa in modo sistematico per il mid-market PE.",
+      "I primi 12-18 mesi post-deal sono il momento migliore per la transformation. Ma non c\u2019\u00E8 nessuno che lo fa in modo sistematico per il mid-market PE.",
   },
 ];
 
-const FASI_DEAL = [
-  {
-    fase: "Pre-Deal DD",
-    titolo: "AI Due Diligence",
-    items: [
-      "Valutiamo l\u2019AI readiness della target",
-      "Identifichiamo quick wins per i primi 100 giorni",
-      "Quantifichiamo l\u2019EBITDA uplift potenziale",
-      "Stima ROI inclusa nel Value Creation Plan",
-    ],
-  },
-  {
-    fase: "Primi 100 Giorni",
-    titolo: "Quick Wins ad Alto Impatto",
-    items: [
-      "2\u20133 implementazioni concrete",
-      "Vittorie rapide che danno momentum",
-      "KPI e dashboard per tracking",
-      "Il management vede risultati, non slide",
-    ],
-  },
-  {
-    fase: "Mesi 3\u201318",
-    titolo: "Trasformazione Profonda",
-    items: [
-      "Embedded nell\u2019azienda",
-      "Cost reduction 15\u201330%",
-      "Operations scalabili",
-      "Team interno formato per autonomia",
-    ],
-  },
-  {
-    fase: "Portfolio-Wide",
-    titolo: "Scala il Know-How",
-    items: [
-      "Pattern comuni tra portfolio companies",
-      "Time-to-value ridotto per ogni nuova azienda",
-      "Il know-how diventa un asset del fondo",
-      "Vantaggio competitivo sistemico",
-    ],
-  },
-];
-
-const TIMELINE_FONDI = [
-  {
-    title: "Pre-Deal DD",
-    description: "AI readiness assessment e stima EBITDA uplift",
-  },
-  {
-    title: "Primi 100 Giorni",
-    description: "2-3 quick wins concreti con KPI misurabili",
-  },
-  {
-    title: "Mesi 3-18",
-    description: "Trasformazione profonda, cost reduction 15-30%",
-  },
-  {
-    title: "Portfolio-Wide",
-    description: "Pattern scalabili su tutte le portfolio companies",
-  },
-];
 
 const SETTORI_TABELLA = [
   {
@@ -155,132 +71,203 @@ const SETTORI_TABELLA = [
 export default function FondiPage() {
   return (
     <>
-      {/* ── Section 1: Hero (Yellow) ─────────────────────── */}
-      <SectionWrapper bg="giallo" className="!pt-40 !pb-16">
-        <FadeInOnScroll>
-          <Label className="!text-nero/60">PER I FONDI PE</Label>
-          <h1 className="text-hero mt-4 max-w-4xl">
-            La leva di value creation pi&ugrave; sottovalutata nel vostro
-            portfolio.
-          </h1>
-          <p className="text-subheadline text-nero/70 mt-6 max-w-[680px]">
-            L&rsquo;AI non &egrave; un costo IT. &Egrave; la leva di value
-            creation pi&ugrave; potente e meno utilizzata nel mid-market PE.
-            Ogni euro di EBITDA guadagnato con l&rsquo;AI vale 10x
-            all&rsquo;exit.
-          </p>
-          <div className="mt-10">
-            <Button href="/contatti" className="!bg-nero !text-giallo hover:!bg-grigio-scuro">
-              Parla con noi &rarr;
-            </Button>
-          </div>
-        </FadeInOnScroll>
-      </SectionWrapper>
-
-      {/* ── Section 2: Ogni Euro di EBITDA ───────────────── */}
-      <SectionWrapper bg="dark">
-        <FadeInOnScroll>
-          <Label className="!text-giallo">IL MOLTIPLICATORE</Label>
-          <h2 className="text-section text-bianco mt-4">
-            Ogni euro di EBITDA vale 10 volte all&rsquo;exit.
-          </h2>
-          <p className="text-body text-bianco/60 mt-4 max-w-[700px]">
-            Un investimento di &euro;150K in AI transformation pu&ograve;
-            generare &euro;500K di savings annui. Con un multiplo di 10x,
-            sono &euro;5M di valutazione aggiuntiva.
-          </p>
-        </FadeInOnScroll>
-
-        <FadeInOnScroll className="mt-12">
-          <div className="bg-[#2A2A2A] p-8 md:p-10">
-            <div className="space-y-5">
-              {VALUATION_ROWS.map((row) => (
-                <div
-                  key={row.label}
-                  className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-4 last:border-0 last:pb-0 gap-1"
-                >
-                  <span className="text-grigio-medio text-sm uppercase tracking-wider">
-                    {row.label}
-                  </span>
-                  <span
-                    className={`text-2xl font-bold ${
-                      row.highlight ? "text-giallo" : "text-bianco"
-                    }`}
-                  >
-                    {row.value}
-                  </span>
-                </div>
-              ))}
+      {/* ── Section 1: Hero (Yellow + Venice skyline) ───── */}
+      <section className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
+        <div className="container-site relative z-10 text-center pt-24 pb-40 md:pb-48">
+          <FadeInOnScroll>
+            <span className="text-label uppercase text-nero/60 tracking-widest">Per i Fondi PE</span>
+            <h1 className="text-section uppercase mt-4 max-w-[900px] mx-auto">
+              La leva di value creation pi&ugrave; sottovalutata nel vostro portfolio.
+            </h1>
+            <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
+              L&rsquo;AI non &egrave; un costo IT. &Egrave; la leva di value
+              creation pi&ugrave; potente e meno utilizzata nel mid-market PE.
+              Ogni euro di EBITDA guadagnato con l&rsquo;AI vale 10x
+              all&rsquo;exit.
+            </p>
+            <div className="mt-8">
+              <a
+                href="/contatti"
+                className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo-hover hover:text-nero transition-all duration-300 uppercase tracking-wider"
+              >
+                Parla con noi
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
             </div>
+          </FadeInOnScroll>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
+          <img src="/hero/landscape venezia (no-bg).png" alt="Venice skyline" className="w-full h-auto opacity-30" />
+        </div>
+      </section>
+
+      {/* ── Section 2: I Numeri / EBITDA ─────────────────── */}
+      <SectionWrapper bg="white">
+        <FadeInOnScroll>
+          <div className="text-center mb-14">
+            <span className="text-label uppercase text-grigio-medio tracking-widest">I numeri</span>
+            <h2 className="text-section uppercase mt-4">
+              Ogni euro di EBITDA vale 10 volte tanto all&rsquo;exit
+            </h2>
+            <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
+              Per un fondo, l&rsquo;AI non &egrave; un progetto tecnologico.
+              &Egrave; una leva di value creation con uno dei migliori ROI disponibili oggi.
+            </p>
           </div>
         </FadeInOnScroll>
 
-        <FadeInOnScroll className="mt-10">
-          <p className="text-bianco text-[22px] font-bold text-center">
-            Per i fondi PE, questo &egrave; un no-brainer assoluto.
-          </p>
+        <FadeInOnScroll>
+          <EbitdaCalculator />
+
+          <div className="text-center mt-10">
+            <a
+              href="/contatti"
+              className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo hover:text-nero transition-[background-color,color] duration-[250ms] uppercase tracking-wider"
+            >
+              Calcola il tuo ROI con noi
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
         </FadeInOnScroll>
       </SectionWrapper>
 
       {/* ── Section 3: Non manca la visione ──────────────── */}
       <SectionWrapper bg="white">
         <FadeInOnScroll>
-          <Label>IL PROBLEMA</Label>
-          <h2 className="text-section mt-4">
-            Non manca la visione. Manca chi esegue.
-          </h2>
-          <p className="text-body text-grigio-scuro mt-4 max-w-[700px]">
-            Ogni fondo sa che l&rsquo;AI &egrave; il futuro. Ma tra saperlo e
-            farlo c&rsquo;&egrave; un gap enorme. Tre gap, per la precisione.
-          </p>
+          <div className="text-center mb-14">
+            <span className="text-label uppercase text-grigio-medio tracking-widest">
+              Il problema
+            </span>
+            <h2 className="text-section uppercase mt-4">
+              Non manca la visione. Manca chi esegue.
+            </h2>
+            <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
+              Ogni fondo mid-market che seguiamo affronta le stesse tre sfide strutturali.
+            </p>
+          </div>
         </FadeInOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
-          {GAPS.map((gap, i) => (
-            <NumberedCard
-              key={gap.number}
-              number={gap.number}
-              title={gap.title}
-              description={gap.description}
-              index={i}
-            />
-          ))}
-        </div>
+        <FadeInOnScroll>
+          <div className="border border-nero">
+            <div className="grid grid-cols-1 md:grid-cols-3">
+              {GAPS.map((gap, i) => (
+                <div
+                  key={gap.number}
+                  className={`${i < 2 ? "md:border-r border-nero" : ""} border-b md:border-b-0 border-nero last:border-b-0`}
+                >
+                  <div className="border-b border-nero px-4 py-4 md:px-8 md:py-6">
+                    <h3 className="text-lg font-bold uppercase">
+                      <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
+                        {gap.title}
+                      </span>
+                    </h3>
+                  </div>
+                  <div className="px-4 py-4 md:px-8 md:py-6">
+                    <p className="text-sm text-nero/70 leading-relaxed">
+                      {gap.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="border-t border-nero px-4 py-6 md:px-8 md:py-8 text-center">
+              <p className="text-body font-bold text-nero">
+                Noi colmiamo tutti e tre.<br />
+                End-to-end, dalla due diligence all&rsquo;exit.
+              </p>
+            </div>
+          </div>
+        </FadeInOnScroll>
       </SectionWrapper>
 
-      {/* ── Section 4: Braccio operativo in ogni fase ────── */}
-      <SectionWrapper bg="light">
+      {/* ── Section 4: Braccio operativo - Timeline ───── */}
+      <SectionWrapper bg="white">
         <FadeInOnScroll>
-          <Label>IL PLAYBOOK</Label>
-          <h2 className="text-section mt-4">
-            Il vostro braccio operativo AI in ogni fase del deal.
-          </h2>
+          <div className="text-center mb-14">
+            <span className="text-label uppercase text-grigio-medio tracking-widest">
+              Cosa offriamo
+            </span>
+            <h2 className="text-section uppercase mt-4">
+              Il vostro braccio operativo AI in ogni fase del deal.
+            </h2>
+            <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
+              Diventiamo parte del vostro processo di value creation, dalla tesi di investimento all&rsquo;exit multiplo.
+            </p>
+          </div>
         </FadeInOnScroll>
 
-        {/* Animated Timeline */}
-        <TimelineAnimated items={TIMELINE_FONDI} />
+        {/* Timeline - horizontal desktop, vertical mobile */}
+        <FadeInOnScroll>
+          {/* Desktop */}
+          <div className="hidden md:block relative">
+            <div className="grid grid-cols-4 gap-6 relative">
+              {[
+                { title: "AI Due Diligence", time: "PRE-DEAL", body: "Valutiamo l'AI readiness della target, identifichiamo i quick wins nei primi 100 giorni e quantifichiamo l'EBITDA uplift potenziale." },
+                { title: "100-Day Plan", time: "POST-DEAL", body: "Implementiamo 2-3 quick wins con risultati misurabili. Momentum immediato per il management, validazione della tesi di investimento." },
+                { title: "Full AI Transformation", time: "12-18 MESI", body: "Lavoriamo embedded nella portfolio company su 5-8 use case prioritizzati. Il team interno diventa autonomo." },
+                { title: "Portfolio-Wide Playbook", time: "ONGOING", body: "Dopo 2-3 aziende, costruiamo un playbook replicabile su tutto il portfolio. Ogni nuovo deal parte piu veloce del precedente." },
+              ].map((step, i) => (
+                <div key={i} className="text-center">
+                  <h3 className="text-base font-bold uppercase">
+                    <span className="underline decoration-giallo decoration-[3px] underline-offset-4">{step.title}</span>
+                  </h3>
+                  <p className="text-xs uppercase tracking-wider text-nero/60 mt-1">{step.time}</p>
+                  <div className="relative flex justify-center my-4">
+                    <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-nero -translate-y-1/2" />
+                    <div className="w-4 h-4 bg-nero rounded-full relative z-10" />
+                    {i === 3 && (
+                      <div className="absolute top-1/2 -right-3 -translate-y-1/2 z-10">
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M7 0l5 5-5 5" stroke="#1A1A1A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </div>
+                    )}
+                  </div>
+                  <p className="text-sm text-nero/70 leading-relaxed">{step.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-          {FASI_DEAL.map((fase, i) => (
-            <Card key={fase.fase} index={i}>
-              <span className="text-label text-giallo uppercase tracking-wider">
-                {fase.fase}
-              </span>
-              <h3 className="text-xl font-bold mt-2 mb-4">{fase.titolo}</h3>
-              <ul className="space-y-2">
-                {fase.items.map((item, j) => (
-                  <li
-                    key={j}
-                    className="flex items-start gap-3 text-body text-grigio-scuro"
-                  >
-                    <span className="text-giallo mt-0.5 shrink-0">&rarr;</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          ))}
-        </div>
+          {/* Mobile: vertical */}
+          <div className="md:hidden relative pl-8">
+            <div className="absolute left-3 top-0 bottom-0 w-[2px] bg-nero" />
+            {[
+              { title: "AI Due Diligence", time: "PRE-DEAL", body: "Valutiamo l'AI readiness della target, identifichiamo i quick wins nei primi 100 giorni e quantifichiamo l'EBITDA uplift potenziale." },
+              { title: "100-Day Plan", time: "POST-DEAL", body: "Implementiamo 2-3 quick wins con risultati misurabili. Momentum immediato per il management." },
+              { title: "Full AI Transformation", time: "12-18 MESI", body: "Lavoriamo embedded nella portfolio company su 5-8 use case prioritizzati." },
+              { title: "Portfolio-Wide Playbook", time: "ONGOING", body: "Costruiamo un playbook replicabile su tutto il portfolio." },
+            ].map((step, i) => (
+              <div key={i} className="relative pb-8 last:pb-0">
+                <div className="absolute left-[-22px] top-1 w-4 h-4 bg-nero rounded-full z-10" />
+                <h3 className="text-base font-bold uppercase">
+                  <span className="underline decoration-giallo decoration-[3px] underline-offset-4">{step.title}</span>
+                </h3>
+                <p className="text-xs uppercase tracking-wider text-nero/60 mt-1">{step.time}</p>
+                <p className="text-sm text-nero/70 leading-relaxed mt-2">{step.body}</p>
+              </div>
+            ))}
+          </div>
+        </FadeInOnScroll>
+
+        {/* Bottom CTA */}
+        <FadeInOnScroll>
+          <div className="text-center mt-12">
+            <p className="text-body font-bold text-nero">
+              Tutto il nostro processo &egrave; aperto.
+            </p>
+            <div className="mt-4 flex items-center justify-center gap-3">
+              <span className="text-body text-nero">Leggi</span>
+              <span className="text-nero">&rarr;</span>
+              <a
+                href="/metodo"
+                className="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 bg-giallo text-nero hover:bg-giallo-hover transition-colors"
+              >
+                <img src="/icon/logoB-noBG.png" alt="" width={16} height={16} />
+                Il Codice del Doge
+              </a>
+            </div>
+          </div>
+        </FadeInOnScroll>
       </SectionWrapper>
 
       {/* ── Section 5: Settore + Applicazioni AI ─────────── */}
