@@ -10,7 +10,7 @@ const AI_PROMPT = encodeURIComponent(
 const NAV_COL_1 = [
   { label: "Chi Siamo", href: "/chi-siamo" },
   { label: "Per le Aziende", href: "/aziende" },
-  { label: "Per i Fondi PE", href: "/fondi" },
+  { label: "Per i Fondi", href: "/fondi" },
   { label: "Partner", href: "/partner" },
   { label: "Il Codice del Doge", href: "/metodo" },
   { label: "Casi d'Uso", href: "/casi-duso" },
@@ -20,6 +20,7 @@ const NAV_COL_2 = [
   { label: "Settori", href: "/settori" },
   { label: "Blog", href: "/blog" },
   { label: "Soluzioni", href: "/soluzioni" },
+  { label: "Incentivi", href: "/incentivi" },
   { label: "Lavora con Noi", href: "/lavora-con-noi" },
   { label: "Contatti", href: "/contatti" },
 ];
@@ -29,7 +30,7 @@ export default function Footer() {
     <footer className="bg-nero text-bianco border-t border-bianco/10">
       <div className="container-site py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-12 pb-12 border-b border-bianco/10">
-          {/* Col 1: Logo + tagline + social */}
+          {/* Col 1: Logo + tagline + doge head + social */}
           <div>
             <div className="flex items-center gap-2">
               <Image src="/icon/logoW-noBG.png" alt="Doge icon" width={28} height={28} />
@@ -49,7 +50,9 @@ export default function Footer() {
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
-              <Image src="/icon/logoW-noBG.png" alt="Doge" width={20} height={20} className="opacity-50 hover:opacity-100 transition-opacity" />
+              <Link href="/" className="opacity-50 hover:opacity-100 transition-opacity">
+                <Image src="/icon/logoY-noBG.png" alt="Doge" width={20} height={20} />
+              </Link>
             </div>
           </div>
 
@@ -60,7 +63,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-bianco/70 hover:text-giallo transition-colors"
+                    className="text-sm text-bianco/80 hover:text-giallo transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -76,7 +79,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-bianco/70 hover:text-giallo transition-colors"
+                    className="text-sm text-bianco/80 hover:text-giallo transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -88,7 +91,7 @@ export default function Footer() {
           {/* Col 4: Contacts */}
           <div className="md:border-l md:border-bianco/10 md:pl-8">
             <h4 className="text-label uppercase text-bianco/40 mb-4">Contatti</h4>
-            <ul className="space-y-2 text-sm text-bianco/70">
+            <ul className="space-y-2 text-sm text-bianco/80">
               <li>
                 <a
                   href={`mailto:${CONTACT_INFO.email}`}
@@ -132,7 +135,9 @@ export default function Footer() {
         <div className="mt-6 pt-6 border-t border-bianco/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-bianco/40">
           <span>
             &copy; {new Date().getFullYear()} Il Doge di Venezia &middot;{" "}
-            {CONTACT_INFO.piva}
+            <a href="https://supalabs.co" target="_blank" rel="noopener noreferrer" className="hover:text-bianco/70 transition-colors">
+              {CONTACT_INFO.piva}
+            </a>
           </span>
           <div className="flex items-center gap-4">
             {FOOTER_LINKS.legal.map((link) => (
@@ -149,7 +154,7 @@ export default function Footer() {
       </div>
 
       {/* Venice landscape full width */}
-      <div className="w-full opacity-20">
+      <div className="w-full">
         <img
           src="/hero/landscape venezia (no-bg).png"
           alt="Venice skyline"

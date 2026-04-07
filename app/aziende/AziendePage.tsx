@@ -1,11 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
-import ShieldAnimation from "@/components/animations/ShieldAnimation";
-import RocketAnimation from "@/components/animations/RocketAnimation";
-import { SETTORI } from "@/lib/settori-data";
+import DoveOperiamo from "@/components/sections/DoveOperiamo";
 import INumeri from "@/components/sections/home/INumeri";
 import CtaFinale from "@/components/sections/CtaFinale";
 import Button from "@/components/ui/Button";
@@ -15,33 +12,24 @@ import Button from "@/components/ui/Button";
 export default function AziendePage() {
   return (
     <>
-      {/* ── Section 1: Hero (Yellow + Venice skyline) ───── */}
-      <section className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
-        <div className="container-site relative z-10 text-center pt-24 pb-40 md:pb-48">
+      {/* ── Section 1: Hero ───── */}
+      <section data-navbar-theme="giallo" className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
+        <div className="container-site relative z-10 text-center pt-24 pb-20 md:pb-24">
         <FadeInOnScroll>
-          <span className="text-label uppercase text-nero/60 tracking-widest">Per le Aziende</span>
+          <span className="text-label uppercase text-nero tracking-widest">Per le Aziende</span>
           <h1 className="text-section uppercase mt-4 max-w-[900px] mx-auto">
-            Se potessi avere 3x i dipendenti senza aumentare il costo del personale, cosa faresti?
+            Se potessi avere il triplo dei dipendenti senza aumentare il costo del personale, cosa faresti?
           </h1>
           <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
             &Egrave; la domanda da cui partiamo con ogni cliente. E oggi, con l&apos;AI,
-            la risposta non &egrave; pi&ugrave; ipotetica. 3x la capacit&agrave;, non i costi.
+            la risposta non &egrave; pi&ugrave; ipotetica. Il triplo della capacit&agrave;, non dei costi.
           </p>
           <div className="mt-8">
-            <Button variant="dark" size="md" uppercase href="/contatti">
+            <Button variant="dark" size="md" uppercase href="/contatti" arrow>
               Parla con noi
             </Button>
           </div>
         </FadeInOnScroll>
-        </div>
-
-        {/* Venice skyline at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-          <img
-            src="/hero/landscape venezia (no-bg).png"
-            alt="Venice skyline"
-            className="w-full h-auto opacity-30"
-          />
         </div>
       </section>
 
@@ -57,7 +45,7 @@ export default function AziendePage() {
             </h2>
             <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
               I modelli AI oggi coprono il 70-80% delle mansioni di un dipendente medio, alla stessa qualit&agrave;.
-              Ogni azienda che inizia ad adottare l&apos;AI si ritrova con 3x le risorse operative.
+              Ogni azienda che inizia ad adottare l&apos;AI si ritrova con il triplo delle risorse operative.
             </p>
           </div>
         </FadeInOnScroll>
@@ -97,12 +85,11 @@ export default function AziendePage() {
             {/* Bottom bar */}
             <div className="border-t border-nero px-4 py-6 md:px-8 md:py-8 text-center">
               <p className="text-body font-bold text-nero max-w-[700px] mx-auto">
-                Quindi se potessi avere 3x i dipendenti senza aumentare il costo del
-                personale, quali opportunit&agrave; si aprirebbero? Espandere in nuovi mercati?
-                Lanciare nuovi prodotti? Servire pi&ugrave; clienti?
+                Espandere in nuovi mercati? Lanciare nuovi prodotti? Servire pi&ugrave; clienti?
+                Quali opportunit&agrave; si aprirebbero con il triplo del personale?
               </p>
               <div className="mt-6">
-                <Button variant="dark" size="md" uppercase href="/contatti">
+                <Button variant="dark" size="md" uppercase href="/contatti" arrow>
                   Raccontacelo qui
                 </Button>
               </div>
@@ -112,7 +99,7 @@ export default function AziendePage() {
       </SectionWrapper>
 
       {/* ── Le Due Modalità ─────────────────────────────── */}
-      <SectionWrapper bg="giallo">
+      <SectionWrapper bg="white">
         <FadeInOnScroll>
           <div className="text-center mb-14">
             <span className="text-label uppercase text-grigio-medio tracking-widest">
@@ -142,15 +129,7 @@ export default function AziendePage() {
                   operativi, aumentare i margini, liberare tempo.
                 </p>
               </div>
-              <div className="bg-nero/5 min-h-[200px] flex items-center justify-center border-t md:border-t-0 border-nero">
-                <ShieldAnimation />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 border-t border-nero">
-              <div className="bg-nero/5 min-h-[200px] flex items-center justify-center border-b md:border-b-0 md:border-r border-nero">
-                <RocketAnimation />
-              </div>
-              <div className="px-4 py-4 md:px-8 md:py-8">
+              <div className="px-4 py-4 md:px-8 md:py-8 border-t md:border-t-0 border-nero">
                 <h3 className="text-xl font-bold uppercase mb-4">
                   <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                     Implementazioni di attacco
@@ -196,7 +175,7 @@ export default function AziendePage() {
                 { title: "Capacity Expansion", time: "12+ MESI", body: "Quello che prima era impossibile diventa il prossimo obiettivo: nuovi prodotti, mercati, modelli di business." },
               ].map((step, i) => (
                 <div key={i} className="text-center">
-                  <h3 className="text-base font-bold uppercase">
+                  <h3 className="text-lg md:text-xl font-bold uppercase">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">{step.title}</span>
                   </h3>
                   <p className="text-xs uppercase tracking-wider text-nero/60 mt-1">{step.time}</p>
@@ -226,7 +205,7 @@ export default function AziendePage() {
             ].map((step, i) => (
               <div key={i} className="relative pb-8 last:pb-0">
                 <div className="absolute left-[-22px] top-1 w-4 h-4 bg-nero rounded-full z-10" />
-                <h3 className="text-base font-bold uppercase">
+                <h3 className="text-lg font-bold uppercase">
                   <span className="underline decoration-giallo decoration-[3px] underline-offset-4">{step.title}</span>
                 </h3>
                 <p className="text-xs uppercase tracking-wider text-nero/60 mt-1">{step.time}</p>
@@ -256,76 +235,10 @@ export default function AziendePage() {
         </FadeInOnScroll>
       </SectionWrapper>
 
-      {/* ── Dove Operiamo ─────────────────────────────────── */}
-      <SectionWrapper bg="dark" className="min-h-screen flex flex-col justify-center">
-        <FadeInOnScroll>
-          <div className="text-center mb-14">
-            <span className="text-label uppercase text-grigio-medio tracking-widest">
-              Dove operiamo
-            </span>
-            <h2 className="text-section uppercase mt-4">
-              Il tuo settore ha un problema. Noi lo conosciamo gi&agrave;.
-            </h2>
-            <p className="text-body text-bianco/70 mt-6 max-w-[600px] mx-auto">
-              Non esistono soluzioni generiche. Ogni settore ha i suoi colli di bottiglia.
-            </p>
-          </div>
-        </FadeInOnScroll>
+      {/* ── Dove Operiamo (shared component) ──────────────── */}
+      <DoveOperiamo />
 
-        <FadeInOnScroll>
-          <div className="border border-bianco/20">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              {/* Interleave: left col 01-05, right col 06-10 */}
-              {/* Left: 01-05, Right: 06-10 - interleaved for 2-col grid */}
-              {[
-                { idx: 0, num: "01", title: "Manifattura & Produzione", slug: "ai-manifattura-produzione" },
-                { idx: 8, num: "06", title: "Edilizia & Immobiliare", slug: "ai-edilizia-immobiliare" },
-                { idx: 4, num: "02", title: "Logistica & Trasporti", slug: "ai-logistica-trasporti" },
-                { idx: 2, num: "07", title: "Retail, Fashion & Design", slug: "ai-retail-fashion" },
-                { idx: 7, num: "03", title: "Food & Beverage", slug: "ai-food-beverage" },
-                { idx: 6, num: "08", title: "Farmaceutica & Dispositivi Medici", slug: "ai-farmaceutica" },
-                { idx: 1, num: "04", title: "Distribuzione B2B & Grossisti", slug: "ai-distribuzione-b2b" },
-                { idx: 8, num: "09", title: "Sanit\u00e0 Privata", slug: "ai-sanita-privata" },
-                { idx: 9, num: "05", title: "Servizi Professionali", slug: "ai-servizi-professionali" },
-                { idx: 3, num: "10", title: "Turismo & Ospitalit\u00e0", slug: "ai-turismo-ospitalita" },
-              ].map((s, i) => {
-                const settore = SETTORI[Math.min(s.idx, SETTORI.length - 1)];
-                return (
-                  <Link
-                    key={i}
-                    href={`/blog/${s.slug}`}
-                    className={`group relative block ${i < 8 ? "border-b border-bianco/20" : ""} ${i % 2 === 1 ? "md:border-l border-bianco/20" : ""}`}
-                  >
-                    <div className="flex items-center gap-4 px-6 py-5 md:px-8 md:py-6 cursor-pointer">
-                      <span className="text-3xl font-bold text-bianco shrink-0">
-                        {s.num}.
-                      </span>
-                      <span className="text-sm font-bold uppercase tracking-wide text-bianco">
-                        {s.title}
-                      </span>
-                      <svg className="ml-auto w-5 h-5 text-bianco transition-transform group-hover:rotate-90 duration-200 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
-                    </div>
-                    <div className="max-h-0 overflow-hidden group-hover:max-h-[180px] transition-[max-height] duration-700 ease-in-out">
-                      <div className="px-6 pb-5 md:px-8 md:pb-6 pl-16 md:pl-20">
-                        <ul className="space-y-2">
-                          {settore.useCases.map((uc, j) => (
-                            <li key={j} className="flex items-start gap-2 text-sm text-bianco/70">
-                              <span className="text-giallo mt-0.5 shrink-0">&rarr;</span>
-                              {uc}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </FadeInOnScroll>
-      </SectionWrapper>
-
-      {/* IN NUMERI - same as homepage */}
+      {/* IN NUMERI */}
       <INumeri />
 
       {/* ── Incentivi e Agevolazioni ─────────────────────── */}
@@ -350,7 +263,7 @@ export default function AziendePage() {
               massimizzare il ritorno sull&apos;investimento.
             </p>
             <div className="mt-8">
-              <Button variant="dark" size="md" uppercase href="/incentivi">
+              <Button variant="dark" size="md" uppercase href="/incentivi" arrow>
                 Scopri tutti gli incentivi
               </Button>
             </div>
@@ -358,16 +271,13 @@ export default function AziendePage() {
         </FadeInOnScroll>
       </SectionWrapper>
 
-      {/* ── REMOVED: old metrics, successi, settori, stats ── */}
-      {/* All replaced by new sections above */}
-
-      {/* ── Section 7: CTA Finale ────────────────────────── */}
+      {/* ── CTA Finale ────────────────────────── */}
       <CtaFinale
+        veniceImage
         title="Vinci la prossima decade."
         subtitle="Non aspettare che lo facciano i tuoi concorrenti. Parla con noi, nessun impegno."
-        buttonText="Prenota una call &rarr;"
+        buttonText="Prenota una call"
         buttonHref="/contatti"
-        dark
       />
     </>
   );

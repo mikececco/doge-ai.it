@@ -7,6 +7,7 @@ type ButtonProps = {
   variant?: "primary" | "secondary" | "dark" | "outline";
   size?: "sm" | "md" | "lg";
   uppercase?: boolean;
+  arrow?: boolean;
   href?: string;
   external?: boolean;
   children: React.ReactNode;
@@ -20,6 +21,7 @@ export default function Button({
   variant = "primary",
   size = "sm",
   uppercase,
+  arrow,
   href,
   external,
   children,
@@ -28,14 +30,17 @@ export default function Button({
   onClick,
   className: extraClass,
 }: ButtonProps) {
-  const base =
-    "inline-flex items-center gap-2 font-bold text-sm uppercase tracking-wider transition-all duration-300 cursor-pointer";
+  const showArrow = arrow || variant === "secondary";
+
+  const base = `inline-flex items-center gap-2 font-bold text-sm uppercase tracking-wider transition-all duration-300 cursor-pointer${
+    showArrow ? " group" : ""
+  }`;
 
   const variants = {
     primary:
-      "bg-giallo text-nero hover:bg-giallo-hover active:scale-[0.98]",
+      "bg-giallo text-nero border-[2px] border-nero hover:bg-giallo-hover active:scale-[0.98]",
     secondary:
-      "text-nero hover:text-giallo-hover group",
+      "text-nero hover:text-giallo-hover",
     dark:
       "bg-nero text-bianco hover:bg-giallo hover:text-nero",
     outline:
@@ -55,7 +60,7 @@ export default function Button({
     .filter(Boolean)
     .join(" ");
 
-  const arrow = variant === "secondary" && (
+  const arrowIcon = showArrow && (
     <ArrowRight
       size={16}
       className="transition-transform duration-300 group-hover:translate-x-1"
@@ -66,7 +71,7 @@ export default function Button({
     return (
       <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
         {children}
-        {arrow}
+        {arrowIcon}
       </a>
     );
   }
@@ -75,7 +80,7 @@ export default function Button({
     return (
       <Link href={href} className={cls}>
         {children}
-        {arrow}
+        {arrowIcon}
       </Link>
     );
   }
@@ -88,7 +93,7 @@ export default function Button({
       className={`${cls} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
     >
       {children}
-      {arrow}
+      {arrowIcon}
     </button>
   );
 }

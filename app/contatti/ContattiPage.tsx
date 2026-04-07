@@ -83,6 +83,7 @@ export default function ContattiPage() {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -116,12 +117,12 @@ export default function ContattiPage() {
   return (
     <>
       {/* Full-width yellow background */}
-      <section className="bg-giallo text-nero pt-40 pb-20 min-h-screen">
+      <section data-navbar-theme="giallo" className="bg-giallo text-nero pt-40 pb-20 min-h-screen">
         <div className="container-site">
           {/* Title */}
           <FadeInOnScroll>
             <h1 className="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-[1.1] max-w-4xl uppercase">
-              La prima conversazione &egrave; sempre gratuita.
+              La prima conversazione<br />&egrave; sempre gratuita.
             </h1>
           </FadeInOnScroll>
 
@@ -283,9 +284,25 @@ export default function ContattiPage() {
                       )}
                     </div>
 
+                    {watch("contatto_preferito") === "telefono" && (
+                      <div>
+                        <label htmlFor="telefono" className={labelClass}>
+                          Numero di telefono
+                        </label>
+                        <input
+                          id="telefono"
+                          type="tel"
+                          className={inputClass}
+                          placeholder="+39 333 1234567"
+                          {...register("telefono")}
+                        />
+                      </div>
+                    )}
+
                     <div className="pt-4">
                       <Button
                         type="submit"
+                        variant="dark"
                         disabled={stage === "submitting"}
                       >
                         {stage === "submitting" ? (

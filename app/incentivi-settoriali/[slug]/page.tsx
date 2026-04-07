@@ -123,7 +123,7 @@ export default function IncentivoSettorialePage({ params }: Props) {
       />
 
       {/* Hero - Yellow */}
-      <section className="relative bg-giallo text-nero pt-40 pb-20 overflow-hidden">
+      <section data-navbar-theme="giallo" className="relative bg-giallo text-nero pt-40 pb-20 overflow-hidden">
         <div className="container-site relative z-10">
           <FadeInOnScroll>
             <Label className="text-nero/60">
@@ -139,13 +139,6 @@ export default function IncentivoSettorialePage({ params }: Props) {
               {item.description}
             </p>
           </FadeInOnScroll>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-          <img
-            src="/hero/landscape venezia (no-bg).png"
-            alt="Venice skyline"
-            className="w-full h-auto opacity-15"
-          />
         </div>
       </section>
 

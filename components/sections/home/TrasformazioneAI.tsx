@@ -81,7 +81,7 @@ export default function TrasformazioneAI() {
             <div className="border-t border-nero">
               <a
                 href="/fondi"
-                className="block bg-giallo text-nero px-4 md:px-8 py-5 font-semibold text-sm hover:bg-nero hover:text-bianco transition-[background-color,color] duration-[250ms]"
+                className="block bg-nero text-bianco px-4 md:px-8 py-5 font-semibold text-sm hover:bg-giallo hover:text-nero transition-[background-color,color] duration-[250ms]"
               >
                 Scopri come lavoriamo con i fondi <ArrowRight size={16} className="inline-block" />
               </a>

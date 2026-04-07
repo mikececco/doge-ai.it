@@ -5,7 +5,6 @@ export const NAV_ITEMS = [
     children: [
       { label: "Per le Aziende", href: "/aziende" },
       { label: "Per i Fondi", href: "/fondi" },
-      { label: "Partner", href: "/partner" },
     ],
   },
   { label: "Il Codice del Doge", href: "/metodo" },
@@ -13,7 +12,10 @@ export const NAV_ITEMS = [
     label: "Risorse",
     children: [
       { label: "Casi d'Uso", href: "/casi-duso" },
+      { label: "Settori", href: "/settori" },
+      { label: "Incentivi", href: "/incentivi" },
       { label: "Blog", href: "/blog" },
+      { label: "Soluzioni", href: "/soluzioni" },
     ],
   },
 ] as const;

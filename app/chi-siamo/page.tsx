@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 const BUILDERS = [
-  "Product Managers",
+  "Product Manager",
   "Data Scientists",
   "AI Engineers",
   "Full Stack Developers",
@@ -43,19 +43,19 @@ export default function ChiSiamoPage() {
   return (
     <>
       {/* Section 1 - Yellow Hero: Manifesto */}
-      <section className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
-        <div className="container-site relative z-10 text-center pt-24 pb-40 md:pb-48">
+      <section data-navbar-theme="giallo" className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
+        <div className="container-site relative z-10 text-left pt-24 pb-20 md:pb-24">
           <FadeInOnScroll>
-            <span className="text-label uppercase text-nero/60 tracking-widest">
+            <span className="text-label uppercase text-nero tracking-widest">
               Manifesto
             </span>
-            <h1 className="text-section uppercase mt-4 max-w-[900px] mx-auto">
+            <h1 className="text-section uppercase mt-4 max-w-[900px]">
               Perch&eacute; abbiamo scelto &lsquo;Il Doge di Venezia&rsquo;?
             </h1>
           </FadeInOnScroll>
 
           <FadeInOnScroll>
-            <div className="text-body text-nero/80 mt-8 max-w-[680px] mx-auto space-y-6">
+            <div className="text-body text-nero/80 mt-8 max-w-[680px] space-y-6">
               <p>
                 Venezia ha costruito l&rsquo;impero commerciale pi&ugrave;
                 grande del mondo non con eserciti, ma con{" "}
@@ -80,15 +80,6 @@ export default function ChiSiamoPage() {
             </div>
           </FadeInOnScroll>
         </div>
-
-        {/* Venice skyline pinned to bottom */}
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-          <img
-            src="/hero/landscape venezia (no-bg).png"
-            alt="Venice skyline"
-            className="w-full h-auto opacity-30"
-          />
-        </div>
       </section>
 
       {/* Section 2 - Chi Siamo + Team */}
@@ -105,7 +96,6 @@ export default function ChiSiamoPage() {
           </div>
         </FadeInOnScroll>
 
-        {/* Grid: photos left, text right */}
         <FadeInOnScroll>
           <div className="border border-nero px-4 py-4 md:px-8 md:py-8">
             <p className="text-body text-nero leading-relaxed">
@@ -129,16 +119,16 @@ export default function ChiSiamoPage() {
         </FadeInOnScroll>
       </SectionWrapper>
 
-      {/* Section 4 - Lavora con Noi */}
+      {/* Section 3 - Lavora con Noi */}
       <SectionWrapper bg="white">
         <FadeInOnScroll>
-          <h2 className="text-section uppercase mb-12">Lavora con noi</h2>
+          <h2 className="text-section uppercase mb-12 text-center">Lavora con noi</h2>
         </FadeInOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 lg:gap-16">
           {/* Builders */}
           <FadeInOnScroll>
-            <div>
+            <div className="border border-nero p-6 md:p-8">
               <h3 className="text-2xl font-bold uppercase tracking-wide">
                 Builders
               </h3>
@@ -158,7 +148,7 @@ export default function ChiSiamoPage() {
 
           {/* Hustlers */}
           <FadeInOnScroll>
-            <div>
+            <div className="border border-nero p-6 md:p-8">
               <h3 className="text-2xl font-bold uppercase tracking-wide">
                 Hustlers
               </h3>
@@ -177,11 +167,18 @@ export default function ChiSiamoPage() {
           </FadeInOnScroll>
         </div>
 
+        {/* Candidatura spontanea */}
         <FadeInOnScroll>
-          <div className="mt-12">
-            <Button href="mailto:dogedivenezia.ai@gmail.com">
-              Candidati &rarr;
-            </Button>
+          <div className="mt-12 text-center border-t border-nero pt-10">
+            <p className="text-body text-nero max-w-[600px] mx-auto">
+              Non trovi la posizione giusta ma pensi di poter contribuire?
+              Mandaci una candidatura spontanea.
+            </p>
+            <div className="mt-6">
+              <Button href="mailto:dogedivenezia.ai@gmail.com" arrow>
+                Candidati
+              </Button>
+            </div>
           </div>
         </FadeInOnScroll>
       </SectionWrapper>

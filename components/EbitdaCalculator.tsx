@@ -3,8 +3,8 @@
 import { useState } from "react";
 
 export default function EbitdaCalculator() {
-  const [investimento, setInvestimento] = useState(150);
-  const [savingPct, setSavingPct] = useState(300);
+  const [investimento, setInvestimento] = useState(300);
+  const [savingPct, setSavingPct] = useState(500);
   const [multiplo, setMultiplo] = useState(10);
 
   const savingAnnuo = savingPct;
@@ -39,8 +39,8 @@ export default function EbitdaCalculator() {
           <input
             type="range"
             min={50}
-            max={500}
-            step={10}
+            max={2000}
+            step={50}
             value={investimento}
             onChange={(e) => setInvestimento(Number(e.target.value))}
             className="w-full accent-giallo cursor-pointer"
@@ -58,8 +58,8 @@ export default function EbitdaCalculator() {
           <input
             type="range"
             min={50}
-            max={1500}
-            step={50}
+            max={5000}
+            step={100}
             value={savingPct}
             onChange={(e) => setSavingPct(Number(e.target.value))}
             className="w-full accent-giallo cursor-pointer"

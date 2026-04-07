@@ -42,8 +42,8 @@ export default function SettoriPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
-        <div className="container-site relative z-10 text-center pt-24 pb-40 md:pb-48">
+      <section data-navbar-theme="giallo" className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
+        <div className="container-site relative z-10 text-center pt-24 pb-20 md:pb-24">
           <FadeInOnScroll>
             <span className="text-label uppercase text-nero/60 tracking-widest">
               Dove operiamo
@@ -56,13 +56,6 @@ export default function SettoriPage() {
               i suoi processi critici e le sue opportunit&agrave; specifiche.
             </p>
           </FadeInOnScroll>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-          <img
-            src="/hero/landscape venezia (no-bg).png"
-            alt="Venice skyline"
-            className="w-full h-auto opacity-30"
-          />
         </div>
       </section>
 

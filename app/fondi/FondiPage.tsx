@@ -1,14 +1,13 @@
 "use client";
 
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import Label from "@/components/ui/Label";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import CtaFinale from "@/components/sections/CtaFinale";
+import DoveOperiamo from "@/components/sections/DoveOperiamo";
 import Button from "@/components/ui/Button";
 import EbitdaCalculator from "@/components/EbitdaCalculator";
 
 /* ─── Data ─────────────────────────────────────────────── */
-
 
 const GAPS = [
   {
@@ -31,70 +30,29 @@ const GAPS = [
   },
 ];
 
-
-const SETTORI_TABELLA = [
-  {
-    settore: "Manifattura",
-    applicazione: "Automazione ordini, quality control predittivo, manutenzione preventiva",
-  },
-  {
-    settore: "Food & Beverage",
-    applicazione: "Parsing ordini multi-canale, demand forecasting, tracciabilit\u00E0 automatica",
-  },
-  {
-    settore: "Logistica",
-    applicazione: "Ottimizzazione rotte, gestione magazzino intelligente, tracking predittivo",
-  },
-  {
-    settore: "Distribuzione B2B",
-    applicazione: "CRM intelligente, automazione offerte, analisi credito clienti",
-  },
-  {
-    settore: "Moda & Lusso",
-    applicazione: "Configuratori prodotto, trend analysis, personalizzazione clienteling",
-  },
-  {
-    settore: "Healthcare",
-    applicazione: "Documentazione clinica AI, compliance automatizzata, scheduling intelligente",
-  },
-  {
-    settore: "Costruzioni",
-    applicazione: "Project management predittivo, analisi cantiere, procurement intelligence",
-  },
-  {
-    settore: "Retail",
-    applicazione: "Pricing dinamico, inventory optimization, customer service omnicanale",
-  },
-];
-
 /* ─── Page ─────────────────────────────────────────────── */
 
 export default function FondiPage() {
   return (
     <>
-      {/* ── Section 1: Hero (Yellow + Venice skyline) ───── */}
-      <section className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
-        <div className="container-site relative z-10 text-center pt-24 pb-40 md:pb-48">
+      {/* ── Section 1: Hero ───── */}
+      <section data-navbar-theme="giallo" className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
+        <div className="container-site relative z-10 text-center pt-24 pb-20 md:pb-24">
           <FadeInOnScroll>
-            <span className="text-label uppercase text-nero/60 tracking-widest">Per i Fondi PE</span>
+            <span className="text-label uppercase text-nero tracking-widest">Per i Fondi</span>
             <h1 className="text-section uppercase mt-4 max-w-[900px] mx-auto">
               La leva di value creation pi&ugrave; sottovalutata nel vostro portfolio.
             </h1>
             <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
-              L&rsquo;AI non &egrave; un costo IT. &Egrave; la leva di value
-              creation pi&ugrave; potente e meno utilizzata nel mid-market PE.
-              Ogni euro di EBITDA guadagnato con l&rsquo;AI vale 10x
-              all&rsquo;exit.
+              Diventiamo il vostro braccio operativo per la trasformazione AI delle portfolio companies.
+              Dalla due diligence all&rsquo;exit, con risultati misurabili.
             </p>
             <div className="mt-8">
-              <Button variant="dark" size="md" uppercase href="/contatti">
+              <Button variant="dark" size="md" uppercase href="/contatti" arrow>
                 Parla con noi
               </Button>
             </div>
           </FadeInOnScroll>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-          <img src="/hero/landscape venezia (no-bg).png" alt="Venice skyline" className="w-full h-auto opacity-30" />
         </div>
       </section>
 
@@ -107,7 +65,7 @@ export default function FondiPage() {
               Ogni euro di EBITDA vale 10 volte tanto all&rsquo;exit
             </h2>
             <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
-              Per un fondo, l&rsquo;AI non &egrave; un progetto tecnologico.
+              Per un fondo, l&rsquo;AI non &egrave; un progetto tecnologico.<br />
               &Egrave; una leva di value creation con uno dei migliori ROI disponibili oggi.
             </p>
           </div>
@@ -117,7 +75,7 @@ export default function FondiPage() {
           <EbitdaCalculator />
 
           <div className="text-center mt-10">
-            <Button variant="dark" size="md" uppercase href="/contatti">
+            <Button variant="dark" size="md" uppercase href="/contatti" arrow>
               Calcola il tuo ROI con noi
             </Button>
           </div>
@@ -202,7 +160,7 @@ export default function FondiPage() {
                 { title: "Portfolio-Wide Playbook", time: "ONGOING", body: "Dopo 2-3 aziende, costruiamo un playbook replicabile su tutto il portfolio. Ogni nuovo deal parte piu veloce del precedente." },
               ].map((step, i) => (
                 <div key={i} className="text-center">
-                  <h3 className="text-base font-bold uppercase">
+                  <h3 className="text-lg md:text-xl font-bold uppercase">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">{step.title}</span>
                   </h3>
                   <p className="text-xs uppercase tracking-wider text-nero/60 mt-1">{step.time}</p>
@@ -232,7 +190,7 @@ export default function FondiPage() {
             ].map((step, i) => (
               <div key={i} className="relative pb-8 last:pb-0">
                 <div className="absolute left-[-22px] top-1 w-4 h-4 bg-nero rounded-full z-10" />
-                <h3 className="text-base font-bold uppercase">
+                <h3 className="text-lg font-bold uppercase">
                   <span className="underline decoration-giallo decoration-[3px] underline-offset-4">{step.title}</span>
                 </h3>
                 <p className="text-xs uppercase tracking-wider text-nero/60 mt-1">{step.time}</p>
@@ -250,7 +208,6 @@ export default function FondiPage() {
             </p>
             <div className="mt-4 flex items-center justify-center gap-3">
               <span className="text-body text-nero">Leggi</span>
-              <span className="text-nero">&rarr;</span>
               <Button variant="primary" href="/metodo">
                 <img src="/icon/logoB-noBG.png" alt="" width={16} height={16} />
                 Il Codice del Doge
@@ -260,59 +217,16 @@ export default function FondiPage() {
         </FadeInOnScroll>
       </SectionWrapper>
 
-      {/* ── Section 5: Settore + Applicazioni AI ─────────── */}
-      <SectionWrapper bg="dark">
-        <FadeInOnScroll>
-          <Label className="!text-giallo">COMPETENZA SETTORIALE</Label>
-          <h2 className="text-section text-bianco mt-4">
-            Il tuo settore ha un problema. Noi lo conosciamo gi&agrave;.
-          </h2>
-          <p className="text-body text-bianco/60 mt-4 max-w-[700px]">
-            Abbiamo mappato i processi pi&ugrave; inefficienti per ogni
-            verticale. Sappiamo dove l&rsquo;AI ha il massimo impatto.
-          </p>
-        </FadeInOnScroll>
+      {/* ── Dove Operiamo (shared component) ──────────────── */}
+      <DoveOperiamo />
 
-        <FadeInOnScroll className="mt-12">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="border-b border-white/20">
-                  <th className="text-label text-giallo pb-4 pr-8 uppercase tracking-wider">
-                    Settore
-                  </th>
-                  <th className="text-label text-giallo pb-4 uppercase tracking-wider">
-                    Applicazioni AI
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {SETTORI_TABELLA.map((row) => (
-                  <tr
-                    key={row.settore}
-                    className="border-b border-white/10 last:border-0"
-                  >
-                    <td className="text-bianco font-bold py-4 pr-8 whitespace-nowrap">
-                      {row.settore}
-                    </td>
-                    <td className="text-bianco/70 text-body py-4">
-                      {row.applicazione}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </FadeInOnScroll>
-      </SectionWrapper>
-
-      {/* ── Section 6: CTA Finale ────────────────────────── */}
+      {/* ── CTA Finale ────────────────────────── */}
       <CtaFinale
+        veniceImage
         title="Vinci la prossima decade."
-        subtitle="La prima conversazione &egrave; sempre riservata e senza impegno. Parliamo del vostro portfolio."
-        buttonText="Contattaci &rarr;"
+        subtitle="La prima conversazione è sempre riservata e senza impegno. Parliamo del vostro portfolio."
+        buttonText="Contattaci"
         buttonHref="/contatti"
-        dark
       />
     </>
   );

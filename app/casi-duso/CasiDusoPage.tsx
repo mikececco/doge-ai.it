@@ -41,8 +41,8 @@ export default function CasiDusoPage() {
   return (
     <>
       {/* ── Section 1: Yellow Hero ──────────────────────── */}
-      <section className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
-        <div className="container-site relative z-10 text-center pt-24 pb-40 md:pb-48">
+      <section data-navbar-theme="giallo" className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
+        <div className="container-site relative z-10 text-center pt-24 pb-20 md:pb-24">
           <FadeInOnScroll>
             <span className="text-label uppercase text-nero/60 tracking-widest">
               Casi d&rsquo;Uso
@@ -62,14 +62,6 @@ export default function CasiDusoPage() {
 
         </div>
 
-        {/* Venice skyline at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-          <img
-            src="/hero/landscape venezia (no-bg).png"
-            alt="Venice skyline"
-            className="w-full h-auto opacity-30"
-          />
-        </div>
       </section>
 
       {/* ── Section 2: Search + Filters (dark bg) ──────── */}
@@ -188,7 +180,7 @@ export default function CasiDusoPage() {
                     <Link
                       href={`/casi-duso/${caso.id}`}
                       key={caso.id}
-                      className={`p-5 md:p-6 flex flex-col hover:bg-giallo/5 transition-colors
+                      className={`group p-5 md:p-6 flex flex-col hover:bg-giallo transition-colors
                         ${i < totalItems - 1 ? "border-b border-nero md:border-b" : ""}
                         ${(i + 1) % colsMd !== 0 ? "md:border-r md:border-nero" : ""}
                         ${(i + 1) % colsLg !== 0 ? "lg:border-r lg:border-nero" : ""}
@@ -206,21 +198,23 @@ export default function CasiDusoPage() {
                         {caso.description}
                       </p>
 
-                      {/* Bullets */}
-                      <ul className="space-y-2 mb-4">
-                        {caso.bullets.map((bullet, bi) => (
-                          <li
-                            key={bi}
-                            className="flex items-start gap-2 text-xs text-nero/80 leading-relaxed"
-                          >
-                            <ArrowRight
-                              size={12}
-                              className="shrink-0 mt-0.5 text-nero"
-                            />
-                            <span>{bullet}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      {/* Bullets - visible on hover */}
+                      <div className="max-h-0 overflow-hidden group-hover:max-h-[200px] transition-[max-height] duration-500">
+                        <ul className="space-y-2 mb-4">
+                          {caso.bullets.map((bullet, bi) => (
+                            <li
+                              key={bi}
+                              className="flex items-start gap-2 text-xs text-nero/80 leading-relaxed"
+                            >
+                              <ArrowRight
+                                size={12}
+                                className="shrink-0 mt-0.5 text-nero"
+                              />
+                              <span>{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
 
                       {/* Tags */}
                       <div className="flex flex-wrap gap-1.5 mt-auto">
@@ -250,7 +244,7 @@ export default function CasiDusoPage() {
 
       {/* ── Section 4: CTA ─────────────────────────────── */}
       <CtaFinale
-        dark
+        veniceImage
         title="Vinci la prossima decade."
         subtitle="Parla con noi. Nessun impegno, solo chiarezza."
         buttonText="Prenota una call"

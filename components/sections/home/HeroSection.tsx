@@ -24,17 +24,17 @@ export default function HeroSection() {
     offset: ["start start", "end start"],
   });
 
-  // Parallax: skyline moves at 0.4x scroll speed (moves up slower)
   const skylineY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
 
   return (
     <section
       ref={sectionRef}
+      data-navbar-theme="giallo"
       className="relative bg-giallo min-h-screen flex flex-col justify-center overflow-hidden"
     >
       {/* Venice skyline at bottom - parallax on desktop */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 pointer-events-none opacity-30"
+        className="absolute bottom-0 left-0 right-0 pointer-events-none"
         style={isDesktop ? { y: skylineY } : undefined}
       >
         <Image
@@ -47,14 +47,14 @@ export default function HeroSection() {
         />
       </motion.div>
 
-      {/* Content - upper half */}
+      {/* Content */}
       <div className="container-site relative z-10 text-center pt-24 pb-40 md:pb-48">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: DURATION.fast, ease: EASE }}
         >
-          <Label className="text-nero/60">Trasformazione AI</Label>
+          <Label className="text-nero">Trasformazione AI</Label>
         </motion.div>
 
         <TextReveal
@@ -64,7 +64,7 @@ export default function HeroSection() {
         />
 
         <motion.p
-          className="text-nero/60 text-subheadline mt-6 max-w-[560px] mx-auto"
+          className="text-nero text-subheadline mt-6 max-w-[560px] mx-auto"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
@@ -80,10 +80,17 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: DURATION.normal, delay: 0.8, ease: EASE }}
         >
-          <Button variant="dark" href="/contatti">
+          <Button variant="dark" href="/contatti" arrow className="min-w-[220px] justify-center">
             Parla con noi
           </Button>
-          <Button variant="outline" href="/metodo">
+          <Image
+            src="/icon/logoB-noBG.png"
+            alt="Doge"
+            width={28}
+            height={28}
+            className="hidden sm:block"
+          />
+          <Button variant="outline" href="/metodo" arrow className="min-w-[220px] justify-center">
             Il Codice del Doge
           </Button>
         </motion.div>

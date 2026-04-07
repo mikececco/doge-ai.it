@@ -39,7 +39,7 @@ const bottomRow = [
 
 export default function RealtaScomode() {
   return (
-    <section className="bg-bianco text-nero section-padding" id="realta-scomode">
+    <section className="bg-bianco text-nero section-padding" id="realta-scomode" data-navbar-theme="light">
       {/* Title */}
       <div className="container-site">
         <FadeInOnScroll>
@@ -55,16 +55,18 @@ export default function RealtaScomode() {
               {topRow.map((card, i) => (
                 <div
                   key={i}
-                  className={`px-4 py-4 md:px-8 md:py-8 ${i < topRow.length - 1 ? "md:border-r border-nero" : ""}`}
+                  className={`group px-4 py-4 md:px-8 md:py-8 ${i < topRow.length - 1 ? "md:border-r border-nero" : ""}`}
                 >
                   <h3 className="text-base font-bold uppercase leading-snug mb-4">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                       {card.title}
                     </span>
                   </h3>
-                  <p className="text-sm text-nero/70 leading-relaxed">
-                    {card.body}
-                  </p>
+                  <div className="max-h-0 overflow-hidden group-hover:max-h-[200px] transition-[max-height] duration-500">
+                    <p className="text-sm text-nero/70 leading-relaxed">
+                      {card.body}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -80,16 +82,18 @@ export default function RealtaScomode() {
               {bottomRow.map((card, i) => (
                 <div
                   key={i}
-                  className={`px-4 py-4 md:px-8 md:py-8 md:border-r border-nero`}
+                  className={`group px-4 py-4 md:px-8 md:py-8 md:border-r border-nero`}
                 >
                   <h3 className="text-base font-bold uppercase leading-snug mb-4">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                       {card.title}
                     </span>
                   </h3>
-                  <p className="text-sm text-nero/70 leading-relaxed">
-                    {card.body}
-                  </p>
+                  <div className="max-h-0 overflow-hidden group-hover:max-h-[200px] transition-[max-height] duration-500">
+                    <p className="text-sm text-nero/70 leading-relaxed">
+                      {card.body}
+                    </p>
+                  </div>
                 </div>
               ))}
 
@@ -98,11 +102,11 @@ export default function RealtaScomode() {
                 <div>
                   <h3 className="text-2xl font-bold uppercase leading-tight">
                     <span className="group-hover:hidden">L&apos;AI in azienda non fa paura.</span>
-                    <span className="hidden group-hover:inline text-nero">Prenota una call</span>
+                    <span className="hidden group-hover:inline text-nero">PRENOTA UNA CALL</span>
                   </h3>
                   <p className="text-lg italic text-giallo mt-2 group-hover:text-nero">
                     <span className="group-hover:hidden">Ignorarla s&igrave;.</span>
-                    <span className="hidden group-hover:inline">Nessun impegno, solo chiarezza.</span>
+                    <span className="hidden group-hover:inline">Ti diciamo esattamente quanto vale l&apos;AI per la tua azienda.</span>
                   </p>
                 </div>
                 <div className="flex justify-end">

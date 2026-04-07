@@ -38,7 +38,7 @@ export default function IncentiviPage() {
   return (
     <>
       {/* Hero - Yellow */}
-      <section className="relative bg-giallo text-nero pt-40 pb-32 overflow-hidden">
+      <section data-navbar-theme="giallo" className="relative bg-giallo text-nero pt-40 pb-32 overflow-hidden">
         <div className="container-site relative z-10">
           <FadeInOnScroll>
             <Label className="text-nero/60">INCENTIVI E AGEVOLAZIONI</Label>
@@ -55,14 +55,6 @@ export default function IncentiviPage() {
               costo ridotto.
             </p>
           </FadeInOnScroll>
-        </div>
-        {/* Venice skyline at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-          <img
-            src="/hero/landscape venezia (no-bg).png"
-            alt="Venice skyline"
-            className="w-full h-auto opacity-20"
-          />
         </div>
       </section>
 
@@ -139,10 +131,10 @@ export default function IncentiviPage() {
 
       {/* CTA Finale */}
       <CtaFinale
-        dark
+        veniceImage
         title="Non sai quale incentivo fa per te?"
         subtitle="Ti aiutiamo a identificare le agevolazioni giuste e a preparare la domanda. Gratis, nella prima call."
-        buttonText="Parla con noi →"
+        buttonText="Parla con noi"
         buttonHref="/contatti"
       />
     </>

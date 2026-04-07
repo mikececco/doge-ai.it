@@ -63,10 +63,10 @@ export default function Home() {
       <IlManifesto />
       <RealtaScomode />
       <CtaFinale
-        dark
+        veniceImage
         title="Vinci la prossima decade."
         subtitle="Scopri dove l'AI ha il massimo impatto nella tua azienda."
-        buttonText="Prenota una call →"
+        buttonText="Prenota una call"
         buttonHref="/contatti"
       />
     </>

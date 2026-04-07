@@ -13,6 +13,13 @@ const bgMap = {
   giallo: "bg-giallo text-nero",
 };
 
+const navThemeMap = {
+  white: "light",
+  light: "light",
+  dark: "dark",
+  giallo: "giallo",
+} as const;
+
 export default function SectionWrapper({
   children,
   bg = "white",
@@ -21,7 +28,11 @@ export default function SectionWrapper({
   noPadding = false,
 }: SectionWrapperProps) {
   return (
-    <section id={id} className={`${bgMap[bg]} ${noPadding ? "" : "section-padding"} ${className}`}>
+    <section
+      id={id}
+      data-navbar-theme={navThemeMap[bg]}
+      className={`${bgMap[bg]} ${noPadding ? "" : "section-padding"} ${className}`}
+    >
       <div className="container-site">{children}</div>
     </section>
   );
