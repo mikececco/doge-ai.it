@@ -73,12 +73,13 @@ export default function PartnerPage() {
   return (
     <>
       {/* ── Section 1: Hero (Yellow + Venice skyline) ───── */}
-      <section className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
-        <div className="container-site relative z-10 text-center pt-24 pb-40 md:pb-48">
+      <section data-navbar-theme="giallo" className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
+        <div className="container-site relative z-10 text-center pt-24 pb-20 md:pb-24">
           <FadeInOnScroll>
             <span className="text-label uppercase text-nero/60 tracking-widest">Programma Partner</span>
             <h1 className="text-section uppercase mt-4 max-w-[900px] mx-auto">
-              Porta l&rsquo;AI ai tuoi clienti — senza costruirla da zero.
+              Porta l&rsquo;AI ai tuoi clienti<br />
+              senza costruirla da zero.
             </h1>
             <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
               Stiamo ampliando la nostra rete di partner. Se lavori con aziende
@@ -92,9 +93,6 @@ export default function PartnerPage() {
               </Button>
             </div>
           </FadeInOnScroll>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-          <img src="/hero/landscape venezia (no-bg).png" alt="Venice skyline" className="w-full h-auto opacity-30" />
         </div>
       </section>
 
