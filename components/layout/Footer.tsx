@@ -11,6 +11,7 @@ const NAV_COL_1 = [
   { label: "Chi Siamo", href: "/chi-siamo" },
   { label: "Per le Aziende", href: "/aziende" },
   { label: "Per i Fondi PE", href: "/fondi" },
+  { label: "Partner", href: "/partner" },
   { label: "Il Codice del Doge", href: "/metodo" },
   { label: "Casi d'Uso", href: "/casi-duso" },
 ];

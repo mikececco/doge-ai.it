@@ -4,7 +4,8 @@ export const NAV_ITEMS = [
     label: "Cosa Facciamo",
     children: [
       { label: "Per le Aziende", href: "/aziende" },
-      { label: "Per i Fondi PE", href: "/fondi" },
+      { label: "Per i Fondi", href: "/fondi" },
+      { label: "Partner", href: "/partner" },
     ],
   },
   { label: "Il Codice del Doge", href: "/metodo" },
@@ -12,10 +13,7 @@ export const NAV_ITEMS = [
     label: "Risorse",
     children: [
       { label: "Casi d'Uso", href: "/casi-duso" },
-      { label: "Settori", href: "/settori" },
-      { label: "Incentivi", href: "/incentivi" },
       { label: "Blog", href: "/blog" },
-      { label: "Soluzioni", href: "/soluzioni" },
     ],
   },
 ] as const;
@@ -24,12 +22,11 @@ export const FOOTER_LINKS = {
   navigation: [
     { label: "Chi Siamo", href: "/chi-siamo" },
     { label: "Per le Aziende", href: "/aziende" },
-    { label: "Per i Fondi PE", href: "/fondi" },
+    { label: "Per i Fondi", href: "/fondi" },
+    { label: "Partner", href: "/partner" },
     { label: "Il Codice del Doge", href: "/metodo" },
     { label: "Casi d'Uso", href: "/casi-duso" },
-    { label: "Settori", href: "/settori" },
     { label: "Blog", href: "/blog" },
-    { label: "Soluzioni", href: "/soluzioni" },
     { label: "Incentivi", href: "/incentivi" },
     { label: "Lavora con Noi", href: "/lavora-con-noi" },
     { label: "Contatti", href: "/contatti" },

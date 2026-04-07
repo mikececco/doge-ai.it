@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/chi-siamo",
     "/aziende",
     "/fondi",
+    "/partner",
     "/metodo",
     "/casi-duso",
     "/blog",
