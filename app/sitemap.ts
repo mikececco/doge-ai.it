@@ -4,6 +4,11 @@ import { SOLUZIONI_PAGES } from "@/lib/soluzioni-data";
 import { CITIES } from "@/lib/cities-data";
 import { INCENTIVI, REGIONI } from "@/lib/incentivi-data";
 import { CASI_DUSO } from "@/lib/casi-duso-data";
+import { INCENTIVI_SETTORIALI } from "@/lib/incentivi-settoriali-data";
+import { CASI_STUDIO } from "@/lib/casi-studio-data";
+import { SETTORI_WITH_SLUGS } from "@/lib/settore-slugs";
+
+export const dynamic = "force-static";
 
 const BASE_URL = "https://doge-ai.it";
 
@@ -85,13 +90,72 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
+  // pSEO: City x Sector pages (107 x 10 = 1,070)
+  const consulenzaAISettori: MetadataRoute.Sitemap = CITIES.flatMap((city) =>
+    SETTORI_WITH_SLUGS.map((settore) => ({
+      url: `${BASE_URL}/consulenza-ai/${city.slug}/${settore.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }))
+  );
+
+  // pSEO: City x Use Case pages (107 x 20 = 2,140)
+  const crossIndustryIds = [
+    "assistenti-personali-ai", "copilota-ai-dipendente", "automazione-meeting-notes",
+    "knowledge-base-interna-ai", "document-generation-automatica", "automazione-hr-payroll",
+    "onboarding-digitale", "screening-cv-ai", "agenti-ai-operativi", "customer-service-automation",
+    "procurement-intelligence", "supplier-scoring-selezione", "contract-management-ai",
+    "gestione-automatica-email", "report-generation-ai", "lead-scoring-predittivo",
+    "crm-automation-enrichment", "brand-visibility-piattaforme-ai", "content-generation-ai",
+    "seo-aeo-automation",
+  ];
+  const aiCasoCitta: MetadataRoute.Sitemap = CITIES.flatMap((city) =>
+    crossIndustryIds.map((casoId) => ({
+      url: `${BASE_URL}/ai/${city.slug}/${casoId}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.55,
+    }))
+  );
+
+  // pSEO: Region x Sector incentivi pages (100)
+  const incentiviSettorialiPages: MetadataRoute.Sitemap = INCENTIVI_SETTORIALI.map((is) => ({
+    url: `${BASE_URL}/incentivi-settoriali/${is.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  }));
+
+  // Case Studies (20)
+  const casiStudioIndex: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/casi-studio`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+  ];
+
+  const casiStudioPages: MetadataRoute.Sitemap = CASI_STUDIO.map((cs) => ({
+    url: `${BASE_URL}/casi-studio/${cs.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   return [
     ...staticPages,
     ...blogPosts,
     ...soluzioniPages,
     ...consulenzaAIIndex,
     ...consulenzaAICities,
+    ...consulenzaAISettori,
     ...incentiviPages,
+    ...incentiviSettorialiPages,
     ...casiDusoPages,
+    ...casiStudioIndex,
+    ...casiStudioPages,
+    ...aiCasoCitta,
   ];
 }

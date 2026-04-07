@@ -11,14 +11,15 @@ const config: Config = {
       colors: {
         nero: "#1A1A1A",
         bianco: "#FFFFFF",
-        giallo: "#FFE500",
-        "giallo-hover": "#E6CE00",
+        giallo: "#FDE732",
+        "giallo-hover": "#E3D02D",
         "grigio-chiaro": "#F5F5F5",
         "grigio-medio": "#888888",
         "grigio-scuro": "#444444",
       },
       fontFamily: {
-        sans: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
+        sans: ["var(--font-archivo)", "system-ui", "sans-serif"],
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
       },
       fontSize: {
         // Hero
@@ -40,6 +41,9 @@ const config: Config = {
       spacing: {
         section: "96px",
         "section-mobile": "64px",
+      },
+      borderWidth: {
+        DEFAULT: "4px",
       },
       borderRadius: {
         card: "0px",

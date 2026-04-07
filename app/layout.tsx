@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Barlow_Condensed, Archivo } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageTransition from "@/components/animations/PageTransition";
 import CookieBanner from "@/components/CookieBanner";
 
-const spaceGrotesk = Space_Grotesk({
+const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-space-grotesk",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+const archivo = Archivo({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  variable: "--font-archivo",
   display: "swap",
 });
 
@@ -71,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it" className={spaceGrotesk.variable}>
+    <html lang="it" className={`${barlowCondensed.variable} ${archivo.variable}`}>
       <body className="font-sans">
         <Navbar />
         <main>

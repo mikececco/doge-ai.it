@@ -8,6 +8,7 @@ import RocketAnimation from "@/components/animations/RocketAnimation";
 import { SETTORI } from "@/lib/settori-data";
 import INumeri from "@/components/sections/home/INumeri";
 import CtaFinale from "@/components/sections/CtaFinale";
+import Button from "@/components/ui/Button";
 
 /* ─── Page ─────────────────────────────────────────────── */
 
@@ -27,13 +28,9 @@ export default function AziendePage() {
             la risposta non &egrave; pi&ugrave; ipotetica. 3x la capacit&agrave;, non i costi.
           </p>
           <div className="mt-8">
-            <a
-              href="/contatti"
-              className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo-hover hover:text-nero transition-all duration-300 uppercase tracking-wider"
-            >
+            <Button variant="dark" size="md" uppercase href="/contatti">
               Parla con noi
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
+            </Button>
           </div>
         </FadeInOnScroll>
         </div>
@@ -105,13 +102,9 @@ export default function AziendePage() {
                 Lanciare nuovi prodotti? Servire pi&ugrave; clienti?
               </p>
               <div className="mt-6">
-                <a
-                  href="/contatti"
-                  className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo hover:text-nero transition-[background-color,color] duration-[250ms] uppercase tracking-wider"
-                >
+                <Button variant="dark" size="md" uppercase href="/contatti">
                   Raccontacelo qui
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -254,13 +247,10 @@ export default function AziendePage() {
             </p>
             <div className="mt-4 flex items-center justify-center gap-3">
               <span className="text-body text-nero">Leggi</span>
-              <a
-                href="/metodo"
-                className="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 bg-giallo text-nero hover:bg-giallo-hover transition-colors"
-              >
+              <Button variant="primary" href="/metodo">
                 <img src="/icon/logoB-noBG.png" alt="" width={16} height={16} />
                 Il Codice del Doge
-              </a>
+              </Button>
             </div>
           </div>
         </FadeInOnScroll>
@@ -360,13 +350,9 @@ export default function AziendePage() {
               massimizzare il ritorno sull&apos;investimento.
             </p>
             <div className="mt-8">
-              <a
-                href="/incentivi"
-                className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo hover:text-nero transition-[background-color,color] duration-[250ms] uppercase tracking-wider"
-              >
+              <Button variant="dark" size="md" uppercase href="/incentivi">
                 Scopri tutti gli incentivi
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
+              </Button>
             </div>
           </div>
         </FadeInOnScroll>

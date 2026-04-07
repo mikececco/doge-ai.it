@@ -18,15 +18,23 @@ export default function TextReveal({
   className = "",
   as: Tag = "h1",
 }: TextRevealProps) {
-  const words = text.split(" ");
+  const parts = text.split("\n");
+  let wordIndex = 0;
 
   return (
     <Tag className={className}>
-      {words.map((word, i) => (
-        <span key={i} className="inline-block overflow-hidden mr-[0.3em]">
+      {parts.map((part, p) => {
+        const words = part.split(" ");
+        return (
+          <span key={p}>
+            {p > 0 && <br />}
+            {words.map((word) => {
+              const i = wordIndex++;
+              return (
+                <span key={i} className="inline-block mr-[0.3em]" style={{ clipPath: "inset(-10% -5% -10% -5%)" }}>
           <motion.span
             className="inline-block"
-            initial={{ y: "100%", opacity: 0 }}
+            initial={{ y: "110%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{
               duration: WORD_DURATION,
@@ -36,8 +44,12 @@ export default function TextReveal({
           >
             {word}
           </motion.span>
-        </span>
-      ))}
+                </span>
+              );
+            })}
+          </span>
+        );
+      })}
     </Tag>
   );
 }

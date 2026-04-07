@@ -3,6 +3,33 @@
 @tailwind utilities;
 
 @layer base {
+  /* Global border width — 4px for all border utilities */
+  .border-t:not([class*="border-t-0"]) { border-top-width: 4px; }
+  .border-b:not([class*="border-b-0"]) { border-bottom-width: 4px; }
+  .border-l:not([class*="border-l-0"]) { border-left-width: 4px; }
+  .border-r:not([class*="border-r-0"]) { border-right-width: 4px; }
+
+  @media (min-width: 768px) {
+    .md\:border-t { border-top-width: 4px; }
+    .md\:border-b { border-bottom-width: 4px; }
+    .md\:border-l { border-left-width: 4px; }
+    .md\:border-r { border-right-width: 4px; }
+    .md\:border-t-0 { border-top-width: 0; }
+    .md\:border-b-0 { border-bottom-width: 0; }
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:border-r { border-right-width: 4px; }
+  }
+
+
+  /* Barlow Condensed on all headings */
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
   body {
     @apply bg-bianco text-nero antialiased;
   }
@@ -26,12 +53,21 @@
 
   /* Selection */
   ::selection {
-    background-color: #FFE500;
+    background-color: #FDE732;
     color: #1A1A1A;
   }
 }
 
 @layer components {
+  /* Heading text-transform + Barlow Condensed for non-h elements */
+  .text-hero,
+  .text-section,
+  .text-metric {
+    text-transform: uppercase;
+    font-family: var(--font-heading), system-ui, sans-serif;
+    font-weight: 600;
+  }
+
   .section-padding {
     @apply py-section-mobile lg:py-section;
   }
@@ -46,11 +82,11 @@
   }
 
   .blog-prose h2 {
-    @apply text-[28px] font-bold text-nero mt-12 mb-4 leading-tight scroll-mt-24;
+    @apply text-[28px] font-bold text-nero mt-12 mb-4 leading-tight scroll-mt-24 uppercase;
   }
 
   .blog-prose h3 {
-    @apply text-[20px] font-bold text-nero mt-8 mb-3 leading-tight;
+    @apply text-[20px] font-bold text-nero mt-8 mb-3 leading-tight uppercase;
   }
 
   .blog-prose p {
@@ -111,7 +147,7 @@
   }
 
   .mid-cta-btn {
-    @apply inline-block mt-5 bg-giallo text-nero text-sm font-semibold px-5 py-2.5 hover:bg-giallo-hover transition-colors no-underline !important;
+    @apply inline-block mt-5 bg-giallo text-nero text-sm font-semibold uppercase tracking-wider px-5 py-1.5 hover:bg-giallo-hover transition-colors no-underline !important;
   }
 
   /* ─── Card Flip 3D ───────────────────────────────────── */

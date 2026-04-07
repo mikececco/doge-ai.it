@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/lib/constants";
 import DogeLogo from "@/components/icons/DogeLogo";
+import Button from "@/components/ui/Button";
 import Image from "next/image";
 import MobileMenu from "./MobileMenu";
 
@@ -77,7 +78,7 @@ export default function Navbar() {
                   >
                     <button
                       className={`text-sm font-medium transition-colors cursor-pointer pb-1 ${
-                        active ? "border-b-2 border-[#FFE500]" : ""
+                        active ? "border-b-2 border-[#FDE732]" : ""
                       } ${
                         scrolled ? "text-nero hover:text-giallo-hover" : "text-nero/80 hover:text-nero"
                       }`}
@@ -110,7 +111,7 @@ export default function Navbar() {
                   key={item.label}
                   href={item.href}
                   className={`text-sm font-medium transition-colors pb-1 ${
-                    active ? "border-b-2 border-[#FFE500]" : ""
+                    active ? "border-b-2 border-[#FDE732]" : ""
                   } ${
                     scrolled ? "text-nero hover:text-giallo-hover" : "text-nero/80 hover:text-nero"
                   }`}
@@ -119,12 +120,9 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <a
-              href="/contatti"
-              className="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 bg-nero text-bianco hover:bg-giallo hover:text-nero transition-[background-color,color] duration-[250ms]"
-            >
+            <Button variant="dark" href="/contatti">
               Contattaci
-            </a>
+            </Button>
           </div>
 
           {/* Mobile hamburger */}

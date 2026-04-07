@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import Button from "@/components/ui/Button";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 
@@ -59,12 +59,9 @@ export default function IlManifesto() {
             <p className="text-sm text-nero">
               Vuoi capire i principi che guidano ogni nostro progetto?
             </p>
-            <a
-              href="/metodo"
-              className="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 bg-giallo text-nero hover:bg-giallo-hover transition-colors duration-200 shrink-0"
-            >
-              Il Codice del Doge <ArrowRight size={16} className="inline-block" />
-            </a>
+            <Button variant="primary" href="/metodo" className="shrink-0">
+              Il Codice del Doge
+            </Button>
           </div>
         </div>
       </FadeInOnScroll>

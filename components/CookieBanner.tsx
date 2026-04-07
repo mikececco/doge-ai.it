@@ -49,13 +49,13 @@ export default function CookieBanner() {
             <div className="flex items-center gap-3 shrink-0">
               <button
                 onClick={reject}
-                className="px-3 py-2 sm:px-5 text-sm font-semibold border border-bianco/30 text-bianco hover:border-bianco transition-colors cursor-pointer"
+                className="px-3 py-1 sm:px-5 text-sm font-semibold border border-bianco/30 text-bianco hover:border-bianco transition-colors cursor-pointer"
               >
                 Rifiuta
               </button>
               <button
                 onClick={accept}
-                className="px-3 py-2 sm:px-5 text-sm font-semibold bg-giallo text-nero hover:bg-giallo-hover transition-colors cursor-pointer"
+                className="px-3 py-1 sm:px-5 text-sm font-semibold bg-giallo text-nero hover:bg-giallo-hover transition-colors cursor-pointer"
               >
                 Accetta
               </button>

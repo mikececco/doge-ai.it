@@ -103,7 +103,7 @@ export default function ShieldAnimation() {
         <path
           ref={checkRef}
           d="M40 70L55 85L80 55"
-          stroke="#FFE500"
+          stroke="#FDE732"
           strokeWidth="4"
           strokeLinecap="round"
           strokeLinejoin="round"

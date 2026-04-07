@@ -27,7 +27,7 @@ export default function CtaFinale({
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(30,40,50,0.8)_0%,_transparent_70%)]" />
         <div className="container-site relative z-10">
           <FadeInOnScroll className="text-center max-w-2xl mx-auto">
-            <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-tight text-bianco">
+            <h2 className="text-hero text-bianco">
               {title}
             </h2>
             <p className="text-subheadline mt-4 text-bianco/70">

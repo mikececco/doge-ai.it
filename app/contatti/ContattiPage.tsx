@@ -92,7 +92,7 @@ export default function ContattiPage() {
   async function onSubmit(data: ContactFormData) {
     setStage("submitting");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://doge-contact.hellosupalabs.workers.dev", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -108,7 +108,7 @@ export default function ContattiPage() {
   }
 
   const inputClass =
-    "w-full bg-transparent border-b-2 border-nero/20 py-3 text-base text-nero placeholder:text-nero/40 focus:border-nero outline-none transition-colors";
+    "w-full bg-transparent border-b-2 border-nero/20 py-2 text-base text-nero placeholder:text-nero/40 focus:border-nero outline-none transition-colors";
   const labelClass =
     "block text-xs font-bold uppercase tracking-wider text-nero/60 mb-2";
   const errorClass = "text-red-600 text-xs mt-1";

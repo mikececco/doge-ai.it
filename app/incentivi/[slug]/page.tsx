@@ -175,7 +175,7 @@ function NazionalePage({ incentivo }: { incentivo: Incentivo }) {
               {incentivo.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-sm font-medium text-nero/80 bg-nero/10 px-4 py-2"
+                  className="text-sm font-medium text-nero/80 bg-nero/10 px-4 py-1.5"
                 >
                   {tag}
                 </span>

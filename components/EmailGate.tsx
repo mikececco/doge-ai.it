@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Cookies from "js-cookie";
+import Button from "@/components/ui/Button";
 
 const GATE_COOKIE = "codice-del-doge-access";
 const FREE_DOMAINS = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "icloud.com", "libero.it", "virgilio.it", "alice.it", "tin.it", "tiscali.it"];
@@ -90,15 +91,11 @@ export default function EmailGate({ children, preview }: EmailGateProps) {
                   placeholder="nome@tuaazienda.it"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-4 py-3 border-2 border-nero/20 text-sm focus:border-nero focus:outline-none transition-colors"
+                  className="flex-1 px-4 py-2 border-2 border-nero/20 text-sm focus:border-nero focus:outline-none transition-colors"
                 />
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="px-6 py-3 bg-nero text-bianco font-semibold text-sm uppercase tracking-wider hover:bg-giallo hover:text-nero transition-[background-color,color] duration-[250ms] disabled:opacity-50 shrink-0"
-                >
+                <Button variant="dark" size="md" uppercase type="submit" disabled={submitting} className="shrink-0">
                   {submitting ? "..." : "Accedi"}
-                </button>
+                </Button>
               </div>
               {error && (
                 <p className="text-sm text-red-600 mt-3 text-left">{error}</p>

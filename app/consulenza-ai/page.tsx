@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Button from "@/components/ui/Button";
 import Label from "@/components/ui/Label";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import CtaFinale from "@/components/sections/CtaFinale";
@@ -106,12 +107,9 @@ export default function ConsulenzaAIPage() {
           </FadeInOnScroll>
           <FadeInOnScroll>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link
-                href="/contatti"
-                className="inline-block bg-giallo text-nero font-semibold px-8 py-4 text-base hover:bg-giallo/90 transition-colors"
-              >
+              <Button variant="primary" size="md" href="/contatti">
                 Parla con noi →
-              </Link>
+              </Button>
               <span className="inline-flex items-center text-bianco/50 text-sm">
                 {CITIES.length} province coperte
               </span>
@@ -197,12 +195,9 @@ export default function ConsulenzaAIPage() {
               </p>
             </FadeInOnScroll>
             <FadeInOnScroll>
-              <Link
-                href="/metodo"
-                className="inline-block border-2 border-nero text-nero font-semibold px-8 py-4 text-base hover:bg-nero hover:text-bianco transition-colors"
-              >
+              <Button variant="outline" size="md" href="/metodo">
                 Scopri il nostro metodo →
-              </Link>
+              </Button>
             </FadeInOnScroll>
           </div>
         </div>

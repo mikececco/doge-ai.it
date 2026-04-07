@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Button from "@/components/ui/Button";
 import Label from "@/components/ui/Label";
 import CtaFinale from "@/components/sections/CtaFinale";
 import RelatedContent from "@/components/sections/RelatedContent";
@@ -255,12 +256,9 @@ export default async function BlogPostPage({ params }: Props) {
                   <p className="text-sm text-grigio-scuro mt-2 leading-relaxed">
                     La prima conversazione con DOGE di Venezia è gratuita.
                   </p>
-                  <Link
-                    href="/contatti"
-                    className="inline-block mt-4 bg-giallo text-nero text-sm font-semibold px-4 py-2 hover:bg-giallo-hover transition-colors"
-                  >
+                  <Button variant="primary" href="/contatti" className="mt-4">
                     Contattaci →
-                  </Link>
+                  </Button>
                 </div>
               </aside>
             )}

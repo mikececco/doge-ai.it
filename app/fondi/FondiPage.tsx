@@ -4,6 +4,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import Label from "@/components/ui/Label";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import CtaFinale from "@/components/sections/CtaFinale";
+import Button from "@/components/ui/Button";
 import EbitdaCalculator from "@/components/EbitdaCalculator";
 
 /* ─── Data ─────────────────────────────────────────────── */
@@ -86,13 +87,9 @@ export default function FondiPage() {
               all&rsquo;exit.
             </p>
             <div className="mt-8">
-              <a
-                href="/contatti"
-                className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo-hover hover:text-nero transition-all duration-300 uppercase tracking-wider"
-              >
+              <Button variant="dark" size="md" uppercase href="/contatti">
                 Parla con noi
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
+              </Button>
             </div>
           </FadeInOnScroll>
         </div>
@@ -120,13 +117,9 @@ export default function FondiPage() {
           <EbitdaCalculator />
 
           <div className="text-center mt-10">
-            <a
-              href="/contatti"
-              className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo hover:text-nero transition-[background-color,color] duration-[250ms] uppercase tracking-wider"
-            >
+            <Button variant="dark" size="md" uppercase href="/contatti">
               Calcola il tuo ROI con noi
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
+            </Button>
           </div>
         </FadeInOnScroll>
       </SectionWrapper>
@@ -258,13 +251,10 @@ export default function FondiPage() {
             <div className="mt-4 flex items-center justify-center gap-3">
               <span className="text-body text-nero">Leggi</span>
               <span className="text-nero">&rarr;</span>
-              <a
-                href="/metodo"
-                className="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 bg-giallo text-nero hover:bg-giallo-hover transition-colors"
-              >
+              <Button variant="primary" href="/metodo">
                 <img src="/icon/logoB-noBG.png" alt="" width={16} height={16} />
                 Il Codice del Doge
-              </a>
+              </Button>
             </div>
           </div>
         </FadeInOnScroll>

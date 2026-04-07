@@ -6,7 +6,7 @@ import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import CtaFinale from "@/components/sections/CtaFinale";
 import { CASI_DUSO } from "@/lib/casi-duso-data";
 import type { CasoDuso } from "@/lib/casi-duso-data";
-import { ArrowRight } from "lucide-react";
+import Button from "@/components/ui/Button";
 import RisorseCorrelate from "@/components/sections/RisorseCorrelate";
 import { getStrategicLinksForCasoDuso } from "@/lib/internal-links";
 
@@ -156,16 +156,12 @@ export default function CasoDusoSlugPage({ params }: Props) {
           </FadeInOnScroll>
           <FadeInOnScroll>
             <div className="flex flex-wrap items-center gap-4 mt-8">
-              <span className="text-sm font-semibold text-nero/80 bg-nero/10 px-4 py-2 uppercase tracking-wider">
+              <span className="text-sm font-semibold text-nero/80 bg-nero/10 px-4 py-1.5 uppercase tracking-wider">
                 {caso.department}
               </span>
-              <Link
-                href="/contatti"
-                className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo-hover hover:text-nero transition-all duration-300 uppercase tracking-wider"
-              >
+              <Button variant="dark" size="md" uppercase href="/contatti">
                 Parla con noi
-                <ArrowRight size={16} />
-              </Link>
+              </Button>
             </div>
           </FadeInOnScroll>
         </div>
@@ -251,7 +247,7 @@ export default function CasoDusoSlugPage({ params }: Props) {
                   Settore
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-sm font-semibold text-nero bg-giallo/20 px-4 py-2 border border-giallo/30">
+                  <span className="text-sm font-semibold text-nero bg-giallo/20 px-4 py-1.5 border border-giallo/30">
                     {caso.sector}
                   </span>
                 </div>
@@ -263,7 +259,7 @@ export default function CasoDusoSlugPage({ params }: Props) {
                   Reparto
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-sm font-semibold text-nero bg-giallo/20 px-4 py-2 border border-giallo/30">
+                  <span className="text-sm font-semibold text-nero bg-giallo/20 px-4 py-1.5 border border-giallo/30">
                     {caso.department}
                   </span>
                 </div>
@@ -278,7 +274,7 @@ export default function CasoDusoSlugPage({ params }: Props) {
                   {caso.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-sm font-medium text-nero/80 bg-nero/5 px-4 py-2 border border-nero/10"
+                      className="text-sm font-medium text-nero/80 bg-nero/5 px-4 py-1.5 border border-nero/10"
                     >
                       {tag}
                     </span>

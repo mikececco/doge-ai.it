@@ -6,6 +6,7 @@ import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import CtaFinale from "@/components/sections/CtaFinale";
 import { CASI_DUSO, DEPARTMENTS, SECTORS } from "@/lib/casi-duso-data";
 import { ArrowRight } from "lucide-react";
+import Button from "@/components/ui/Button";
 
 /* ─── Page ─────────────────────────────────────────────── */
 
@@ -53,13 +54,9 @@ export default function CasiDusoPage() {
               Non vendiamo slide. Costruiamo sistemi.
             </p>
             <div className="mt-8">
-              <a
-                href="/contatti"
-                className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo-hover hover:text-nero transition-all duration-300 uppercase tracking-wider"
-              >
+              <Button variant="dark" size="md" uppercase href="/contatti">
                 Parla con noi
-                <ArrowRight size={16} />
-              </a>
+              </Button>
             </div>
           </FadeInOnScroll>
 
@@ -101,7 +98,7 @@ export default function CasiDusoPage() {
                 placeholder="Cerca casi d'uso..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="w-full bg-nero/50 border border-bianco/10 pl-11 pr-4 py-3 text-sm text-bianco placeholder:text-bianco/40 focus:outline-none focus:border-giallo transition-colors"
+                className="w-full bg-nero/50 border border-bianco/10 pl-11 pr-4 py-2 text-sm text-bianco placeholder:text-bianco/40 focus:outline-none focus:border-giallo transition-colors"
               />
             </div>
 
@@ -110,7 +107,7 @@ export default function CasiDusoPage() {
             <div className="flex flex-wrap gap-2 mb-4">
               <button
                 onClick={() => setActiveDepartment(null)}
-                className={`px-3 py-2 text-xs font-semibold uppercase tracking-wider border transition-colors ${
+                className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider border transition-colors ${
                   activeDepartment === null
                     ? "bg-giallo text-nero border-giallo"
                     : "bg-transparent text-bianco/60 border-bianco/20 hover:border-giallo hover:text-bianco"
@@ -124,7 +121,7 @@ export default function CasiDusoPage() {
                   onClick={() =>
                     setActiveDepartment(activeDepartment === dep ? null : dep)
                   }
-                  className={`px-3 py-2 text-xs font-semibold uppercase tracking-wider border transition-colors ${
+                  className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider border transition-colors ${
                     activeDepartment === dep
                       ? "bg-giallo text-nero border-giallo"
                       : "bg-transparent text-bianco/60 border-bianco/20 hover:border-giallo hover:text-bianco"
@@ -140,7 +137,7 @@ export default function CasiDusoPage() {
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setActiveSector(null)}
-                className={`px-3 py-2 text-xs font-semibold uppercase tracking-wider border transition-colors ${
+                className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider border transition-colors ${
                   activeSector === null
                     ? "bg-giallo text-nero border-giallo"
                     : "bg-transparent text-bianco/60 border-bianco/20 hover:border-giallo hover:text-bianco"
@@ -154,7 +151,7 @@ export default function CasiDusoPage() {
                   onClick={() =>
                     setActiveSector(activeSector === sec ? null : sec)
                   }
-                  className={`px-3 py-2 text-xs font-semibold uppercase tracking-wider border transition-colors ${
+                  className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider border transition-colors ${
                     activeSector === sec
                       ? "bg-giallo text-nero border-giallo"
                       : "bg-transparent text-bianco/60 border-bianco/20 hover:border-giallo hover:text-bianco"

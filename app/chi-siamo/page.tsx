@@ -107,39 +107,24 @@ export default function ChiSiamoPage() {
 
         {/* Grid: photos left, text right */}
         <FadeInOnScroll>
-          <div className="border border-nero">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              {/* Left - Team photos 2x2 */}
-              <div className="md:border-r border-nero p-4 md:p-8 flex items-center justify-center">
-                <div className="grid grid-cols-2 gap-3 max-w-[200px] md:max-w-[280px]">
-                  <img src="/team/image14.png" alt="Team member" className="w-full h-auto object-cover aspect-square grayscale" />
-                  <img src="/team/image15.png" alt="Team member" className="w-full h-auto object-cover aspect-square grayscale" />
-                  <img src="/team/image13.png" alt="Team member" className="w-full h-auto object-cover aspect-square grayscale" />
-                  <img src="/team/image18.jpg" alt="Team member" className="w-full h-auto object-cover aspect-square grayscale" />
-                </div>
-              </div>
-
-              {/* Right - Text */}
-              <div className="px-4 py-4 md:px-8 md:py-8 flex flex-col justify-center">
-                <p className="text-body text-nero leading-relaxed">
-                  Strategia e codice nello stesso team. Non in sequenza, in
-                  parallelo. Veniamo da fondi VC europei, startup AI
-                  internazionali ed exit con milioni di utenti. Abbiamo visto da
-                  vicino cosa separa le aziende che guidano questa
-                  trasformazione da quelle che la subiscono.
-                </p>
-                <p className="text-body text-nero leading-relaxed mt-6">
-                  Potevamo restare all&rsquo;estero, ma abbiamo scelto di
-                  tornare perch&eacute; abbiamo visto qualcosa che valeva:
-                  un&rsquo;economia straordinaria, con prodotti unici e
-                  imprenditori visionari, che rischiava di arrivare tardi alla
-                  trasformazione pi&ugrave; importante degli ultimi decenni.
-                </p>
-                <p className="text-body text-nero leading-relaxed mt-6 italic">
-                  Siamo qui per colmare quel gap.
-                </p>
-              </div>
-            </div>
+          <div className="border border-nero px-4 py-4 md:px-8 md:py-8">
+            <p className="text-body text-nero leading-relaxed">
+              Strategia e codice nello stesso team. Non in sequenza, in
+              parallelo. Veniamo da fondi VC europei, startup AI
+              internazionali ed exit con milioni di utenti. Abbiamo visto da
+              vicino cosa separa le aziende che guidano questa
+              trasformazione da quelle che la subiscono.
+            </p>
+            <p className="text-body text-nero leading-relaxed mt-6">
+              Potevamo restare all&rsquo;estero, ma abbiamo scelto di
+              tornare perch&eacute; abbiamo visto qualcosa che valeva:
+              un&rsquo;economia straordinaria, con prodotti unici e
+              imprenditori visionari, che rischiava di arrivare tardi alla
+              trasformazione pi&ugrave; importante degli ultimi decenni.
+            </p>
+            <p className="text-body text-nero leading-relaxed mt-6 italic">
+              Siamo qui per colmare quel gap.
+            </p>
           </div>
         </FadeInOnScroll>
       </SectionWrapper>

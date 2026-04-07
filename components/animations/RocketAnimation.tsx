@@ -113,24 +113,24 @@ export default function RocketAnimation() {
         <line ref={trail3Ref} x1="65" y1="95" x2="65" y2="130" stroke="#1A1A1A" strokeWidth="2" opacity="0.3" />
 
         {/* Particles */}
-        <circle ref={particle1Ref} cx="55" cy="100" r="3" fill="#FFE500" />
+        <circle ref={particle1Ref} cx="55" cy="100" r="3" fill="#FDE732" />
         <circle ref={particle2Ref} cx="65" cy="100" r="2" fill="#1A1A1A" />
-        <circle ref={particle3Ref} cx="60" cy="105" r="2.5" fill="#FFE500" />
+        <circle ref={particle3Ref} cx="60" cy="105" r="2.5" fill="#FDE732" />
 
         {/* Rocket */}
         <g ref={rocketRef}>
           {/* Body */}
           <path d="M60 15L45 55V80H75V55L60 15Z" fill="#1A1A1A" />
           {/* Nose */}
-          <path d="M60 15L52 40H68L60 15Z" fill="#FFE500" />
+          <path d="M60 15L52 40H68L60 15Z" fill="#FDE732" />
           {/* Window */}
-          <circle cx="60" cy="52" r="6" fill="#FFE500" />
+          <circle cx="60" cy="52" r="6" fill="#FDE732" />
           <circle cx="60" cy="52" r="3" fill="#1A1A1A" />
           {/* Fins */}
           <path d="M45 65L35 80H45V65Z" fill="#1A1A1A" />
           <path d="M75 65L85 80H75V65Z" fill="#1A1A1A" />
           {/* Flame */}
-          <path d="M50 80L55 95L60 85L65 95L70 80" fill="#FFE500" />
+          <path d="M50 80L55 95L60 85L65 95L70 80" fill="#FDE732" />
         </g>
       </svg>
     </div>

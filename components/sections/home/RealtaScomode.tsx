@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 
 const topRow = [
@@ -74,7 +75,7 @@ export default function RealtaScomode() {
       {/* Bottom row */}
       <div className="container-site">
         <FadeInOnScroll>
-          <div className="border border-nero">
+          <div className="border border-nero border-t-0">
             <div className="grid grid-cols-1 md:grid-cols-4">
               {bottomRow.map((card, i) => (
                 <div
@@ -93,13 +94,15 @@ export default function RealtaScomode() {
               ))}
 
               {/* Special last card - black bg, bigger */}
-              <div className="px-4 py-4 md:px-8 md:py-8 bg-nero text-bianco flex flex-col justify-between min-h-[220px]">
+              <Link href="/contatti" className="group px-4 py-4 md:px-8 md:py-8 bg-nero text-bianco flex flex-col justify-between min-h-[220px] hover:bg-giallo transition-colors duration-300">
                 <div>
                   <h3 className="text-2xl font-bold uppercase leading-tight">
-                    L&apos;AI in azienda non fa paura.
+                    <span className="group-hover:hidden">L&apos;AI in azienda non fa paura.</span>
+                    <span className="hidden group-hover:inline text-nero">Prenota una call</span>
                   </h3>
-                  <p className="text-lg italic text-giallo mt-2">
-                    Ignorarla s&igrave;.
+                  <p className="text-lg italic text-giallo mt-2 group-hover:text-nero">
+                    <span className="group-hover:hidden">Ignorarla s&igrave;.</span>
+                    <span className="hidden group-hover:inline">Nessun impegno, solo chiarezza.</span>
                   </p>
                 </div>
                 <div className="flex justify-end">
@@ -110,12 +113,12 @@ export default function RealtaScomode() {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className="text-bianco"
+                    className="text-bianco group-hover:text-nero transition-colors duration-300"
                   >
                     <path d="M7 7l10 10M17 17V7M17 17H7" />
                   </svg>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </FadeInOnScroll>

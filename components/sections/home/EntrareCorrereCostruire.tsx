@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import Button from "@/components/ui/Button";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 
 const steps = [
@@ -32,12 +32,9 @@ export default function EntrareCorrereCostruire() {
               Entriamo. Capiamo. Costruiamo.
             </h2>
             <div className="mt-8">
-              <a
-                href="/metodo"
-                className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 border border-nero text-nero hover:bg-nero hover:text-bianco transition-[background-color,color] duration-[250ms]"
-              >
-                Il Codice del Doge <ArrowRight size={16} className="inline-block" />
-              </a>
+              <Button variant="outline" size="md" href="/metodo">
+                Il Codice del Doge
+              </Button>
             </div>
           </div>
         </FadeInOnScroll>

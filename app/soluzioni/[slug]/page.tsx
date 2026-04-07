@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Button from "@/components/ui/Button";
 import Label from "@/components/ui/Label";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import CtaFinale from "@/components/sections/CtaFinale";
@@ -113,12 +113,9 @@ export default function SoluzioneSlugPage({ params }: Props) {
           </FadeInOnScroll>
           <FadeInOnScroll>
             <div className="mt-10">
-              <Link
-                href="/contatti"
-                className="inline-block bg-giallo text-nero font-semibold px-8 py-4 text-base hover:bg-giallo/90 transition-colors"
-              >
+              <Button variant="primary" size="md" href="/contatti">
                 Parla con noi →
-              </Link>
+              </Button>
             </div>
           </FadeInOnScroll>
         </div>

@@ -4,6 +4,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import CtaFinale from "@/components/sections/CtaFinale";
 import EmailGate from "@/components/EmailGate";
+import Button from "@/components/ui/Button";
 
 /* ─── Data ─────────────────────────────────────────────── */
 
@@ -115,13 +116,9 @@ export default function MetodoPage() {
               entriamo in un&apos;azienda. Abbiamo deciso di renderlo pubblico.
             </p>
             <div className="mt-8">
-              <a
-                href="/contatti"
-                className="inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 bg-nero text-bianco hover:bg-giallo-hover hover:text-nero transition-all duration-300 uppercase tracking-wider"
-              >
+              <Button variant="dark" size="md" uppercase href="/contatti">
                 Parla con noi
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
+              </Button>
             </div>
           </FadeInOnScroll>
         </div>
