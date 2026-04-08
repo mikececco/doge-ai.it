@@ -7,7 +7,7 @@ import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 
 type CtaFinaleProps = {
   title?: string;
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   buttonText?: string;
   buttonHref?: string;
   dark?: boolean;
@@ -48,7 +48,7 @@ export default function CtaFinale({
             <h2 className="text-hero uppercase text-giallo">
               {title}
             </h2>
-            <p className="text-subheadline mt-4 text-bianco/70 max-w-[600px] mx-auto">
+            <p className="text-subheadline mt-4 text-bianco/70 max-w-[700px] mx-auto">
               {subtitle}
             </p>
             <div className="mt-8">

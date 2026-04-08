@@ -86,8 +86,8 @@ export default function AziendePage() {
           </div>
 
           <div className="mt-10 text-center">
-            <p className="text-body font-bold text-nero max-w-[700px] mx-auto">
-              Espandere in nuovi mercati? Lanciare nuovi prodotti? Servire pi&ugrave; clienti?<span className="hidden md:inline"><br /></span>
+            <p className="text-body font-bold text-nero max-w-[780px] mx-auto">
+              Espandere in nuovi mercati? Lanciare nuovi prodotti? Servire pi&ugrave;{"\u00A0"}clienti?<span className="hidden md:inline"><br /></span>
               Quali opportunit&agrave; si aprirebbero con il triplo del personale?
             </p>
             <div className="mt-6">
@@ -109,8 +109,8 @@ export default function AziendePage() {
             <h2 className="text-section uppercase mt-4">
               Proteggere o espandersi.<br />Entrambi partono da qui.
             </h2>
-            <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
-              Alcune aziende hanno margini da proteggere. Altre hanno mercati da conquistare.<span className="hidden md:inline"><br /></span>
+            <p className="text-body text-nero/70 mt-6 max-w-[780px] mx-auto">
+              Alcune aziende hanno margini da proteggere. Altre hanno mercati da{"\u00A0"}conquistare.<span className="hidden md:inline"><br /></span>
               Le migliori fanno entrambe le cose, in sequenza.
             </p>
           </div>
@@ -248,19 +248,19 @@ export default function AziendePage() {
       {/* ── Incentivi e Agevolazioni ─────────────────────── */}
       <SectionWrapper bg="white">
         <FadeInOnScroll>
-          <div className="text-center max-w-[700px] mx-auto">
+          <div className="text-center mx-auto">
             <span className="text-label uppercase text-grigio-medio tracking-widest">
               Incentivi e agevolazioni
             </span>
             <h2 className="text-section uppercase mt-4">
-              L&apos;AI che si paga (in parte) da sola
+              L&apos;AI che si paga (in parte)<br />da sola
             </h2>
-            <p className="text-body text-nero/70 mt-6 leading-relaxed">
+            <p className="text-body text-nero/70 mt-6 leading-relaxed max-w-[800px] mx-auto">
               La trasformazione AI di un&apos;azienda pu&ograve; essere finanziata - in parte o
               totalmente - attraverso <a href="/incentivi/credito-imposta-4-0" className="underline decoration-giallo decoration-2 underline-offset-2 hover:text-nero">incentivi fiscali &rarr;</a>, <a href="/incentivi" className="underline decoration-giallo decoration-2 underline-offset-2 hover:text-nero">bandi regionali &rarr;</a> e <a href="/incentivi/pnrr-digitalizzazione" className="underline decoration-giallo decoration-2 underline-offset-2 hover:text-nero">fondi europei &rarr;</a> oggi
               disponibili per le PMI italiane.
             </p>
-            <p className="text-body text-nero/70 mt-4 leading-relaxed">
+            <p className="text-body text-nero/70 mt-4 leading-relaxed max-w-[800px] mx-auto">
               Non &egrave; il nostro mestiere navigare la burocrazia, ma abbiamo un
               ecosistema di partner, commercialisti e consulenti specializzati, che
               affiancano i nostri clienti per identificare gli strumenti giusti e
@@ -279,7 +279,7 @@ export default function AziendePage() {
       <CtaFinale
         veniceImage
         title="Vinci la prossima decade."
-        subtitle="Non aspettare che lo facciano i tuoi concorrenti. Parla con noi, nessun impegno."
+        subtitle={<>Non aspettare che lo facciano i tuoi concorrenti.<br />Parla con noi, nessun impegno.</>}
         buttonText="Prenota una call"
         buttonHref="/contatti"
       />

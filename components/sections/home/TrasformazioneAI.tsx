@@ -13,7 +13,7 @@ export default function TrasformazioneAI() {
           <span className="text-label uppercase text-grigio-medio tracking-widest">
             Cosa facciamo
           </span>
-          <h2 className="text-section mt-4 max-w-[900px] mx-auto uppercase">
+          <h2 className="text-section mt-4 max-w-[1000px] mx-auto uppercase">
             Trasformazione AI per chi ha un&apos;azienda da far crescere.
           </h2>
         </div>

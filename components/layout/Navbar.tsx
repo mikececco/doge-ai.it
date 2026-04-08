@@ -187,13 +187,13 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
           >
-            <span className={`block w-6 h-0.5 transition-all duration-300 ${
+            <span className={`block w-6 h-[2px] transition-all duration-300 ${
               mobileOpen ? "rotate-45 translate-y-2 bg-bianco" : theme.hamburger
             }`} />
-            <span className={`block w-6 h-0.5 transition-all duration-300 ${
+            <span className={`block w-6 h-[2px] transition-all duration-300 ${
               mobileOpen ? "opacity-0" : theme.hamburger
             }`} />
-            <span className={`block w-6 h-0.5 transition-all duration-300 ${
+            <span className={`block w-6 h-[2px] transition-all duration-300 ${
               mobileOpen ? "-rotate-45 -translate-y-2 bg-bianco" : theme.hamburger
             }`} />
           </button>

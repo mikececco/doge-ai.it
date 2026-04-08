@@ -48,6 +48,14 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="container-site relative z-10 text-center pt-16 pb-32 md:pb-40 !px-4 md:!px-6 lg:!px-8">
+        <motion.span
+          className="text-label uppercase text-nero tracking-widest"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: DURATION.normal, ease: EASE }}
+        >
+          Trasformazione AI
+        </motion.span>
         <TextReveal
           text={"Mentre tutti ne\u00A0parlano.\nNoi la\u00A0implementiamo."}
           as="h1"
@@ -55,13 +63,13 @@ export default function HeroSection() {
         />
 
         <motion.p
-          className="text-nero text-subheadline mt-6 max-w-[560px] mx-auto"
+          className="text-nero text-subheadline mt-6 max-w-[640px] mx-auto"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
           custom={3}
         >
-          Definiamo e realizziamo la strategia AI della tua azienda alla
+          Definiamo e realizziamo la strategia AI della tua azienda<span className="hidden md:inline"><br /></span>{" "}alla
           velocit&agrave; di una startup.
         </motion.p>
 

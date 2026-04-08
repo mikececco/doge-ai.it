@@ -24,7 +24,7 @@ export default function EbitdaCalculator() {
           Assumendo un multiplo su EBITDA di{" "}
           <strong className="text-nero">{multiplo}x</strong>, ogni{" "}
           <strong className="text-nero">&euro;{fmt(investimento)}</strong> investiti generano{" "}
-          <strong className="text-nero">&euro;{fmt(impatto)}</strong> di valuation in pi&ugrave; all&rsquo;exit.
+          <strong className="text-nero">&euro;{fmt(impatto)}</strong>{" "}di valuation in pi&ugrave; all&rsquo;exit.
         </p>
       </div>
 

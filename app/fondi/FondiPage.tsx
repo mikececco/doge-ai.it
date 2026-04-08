@@ -91,7 +91,7 @@ export default function FondiPage() {
             <h2 className="text-section uppercase mt-4">
               Non manca la visione. Manca chi esegue.
             </h2>
-            <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
+            <p className="text-body text-nero/70 mt-6 max-w-[800px] mx-auto">
               Ogni fondo mid-market che seguiamo affronta le stesse tre sfide strutturali.
             </p>
           </div>

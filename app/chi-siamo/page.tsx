@@ -104,6 +104,9 @@ export default function ChiSiamoPage() {
             <p className="text-body text-nero leading-relaxed mt-6 italic">
               Siamo qui per colmare quel gap.
             </p>
+            <div className="mt-8">
+              <Button variant="dark" href="/contatti" arrow>Parla con noi</Button>
+            </div>
           </div>
         </FadeInOnScroll>
       </SectionWrapper>
