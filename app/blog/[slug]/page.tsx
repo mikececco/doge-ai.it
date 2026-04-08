@@ -181,7 +181,7 @@ export default async function BlogPostPage({ params }: Props) {
       <ReadingProgress />
 
       {/* Hero */}
-      <section data-navbar-theme="dark" className="bg-nero text-bianco pt-40 pb-16">
+      <section data-navbar-theme="dark" className="bg-black text-bianco pt-40 pb-16">
         <div className="container-site">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-bianco/50 mb-8">
