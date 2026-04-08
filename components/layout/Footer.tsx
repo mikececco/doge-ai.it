@@ -32,8 +32,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-12 pb-12 border-b border-bianco/10">
           {/* Col 1: Logo + tagline + doge head + social */}
           <div>
-            <div className="flex items-center gap-2">
-              <Image src="/icon/logoW-noBG.png" alt="Doge icon" width={28} height={28} />
+            <div className="flex items-center">
               <DogeLogo light />
             </div>
             <p className="mt-4 text-sm text-bianco/60 max-w-[280px]">
@@ -110,8 +109,8 @@ export default function Footer() {
         <div className="mt-0 pt-6 text-xs text-bianco/50">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <img src="/webflow/images/gdpr.svg" alt="GDPR" width={100} className="inline" />
-              <img src="/webflow/images/ssl.svg" alt="SSL" width={100} className="inline invert brightness-200" />
+              <img src="/webflow/images/gdpr.svg" alt="GDPR" width={64} className="inline" />
+              <img src="/webflow/images/ssl.svg" alt="SSL" width={64} className="inline invert brightness-200" />
             </div>
             <div className="flex items-center gap-3">
               <span>Ottieni un riassunto IA</span>
