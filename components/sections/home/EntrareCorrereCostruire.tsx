@@ -56,7 +56,7 @@ export default function EntrareCorrereCostruire() {
                   {/* Title with number */}
                   <div className="border-b border-nero px-4 md:px-8 py-4 md:py-6 flex items-baseline gap-4">
                     <span className="text-4xl font-bold text-nero/10">{step.num}</span>
-                    <h3 className="text-lg font-bold uppercase">
+                    <h3 className="text-2xl font-bold uppercase">
                       <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                         {step.title}
                       </span>
