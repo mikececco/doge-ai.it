@@ -9,7 +9,7 @@ import { GLOSSARIO } from "@/lib/glossario-data";
 const BASE_URL = "https://doge-ai.it";
 
 type Props = {
-  params: { termine: string };
+  params: Promise<{ termine: string }>;
 };
 
 export function generateStaticParams() {
@@ -17,7 +17,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const term = GLOSSARIO.find((t) => t.slug === params.termine);
+  const { termine } = await params;
+  const term = GLOSSARIO.find((t) => t.slug === termine);
   if (!term) return {};
 
   const canonicalUrl = `${BASE_URL}/glossario/${term.slug}`;
@@ -59,8 +60,9 @@ function getSameCategory(term: (typeof GLOSSARIO)[0]) {
   ).slice(0, 6);
 }
 
-export default function GlossarioTermPage({ params }: Props) {
-  const term = GLOSSARIO.find((t) => t.slug === params.termine);
+export default async function GlossarioTermPage({ params }: Props) {
+  const { termine } = await params;
+  const term = GLOSSARIO.find((t) => t.slug === termine);
   if (!term) notFound();
 
   const related = getRelated(term.relatedTerms);

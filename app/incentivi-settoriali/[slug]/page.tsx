@@ -10,7 +10,7 @@ import { INCENTIVI_SETTORIALI } from "@/lib/incentivi-settoriali-data";
 const BASE_URL = "https://doge-ai.it";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
@@ -18,10 +18,11 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const item = INCENTIVI_SETTORIALI.find((is) => is.slug === params.slug);
+  const { slug } = await params;
+  const item = INCENTIVI_SETTORIALI.find((is) => is.slug === slug);
   if (!item) return {};
 
-  const canonicalUrl = `${BASE_URL}/incentivi-settoriali/${params.slug}`;
+  const canonicalUrl = `${BASE_URL}/incentivi-settoriali/${slug}`;
   const title = `${item.title} | Bandi e Agevolazioni - DOGE di Venezia`;
   const description = item.description.slice(0, 155) + "...";
 
@@ -71,8 +72,9 @@ const COME_TI_AIUTIAMO = [
   },
 ];
 
-export default function IncentivoSettorialePage({ params }: Props) {
-  const item = INCENTIVI_SETTORIALI.find((is) => is.slug === params.slug);
+export default async function IncentivoSettorialePage({ params }: Props) {
+  const { slug } = await params;
+  const item = INCENTIVI_SETTORIALI.find((is) => is.slug === slug);
   if (!item) notFound();
 
   const canonicalUrl = `${BASE_URL}/incentivi-settoriali/${item.slug}`;
@@ -362,7 +364,7 @@ export default function IncentivoSettorialePage({ params }: Props) {
         dark
         title={`Porta l'AI nel ${item.settore} in ${item.regione}`}
         subtitle="Ti guidiamo dall'identificazione del bando giusto all'implementazione del progetto AI. La prima call e gratuita."
-        buttonText="Parla con noi →"
+        buttonText="Parla con noi"
         buttonHref="/contatti"
       />
     </>

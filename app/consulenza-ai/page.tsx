@@ -208,7 +208,7 @@ export default function ConsulenzaAIPage() {
         dark
         title="Pronto a portare l'AI nella tua azienda?"
         subtitle="La prima conversazione è gratuita. Nessun impegno, solo chiarezza."
-        buttonText="Contattaci →"
+        buttonText="Contattaci"
         buttonHref="/contatti"
       />
     </>

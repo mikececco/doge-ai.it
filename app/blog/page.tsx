@@ -56,7 +56,7 @@ export default function BlogPage() {
       <CtaFinale
         title="Vinci la prossima decade."
         subtitle="Parla con noi. Nessun impegno, solo chiarezza."
-        buttonText="Contattaci &rarr;"
+        buttonText="Contattaci"
         buttonHref="/contatti"
       />
     </>

@@ -159,7 +159,7 @@ export default async function BlogPostPage({ params }: Props) {
     <div class="mid-article-cta">
       <p class="mid-cta-title">Vuoi applicare questo nella tua azienda?</p>
       <p class="mid-cta-body">In DOGE di Venezia affianchiamo le PMI italiane in ogni fase della trasformazione AI. La prima conversazione è gratuita.</p>
-      <a href="/contatti" class="mid-cta-btn">Parlaci del tuo progetto →</a>
+      <a href="/contatti" class="mid-cta-btn">Parlaci del tuo progetto</a>
     </div>
   `;
 
@@ -320,7 +320,7 @@ export default async function BlogPostPage({ params }: Props) {
         dark
         title="Pronto a trasformare la tua azienda?"
         subtitle="Parla con noi. La prima conversazione è gratuita."
-        buttonText="Contattaci →"
+        buttonText="Contattaci"
         buttonHref="/contatti"
       />
     </>

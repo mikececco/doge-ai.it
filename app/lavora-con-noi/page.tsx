@@ -120,7 +120,7 @@ export default function LavoraConNoi() {
       <CtaFinale
         title="Non trovi la posizione giusta?"
         subtitle="Mandaci una candidatura spontanea. Cerchiamo sempre persone di talento."
-        buttonText="Contattaci →"
+        buttonText="Contattaci"
         buttonHref="/contatti"
       />
     </>

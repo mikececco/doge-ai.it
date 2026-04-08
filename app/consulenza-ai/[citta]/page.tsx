@@ -15,7 +15,7 @@ import RisorseCorrelate from "@/components/sections/RisorseCorrelate";
 const BASE_URL = "https://doge-ai.it";
 
 type Props = {
-  params: { citta: string };
+  params: Promise<{ citta: string }>;
 };
 
 export function generateStaticParams() {
@@ -23,7 +23,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const city = CITIES.find((c) => c.slug === params.citta);
+  const { citta } = await params;
+  const city = CITIES.find((c) => c.slug === citta);
   if (!city) return {};
 
   const canonicalUrl = `${BASE_URL}/consulenza-ai/${city.slug}`;
@@ -100,8 +101,9 @@ const DIFFERENTIATORS = [
   },
 ];
 
-export default function ConsulenzaAICittaPage({ params }: Props) {
-  const city = CITIES.find((c) => c.slug === params.citta);
+export default async function ConsulenzaAICittaPage({ params }: Props) {
+  const { citta } = await params;
+  const city = CITIES.find((c) => c.slug === citta);
   if (!city) notFound();
 
   const canonicalUrl = `${BASE_URL}/consulenza-ai/${city.slug}`;
@@ -302,7 +304,7 @@ export default function ConsulenzaAICittaPage({ params }: Props) {
         dark
         title={`Porta l'AI nella tua azienda a ${city.name}`}
         subtitle="La prima conversazione è gratuita. Nessun impegno, solo chiarezza su cosa l'AI può fare per te."
-        buttonText="Parla con noi →"
+        buttonText="Parla con noi"
         buttonHref="/contatti"
       />
     </>

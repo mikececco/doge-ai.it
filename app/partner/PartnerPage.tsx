@@ -31,13 +31,13 @@ const VALUE_PROPS = [
     icon: Layers,
     title: "Casi d'uso pronti all'uso",
     description:
-      "Automazione documentale, assistenti AI, qualificazione lead, reportistica — già sviluppati e collaudati. Prototipale per i tuoi clienti.",
+      "Automazione documentale, assistenti AI, qualificazione lead, reportistica - già sviluppati e collaudati. Prototipale per i tuoi clienti.",
   },
   {
     icon: Users,
     title: "White-label se preferisci",
     description:
-      "Lavoriamo dietro le quinte quando serve. Il tuo brand, la tua relazione — noi consegniamo il lavoro.",
+      "Lavoriamo dietro le quinte quando serve. Il tuo brand, la tua relazione - noi consegniamo il lavoro.",
   },
   {
     icon: DollarSign,
@@ -74,17 +74,19 @@ export default function PartnerPage() {
     <>
       {/* ── Section 1: Hero (Yellow + Venice skyline) ───── */}
       <section data-navbar-theme="giallo" className="relative bg-giallo text-nero min-h-screen flex flex-col justify-center overflow-hidden">
-        <div className="container-site relative z-10 text-center pt-24 pb-20 md:pb-24">
+        <div className="container-site relative z-10 text-left pt-24 pb-20 md:pb-24">
           <FadeInOnScroll>
-            <span className="text-label uppercase text-nero/60 tracking-widest">Programma Partner</span>
-            <h1 className="text-section uppercase mt-4 max-w-[900px] mx-auto">
+            <span className="text-label uppercase text-nero tracking-widest">Programma Partner</span>
+            <h1 className="text-hero uppercase mt-4">
               Porta l&rsquo;AI ai tuoi clienti<br />
               senza costruirla da zero.
             </h1>
-            <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
+          </FadeInOnScroll>
+          <FadeInOnScroll>
+            <p className="text-xl md:text-2xl font-medium text-nero/80 mt-8 max-w-[680px] leading-relaxed">
               Stiamo ampliando la nostra rete di partner. Se lavori con aziende
               che potrebbero beneficiare dell&rsquo;intelligenza artificiale, ti
-              diamo gli strumenti per offrire quel valore — e guadagnare su ogni
+              diamo gli strumenti per offrire quel valore - e guadagnare su ogni
               progetto.
             </p>
             <div className="mt-8">
@@ -96,7 +98,7 @@ export default function PartnerPage() {
         </div>
       </section>
 
-      {/* ── Section 2: L'opportunità — 3 cards ─────────── */}
+      {/* ── Section 2: L'opportunità - 3 cards ─────────── */}
       <SectionWrapper bg="white">
         <FadeInOnScroll>
           <div className="text-center mb-14">
@@ -111,7 +113,7 @@ export default function PartnerPage() {
               crescita sul mercato, ma la maggior parte delle agenzie e delle
               societ&agrave; di consulenza non ha ancora le competenze
               specializzate per erogarla con sicurezza. Noi gestiamo la parte
-              tecnica — tu porti la relazione con il cliente. Insieme chiudiamo
+              tecnica - tu porti la relazione con il cliente. Insieme chiudiamo
               pi&ugrave; contratti e cresciamo entrambi.
             </p>
           </div>
@@ -144,7 +146,7 @@ export default function PartnerPage() {
         </FadeInOnScroll>
       </SectionWrapper>
 
-      {/* ── Section 3: Perché collaborare — 2x2 grid ───── */}
+      {/* ── Section 3: Perché collaborare - 2x2 grid ───── */}
       <SectionWrapper bg="white">
         <FadeInOnScroll>
           <div className="text-center mb-14">
@@ -188,7 +190,7 @@ export default function PartnerPage() {
         </FadeInOnScroll>
       </SectionWrapper>
 
-      {/* ── Section 4: Come funziona — Timeline ────────── */}
+      {/* ── Section 4: Come funziona - Timeline ────────── */}
       <SectionWrapper bg="white">
         <FadeInOnScroll>
           <div className="text-center mb-14">
@@ -247,7 +249,7 @@ export default function PartnerPage() {
       <CtaFinale
         title="Ti interessa? Parliamone."
         subtitle="Bastano 30 minuti per capire se ha senso lavorare insieme."
-        buttonText="Contattaci →"
+        buttonText="Contattaci"
         buttonHref="/contatti"
         dark
       />

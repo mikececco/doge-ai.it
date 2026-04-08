@@ -13,7 +13,7 @@ import { getStrategicLinksForCasoDuso } from "@/lib/internal-links";
 const BASE_URL = "https://doge-ai.it";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 /* ─── Static params for all 65 use cases ─── */
@@ -25,7 +25,8 @@ export function generateStaticParams() {
 /* ─── Dynamic metadata ─── */
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const caso = CASI_DUSO.find((c) => c.id === params.slug);
+  const { slug } = await params;
+  const caso = CASI_DUSO.find((c) => c.id === slug);
   if (!caso) return {};
 
   const canonicalUrl = `${BASE_URL}/casi-duso/${caso.id}`;
@@ -103,8 +104,9 @@ function getRelated(caso: CasoDuso): CasoDuso[] {
 
 /* ─── Page Component ─── */
 
-export default function CasoDusoSlugPage({ params }: Props) {
-  const caso = CASI_DUSO.find((c) => c.id === params.slug);
+export default async function CasoDusoSlugPage({ params }: Props) {
+  const { slug } = await params;
+  const caso = CASI_DUSO.find((c) => c.id === slug);
   if (!caso) notFound();
 
   const benefits = getBenefits(caso);
@@ -332,7 +334,7 @@ export default function CasoDusoSlugPage({ params }: Props) {
         dark
         title="Pronto a implementarlo?"
         subtitle="Analizziamo insieme come questo caso d'uso puo trasformare la tua azienda. La prima call e gratuita."
-        buttonText="Parla con noi →"
+        buttonText="Parla con noi"
         buttonHref="/contatti"
       />
     </>

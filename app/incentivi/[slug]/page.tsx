@@ -12,7 +12,7 @@ import { getStrategicLinksForIncentivo } from "@/lib/internal-links";
 const BASE_URL = "https://doge-ai.it";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
@@ -32,10 +32,11 @@ function findBySlug(slug: string) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const result = findBySlug(params.slug);
+  const { slug } = await params;
+  const result = findBySlug(slug);
   if (!result) return {};
 
-  const canonicalUrl = `${BASE_URL}/incentivi/${params.slug}`;
+  const canonicalUrl = `${BASE_URL}/incentivi/${slug}`;
 
   if (result.type === "nazionale") {
     const incentivo = result.data as Incentivo;
@@ -115,8 +116,9 @@ const COME_TI_AIUTIAMO = [
   },
 ];
 
-export default function IncentivoSlugPage({ params }: Props) {
-  const result = findBySlug(params.slug);
+export default async function IncentivoSlugPage({ params }: Props) {
+  const { slug } = await params;
+  const result = findBySlug(slug);
   if (!result) notFound();
 
   if (result.type === "nazionale") {
@@ -271,7 +273,7 @@ function NazionalePage({ incentivo }: { incentivo: Incentivo }) {
         dark
         title="Vuoi sfruttare questo incentivo?"
         subtitle="Analizziamo gratuitamente se la tua impresa ha i requisiti e come massimizzare il beneficio."
-        buttonText="Parla con noi →"
+        buttonText="Parla con noi"
         buttonHref="/contatti"
       />
     </>
@@ -410,7 +412,7 @@ function RegionalePage({
         dark
         title={`Porta l'AI nella tua impresa in ${regione.name}`}
         subtitle="Ti guidiamo dall'identificazione del bando giusto all'implementazione del progetto AI. La prima call è gratuita."
-        buttonText="Parla con noi →"
+        buttonText="Parla con noi"
         buttonHref="/contatti"
       />
     </>

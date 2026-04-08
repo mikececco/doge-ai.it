@@ -11,7 +11,7 @@ import { SETTORI_WITH_SLUGS, getSettoreBySlug } from "@/lib/settore-slugs";
 const BASE_URL = "https://doge-ai.it";
 
 type Props = {
-  params: { citta: string; settore: string };
+  params: Promise<{ citta: string; settore: string }>;
 };
 
 /* ------------------------------------------------------------------ */
@@ -31,8 +31,9 @@ export function generateStaticParams() {
 /*  Metadata                                                           */
 /* ------------------------------------------------------------------ */
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const city = CITIES.find((c) => c.slug === params.citta);
-  const settore = getSettoreBySlug(params.settore);
+  const { citta, settore: settoreSlug } = await params;
+  const city = CITIES.find((c) => c.slug === citta);
+  const settore = getSettoreBySlug(settoreSlug);
   if (!city || !settore) return {};
 
   const canonicalUrl = `${BASE_URL}/consulenza-ai/${city.slug}/${settore.slug}`;
@@ -58,9 +59,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /* ------------------------------------------------------------------ */
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
-export default function ConsulenzaAISettoreCittaPage({ params }: Props) {
-  const city = CITIES.find((c) => c.slug === params.citta);
-  const settore = getSettoreBySlug(params.settore);
+export default async function ConsulenzaAISettoreCittaPage({ params }: Props) {
+  const { citta, settore: settoreSlug } = await params;
+  const city = CITIES.find((c) => c.slug === citta);
+  const settore = getSettoreBySlug(settoreSlug);
   if (!city || !settore) notFound();
 
   const canonicalUrl = `${BASE_URL}/consulenza-ai/${city.slug}/${settore.slug}`;
@@ -118,7 +120,7 @@ export default function ConsulenzaAISettoreCittaPage({ params }: Props) {
           <FadeInOnScroll>
             <div className="mt-10">
               <Button variant="primary" size="md" href="/contatti">
-                Parla con noi &rarr;
+                Parla con noi
               </Button>
             </div>
           </FadeInOnScroll>
@@ -240,7 +242,7 @@ export default function ConsulenzaAISettoreCittaPage({ params }: Props) {
         dark
         title={`AI per ${settore.title} a ${city.name}`}
         subtitle="La prima conversazione è gratuita. Nessun impegno, solo chiarezza su cosa l'AI può fare per te."
-        buttonText="Parla con noi →"
+        buttonText="Parla con noi"
         buttonHref="/contatti"
       />
     </>

@@ -413,7 +413,7 @@ export default function MetodoPage() {
         dark
         title="Questo &egrave; il processo che seguiamo."
         subtitle="Se ti riconosci in qualcuna di queste sfide, la prima conversazione &egrave; gratuita."
-        buttonText="Parla con noi &rarr;"
+        buttonText="Parla con noi"
         buttonHref="/contatti"
       />
 

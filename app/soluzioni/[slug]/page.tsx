@@ -15,7 +15,7 @@ import RisorseCorrelate from "@/components/sections/RisorseCorrelate";
 const BASE_URL = "https://doge-ai.it";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
@@ -23,7 +23,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const page = SOLUZIONI_PAGES.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const page = SOLUZIONI_PAGES.find((p) => p.slug === slug);
   if (!page) return {};
 
   const canonicalUrl = `${BASE_URL}/soluzioni/${page.slug}`;
@@ -49,8 +50,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function SoluzioneSlugPage({ params }: Props) {
-  const page = SOLUZIONI_PAGES.find((p) => p.slug === params.slug);
+export default async function SoluzioneSlugPage({ params }: Props) {
+  const { slug } = await params;
+  const page = SOLUZIONI_PAGES.find((p) => p.slug === slug);
   if (!page) notFound();
 
   const canonicalUrl = `${BASE_URL}/soluzioni/${page.slug}`;
@@ -222,7 +224,7 @@ export default function SoluzioneSlugPage({ params }: Props) {
         dark
         title="Pronto a portare l'AI nella tua azienda?"
         subtitle="La prima conversazione è gratuita. Nessun impegno, solo chiarezza."
-        buttonText="Parla con noi →"
+        buttonText="Parla con noi"
         buttonHref="/contatti"
       />
     </>

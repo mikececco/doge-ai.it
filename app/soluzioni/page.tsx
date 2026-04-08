@@ -153,7 +153,7 @@ export default function SoluzioniPage() {
         dark
         title="Non sai da dove iniziare?"
         subtitle="La prima call è gratuita. Ti diciamo noi dove l'AI vale di più per la tua azienda."
-        buttonText="Prenota una call →"
+        buttonText="Prenota una call"
         buttonHref="/contatti"
       />
     </>

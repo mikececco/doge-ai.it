@@ -42,7 +42,7 @@ const CROSS_INDUSTRY_CASES = CASI_DUSO.filter((c) =>
 );
 
 type Props = {
-  params: { citta: string; caso: string };
+  params: Promise<{ citta: string; caso: string }>;
 };
 
 /* ------------------------------------------------------------------ */
@@ -64,8 +64,9 @@ export function generateStaticParams() {
 /*  Metadata                                                           */
 /* ------------------------------------------------------------------ */
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const city = CITIES.find((c) => c.slug === params.citta);
-  const caso = CROSS_INDUSTRY_CASES.find((c) => c.id === params.caso);
+  const { citta, caso: casoSlug } = await params;
+  const city = CITIES.find((c) => c.slug === citta);
+  const caso = CROSS_INDUSTRY_CASES.find((c) => c.id === casoSlug);
   if (!city || !caso) return {};
 
   const canonicalUrl = `${BASE_URL}/ai/${city.slug}/${caso.id}`;
@@ -92,9 +93,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /* ------------------------------------------------------------------ */
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
-export default function AICasoCittaPage({ params }: Props) {
-  const city = CITIES.find((c) => c.slug === params.citta);
-  const caso = CROSS_INDUSTRY_CASES.find((c) => c.id === params.caso);
+export default async function AICasoCittaPage({ params }: Props) {
+  const { citta, caso: casoSlug } = await params;
+  const city = CITIES.find((c) => c.slug === citta);
+  const caso = CROSS_INDUSTRY_CASES.find((c) => c.id === casoSlug);
   if (!city || !caso) notFound();
 
   const canonicalUrl = `${BASE_URL}/ai/${city.slug}/${caso.id}`;
@@ -149,7 +151,7 @@ export default function AICasoCittaPage({ params }: Props) {
           <FadeInOnScroll>
             <div className="mt-10">
               <Button variant="primary" size="md" href="/contatti">
-                Parla con noi &rarr;
+                Parla con noi
               </Button>
             </div>
           </FadeInOnScroll>
@@ -243,7 +245,7 @@ export default function AICasoCittaPage({ params }: Props) {
         dark
         title={`${titleText} per la tua azienda a ${city.name}`}
         subtitle="La prima conversazione è gratuita. Nessun impegno, solo chiarezza su cosa l'AI può fare per te."
-        buttonText="Parla con noi →"
+        buttonText="Parla con noi"
         buttonHref="/contatti"
       />
     </>

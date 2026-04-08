@@ -11,7 +11,7 @@ import Button from "@/components/ui/Button";
 const BASE_URL = "https://doge-ai.it";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
@@ -19,7 +19,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const confronto = CONFRONTI.find((c) => c.slug === params.slug);
+  const { slug } = await params;
+  const confronto = CONFRONTI.find((c) => c.slug === slug);
   if (!confronto) return {};
 
   const canonicalUrl = `${BASE_URL}/confronto/${confronto.slug}`;
@@ -57,8 +58,9 @@ function getRelated(confronto: (typeof CONFRONTI)[0]) {
   ).slice(0, 4);
 }
 
-export default function ConfrontoSlugPage({ params }: Props) {
-  const confronto = CONFRONTI.find((c) => c.slug === params.slug);
+export default async function ConfrontoSlugPage({ params }: Props) {
+  const { slug } = await params;
+  const confronto = CONFRONTI.find((c) => c.slug === slug);
   if (!confronto) notFound();
 
   const related = getRelated(confronto);

@@ -201,7 +201,7 @@ export default function CasiStudioPage() {
         dark
         title="Il prossimo caso studio potrebbe essere il tuo."
         subtitle="Analizziamo gratuitamente i tuoi processi e identifichiamo dove l'AI puo generare il massimo impatto."
-        buttonText="Parla con noi →"
+        buttonText="Parla con noi"
         buttonHref="/contatti"
       />
     </>

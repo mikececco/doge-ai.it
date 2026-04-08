@@ -10,7 +10,7 @@ import { CASI_STUDIO } from "@/lib/casi-studio-data";
 const BASE_URL = "https://doge-ai.it";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
@@ -18,10 +18,11 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const cs = CASI_STUDIO.find((c) => c.slug === params.slug);
+  const { slug } = await params;
+  const cs = CASI_STUDIO.find((c) => c.slug === slug);
   if (!cs) return {};
 
-  const canonicalUrl = `${BASE_URL}/casi-studio/${params.slug}`;
+  const canonicalUrl = `${BASE_URL}/casi-studio/${slug}`;
   const topResult = cs.results[0];
   const title = `${cs.title} | Caso Studio AI - DOGE di Venezia`;
   const description = `${cs.company}. Risultato chiave: ${topResult.metric} ${topResult.value}. Scopri sfida, soluzione AI, risultati e investimento.`;
@@ -49,8 +50,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function CasoStudioPage({ params }: Props) {
-  const cs = CASI_STUDIO.find((c) => c.slug === params.slug);
+export default async function CasoStudioPage({ params }: Props) {
+  const { slug } = await params;
+  const cs = CASI_STUDIO.find((c) => c.slug === slug);
   if (!cs) notFound();
 
   const canonicalUrl = `${BASE_URL}/casi-studio/${cs.slug}`;
@@ -313,7 +315,7 @@ export default function CasoStudioPage({ params }: Props) {
         dark
         title="Vuoi risultati simili nella tua azienda?"
         subtitle="Analizziamo gratuitamente i tuoi processi e ti mostriamo dove l'AI puo generare il massimo impatto."
-        buttonText="Parla con noi →"
+        buttonText="Parla con noi"
         buttonHref="/contatti"
       />
     </>

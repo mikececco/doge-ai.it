@@ -10,7 +10,7 @@ import Button from "@/components/ui/Button";
 const BASE_URL = "https://doge-ai.it";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
@@ -18,7 +18,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const guida = GUIDE.find((g) => g.slug === params.slug);
+  const { slug } = await params;
+  const guida = GUIDE.find((g) => g.slug === slug);
   if (!guida) return {};
 
   const canonicalUrl = `${BASE_URL}/guida/${guida.slug}`;
@@ -75,8 +76,9 @@ function getRelated(guida: (typeof GUIDE)[0]) {
   return [...sameSector, ...others].slice(0, 3);
 }
 
-export default function GuidaSlugPage({ params }: Props) {
-  const guida = GUIDE.find((g) => g.slug === params.slug);
+export default async function GuidaSlugPage({ params }: Props) {
+  const { slug } = await params;
+  const guida = GUIDE.find((g) => g.slug === slug);
   if (!guida) notFound();
 
   const related = getRelated(guida);
