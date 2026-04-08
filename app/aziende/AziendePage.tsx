@@ -17,7 +17,7 @@ export default function AziendePage() {
         <div className="container-site relative z-10 text-center pt-24 pb-20 md:pb-24">
         <FadeInOnScroll>
           <span className="text-label uppercase text-nero tracking-widest">Per le Aziende</span>
-          <h1 className="text-section uppercase mt-4 max-w-[900px] mx-auto">
+          <h1 className="text-hero uppercase mt-4 mx-auto">
             Se potessi avere il triplo dei dipendenti senza aumentare il costo del personale, cosa faresti?
           </h1>
           <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">

@@ -23,21 +23,6 @@ export const metadata: Metadata = {
   },
 };
 
-const BUILDERS = [
-  "Product Manager",
-  "Data Scientists",
-  "AI Engineers",
-  "Full Stack Developers",
-  "Technical Project Managers",
-  "QA/UX Designers",
-];
-
-const HUSTLERS = [
-  "AI Implementation Strategists",
-  "Business Development Representatives",
-  "Founder's Associates",
-  "Growth Associates",
-];
 
 export default function ChiSiamoPage() {
   return (
@@ -49,30 +34,34 @@ export default function ChiSiamoPage() {
             <span className="text-label uppercase text-nero tracking-widest">
               Manifesto
             </span>
-            <h1 className="text-section uppercase mt-4 max-w-[900px]">
+            <h1 className="text-hero uppercase mt-4">
               Perch&eacute; abbiamo scelto &lsquo;Il Doge di Venezia&rsquo;?
             </h1>
           </FadeInOnScroll>
 
           <FadeInOnScroll>
-            <div className="text-body text-nero/80 mt-8 max-w-[680px] space-y-6">
+            <div className="text-xl md:text-2xl font-medium text-nero/80 mt-8 space-y-6 leading-relaxed">
               <p>
                 Venezia ha costruito l&rsquo;impero commerciale pi&ugrave;
                 grande del mondo non con eserciti, ma con{" "}
                 <strong className="text-nero">intelligenza</strong>. Rotte
-                ottimizzate, <strong className="text-nero">alleanze strategiche</strong>,{" "}
-                <strong className="text-nero">dati commerciali</strong> quando il
-                resto del mondo ragionava ancora con le spade. Al centro di
-                tutto, il Doge: un{" "}
-                <strong className="text-nero">leader pragmatico</strong> al servizio della
-                prosperit&agrave; della Repubblica.
+                ottimizzate,{" "}
+                <strong className="text-nero">alleanze strategiche</strong>,{" "}
+                <strong className="text-nero">dati commerciali</strong>{" "}
+                quando il resto del mondo ragionava ancora con le spade. Al
+                centro di tutto, il Doge: un{" "}
+                <strong className="text-nero">leader pragmatico</strong>{" "}
+                al servizio della prosperit&agrave; della Repubblica.
               </p>
               <p className="italic">
                 Quella mentalit&agrave; non &egrave; andata da nessuna parte.
-                Vive nel <strong className="text-nero">tessuto industriale italiano</strong>,
-                nei <strong className="text-nero">prodotti unici</strong>, nel{" "}
-                <strong className="text-nero">saper fare</strong> che non ha eguali al mondo.
-                La nostra missione &egrave; portare quella stessa{" "}
+                Vive nel{" "}
+                <strong className="text-nero">tessuto industriale italiano</strong>,{" "}
+                nei{" "}
+                <strong className="text-nero">prodotti unici</strong>, nel{" "}
+                <strong className="text-nero">saper fare</strong>{" "}
+                che non ha eguali al mondo. La nostra missione &egrave;
+                portare quella stessa{" "}
                 <strong className="text-nero">intelligenza operativa</strong>{" "}
                 nell&rsquo;era dell&rsquo;AI, prima che questa trasformazione
                 arrivi senza di noi.
@@ -122,63 +111,14 @@ export default function ChiSiamoPage() {
       {/* Section 3 - Lavora con Noi */}
       <SectionWrapper bg="white">
         <FadeInOnScroll>
-          <h2 className="text-section uppercase mb-12 text-center">Lavora con noi</h2>
-        </FadeInOnScroll>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 lg:gap-16">
-          {/* Builders */}
-          <FadeInOnScroll>
-            <div className="border border-nero p-6 md:p-8">
-              <h3 className="text-2xl font-bold uppercase tracking-wide">
-                Builders
-              </h3>
-              <ul className="mt-6 space-y-3">
-                {BUILDERS.map((role) => (
-                  <li
-                    key={role}
-                    className="text-lg text-grigio-scuro flex items-start gap-3 cursor-default hover:underline hover:-translate-y-[3px] transition-transform duration-200"
-                  >
-                    <span className="text-giallo mt-0.5 font-bold">&rarr;</span>
-                    {role}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </FadeInOnScroll>
-
-          {/* Hustlers */}
-          <FadeInOnScroll>
-            <div className="border border-nero p-6 md:p-8">
-              <h3 className="text-2xl font-bold uppercase tracking-wide">
-                Hustlers
-              </h3>
-              <ul className="mt-6 space-y-3">
-                {HUSTLERS.map((role) => (
-                  <li
-                    key={role}
-                    className="text-lg text-grigio-scuro flex items-start gap-3 cursor-default hover:underline hover:-translate-y-[3px] transition-transform duration-200"
-                  >
-                    <span className="text-giallo mt-0.5 font-bold">&rarr;</span>
-                    {role}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </FadeInOnScroll>
-        </div>
-
-        {/* Candidatura spontanea */}
-        <FadeInOnScroll>
-          <div className="mt-12 text-center border-t border-nero pt-10">
-            <p className="text-body text-nero max-w-[600px] mx-auto">
-              Non trovi la posizione giusta ma pensi di poter contribuire?
-              Mandaci una candidatura spontanea.
+          <div className="text-center">
+            <h2 className="text-section uppercase mb-6">Lavora con noi</h2>
+            <p className="text-body text-nero/70 max-w-[600px] mx-auto mb-8">
+              Cerchiamo builders e hustlers per costruire il futuro dell&apos;AI in Italia.
             </p>
-            <div className="mt-6">
-              <Button href="mailto:dogedivenezia.ai@gmail.com" arrow>
-                Candidati
-              </Button>
-            </div>
+            <Button variant="dark" href="https://substantial-reply-7e2.notion.site/Lavora-con-noi-3349baac747380e880d2f1ab8121427c" arrow>
+              Vedi le posizioni aperte
+            </Button>
           </div>
         </FadeInOnScroll>
       </SectionWrapper>

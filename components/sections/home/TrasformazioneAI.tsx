@@ -21,9 +21,9 @@ export default function TrasformazioneAI() {
 
       {/* Two-column grid with borders */}
       <FadeInOnScroll>
-        <div className="border border-nero grid grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* LEFT - Per le Aziende */}
-          <div className="md:border-r border-nero flex flex-col">
+          <div className="border border-nero flex flex-col">
             {/* Title */}
             <div className="border-b border-nero px-4 md:px-8 py-4 md:py-6">
               <h3 className="text-2xl font-bold uppercase">
@@ -56,7 +56,7 @@ export default function TrasformazioneAI() {
           </div>
 
           {/* RIGHT - Per i Fondi */}
-          <div className="border-t md:border-t-0 border-nero flex flex-col">
+          <div className="border border-nero flex flex-col">
             {/* Title */}
             <div className="border-b border-nero px-4 md:px-8 py-4 md:py-6">
               <h3 className="text-2xl font-bold uppercase">

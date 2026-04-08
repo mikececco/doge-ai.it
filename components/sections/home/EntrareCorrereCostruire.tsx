@@ -23,7 +23,7 @@ const steps = [
 
 export default function EntrareCorrereCostruire() {
   return (
-    <section className="bg-bianco text-nero" id="metodo" data-navbar-theme="light">
+    <section className="bg-bianco text-nero pb-16 md:pb-24" id="metodo" data-navbar-theme="light">
       {/* Header */}
       <div className="container-site pt-16 md:pt-24 pb-12">
         <FadeInOnScroll>
@@ -46,12 +46,12 @@ export default function EntrareCorrereCostruire() {
       {/* 3-column grid with black borders */}
       <FadeInOnScroll>
         <div className="container-site">
-          <div className="border-t border-b border-nero">
-            <div className="grid grid-cols-1 md:grid-cols-3">
+          <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {steps.map((step, i) => (
                 <div
                   key={i}
-                  className={`flex flex-col ${i < steps.length - 1 ? "md:border-r border-nero" : ""} border-b md:border-b-0 border-nero last:border-b-0`}
+                  className="flex flex-col border border-nero"
                 >
                   {/* Title with number */}
                   <div className="border-b border-nero px-4 md:px-8 py-4 md:py-6 flex items-baseline gap-4">

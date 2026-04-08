@@ -18,19 +18,34 @@ const SETTORI_LIST = [
   { idx: 3, num: "10", title: "Turismo & Ospitalit\u00e0", slug: "ai-turismo-ospitalita" },
 ];
 
-export default function DoveOperiamo() {
+const COPY = {
+  aziende: {
+    label: "Dove operiamo",
+    heading: "Il tuo settore ha un problema. Noi lo conosciamo gi\u00E0.",
+    subtitle: "Non esistono soluzioni generiche. Ogni settore ha i suoi colli di bottiglia.",
+  },
+  fondi: {
+    label: "Settori del Portfolio",
+    heading: "I settori dove generiamo valore per i fondi.",
+    subtitle: "Due diligence AI, quick wins nei primi 100 giorni, e trasformazione strutturale su ogni verticale del portfolio.",
+  },
+} as const;
+
+export default function DoveOperiamo({ variant = "aziende" }: { variant?: "aziende" | "fondi" }) {
+  const copy = COPY[variant];
+
   return (
     <SectionWrapper bg="dark" className="min-h-screen flex flex-col justify-center">
       <FadeInOnScroll>
         <div className="text-center mb-14">
           <span className="text-label uppercase text-grigio-medio tracking-widest">
-            Dove operiamo
+            {copy.label}
           </span>
           <h2 className="text-section uppercase mt-4">
-            Il tuo settore ha un problema. Noi lo conosciamo gi&agrave;.
+            {copy.heading}
           </h2>
           <p className="text-body text-bianco/70 mt-6 max-w-[600px] mx-auto">
-            Non esistono soluzioni generiche. Ogni settore ha i suoi colli di bottiglia.
+            {copy.subtitle}
           </p>
         </div>
       </FadeInOnScroll>

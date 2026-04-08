@@ -41,7 +41,7 @@ export default function INumeri() {
     <section className="bg-giallo text-nero" id="i-numeri">
       {/* Metrics grid with black border cells */}
       <FadeInOnScroll>
-        <div className="grid grid-cols-2 md:grid-cols-5 border-b border-nero">
+        <div className="grid grid-cols-2 md:grid-cols-5 border border-nero">
           {metrics.map((metric, i) => (
             <div
               key={i}

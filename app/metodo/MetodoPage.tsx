@@ -107,7 +107,7 @@ export default function MetodoPage() {
             <span className="text-label uppercase text-nero/60 tracking-widest">
               Il Codice del Doge
             </span>
-            <h1 className="text-section uppercase mt-4 max-w-[900px] mx-auto">
+            <h1 className="text-hero uppercase mt-4">
               Il nostro processo, aperto. Completamente.
             </h1>
             <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
@@ -183,14 +183,14 @@ export default function MetodoPage() {
             </div>
 
             {/* Bottom bar - callout */}
-            <div className="border-t border-nero px-4 py-6 md:px-8 md:py-8 text-center">
-              <p className="text-body font-bold text-nero max-w-[700px] mx-auto">
-                Regola pratica: se in azienda c&apos;&egrave; qualcuno che ha
-                gi&agrave; provato l&apos;AI senza risultati, quella persona
-                deve essere tra le prime a vedere un quick win funzionante.
-                Convertire uno scettico vale dieci evangelisti.
-              </p>
-            </div>
+          </div>
+          <div className="px-4 py-6 md:px-8 md:py-8 text-center">
+            <p className="text-body font-bold text-nero max-w-[700px] mx-auto">
+              Regola pratica: se in azienda c&apos;&egrave; qualcuno che ha
+              gi&agrave; provato l&apos;AI senza risultati, quella persona
+              deve essere tra le prime a vedere un quick win funzionante.
+              Convertire uno scettico vale dieci evangelisti.
+            </p>
           </div>
         </FadeInOnScroll>
 

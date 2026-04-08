@@ -40,7 +40,7 @@ export default function FondiPage() {
         <div className="container-site relative z-10 text-center pt-24 pb-20 md:pb-24">
           <FadeInOnScroll>
             <span className="text-label uppercase text-nero tracking-widest">Per i Fondi</span>
-            <h1 className="text-section uppercase mt-4 max-w-[900px] mx-auto">
+            <h1 className="text-hero uppercase mt-4 mx-auto">
               La leva di value creation pi&ugrave; sottovalutata nel vostro portfolio.
             </h1>
             <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
@@ -99,12 +99,12 @@ export default function FondiPage() {
         </FadeInOnScroll>
 
         <FadeInOnScroll>
-          <div className="border border-nero">
-            <div className="grid grid-cols-1 md:grid-cols-3">
+          <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {GAPS.map((gap, i) => (
                 <div
                   key={gap.number}
-                  className={`${i < 2 ? "md:border-r border-nero" : ""} border-b md:border-b-0 border-nero last:border-b-0`}
+                  className="border border-nero"
                 >
                   <div className="border-b border-nero px-4 py-4 md:px-8 md:py-6">
                     <h3 className="text-lg font-bold uppercase">
@@ -122,13 +122,14 @@ export default function FondiPage() {
               ))}
             </div>
 
-            <div className="border-t border-nero px-4 py-6 md:px-8 md:py-8 text-center">
+          </div>
+
+            <div className="px-4 py-6 md:px-8 md:py-8 text-center">
               <p className="text-body font-bold text-nero">
                 Noi colmiamo tutti e tre.<br />
                 End-to-end, dalla due diligence all&rsquo;exit.
               </p>
             </div>
-          </div>
         </FadeInOnScroll>
       </SectionWrapper>
 
@@ -218,7 +219,7 @@ export default function FondiPage() {
       </SectionWrapper>
 
       {/* ── Dove Operiamo (shared component) ──────────────── */}
-      <DoveOperiamo />
+      <DoveOperiamo variant="fondi" />
 
       {/* ── CTA Finale ────────────────────────── */}
       <CtaFinale
