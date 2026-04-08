@@ -1,7 +1,6 @@
 "use client";
 
 import TextReveal from "@/components/animations/TextReveal";
-import Label from "@/components/ui/Label";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "@/components/ui/Button";
@@ -48,19 +47,11 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Content */}
-      <div className="container-site relative z-10 text-center pt-24 pb-40 md:pb-48">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: DURATION.fast, ease: EASE }}
-        >
-          <Label className="text-nero">Trasformazione AI</Label>
-        </motion.div>
-
+      <div className="container-site relative z-10 text-center pt-16 pb-32 md:pb-40">
         <TextReveal
           text={"Mentre tutti ne parlano.\nNoi la implementiamo."}
           as="h1"
-          className="text-hero text-nero mt-6 max-w-[1100px] mx-auto"
+          className="text-hero text-nero max-w-[1100px] mx-auto"
         />
 
         <motion.p
@@ -75,7 +66,7 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 md:gap-16 lg:gap-24 mt-14"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: DURATION.normal, delay: 0.8, ease: EASE }}
@@ -83,13 +74,6 @@ export default function HeroSection() {
           <Button variant="dark" href="/contatti" arrow className="min-w-[220px] justify-center">
             Parla con noi
           </Button>
-          <Image
-            src="/icon/logoB-noBG.png"
-            alt="Doge"
-            width={28}
-            height={28}
-            className="hidden sm:block"
-          />
           <Button variant="outline" href="/metodo" arrow className="min-w-[220px] justify-center">
             Il Codice del Doge
           </Button>

@@ -87,7 +87,7 @@ export default function ConsulenzaAIPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-nero text-bianco pt-40 pb-20">
+      <section data-navbar-theme="dark" className="bg-nero text-bianco pt-40 pb-20">
         <div className="container-site">
           <FadeInOnScroll>
             <Label className="text-giallo">CONSULENZA AI</Label>
@@ -119,7 +119,7 @@ export default function ConsulenzaAIPage() {
       </section>
 
       {/* Cities by Region */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <p className="text-body text-grigio-scuro mb-16 max-w-2xl">
@@ -169,7 +169,7 @@ export default function ConsulenzaAIPage() {
       </section>
 
       {/* Value prop section */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <div className="max-w-3xl">
             <FadeInOnScroll>

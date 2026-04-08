@@ -141,7 +141,7 @@ export default async function CasoStudioPage({ params }: Props) {
       </section>
 
       {/* Key Results Bar */}
-      <section className="bg-giallo py-8">
+      <section data-navbar-theme="giallo" className="bg-giallo py-8">
         <div className="container-site">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {cs.results.slice(0, 5).map((r) => (
@@ -155,7 +155,7 @@ export default async function CasoStudioPage({ params }: Props) {
       </section>
 
       {/* Challenge */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <div className="max-w-3xl">
             <FadeInOnScroll>
@@ -174,7 +174,7 @@ export default async function CasoStudioPage({ params }: Props) {
       </section>
 
       {/* Solution */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site">
           <div className="max-w-3xl">
             <FadeInOnScroll>
@@ -193,7 +193,7 @@ export default async function CasoStudioPage({ params }: Props) {
       </section>
 
       {/* Results Table */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <div className="max-w-3xl">
             <FadeInOnScroll>
@@ -224,7 +224,7 @@ export default async function CasoStudioPage({ params }: Props) {
       </section>
 
       {/* Timeline & Investment */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site">
           <div className="max-w-3xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -255,7 +255,7 @@ export default async function CasoStudioPage({ params }: Props) {
 
       {/* Related Case Studies */}
       {related.length > 0 && (
-        <section className="bg-bianco py-20">
+        <section data-navbar-theme="light" className="bg-bianco py-20">
           <div className="container-site">
             <FadeInOnScroll>
               <Label className="text-grigio-medio">ALTRI CASI STUDIO</Label>

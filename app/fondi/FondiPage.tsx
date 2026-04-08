@@ -144,7 +144,8 @@ export default function FondiPage() {
               Il vostro braccio operativo AI in ogni fase del deal.
             </h2>
             <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
-              Diventiamo parte del vostro processo di value creation, dalla tesi di investimento all&rsquo;exit multiplo.
+              Diventiamo parte del vostro processo di value creation,<br />
+              dalla tesi di investimento all&rsquo;exit multiplo.
             </p>
           </div>
         </FadeInOnScroll>

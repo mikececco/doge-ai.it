@@ -38,10 +38,11 @@ const metrics = [
 
 export default function INumeri() {
   return (
-    <section className="bg-giallo text-nero" id="i-numeri">
+    <section data-navbar-theme="light" className="text-nero" id="i-numeri">
       {/* Metrics grid with black border cells */}
       <FadeInOnScroll>
-        <div className="grid grid-cols-2 md:grid-cols-5 border border-nero">
+        <div className="max-w-site mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-2 md:grid-cols-5 border border-nero bg-giallo">
           {metrics.map((metric, i) => (
             <div
               key={i}
@@ -58,6 +59,7 @@ export default function INumeri() {
               </p>
             </div>
           ))}
+        </div>
         </div>
       </FadeInOnScroll>
     </section>

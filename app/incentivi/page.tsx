@@ -59,7 +59,7 @@ export default function IncentiviPage() {
       </section>
 
       {/* National Incentives */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <Label className="text-grigio-medio">INCENTIVI NAZIONALI</Label>
@@ -101,7 +101,7 @@ export default function IncentiviPage() {
       </section>
 
       {/* Regional Incentives */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <Label className="text-grigio-medio">INCENTIVI REGIONALI</Label>

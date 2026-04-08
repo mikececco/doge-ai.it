@@ -58,7 +58,7 @@ export default function LavoraConNoi() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-40 pb-20 bg-bianco">
+      <section data-navbar-theme="light" className="pt-40 pb-20 bg-bianco">
         <div className="container-site">
           <FadeInOnScroll>
             <Label>Lavora con noi</Label>

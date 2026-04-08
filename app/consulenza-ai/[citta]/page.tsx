@@ -156,7 +156,7 @@ export default async function ConsulenzaAICittaPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="bg-nero text-bianco pt-40 pb-20">
+      <section data-navbar-theme="dark" className="bg-nero text-bianco pt-40 pb-20">
         <div className="container-site">
           <FadeInOnScroll>
             <Label className="text-giallo">CONSULENZA AI</Label>
@@ -183,7 +183,7 @@ export default async function ConsulenzaAICittaPage({ params }: Props) {
       </section>
 
       {/* Local Context */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <div className="max-w-3xl">
             <FadeInOnScroll>
@@ -222,7 +222,7 @@ export default async function ConsulenzaAICittaPage({ params }: Props) {
       </section>
 
       {/* Services */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">
@@ -247,7 +247,7 @@ export default async function ConsulenzaAICittaPage({ params }: Props) {
       </section>
 
       {/* Why DOGE */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">

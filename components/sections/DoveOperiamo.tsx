@@ -21,7 +21,7 @@ const SETTORI_LIST = [
 const COPY = {
   aziende: {
     label: "Dove operiamo",
-    heading: "Il tuo settore ha un problema. Noi lo conosciamo gi\u00E0.",
+    heading: "Il tuo settore ha un problema.\nNoi lo conosciamo già.",
     subtitle: "Non esistono soluzioni generiche. Ogni settore ha i suoi colli di bottiglia.",
   },
   fondi: {
@@ -42,7 +42,9 @@ export default function DoveOperiamo({ variant = "aziende" }: { variant?: "azien
             {copy.label}
           </span>
           <h2 className="text-section uppercase mt-4">
-            {copy.heading}
+            {copy.heading.split("\n").map((line, i) => (
+              <span key={i}>{i > 0 && <br />}{line}</span>
+            ))}
           </h2>
           <p className="text-body text-bianco/70 mt-6 max-w-[600px] mx-auto">
             {copy.subtitle}

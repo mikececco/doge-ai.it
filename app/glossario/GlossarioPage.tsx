@@ -56,7 +56,7 @@ export default function GlossarioPage() {
       </section>
 
       {/* Search + Filters */}
-      <section className="bg-nero py-12">
+      <section data-navbar-theme="dark" className="bg-nero py-12">
         <div className="container-site">
           <FadeInOnScroll>
             <div className="relative mb-6">
@@ -124,7 +124,7 @@ export default function GlossarioPage() {
       </section>
 
       {/* Results */}
-      <section className="bg-bianco text-nero section-padding">
+      <section data-navbar-theme="light" className="bg-bianco text-nero section-padding">
         <div className="container-site">
           <FadeInOnScroll>
             <p className="text-sm text-grigio-scuro mb-8 uppercase tracking-wider font-semibold">

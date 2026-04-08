@@ -188,7 +188,7 @@ function NazionalePage({ incentivo }: { incentivo: Incentivo }) {
       </section>
 
       {/* Details */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <div className="max-w-3xl">
             <FadeInOnScroll>
@@ -243,7 +243,7 @@ function NazionalePage({ incentivo }: { incentivo: Incentivo }) {
       </section>
 
       {/* Come ti aiutiamo */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">Come ti aiutiamo</h2>
@@ -313,7 +313,7 @@ function RegionalePage({
       </section>
 
       {/* Regional Bandi */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <div className="max-w-3xl">
             <FadeInOnScroll>
@@ -340,7 +340,7 @@ function RegionalePage({
       </section>
 
       {/* National Incentives Cross-link */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <Label className="text-grigio-medio">VALIDI IN TUTTA ITALIA</Label>
@@ -382,7 +382,7 @@ function RegionalePage({
       </section>
 
       {/* Come ti aiutiamo */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">Come ti aiutiamo</h2>

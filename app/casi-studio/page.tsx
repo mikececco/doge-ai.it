@@ -93,7 +93,7 @@ export default function CasiStudioPage() {
       </section>
 
       {/* Stats bar */}
-      <section className="bg-giallo py-8">
+      <section data-navbar-theme="giallo" className="bg-giallo py-8">
         <div className="container-site">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
@@ -117,7 +117,7 @@ export default function CasiStudioPage() {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {CASI_STUDIO.map((cs) => (
@@ -164,7 +164,7 @@ export default function CasiStudioPage() {
       </section>
 
       {/* By Sector */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">Per settore</h2>

@@ -101,7 +101,7 @@ export default async function ConsulenzaAISettoreCittaPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="bg-nero text-bianco pt-40 pb-20">
+      <section data-navbar-theme="dark" className="bg-nero text-bianco pt-40 pb-20">
         <div className="container-site">
           <FadeInOnScroll>
             <Label className="text-giallo">CONSULENZA AI &middot; {settore.title.toUpperCase()}</Label>
@@ -128,7 +128,7 @@ export default async function ConsulenzaAISettoreCittaPage({ params }: Props) {
       </section>
 
       {/* Sector Use Cases */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-4">
@@ -161,7 +161,7 @@ export default async function ConsulenzaAISettoreCittaPage({ params }: Props) {
       </section>
 
       {/* Local Context */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site max-w-3xl">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-6">
@@ -191,7 +191,7 @@ export default async function ConsulenzaAISettoreCittaPage({ params }: Props) {
       </section>
 
       {/* Internal Links */}
-      <section className="bg-bianco py-16">
+      <section data-navbar-theme="light" className="bg-bianco py-16">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-8">Esplora</h2>

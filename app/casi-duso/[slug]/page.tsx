@@ -170,7 +170,7 @@ export default async function CasoDusoSlugPage({ params }: Props) {
       </section>
 
       {/* ── Come Funziona ─────────────────────────────────── */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">Come funziona</h2>
@@ -201,7 +201,7 @@ export default async function CasoDusoSlugPage({ params }: Props) {
       </section>
 
       {/* ── Perche Implementarlo ──────────────────────────── */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">
@@ -229,7 +229,7 @@ export default async function CasoDusoSlugPage({ params }: Props) {
       </section>
 
       {/* ── Per Chi ───────────────────────────────────────── */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">Per chi</h2>
@@ -282,7 +282,7 @@ export default async function CasoDusoSlugPage({ params }: Props) {
 
       {/* ── Casi d'Uso Correlati ──────────────────────────── */}
       {related.length > 0 && (
-        <section className="bg-nero text-bianco py-20">
+        <section data-navbar-theme="dark" className="bg-nero text-bianco py-20">
           <div className="container-site">
             <FadeInOnScroll>
               <Label className="text-giallo">ESPLORA</Label>

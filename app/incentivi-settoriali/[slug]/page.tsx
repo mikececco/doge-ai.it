@@ -145,7 +145,7 @@ export default async function IncentivoSettorialePage({ params }: Props) {
       </section>
 
       {/* Bandi Regionali Specifici */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <div className="max-w-3xl">
             <FadeInOnScroll>
@@ -172,7 +172,7 @@ export default async function IncentivoSettorialePage({ params }: Props) {
       </section>
 
       {/* Incentivi Nazionali Applicabili */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site">
           <div className="max-w-3xl">
             <FadeInOnScroll>
@@ -210,7 +210,7 @@ export default async function IncentivoSettorialePage({ params }: Props) {
       </section>
 
       {/* Come Fare Domanda */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <div className="max-w-3xl">
             <FadeInOnScroll>
@@ -272,7 +272,7 @@ export default async function IncentivoSettorialePage({ params }: Props) {
       </section>
 
       {/* Come ti aiutiamo */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">Come ti aiutiamo</h2>
@@ -296,7 +296,7 @@ export default async function IncentivoSettorialePage({ params }: Props) {
 
       {/* Related: Same Region */}
       {sameRegion.length > 0 && (
-        <section className="bg-bianco py-20">
+        <section data-navbar-theme="light" className="bg-bianco py-20">
           <div className="container-site">
             <FadeInOnScroll>
               <Label className="text-grigio-medio">ALTRI SETTORI</Label>
@@ -327,7 +327,7 @@ export default async function IncentivoSettorialePage({ params }: Props) {
 
       {/* Related: Same Sector */}
       {sameSector.length > 0 && (
-        <section className="bg-grigio-chiaro py-20">
+        <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
           <div className="container-site">
             <FadeInOnScroll>
               <Label className="text-grigio-medio">ALTRE REGIONI</Label>

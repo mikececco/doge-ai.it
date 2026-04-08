@@ -35,7 +35,7 @@ export default function ChiSiamoPage() {
               Manifesto
             </span>
             <h1 className="text-hero uppercase mt-4">
-              Perch&eacute; abbiamo scelto &lsquo;Il Doge di Venezia&rsquo;?
+              Perch&eacute; abbiamo scelto<br />&lsquo;Il Doge di Venezia&rsquo;?
             </h1>
           </FadeInOnScroll>
 

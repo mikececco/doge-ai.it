@@ -65,7 +65,7 @@ export default function CasiDusoPage() {
       </section>
 
       {/* ── Section 2: Search + Filters (dark bg) ──────── */}
-      <section className="bg-nero py-12">
+      <section data-navbar-theme="dark" className="bg-nero py-12">
         <div className="container-site">
           <FadeInOnScroll>
             {/* Search input */}
@@ -158,7 +158,7 @@ export default function CasiDusoPage() {
       </section>
 
       {/* ── Section 3: Results count + Grid (white bg) ─── */}
-      <section className="bg-bianco text-nero section-padding">
+      <section data-navbar-theme="light" className="bg-bianco text-nero section-padding">
         <div className="container-site">
           {/* Results count */}
           <FadeInOnScroll>

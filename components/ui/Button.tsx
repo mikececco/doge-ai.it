@@ -42,7 +42,7 @@ export default function Button({
     secondary:
       "text-nero hover:text-giallo-hover",
     dark:
-      "bg-nero text-bianco hover:bg-giallo hover:text-nero",
+      "bg-nero text-bianco border-[2px] border-nero hover:bg-giallo hover:text-nero hover:border-nero",
     outline:
       "border-[2px] border-nero text-nero hover:bg-nero hover:text-bianco",
   };

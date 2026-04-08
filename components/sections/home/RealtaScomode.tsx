@@ -39,7 +39,7 @@ const bottomRow = [
 
 export default function RealtaScomode() {
   return (
-    <section className="bg-bianco text-nero section-padding" id="realta-scomode" data-navbar-theme="light">
+    <section data-navbar-theme="light" className="bg-bianco text-nero section-padding" id="realta-scomode">
       {/* Title */}
       <div className="container-site">
         <FadeInOnScroll>
@@ -55,9 +55,9 @@ export default function RealtaScomode() {
               {topRow.map((card, i) => (
                 <div
                   key={i}
-                  className={`group px-4 py-4 md:px-8 md:py-8 ${i < topRow.length - 1 ? "md:border-r border-nero" : ""}`}
+                  className={`group relative aspect-square flex flex-col justify-center px-4 py-4 md:px-6 md:py-6 overflow-hidden ${i < topRow.length - 1 ? "md:border-r border-nero" : ""}`}
                 >
-                  <h3 className="text-base font-bold uppercase leading-snug mb-4">
+                  <h3 className="text-xl md:text-2xl font-bold uppercase leading-snug mb-4">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                       {card.title}
                     </span>
@@ -67,6 +67,7 @@ export default function RealtaScomode() {
                       {card.body}
                     </p>
                   </div>
+                  <span className="absolute bottom-3 right-3 text-nero/30 text-xl font-light group-hover:opacity-0 transition-opacity duration-300">+</span>
                 </div>
               ))}
             </div>
@@ -82,9 +83,9 @@ export default function RealtaScomode() {
               {bottomRow.map((card, i) => (
                 <div
                   key={i}
-                  className={`group px-4 py-4 md:px-8 md:py-8 md:border-r border-nero`}
+                  className="group relative aspect-square flex flex-col justify-center px-4 py-4 md:px-6 md:py-6 overflow-hidden md:border-r border-nero"
                 >
-                  <h3 className="text-base font-bold uppercase leading-snug mb-4">
+                  <h3 className="text-xl md:text-2xl font-bold uppercase leading-snug mb-4">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                       {card.title}
                     </span>
@@ -94,6 +95,7 @@ export default function RealtaScomode() {
                       {card.body}
                     </p>
                   </div>
+                  <span className="absolute bottom-3 right-3 text-nero/30 text-xl font-light group-hover:opacity-0 transition-opacity duration-300">+</span>
                 </div>
               ))}
 

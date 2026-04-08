@@ -25,18 +25,18 @@ const config: Config = {
         // Hero
         "hero": ["clamp(3.5rem, 7vw, 6.5rem)", { lineHeight: "1.05", fontWeight: "700" }],
         // Section title
-        "section": ["clamp(2.5rem, 4.5vw, 4rem)", { lineHeight: "1.1", fontWeight: "700" }],
+        "section": ["clamp(2.8rem, 5vw, 4.5rem)", { lineHeight: "1.1", fontWeight: "700" }],
         // Subheadline
-        "subheadline": ["clamp(1.25rem, 2vw, 1.5rem)", { lineHeight: "1.3", fontWeight: "400" }],
+        "subheadline": ["clamp(1.35rem, 2.2vw, 1.65rem)", { lineHeight: "1.3", fontWeight: "400" }],
         // Body
-        "body": ["1.0625rem", { lineHeight: "1.6", fontWeight: "400" }],
+        "body": ["1.125rem", { lineHeight: "1.6", fontWeight: "400" }],
         // Label
         "label": ["0.8125rem", { lineHeight: "1.4", fontWeight: "600", letterSpacing: "0.08em" }],
         // Metric numbers
         "metric": ["clamp(2.5rem, 4vw, 4rem)", { lineHeight: "1", fontWeight: "700" }],
       },
       maxWidth: {
-        site: "1400px",
+        site: "1440px",
       },
       spacing: {
         section: "96px",

@@ -100,7 +100,7 @@ export default async function SoluzioneSlugPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="bg-nero text-bianco pt-40 pb-20">
+      <section data-navbar-theme="dark" className="bg-nero text-bianco pt-40 pb-20">
         <div className="container-site">
           <FadeInOnScroll>
             <Label className="text-giallo">SOLUZIONI</Label>
@@ -124,7 +124,7 @@ export default async function SoluzioneSlugPage({ params }: Props) {
       </section>
 
       {/* Benefits */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">Perché funziona</h2>
@@ -147,7 +147,7 @@ export default async function SoluzioneSlugPage({ params }: Props) {
       </section>
 
       {/* Use Cases */}
-      <section className="bg-grigio-chiaro py-20">
+      <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">Casi d&apos;uso concreti</h2>
@@ -168,7 +168,7 @@ export default async function SoluzioneSlugPage({ params }: Props) {
       </section>
 
       {/* FAQ */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">Domande frequenti</h2>

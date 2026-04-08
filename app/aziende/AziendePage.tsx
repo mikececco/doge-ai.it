@@ -6,6 +6,8 @@ import DoveOperiamo from "@/components/sections/DoveOperiamo";
 import INumeri from "@/components/sections/home/INumeri";
 import CtaFinale from "@/components/sections/CtaFinale";
 import Button from "@/components/ui/Button";
+import ShieldAnimation from "@/components/animations/ShieldAnimation";
+import RocketAnimation from "@/components/animations/RocketAnimation";
 
 /* ─── Page ─────────────────────────────────────────────── */
 
@@ -17,8 +19,8 @@ export default function AziendePage() {
         <div className="container-site relative z-10 text-center pt-24 pb-20 md:pb-24">
         <FadeInOnScroll>
           <span className="text-label uppercase text-nero tracking-widest">Per le Aziende</span>
-          <h1 className="text-hero uppercase mt-4 mx-auto">
-            Se potessi avere il triplo dei dipendenti senza aumentare il costo del personale, cosa faresti?
+          <h1 className="text-section uppercase mt-4 mx-auto">
+            Se potessi avere il triplo dei dipendenti senza aumentare il costo del personale,<br />cosa faresti?
           </h1>
           <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
             &Egrave; la domanda da cui partiamo con ogni cliente. E oggi, con l&apos;AI,
@@ -82,17 +84,17 @@ export default function AziendePage() {
               </div>
             </div>
 
-            {/* Bottom bar */}
-            <div className="border-t border-nero px-4 py-6 md:px-8 md:py-8 text-center">
-              <p className="text-body font-bold text-nero max-w-[700px] mx-auto">
-                Espandere in nuovi mercati? Lanciare nuovi prodotti? Servire pi&ugrave; clienti?
-                Quali opportunit&agrave; si aprirebbero con il triplo del personale?
-              </p>
-              <div className="mt-6">
-                <Button variant="dark" size="md" uppercase href="/contatti" arrow>
-                  Raccontacelo qui
-                </Button>
-              </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <p className="text-body font-bold text-nero max-w-[700px] mx-auto">
+              Espandere in nuovi mercati? Lanciare nuovi prodotti? Servire pi&ugrave; clienti?<br />
+              Quali opportunit&agrave; si aprirebbero con il triplo del personale?
+            </p>
+            <div className="mt-6">
+              <Button variant="dark" size="md" uppercase href="/contatti" arrow>
+                Raccontacelo qui
+              </Button>
             </div>
           </div>
         </FadeInOnScroll>
@@ -109,7 +111,7 @@ export default function AziendePage() {
               Proteggere o espandersi. Entrambi partono da qui.
             </h2>
             <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
-              Alcune aziende hanno margini da proteggere. Altre hanno mercati da conquistare.
+              Alcune aziende hanno margini da proteggere. Altre hanno mercati da conquistare.<br />
               Le migliori fanno entrambe le cose, in sequenza.
             </p>
           </div>
@@ -118,6 +120,9 @@ export default function AziendePage() {
           <div className="border border-nero">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="md:border-r border-nero px-4 py-4 md:px-8 md:py-8">
+                <div className="h-[140px] mb-6">
+                  <ShieldAnimation />
+                </div>
                 <h3 className="text-xl font-bold uppercase mb-4">
                   <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                     Implementazioni di difesa
@@ -130,6 +135,9 @@ export default function AziendePage() {
                 </p>
               </div>
               <div className="px-4 py-4 md:px-8 md:py-8 border-t md:border-t-0 border-nero">
+                <div className="h-[140px] mb-6">
+                  <RocketAnimation />
+                </div>
                 <h3 className="text-xl font-bold uppercase mb-4">
                   <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                     Implementazioni di attacco

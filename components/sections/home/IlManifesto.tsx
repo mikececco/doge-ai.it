@@ -55,8 +55,8 @@ export default function IlManifesto() {
             ))}
           </div>
 
-          <div className="mt-6 px-4 py-3 md:px-8 md:py-4 flex flex-col sm:flex-row items-center gap-4">
-            <p className="text-sm text-nero">
+          <div className="mt-8 flex flex-col items-center text-center gap-4">
+            <p className="text-body text-nero">
               Vuoi capire i principi che guidano ogni nostro progetto?
             </p>
             <Button variant="primary" href="/metodo" className="shrink-0">

@@ -128,7 +128,7 @@ export default async function GlossarioTermPage({ params }: Props) {
       </section>
 
       {/* Definition */}
-      <section className="bg-bianco py-20">
+      <section data-navbar-theme="light" className="bg-bianco py-20">
         <div className="container-site">
           <FadeInOnScroll>
             <div className="max-w-3xl">
@@ -143,7 +143,7 @@ export default async function GlossarioTermPage({ params }: Props) {
 
       {/* Related Terms */}
       {related.length > 0 && (
-        <section className="bg-grigio-chiaro py-20">
+        <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
           <div className="container-site">
             <FadeInOnScroll>
               <h2 className="text-section text-nero mb-12">Termini correlati</h2>
@@ -176,7 +176,7 @@ export default async function GlossarioTermPage({ params }: Props) {
 
       {/* Same Category */}
       {sameCategory.length > 0 && (
-        <section className="bg-nero text-bianco py-20">
+        <section data-navbar-theme="dark" className="bg-nero text-bianco py-20">
           <div className="container-site">
             <FadeInOnScroll>
               <Label className="text-giallo">ESPLORA</Label>

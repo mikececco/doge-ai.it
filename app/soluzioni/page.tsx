@@ -66,7 +66,7 @@ export default function SoluzioniPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-bianco text-nero pt-40 pb-20">
+      <section data-navbar-theme="light" className="bg-bianco text-nero pt-40 pb-20">
         <div className="container-site">
           <FadeInOnScroll>
             <Label>SOLUZIONI</Label>

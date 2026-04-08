@@ -70,7 +70,7 @@ export default function EmailGate({ children, preview }: EmailGateProps) {
       </div>
 
       {/* Email gate */}
-      <section className="bg-bianco text-nero py-16 md:py-24">
+      <section data-navbar-theme="light" className="bg-bianco text-nero py-16 md:py-24">
         <div className="container-site">
           <div className="max-w-[500px] mx-auto text-center">
             <div className="mb-6">

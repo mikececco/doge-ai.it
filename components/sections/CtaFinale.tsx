@@ -24,20 +24,20 @@ export default function CtaFinale({
 }: CtaFinaleProps) {
   if (veniceImage) {
     return (
-      <section data-navbar-theme="dark" className="relative bg-nero text-bianco py-24 md:py-32 overflow-hidden">
-        {/* Venice B&W background */}
+      <section data-navbar-theme="dark" className="relative bg-nero text-bianco min-h-screen flex items-center overflow-hidden">
+        {/* Venice B&W full background */}
         <div className="absolute inset-0">
           <Image
-            src="/hero/landscape venezia (no-bg).png"
+            src="/hero/venice-canal.jpeg"
             alt=""
             fill
-            className="object-cover object-bottom grayscale opacity-20"
+            className="object-cover object-center opacity-30"
           />
         </div>
         {/* Dark overlay + gradient that fades to footer black */}
-        <div className="absolute inset-0 bg-gradient-to-b from-nero/80 via-nero/60 to-nero" />
-        <div className="container-site relative z-10">
-          <FadeInOnScroll className="text-center max-w-2xl mx-auto">
+        <div className="absolute inset-0 bg-gradient-to-b from-nero/70 via-nero/50 to-nero" />
+        <div className="container-site relative z-10 py-24 md:py-32">
+          <FadeInOnScroll className="text-center">
             <Image
               src="/icon/logoY-noBG.png"
               alt="Doge"
@@ -48,7 +48,7 @@ export default function CtaFinale({
             <h2 className="text-hero text-giallo">
               {title}
             </h2>
-            <p className="text-subheadline mt-4 text-bianco/70">
+            <p className="text-subheadline mt-4 text-bianco/70 max-w-[600px] mx-auto">
               {subtitle}
             </p>
             <div className="mt-8">

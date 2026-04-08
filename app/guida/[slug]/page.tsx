@@ -152,7 +152,7 @@ export default async function GuidaSlugPage({ params }: Props) {
       </section>
 
       {/* Table of Contents */}
-      <section className="bg-nero text-bianco py-12">
+      <section data-navbar-theme="dark" className="bg-nero text-bianco py-12">
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-lg font-bold text-bianco mb-6">Indice</h2>
@@ -205,7 +205,7 @@ export default async function GuidaSlugPage({ params }: Props) {
 
       {/* Related Guides */}
       {related.length > 0 && (
-        <section className="bg-nero text-bianco py-20">
+        <section data-navbar-theme="dark" className="bg-nero text-bianco py-20">
           <div className="container-site">
             <FadeInOnScroll>
               <Label className="text-giallo">CONTINUA A LEGGERE</Label>

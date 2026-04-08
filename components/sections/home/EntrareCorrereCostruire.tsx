@@ -23,7 +23,7 @@ const steps = [
 
 export default function EntrareCorrereCostruire() {
   return (
-    <section className="bg-bianco text-nero pb-16 md:pb-24" id="metodo" data-navbar-theme="light">
+    <section data-navbar-theme="light" className="bg-bianco text-nero pb-16 md:pb-24" id="metodo">
       {/* Header */}
       <div className="container-site pt-16 md:pt-24 pb-12">
         <FadeInOnScroll>

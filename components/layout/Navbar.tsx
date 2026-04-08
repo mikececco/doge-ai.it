@@ -56,45 +56,50 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [navTheme, setNavTheme] = useState<NavTheme>("light");
 
-  // IntersectionObserver to adapt navbar theme based on section backgrounds
+  // Detect navbar theme from the section currently at the top of the viewport
   useEffect(() => {
-    const sections = document.querySelectorAll("[data-navbar-theme]");
-    if (sections.length === 0) return;
+    const detect = () => {
+      const sections = document.querySelectorAll("[data-navbar-theme]");
+      if (sections.length === 0) return;
 
-    const visibleSections = new Set<Element>();
+      // Find the section whose top is closest to (but not far below) the navbar
+      let best: HTMLElement | null = null;
+      let bestTop = -Infinity;
+      const navBottom = 64; // navbar height
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) visibleSections.add(e.target);
-          else visibleSections.delete(e.target);
-        });
-
-        if (visibleSections.size > 0) {
-          // Pick the section closest to the top of the viewport
-          let best: Element | null = null;
-          let bestTop = Infinity;
-          visibleSections.forEach((s) => {
-            const top = s.getBoundingClientRect().top;
-            if (Math.abs(top) < Math.abs(bestTop)) {
-              bestTop = top;
-              best = s;
-            }
-          });
-          if (best) {
-            const theme = (best as HTMLElement).dataset.navbarTheme as NavTheme;
-            if (theme) setNavTheme(theme);
-          }
-        } else {
-          // No themed section visible — default to light
-          setNavTheme("light");
+      sections.forEach((s) => {
+        const rect = s.getBoundingClientRect();
+        const top = rect.top;
+        // Section is "active" if its top is above the navbar bottom
+        // and it's the closest one (highest top value that's still <= navBottom)
+        if (top <= navBottom && top > bestTop) {
+          bestTop = top;
+          best = s as HTMLElement;
         }
-      },
-      { rootMargin: "0px 0px -80% 0px", threshold: [0, 0.1, 0.5] }
-    );
+      });
 
-    sections.forEach((s) => observer.observe(s));
-    return () => observer.disconnect();
+      if (best) {
+        const theme = best.dataset.navbarTheme as NavTheme;
+        if (theme) setNavTheme(theme);
+      } else {
+        // Fallback: use the first section
+        const first = sections[0] as HTMLElement;
+        const theme = first.dataset.navbarTheme as NavTheme;
+        if (theme) setNavTheme(theme);
+      }
+    };
+
+    // Run immediately + after paint (for client-side nav)
+    detect();
+    const rafId = requestAnimationFrame(detect);
+
+    // Listen to scroll
+    window.addEventListener("scroll", detect, { passive: true });
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener("scroll", detect);
+    };
   }, [pathname]);
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
@@ -115,7 +120,7 @@ export default function Navbar() {
       >
         <div className="container-site flex items-center justify-between w-full h-full">
           <div className="hidden lg:flex items-center gap-6 h-full">
-            <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2">
+            <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 h-full">
               <Image src={theme.icon} alt="Doge icon" width={28} height={28} priority />
               <DogeLogo light={theme.logoLight} />
             </Link>
@@ -134,13 +139,13 @@ export default function Navbar() {
                 return (
                   <div
                     key={item.label}
-                    className="relative"
+                    className="relative h-full flex items-center"
                     onMouseEnter={() => setOpenDropdown(item.label)}
                     onMouseLeave={() => setOpenDropdown(null)}
                   >
                     <button
-                      className={`text-sm font-medium transition-colors cursor-pointer pb-1 ${
-                        active ? "border-b-2 border-[#FDE732]" : ""
+                      className={`text-sm font-medium transition-colors cursor-pointer ${
+                        active ? "underline decoration-2 decoration-[#FDE732] underline-offset-4" : ""
                       } ${theme.text} ${theme.hoverText}`}
                     >
                       {item.label}
@@ -170,8 +175,8 @@ export default function Navbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`text-sm font-medium transition-colors pb-1 ${
-                    active ? "border-b-2 border-[#FDE732]" : ""
+                  className={`text-sm font-medium transition-colors ${
+                    active ? "underline decoration-2 decoration-[#FDE732] underline-offset-4" : ""
                   } ${theme.text} ${theme.hoverText}`}
                 >
                   {item.label}

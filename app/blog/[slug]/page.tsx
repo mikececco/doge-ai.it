@@ -181,7 +181,7 @@ export default async function BlogPostPage({ params }: Props) {
       <ReadingProgress />
 
       {/* Hero */}
-      <section className="bg-nero text-bianco pt-40 pb-16">
+      <section data-navbar-theme="dark" className="bg-nero text-bianco pt-40 pb-16">
         <div className="container-site">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-bianco/50 mb-8">
@@ -221,7 +221,7 @@ export default async function BlogPostPage({ params }: Props) {
       </section>
 
       {/* Article + ToC */}
-      <section className="bg-bianco py-20" id="article-body">
+      <section data-navbar-theme="light" className="bg-bianco py-20" id="article-body">
         <div className="container-site">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-16 items-start">
             {/* Article body */}
@@ -268,7 +268,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Related Posts */}
       {related.length > 0 && (
-        <section className="bg-grigio-chiaro py-20">
+        <section data-navbar-theme="light" className="bg-grigio-chiaro py-20">
           <div className="container-site">
             <Label>LEGGI ANCHE</Label>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
