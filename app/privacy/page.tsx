@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Il Doge di Venezia",
+  title: "Privacy Policy - IL DOGE DI VENEZIA",
   description:
-    "Informativa sulla privacy ai sensi del Regolamento UE 2016/679 (GDPR) de Il Doge di Venezia.",
+    "Informativa sulla privacy ai sensi del Regolamento UE 2016/679 (GDPR) de IL DOGE DI VENEZIA.",
 };
 
 export default function Privacy() {
@@ -24,7 +24,7 @@ export default function Privacy() {
           <h2>1. Titolare del trattamento</h2>
           <p>
             Il Titolare del trattamento dei dati personali è{" "}
-            <strong>Il Doge di Venezia</strong>, con sede legale in Calle Polver
+            <strong>IL DOGE DI VENEZIA</strong>, con sede legale in Calle Polver
             del Fuoco 827/A, VENEZIA (VE), Italia.
           </p>
           <p>

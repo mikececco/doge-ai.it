@@ -8,23 +8,23 @@ import { CASI_STUDIO } from "@/lib/casi-studio-data";
 const BASE_URL = "https://doge-ai.it";
 
 export const metadata: Metadata = {
-  title: "Casi Studio AI | Risultati Reali per PMI Italiane - DOGE di Venezia",
+  title: "Casi Studio AI | Risultati Reali per PMI Italiane - IL DOGE DI VENEZIA",
   description:
     "20 casi studio reali di implementazione AI nelle PMI italiane: manifattura, distribuzione, turismo, food & beverage, sanita e servizi professionali. ROI misurabili e risultati concreti.",
   alternates: { canonical: `${BASE_URL}/casi-studio` },
   openGraph: {
-    title: "Casi Studio AI | Risultati Reali per PMI Italiane - DOGE di Venezia",
+    title: "Casi Studio AI | Risultati Reali per PMI Italiane - IL DOGE DI VENEZIA",
     description:
       "20 casi studio reali di implementazione AI nelle PMI italiane. ROI misurabili e risultati concreti.",
     url: `${BASE_URL}/casi-studio`,
     type: "website",
-    siteName: "DOGE di Venezia",
+    siteName: "IL DOGE DI VENEZIA",
     images: [
       {
         url: "/icon/logoB-noBG.png",
         width: 512,
         height: 512,
-        alt: "il Doge di Venezia",
+        alt: "IL DOGE DI VENEZIA",
       },
     ],
   },
@@ -58,7 +58,7 @@ export default function CasiStudioPage() {
     url: `${BASE_URL}/casi-studio`,
     publisher: {
       "@type": "Organization",
-      name: "DOGE di Venezia",
+      name: "IL DOGE DI VENEZIA",
     },
   };
 

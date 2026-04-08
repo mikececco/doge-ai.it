@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!city || !settore) return {};
 
   const canonicalUrl = `${BASE_URL}/consulenza-ai/${city.slug}/${settore.slug}`;
-  const title = `Consulenza AI ${settore.title} ${city.name} | DOGE di Venezia`;
+  const title = `Consulenza AI ${settore.title} ${city.name} | IL DOGE DI VENEZIA`;
   const description = `Consulenza AI per il settore ${settore.title} a ${city.name} (${city.region}). Casi d'uso concreti: ${settore.useCases[0].split(" - ")[0]}, ${settore.useCases[1].split(" - ")[0]} e altro. Implementazione con tecnologia Anthropic/Claude.`;
 
   return {
@@ -49,8 +49,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonicalUrl,
       type: "website",
-      siteName: "DOGE di Venezia",
-      images: [{ url: "/icon/logoB-noBG.png", width: 512, height: 512, alt: "il Doge di Venezia" }],
+      siteName: "IL DOGE DI VENEZIA",
+      images: [{ url: "/icon/logoB-noBG.png", width: 512, height: 512, alt: "IL DOGE DI VENEZIA" }],
     },
     twitter: { card: "summary_large_image", title, description },
   };
@@ -70,7 +70,7 @@ export default async function ConsulenzaAISettoreCittaPage({ params }: Props) {
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: `il Doge di Venezia - AI ${settore.title} ${city.name}`,
+    name: `IL DOGE DI VENEZIA - AI ${settore.title} ${city.name}`,
     description: `Consulenza AI per il settore ${settore.title} a ${city.name}`,
     url: canonicalUrl,
     areaServed: { "@type": "City", name: city.name },
@@ -84,7 +84,7 @@ export default async function ConsulenzaAISettoreCittaPage({ params }: Props) {
     name: `Consulenza AI ${settore.title} a ${city.name}`,
     description: `Servizi di consulenza AI per aziende del settore ${settore.title} a ${city.name}. ${settore.useCases[0]}.`,
     url: canonicalUrl,
-    provider: { "@type": "Organization", name: "DOGE di Venezia", url: BASE_URL },
+    provider: { "@type": "Organization", name: "IL DOGE DI VENEZIA", url: BASE_URL },
     areaServed: { "@type": "City", name: city.name },
     serviceType: `Consulenza AI - ${settore.title}`,
   };

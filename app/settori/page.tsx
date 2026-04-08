@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
-import SectionWrapper from "@/components/ui/SectionWrapper";
 import CtaFinale from "@/components/sections/CtaFinale";
 import { SETTORI } from "@/lib/settori-data";
 
 export const metadata: Metadata = {
-  title: "Settori - Il Doge di Venezia",
+  title: "Settori - IL DOGE DI VENEZIA",
   description:
     "10 settori industriali dove l'AI trasforma le PMI italiane. Scopri i casi d'uso concreti per il tuo settore.",
   openGraph: {
-    title: "Settori - Il Doge di Venezia",
+    title: "Settori - IL DOGE DI VENEZIA",
     description:
       "10 settori industriali dove l'AI trasforma le PMI italiane.",
     type: "website",
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
         url: "/icon/logoB-noBG.png",
         width: 512,
         height: 512,
-        alt: "il Doge di Venezia",
+        alt: "IL DOGE DI VENEZIA",
       },
     ],
   },
@@ -48,8 +47,10 @@ export default function SettoriPage() {
             <span className="text-label uppercase text-nero/60 tracking-widest">
               Dove operiamo
             </span>
-            <h1 className="text-section uppercase mt-4 max-w-[900px] mx-auto">
-              Ogni settore ha le sue sfide. Noi le conosciamo gi&agrave;.
+            <h1 className="text-section uppercase mt-4 mx-auto">
+              Ogni settore ha le sue sfide.
+              <br />
+              Noi le conosciamo gi&agrave;.
             </h1>
             <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
               Non esistono soluzioni generiche. Ogni settore ha i suoi colli di bottiglia,
@@ -60,7 +61,8 @@ export default function SettoriPage() {
       </section>
 
       {/* Sector Grid - clickable cards */}
-      <SectionWrapper bg="dark">
+      <section data-navbar-theme="dark" className="bg-black text-bianco section-padding">
+        <div className="container-site">
         <FadeInOnScroll>
           <div className="border border-bianco/20">
             <div className="grid grid-cols-1 md:grid-cols-2">
@@ -99,11 +101,12 @@ export default function SettoriPage() {
             </div>
           </div>
         </FadeInOnScroll>
-      </SectionWrapper>
+        </div>
+      </section>
 
       {/* CTA */}
       <CtaFinale
-        dark
+        veniceImage
         title="Non trovi il tuo settore?"
         subtitle="Contattaci. Analizziamo il tuo caso specifico gratuitamente."
         buttonText="Parla con noi"

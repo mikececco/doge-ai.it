@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!city) return {};
 
   const canonicalUrl = `${BASE_URL}/consulenza-ai/${city.slug}`;
-  const title = `Consulenza AI a ${city.name} | DOGE di Venezia`;
+  const title = `Consulenza AI a ${city.name} | IL DOGE DI VENEZIA`;
   const description = `Consulenza AI per le PMI di ${city.name} (${city.region}). Specializzati in ${city.industries.join(", ")}. Strategia, implementazione agenti e automazione processi con tecnologia Anthropic/Claude.`;
 
   return {
@@ -42,13 +42,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonicalUrl,
       type: "website",
-      siteName: "DOGE di Venezia",
+      siteName: "IL DOGE DI VENEZIA",
       images: [
         {
           url: "/icon/logoB-noBG.png",
           width: 512,
           height: 512,
-          alt: "il Doge di Venezia",
+          alt: "IL DOGE DI VENEZIA",
         },
       ],
     },
@@ -111,7 +111,7 @@ export default async function ConsulenzaAICittaPage({ params }: Props) {
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: `il Doge di Venezia - Consulenza AI ${city.name}`,
+    name: `IL DOGE DI VENEZIA - Consulenza AI ${city.name}`,
     description: `Consulenza AI per le imprese di ${city.name} e ${city.region}`,
     url: canonicalUrl,
     areaServed: {
@@ -134,7 +134,7 @@ export default async function ConsulenzaAICittaPage({ params }: Props) {
     url: canonicalUrl,
     provider: {
       "@type": "Organization",
-      name: "DOGE di Venezia",
+      name: "IL DOGE DI VENEZIA",
       url: BASE_URL,
     },
     areaServed: {
@@ -251,7 +251,7 @@ export default async function ConsulenzaAICittaPage({ params }: Props) {
         <div className="container-site">
           <FadeInOnScroll>
             <h2 className="text-section text-nero mb-12">
-              Perché scegliere DOGE di Venezia
+              Perché scegliere IL DOGE DI VENEZIA
             </h2>
           </FadeInOnScroll>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

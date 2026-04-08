@@ -13,7 +13,7 @@ export default function DogeLogo({ className = "", light = false }: LogoProps) {
   return (
     <Image
       src={src}
-      alt="Il Doge di Venezia"
+      alt="IL DOGE DI VENEZIA"
       width={240}
       height={80}
       className={`h-[28px] w-auto ${className}`}

@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: page.metaDescription,
       url: canonicalUrl,
       type: "website",
-      siteName: "DOGE di Venezia",
+      siteName: "IL DOGE DI VENEZIA",
     },
     twitter: {
       card: "summary_large_image",
@@ -65,7 +65,7 @@ export default async function SoluzioneSlugPage({ params }: Props) {
     url: canonicalUrl,
     provider: {
       "@type": "Organization",
-      name: "DOGE di Venezia",
+      name: "IL DOGE DI VENEZIA",
       url: BASE_URL,
     },
     areaServed: {

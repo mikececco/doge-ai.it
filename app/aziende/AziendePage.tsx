@@ -253,7 +253,7 @@ export default function AziendePage() {
               Incentivi e agevolazioni
             </span>
             <h2 className="text-section uppercase mt-4">
-              L&apos;AI che si paga (in parte)<br />da sola
+              Accelera la tua trasformazione AI<br />con gli incentivi
             </h2>
             <p className="text-body text-nero/70 mt-6 leading-relaxed max-w-[800px] mx-auto">
               La trasformazione AI di un&apos;azienda pu&ograve; essere finanziata - in parte o
@@ -261,10 +261,7 @@ export default function AziendePage() {
               disponibili per le PMI italiane.
             </p>
             <p className="text-body text-nero/70 mt-4 leading-relaxed max-w-[800px] mx-auto">
-              Non &egrave; il nostro mestiere navigare la burocrazia, ma abbiamo un
-              ecosistema di partner, commercialisti e consulenti specializzati, che
-              affiancano i nostri clienti per identificare gli strumenti giusti e
-              massimizzare il ritorno sull&apos;investimento.
+              Ti aiutiamo a capire quale incentivo &egrave; pi&ugrave; adatto alla tua situazione.
             </p>
             <div className="mt-8">
               <Button variant="dark" size="md" uppercase href="/incentivi" arrow>

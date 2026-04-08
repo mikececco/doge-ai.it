@@ -6,23 +6,23 @@ import CtaFinale from "@/components/sections/CtaFinale";
 import { SOLUZIONI_PAGES } from "@/lib/soluzioni-data";
 
 export const metadata: Metadata = {
-  title: "Soluzioni AI per Aziende Italiane - DOGE di Venezia",
+  title: "Soluzioni AI per Aziende Italiane - IL DOGE DI VENEZIA",
   description:
-    "Esplora tutte le soluzioni AI di DOGE di Venezia per PMI, manifattura, PE/Family Office e settori specifici. Dall'automazione processi agli agenti AI personalizzati.",
+    "Esplora tutte le soluzioni AI di IL DOGE DI VENEZIA per PMI, manifattura, PE/Family Office e settori specifici. Dall'automazione processi agli agenti AI personalizzati.",
   alternates: {
     canonical: "https://doge-ai.it/soluzioni",
   },
   openGraph: {
-    title: "Soluzioni AI per Aziende Italiane - DOGE di Venezia",
+    title: "Soluzioni AI per Aziende Italiane - IL DOGE DI VENEZIA",
     description:
-      "Esplora tutte le soluzioni AI di DOGE di Venezia per PMI, manifattura, PE/Family Office e settori specifici.",
+      "Esplora tutte le soluzioni AI di IL DOGE DI VENEZIA per PMI, manifattura, PE/Family Office e settori specifici.",
     type: "website",
     images: [
       {
         url: "/icon/logoB-noBG.png",
         width: 512,
         height: 512,
-        alt: "il Doge di Venezia",
+        alt: "IL DOGE DI VENEZIA",
       },
     ],
   },
@@ -72,7 +72,7 @@ export default function SoluzioniPage() {
             <Label>SOLUZIONI</Label>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <h1 className="text-hero uppercase mt-4 max-w-3xl">
+            <h1 className="text-hero uppercase mt-4">
               AI su misura per ogni azienda italiana
             </h1>
           </FadeInOnScroll>

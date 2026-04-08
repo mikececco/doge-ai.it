@@ -8,11 +8,11 @@ import RealtaScomode from "@/components/sections/home/RealtaScomode";
 import CtaFinale from "@/components/sections/CtaFinale";
 
 export const metadata: Metadata = {
-  title: "DOGE di Venezia - Trasformazione AI per PMI e Fondi",
+  title: "IL DOGE DI VENEZIA - Trasformazione AI per PMI e Fondi",
   description:
     "Definiamo e realizziamo la strategia AI della tua azienda alla velocità di una startup. Risultati misurabili in 30 giorni.",
   openGraph: {
-    title: "DOGE di Venezia - Trasformazione AI per PMI e Fondi",
+    title: "IL DOGE DI VENEZIA - Trasformazione AI per PMI e Fondi",
     description:
       "Definiamo e realizziamo la strategia AI della tua azienda alla velocità di una startup.",
     type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "/icon/logoB-noBG.png",
         width: 512,
         height: 512,
-        alt: "il Doge di Venezia",
+        alt: "IL DOGE DI VENEZIA",
       },
     ],
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "il Doge di Venezia",
+  name: "IL DOGE DI VENEZIA",
   url: "https://doge-ai.it",
   logo: "https://doge-ai.it/icon/logoB-noBG.png",
   description: "Consulenza AI per PMI e fondi di investimento italiani",

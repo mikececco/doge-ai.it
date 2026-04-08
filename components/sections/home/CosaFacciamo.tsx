@@ -25,7 +25,7 @@ export default function CosaFacciamo() {
     <SectionWrapper bg="white" id="cosa-facciamo">
       <FadeInOnScroll>
         <h2 className="text-section max-w-[700px]">
-          Il Doge di Venezia accompagna la tua azienda verso un modello
+          IL DOGE DI VENEZIA accompagna la tua azienda verso un modello
           AI-first. Noi la{" "}
           <AnimatedUnderline>implementiamo</AnimatedUnderline>.
         </h2>

@@ -15,7 +15,8 @@ const themeConfig = {
   light: {
     bg: "bg-bianco/95 backdrop-blur-md",
     text: "text-nero",
-    border: "border-nero",
+    navBorder: "border-b border-b-nero",
+    divider: "border-l border-l-nero",
     hoverText: "hover:text-giallo-hover",
     icon: "/icon/logoB-noBG.png",
     logoLight: false,
@@ -23,11 +24,13 @@ const themeConfig = {
     dropdownText: "text-nero",
     dropdownHover: "hover:bg-grigio-chiaro hover:text-giallo-hover",
     hamburger: "bg-nero",
+    activeUnderline: "decoration-[#FDE732]",
   },
   dark: {
     bg: "bg-nero/95 backdrop-blur-md",
     text: "text-bianco",
-    border: "border-bianco/20",
+    navBorder: "border-b border-b-bianco/20",
+    divider: "border-l border-l-bianco/20",
     hoverText: "hover:text-giallo",
     icon: "/icon/logoW-noBG.png",
     logoLight: true,
@@ -35,11 +38,13 @@ const themeConfig = {
     dropdownText: "text-bianco",
     dropdownHover: "hover:bg-bianco/10 hover:text-giallo",
     hamburger: "bg-bianco",
+    activeUnderline: "decoration-[#FDE732]",
   },
   giallo: {
     bg: "bg-giallo/95 backdrop-blur-md",
     text: "text-nero",
-    border: "border-nero",
+    navBorder: "border-b border-b-nero",
+    divider: "border-l border-l-nero",
     hoverText: "hover:text-nero/70",
     icon: "/icon/logoB-noBG.png",
     logoLight: false,
@@ -47,6 +52,7 @@ const themeConfig = {
     dropdownText: "text-nero",
     dropdownHover: "hover:bg-nero/10",
     hamburger: "bg-nero",
+    activeUnderline: "decoration-nero",
   },
 };
 
@@ -108,7 +114,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center h-16 transition-all duration-300 border-t-[2px] border-b-[2px] ${theme.bg} ${theme.border}`}
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center h-16 transition-all duration-300 ${theme.bg} ${theme.navBorder}`}
       >
         <div className="container-site flex items-center justify-between w-full h-full">
           <div className="hidden lg:flex items-center gap-6 h-full">
@@ -116,7 +122,7 @@ export default function Navbar() {
               <Image src={theme.icon} alt="Doge icon" width={28} height={28} priority />
               <DogeLogo light={theme.logoLight} />
             </Link>
-            <div className={`w-0 h-full border-l-[2px] ${theme.border}`} />
+            <div className={`w-0 h-full ${theme.divider}`} />
           </div>
           <Link href="/" onClick={() => setMobileOpen(false)} className="flex lg:hidden items-center gap-2">
             <Image src={theme.icon} alt="Doge icon" width={28} height={28} priority />
@@ -137,7 +143,7 @@ export default function Navbar() {
                   >
                     <button
                       className={`text-sm font-medium transition-colors cursor-pointer ${
-                        active ? "underline decoration-2 decoration-[#FDE732] underline-offset-4" : ""
+                        active ? `underline decoration-2 ${theme.activeUnderline} underline-offset-4` : ""
                       } ${theme.text} ${theme.hoverText}`}
                     >
                       {item.label}
@@ -168,14 +174,14 @@ export default function Navbar() {
                   key={item.label}
                   href={item.href}
                   className={`text-sm font-medium transition-colors ${
-                    active ? "underline decoration-2 decoration-[#FDE732] underline-offset-4" : ""
+                    active ? `underline decoration-2 ${theme.activeUnderline} underline-offset-4` : ""
                   } ${theme.text} ${theme.hoverText}`}
                 >
                   {item.label}
                 </Link>
               );
             })}
-            <div className={`w-0 h-full border-l-[2px] ${theme.border}`} />
+            <div className={`w-0 h-full ${theme.divider}`} />
             <Button variant="dark" href="/contatti" arrow>
               Contattaci
             </Button>
@@ -187,13 +193,13 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
           >
-            <span className={`block w-6 h-[2px] transition-all duration-300 ${
+            <span className={`block w-6 h-0.5 transition-all duration-300 ${
               mobileOpen ? "rotate-45 translate-y-2 bg-bianco" : theme.hamburger
             }`} />
-            <span className={`block w-6 h-[2px] transition-all duration-300 ${
+            <span className={`block w-6 h-0.5 transition-all duration-300 ${
               mobileOpen ? "opacity-0" : theme.hamburger
             }`} />
-            <span className={`block w-6 h-[2px] transition-all duration-300 ${
+            <span className={`block w-6 h-0.5 transition-all duration-300 ${
               mobileOpen ? "-rotate-45 -translate-y-2 bg-bianco" : theme.hamburger
             }`} />
           </button>

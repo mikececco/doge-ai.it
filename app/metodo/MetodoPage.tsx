@@ -108,7 +108,7 @@ export default function MetodoPage() {
               Il Codice del Doge
             </span>
             <h1 className="text-hero uppercase mt-4">
-              Il nostro processo, aperto. Completamente.
+              Il nostro processo, aperto.<br /> Completamente.
             </h1>
             <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
               In molti ci hanno chiesto come lavoriamo davvero &mdash; non la
@@ -287,7 +287,7 @@ export default function MetodoPage() {
                   {String(i + 1).padStart(2, "0")}.
                 </span>
                 <div>
-                  <h3 className="text-base font-bold uppercase">
+                  <h3 className="text-xl font-bold uppercase">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                       {step.title}
                     </span>
@@ -345,7 +345,7 @@ export default function MetodoPage() {
                     <span className="text-3xl font-bold text-nero shrink-0">
                       {String(i + 1).padStart(2, "0")}.
                     </span>
-                    <span className="text-sm font-bold uppercase tracking-wide text-nero">
+                    <span className="text-base font-bold uppercase tracking-wide text-nero">
                       {sector.title}
                     </span>
                     <svg className="ml-auto w-5 h-5 text-nero transition-transform group-hover:rotate-90 group-focus-within:rotate-90 duration-200 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
@@ -392,7 +392,7 @@ export default function MetodoPage() {
                       {String(i + 1).padStart(2, "0")}.
                     </span>
                     <div>
-                      <h3 className="text-base font-bold uppercase text-bianco">
+                      <h3 className="text-xl font-bold uppercase text-bianco">
                         <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                           {principio.title}
                         </span>

@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       url,
       publishedTime: post.date,
-      authors: ["il Doge di Venezia"],
-      siteName: "il Doge di Venezia",
+      authors: ["IL DOGE DI VENEZIA"],
+      siteName: "IL DOGE DI VENEZIA",
     },
     twitter: {
       card: "summary_large_image",
@@ -84,12 +84,12 @@ export default async function BlogPostPage({ params }: Props) {
         keywords: post.tags.join(", "),
         author: {
           "@type": "Organization",
-          name: "il Doge di Venezia",
+          name: "IL DOGE DI VENEZIA",
           url: "https://doge-ai.it",
         },
         publisher: {
           "@type": "Organization",
-          name: "il Doge di Venezia",
+          name: "IL DOGE DI VENEZIA",
           url: "https://doge-ai.it",
           logo: {
             "@type": "ImageObject",
@@ -158,7 +158,7 @@ export default async function BlogPostPage({ params }: Props) {
   const midCtaHtml = `
     <div class="mid-article-cta">
       <p class="mid-cta-title">Vuoi applicare questo nella tua azienda?</p>
-      <p class="mid-cta-body">In DOGE di Venezia affianchiamo le PMI italiane in ogni fase della trasformazione AI. La prima conversazione è gratuita.</p>
+      <p class="mid-cta-body">In IL DOGE DI VENEZIA affianchiamo le PMI italiane in ogni fase della trasformazione AI. La prima conversazione è gratuita.</p>
       <a href="/contatti" class="mid-cta-btn">Parlaci del tuo progetto</a>
     </div>
   `;
@@ -211,7 +211,7 @@ export default async function BlogPostPage({ params }: Props) {
           </p>
 
           <div className="mt-8 flex items-center gap-4 text-sm text-bianco/50">
-            <span>DOGE di Venezia</span>
+            <span>IL DOGE DI VENEZIA</span>
             <span>·</span>
             <span>{post.date}</span>
             <span>·</span>
@@ -254,7 +254,7 @@ export default async function BlogPostPage({ params }: Props) {
                     Vuoi applicare questo nella tua azienda?
                   </p>
                   <p className="text-sm text-grigio-scuro mt-2 leading-relaxed">
-                    La prima conversazione con DOGE di Venezia è gratuita.
+                    La prima conversazione con IL DOGE DI VENEZIA è gratuita.
                   </p>
                   <Button variant="primary" href="/contatti" className="mt-4">
                     Contattaci →

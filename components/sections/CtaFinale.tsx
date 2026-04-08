@@ -11,6 +11,7 @@ type CtaFinaleProps = {
   buttonText?: string;
   buttonHref?: string;
   dark?: boolean;
+  giallo?: boolean;
   veniceImage?: boolean;
 };
 
@@ -20,6 +21,7 @@ export default function CtaFinale({
   buttonText = "Prenota una call",
   buttonHref = "/contatti",
   dark = false,
+  giallo = false,
   veniceImage = false,
 }: CtaFinaleProps) {
   if (veniceImage) {
@@ -57,6 +59,22 @@ export default function CtaFinale({
           </FadeInOnScroll>
         </div>
       </section>
+    );
+  }
+
+  if (giallo) {
+    return (
+      <SectionWrapper bg="giallo">
+        <FadeInOnScroll className="text-center max-w-2xl mx-auto">
+          <h2 className="text-hero uppercase text-nero">{title}</h2>
+          <p className="text-subheadline mt-4 text-nero/70">
+            {subtitle}
+          </p>
+          <div className="mt-8">
+            <Button variant="dark" href={buttonHref} arrow>{buttonText}</Button>
+          </div>
+        </FadeInOnScroll>
+      </SectionWrapper>
     );
   }
 

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!confronto) return {};
 
   const canonicalUrl = `${BASE_URL}/confronto/${confronto.slug}`;
-  const title = `${confronto.toolA} vs ${confronto.toolB} - Confronto per PMI | Il Doge di Venezia`;
+  const title = `${confronto.toolA} vs ${confronto.toolB} - Confronto per PMI | IL DOGE DI VENEZIA`;
   const description = confronto.verdict;
 
   return {
@@ -36,13 +36,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonicalUrl,
       type: "website",
-      siteName: "DOGE di Venezia",
+      siteName: "IL DOGE DI VENEZIA",
       images: [
         {
           url: "/icon/logoB-noBG.png",
           width: 512,
           height: 512,
-          alt: "il Doge di Venezia",
+          alt: "IL DOGE DI VENEZIA",
         },
       ],
     },
@@ -74,7 +74,7 @@ export default async function ConfrontoSlugPage({ params }: Props) {
     url: canonicalUrl,
     publisher: {
       "@type": "Organization",
-      name: "DOGE di Venezia",
+      name: "IL DOGE DI VENEZIA",
       url: BASE_URL,
     },
   };

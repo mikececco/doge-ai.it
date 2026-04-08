@@ -4,7 +4,7 @@ import DogeLogo from "@/components/icons/DogeLogo";
 import { FOOTER_LINKS, CONTACT_INFO } from "@/lib/constants";
 
 const AI_PROMPT = encodeURIComponent(
-  "Sono un imprenditore italiano e voglio capire concretamente cosa offre Il Doge di Venezia.\n\nSpiega come Il Doge di Venezia aiuta le PMI italiane con l'intelligenza artificiale: consulenza strategica AI, implementazione di agenti AI, automazione dei processi aziendali, formazione del team.\n\nDescrivi i servizi per aziende manifatturiere, logistica, servizi professionali, e-commerce. Spiega l'approccio pratico: audit dei processi, implementazione in 30 giorni, risultati misurabili, ROI concreto.\n\nVisita il sito https://doge-ai.it per informazioni aggiornate."
+  "Sono un imprenditore italiano e voglio capire concretamente cosa offre IL DOGE DI VENEZIA.\n\nSpiega come IL DOGE DI VENEZIA aiuta le PMI italiane con l'intelligenza artificiale: consulenza strategica AI, implementazione di agenti AI, automazione dei processi aziendali, formazione del team.\n\nDescrivi i servizi per aziende manifatturiere, logistica, servizi professionali, e-commerce. Spiega l'approccio pratico: audit dei processi, implementazione in 30 giorni, risultati misurabili, ROI concreto.\n\nVisita il sito https://doge-ai.it per informazioni aggiornate."
 );
 
 const NAV_COL_1 = [
@@ -133,7 +133,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-6 pt-6 border-t border-bianco/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-bianco/40">
           <span>
-            &copy; {new Date().getFullYear()} Il Doge di Venezia &middot;{" "}
+            &copy; {new Date().getFullYear()} IL DOGE DI VENEZIA &middot;{" "}
             <a href="https://supalabs.co" target="_blank" rel="noopener noreferrer" className="hover:text-bianco/70 transition-colors">
               {CONTACT_INFO.piva}
             </a>

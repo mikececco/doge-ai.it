@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (result.type === "nazionale") {
     const incentivo = result.data as Incentivo;
-    const title = `${incentivo.title} | Incentivi AI - DOGE di Venezia`;
+    const title = `${incentivo.title} | Incentivi AI - IL DOGE DI VENEZIA`;
     const description = `${incentivo.description.slice(0, 150)}... Scopri requisiti, importi e come fare domanda.`;
 
     return {
@@ -52,13 +52,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description,
         url: canonicalUrl,
         type: "website",
-        siteName: "DOGE di Venezia",
+        siteName: "IL DOGE DI VENEZIA",
         images: [
           {
             url: "/icon/logoB-noBG.png",
             width: 512,
             height: 512,
-            alt: "il Doge di Venezia",
+            alt: "IL DOGE DI VENEZIA",
           },
         ],
       },
@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const regione = result.data as (typeof REGIONI)[number];
-  const title = `Incentivi AI ${regione.name} | Bandi e Agevolazioni - DOGE di Venezia`;
+  const title = `Incentivi AI ${regione.name} | Bandi e Agevolazioni - IL DOGE DI VENEZIA`;
   const description = `Tutti i bandi e le agevolazioni per la trasformazione digitale e AI in ${regione.name}: ${regione.incentivi.length} opportunità attive per le PMI.`;
 
   return {
@@ -79,13 +79,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonicalUrl,
       type: "website",
-      siteName: "DOGE di Venezia",
+      siteName: "IL DOGE DI VENEZIA",
       images: [
         {
           url: "/icon/logoB-noBG.png",
           width: 512,
           height: 512,
-          alt: "il Doge di Venezia",
+          alt: "IL DOGE DI VENEZIA",
         },
       ],
     },

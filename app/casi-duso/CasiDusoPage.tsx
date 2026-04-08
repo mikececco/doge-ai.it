@@ -3,7 +3,6 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
-import CtaFinale from "@/components/sections/CtaFinale";
 import { CASI_DUSO, DEPARTMENTS, SECTORS } from "@/lib/casi-duso-data";
 import { ArrowRight } from "lucide-react";
 import Button from "@/components/ui/Button";
@@ -163,7 +162,7 @@ export default function CasiDusoPage() {
           {/* Results count */}
           <FadeInOnScroll>
             <p className="text-sm text-grigio-scuro mb-8 uppercase tracking-wider font-semibold">
-              {filtered.length} casi d&rsquo;uso trovati
+              {filtered.length}{" "}casi d&rsquo;uso trovati
             </p>
           </FadeInOnScroll>
 
@@ -171,16 +170,16 @@ export default function CasiDusoPage() {
             <div className="border border-nero">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 {filtered.map((caso, i) => {
-                  // Calculate border classes for the grid
+                  // Calculate border classes for the grid (+1 for CTA card)
                   const colsLg = 4;
                   const colsMd = 2;
-                  const totalItems = filtered.length;
+                  const totalItems = filtered.length + 1;
 
                   return (
                     <Link
                       href={`/casi-duso/${caso.id}`}
                       key={caso.id}
-                      className={`group p-5 md:p-6 flex flex-col hover:bg-giallo transition-colors
+                      className={`group p-5 md:p-6 flex flex-col hover:bg-giallo transition-colors aspect-square overflow-hidden
                         ${i < totalItems - 1 ? "border-b border-nero md:border-b" : ""}
                         ${(i + 1) % colsMd !== 0 ? "md:border-r md:border-nero" : ""}
                         ${(i + 1) % colsLg !== 0 ? "lg:border-r lg:border-nero" : ""}
@@ -230,6 +229,25 @@ export default function CasiDusoPage() {
                     </Link>
                   );
                 })}
+
+                {/* CTA card — last grid item */}
+                <Link
+                  href="/contatti"
+                  className="group p-5 md:p-6 flex flex-col bg-nero hover:bg-giallo transition-colors aspect-square overflow-hidden"
+                >
+                  <h3 className="text-sm font-bold uppercase leading-tight mb-3 text-bianco group-hover:text-nero transition-colors">
+                    Non trovi il tuo caso d&rsquo;uso?
+                  </h3>
+                  <p className="text-sm text-bianco/70 group-hover:text-nero/70 leading-relaxed mb-4 flex-1 transition-colors">
+                    Contattaci. Analizziamo il tuo caso specifico gratuitamente.
+                  </p>
+                  <div className="flex items-center gap-2 mt-auto">
+                    <span className="text-[10px] font-semibold text-giallo group-hover:text-nero uppercase tracking-wider transition-colors">
+                      Parla con noi
+                    </span>
+                    <ArrowRight size={12} className="text-giallo group-hover:text-nero group-hover:translate-x-1 transition-all" />
+                  </div>
+                </Link>
               </div>
             </div>
 
@@ -242,14 +260,6 @@ export default function CasiDusoPage() {
         </div>
       </section>
 
-      {/* ── Section 4: CTA ─────────────────────────────── */}
-      <CtaFinale
-        veniceImage
-        title="Vinci la prossima decade."
-        subtitle="Parla con noi. Nessun impegno, solo chiarezza."
-        buttonText="Prenota una call"
-        buttonHref="/contatti"
-      />
     </>
   );
 }

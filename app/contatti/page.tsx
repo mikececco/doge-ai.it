@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import ContattiPage from "./ContattiPage";
 
 export const metadata: Metadata = {
-  title: "Contatti - Il Doge di Venezia",
+  title: "Contatti - IL DOGE DI VENEZIA",
   description: "Parla con noi. La prima conversazione è gratuita.",
   openGraph: {
-    title: "Contatti - Il Doge di Venezia",
+    title: "Contatti - IL DOGE DI VENEZIA",
     description: "Parla con noi. La prima conversazione è gratuita.",
     type: "website",
     images: [
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
         url: "/icon/logoB-noBG.png",
         width: 512,
         height: 512,
-        alt: "il Doge di Venezia",
+        alt: "IL DOGE DI VENEZIA",
       },
     ],
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const contactPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Contattaci - il Doge di Venezia",
+  name: "Contattaci - IL DOGE DI VENEZIA",
   url: "https://doge-ai.it/contatti",
 };
 

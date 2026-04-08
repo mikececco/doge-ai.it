@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!item) return {};
 
   const canonicalUrl = `${BASE_URL}/incentivi-settoriali/${slug}`;
-  const title = `${item.title} | Bandi e Agevolazioni - DOGE di Venezia`;
+  const title = `${item.title} | Bandi e Agevolazioni - IL DOGE DI VENEZIA`;
   const description = item.description.slice(0, 155) + "...";
 
   return {
@@ -35,13 +35,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonicalUrl,
       type: "website",
-      siteName: "DOGE di Venezia",
+      siteName: "IL DOGE DI VENEZIA",
       images: [
         {
           url: "/icon/logoB-noBG.png",
           width: 512,
           height: 512,
-          alt: "il Doge di Venezia",
+          alt: "IL DOGE DI VENEZIA",
         },
       ],
     },

@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const canonicalUrl = `${BASE_URL}/ai/${city.slug}/${caso.id}`;
   const titleText = caso.title.charAt(0) + caso.title.slice(1).toLowerCase();
-  const title = `${titleText} a ${city.name} - AI per PMI | DOGE di Venezia`;
+  const title = `${titleText} a ${city.name} - AI per PMI | IL DOGE DI VENEZIA`;
   const description = `${caso.description.slice(0, 120)}... Soluzione AI per le PMI di ${city.name} (${city.region}). Implementazione con Anthropic/Claude.`;
 
   return {
@@ -83,8 +83,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonicalUrl,
       type: "website",
-      siteName: "DOGE di Venezia",
-      images: [{ url: "/icon/logoB-noBG.png", width: 512, height: 512, alt: "il Doge di Venezia" }],
+      siteName: "IL DOGE DI VENEZIA",
+      images: [{ url: "/icon/logoB-noBG.png", width: 512, height: 512, alt: "IL DOGE DI VENEZIA" }],
     },
     twitter: { card: "summary_large_image", title, description },
   };
@@ -108,7 +108,7 @@ export default async function AICasoCittaPage({ params }: Props) {
     name: `${titleText} a ${city.name}`,
     description: caso.description,
     url: canonicalUrl,
-    provider: { "@type": "Organization", name: "DOGE di Venezia", url: BASE_URL },
+    provider: { "@type": "Organization", name: "IL DOGE DI VENEZIA", url: BASE_URL },
     areaServed: { "@type": "City", name: city.name },
     serviceType: titleText,
   };

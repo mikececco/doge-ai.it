@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy - Il Doge di Venezia",
+  title: "Cookie Policy - IL DOGE DI VENEZIA",
   description:
-    "Informativa sull'utilizzo dei cookie sul sito doge-ai.it de Il Doge di Venezia.",
+    "Informativa sull'utilizzo dei cookie sul sito doge-ai.it de IL DOGE DI VENEZIA.",
 };
 
 export default function CookiePolicy() {
@@ -209,7 +209,7 @@ export default function CookiePolicy() {
             Policy, è possibile contattare il Titolare del trattamento:
           </p>
           <p>
-            <strong>Il Doge di Venezia</strong>
+            <strong>IL DOGE DI VENEZIA</strong>
             <br />
             Calle Polver del Fuoco 827/A, VENEZIA (VE), Italia
             <br />

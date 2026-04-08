@@ -6,7 +6,7 @@ const SUGGESTED_LINKS = [
   { label: "Soluzioni AI", href: "/soluzioni", description: "Scopri le nostre soluzioni per le PMI" },
   { label: "Casi d'Uso", href: "/casi-duso", description: "Esplora come l'AI trasforma le aziende" },
   { label: "Blog", href: "/blog", description: "Articoli e approfondimenti sull'AI" },
-  { label: "Chi Siamo", href: "/chi-siamo", description: "Il team dietro Il Doge di Venezia" },
+  { label: "Chi Siamo", href: "/chi-siamo", description: "Il team dietro IL DOGE DI VENEZIA" },
   { label: "Contatti", href: "/contatti", description: "Parliamo del tuo progetto" },
 ];
 

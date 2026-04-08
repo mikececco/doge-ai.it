@@ -9,25 +9,25 @@ import { CITIES, type CityPage } from "@/lib/cities-data";
 const BASE_URL = "https://doge-ai.it";
 
 export const metadata: Metadata = {
-  title: "Consulenza AI in Italia | DOGE di Venezia",
+  title: "Consulenza AI in Italia | IL DOGE DI VENEZIA",
   description:
     "Consulenza AI per le PMI italiane in tutte le province. Strategia, implementazione agenti, automazione processi e formazione team con tecnologia Anthropic/Claude.",
   alternates: {
     canonical: `${BASE_URL}/consulenza-ai`,
   },
   openGraph: {
-    title: "Consulenza AI in Italia | DOGE di Venezia",
+    title: "Consulenza AI in Italia | IL DOGE DI VENEZIA",
     description:
       "Consulenza AI per le PMI italiane in tutte le province. Strategia, implementazione agenti, automazione processi e formazione team con tecnologia Anthropic/Claude.",
     url: `${BASE_URL}/consulenza-ai`,
     type: "website",
-    siteName: "DOGE di Venezia",
+    siteName: "IL DOGE DI VENEZIA",
     images: [
       {
         url: "/icon/logoB-noBG.png",
         width: 512,
         height: 512,
-        alt: "il Doge di Venezia",
+        alt: "IL DOGE DI VENEZIA",
       },
     ],
   },
@@ -174,7 +174,7 @@ export default function ConsulenzaAIPage() {
           <div className="max-w-3xl">
             <FadeInOnScroll>
               <h2 className="text-section text-nero mb-8">
-                Perché le PMI italiane scelgono DOGE di Venezia
+                Perché le PMI italiane scelgono IL DOGE DI VENEZIA
               </h2>
             </FadeInOnScroll>
             <FadeInOnScroll>

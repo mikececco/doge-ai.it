@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const canonicalUrl = `${BASE_URL}/casi-studio/${slug}`;
   const topResult = cs.results[0];
-  const title = `${cs.title} | Caso Studio AI - DOGE di Venezia`;
+  const title = `${cs.title} | Caso Studio AI - IL DOGE DI VENEZIA`;
   const description = `${cs.company}. Risultato chiave: ${topResult.metric} ${topResult.value}. Scopri sfida, soluzione AI, risultati e investimento.`;
 
   return {
@@ -36,13 +36,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonicalUrl,
       type: "article",
-      siteName: "DOGE di Venezia",
+      siteName: "IL DOGE DI VENEZIA",
       images: [
         {
           url: "/icon/logoB-noBG.png",
           width: 512,
           height: 512,
-          alt: "il Doge di Venezia",
+          alt: "IL DOGE DI VENEZIA",
         },
       ],
     },
@@ -74,11 +74,11 @@ export default async function CasoStudioPage({ params }: Props) {
     url: canonicalUrl,
     author: {
       "@type": "Organization",
-      name: "DOGE di Venezia",
+      name: "IL DOGE DI VENEZIA",
     },
     publisher: {
       "@type": "Organization",
-      name: "DOGE di Venezia",
+      name: "IL DOGE DI VENEZIA",
       logo: {
         "@type": "ImageObject",
         url: `${BASE_URL}/icon/logoB-noBG.png`,

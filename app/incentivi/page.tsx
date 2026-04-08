@@ -8,25 +8,25 @@ import { INCENTIVI, REGIONI } from "@/lib/incentivi-data";
 const BASE_URL = "https://doge-ai.it";
 
 export const metadata: Metadata = {
-  title: "Incentivi e Agevolazioni AI per PMI | DOGE di Venezia",
+  title: "Incentivi e Agevolazioni AI per PMI | IL DOGE DI VENEZIA",
   description:
     "Tutti gli incentivi nazionali e regionali per finanziare la trasformazione AI della tua impresa: crediti d'imposta, fondi perduti, bandi regionali e agevolazioni 2026.",
   alternates: {
     canonical: `${BASE_URL}/incentivi`,
   },
   openGraph: {
-    title: "Incentivi e Agevolazioni AI per PMI | DOGE di Venezia",
+    title: "Incentivi e Agevolazioni AI per PMI | IL DOGE DI VENEZIA",
     description:
       "Tutti gli incentivi nazionali e regionali per finanziare la trasformazione AI della tua impresa.",
     url: `${BASE_URL}/incentivi`,
     type: "website",
-    siteName: "DOGE di Venezia",
+    siteName: "IL DOGE DI VENEZIA",
     images: [
       {
         url: "/icon/logoB-noBG.png",
         width: 512,
         height: 512,
-        alt: "il Doge di Venezia",
+        alt: "IL DOGE DI VENEZIA",
       },
     ],
   },
@@ -44,7 +44,7 @@ export default function IncentiviPage() {
             <Label className="text-nero/60">INCENTIVI E AGEVOLAZIONI</Label>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <h1 className="text-hero uppercase mt-4 max-w-4xl">
+            <h1 className="text-hero uppercase mt-4">
               Finanzia la tua trasformazione AI
             </h1>
           </FadeInOnScroll>

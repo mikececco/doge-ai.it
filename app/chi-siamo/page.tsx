@@ -4,20 +4,20 @@ import Button from "@/components/ui/Button";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 
 export const metadata: Metadata = {
-  title: "Chi Siamo - Il Doge di Venezia",
+  title: "Chi Siamo - IL DOGE DI VENEZIA",
   description:
-    "Il team dietro Il Doge di Venezia: AI strategy, engineering e design.",
+    "Il team dietro IL DOGE DI VENEZIA: AI strategy, engineering e design.",
   openGraph: {
-    title: "Chi Siamo - Il Doge di Venezia",
+    title: "Chi Siamo - IL DOGE DI VENEZIA",
     description:
-      "Il team dietro Il Doge di Venezia: AI strategy, engineering e design.",
+      "Il team dietro IL DOGE DI VENEZIA: AI strategy, engineering e design.",
     type: "website",
     images: [
       {
         url: "/icon/logoB-noBG.png",
         width: 512,
         height: 512,
-        alt: "il Doge di Venezia",
+        alt: "IL DOGE DI VENEZIA",
       },
     ],
   },
@@ -35,7 +35,7 @@ export default function ChiSiamoPage() {
               Manifesto
             </span>
             <h1 className="text-hero uppercase mt-4">
-              Perch&eacute; abbiamo scelto<span className="hidden md:inline"><br /></span>{" "}&lsquo;Il Doge di Venezia&rsquo;?
+              Perch&eacute; abbiamo scelto<span className="hidden md:inline"><br /></span>{" "}&lsquo;IL DOGE DI VENEZIA&rsquo;?
             </h1>
           </FadeInOnScroll>
 

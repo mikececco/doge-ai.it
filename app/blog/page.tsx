@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/icon/logoB-noBG.png",
         width: 512,
         height: 512,
-        alt: "il Doge di Venezia",
+        alt: "IL DOGE DI VENEZIA",
       },
     ],
   },
@@ -28,7 +28,7 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section data-navbar-theme="dark" className="bg-nero text-bianco pt-40 pb-12">
+      <section data-navbar-theme="dark" className="bg-black text-bianco pt-40 pb-12">
         <div className="container-site">
           <FadeInOnScroll>
             <h1 className="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-[1.1] max-w-3xl uppercase">
@@ -46,7 +46,7 @@ export default function BlogPage() {
       </section>
 
       {/* Articles Grid - Dark background */}
-      <section data-navbar-theme="dark" className="bg-nero py-12 pb-20">
+      <section data-navbar-theme="dark" className="bg-black py-12 pb-20">
         <div className="container-site">
           <BlogSearch posts={BLOG_POSTS} />
         </div>
@@ -54,6 +54,7 @@ export default function BlogPage() {
 
       {/* CTA - Yellow style */}
       <CtaFinale
+        dark
         title="Vinci la prossima decade."
         subtitle="Parla con noi. Nessun impegno, solo chiarezza."
         buttonText="Contattaci"

@@ -63,7 +63,7 @@ export default function HeroSection() {
         />
 
         <motion.p
-          className="text-nero text-subheadline mt-6 max-w-[640px] mx-auto"
+          className="text-nero text-subheadline mt-6 mx-auto"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"

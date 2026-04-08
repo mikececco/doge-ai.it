@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!caso) return {};
 
   const canonicalUrl = `${BASE_URL}/casi-duso/${caso.id}`;
-  const title = `${caso.title} - AI per PMI | Il Doge di Venezia`;
+  const title = `${caso.title} - AI per PMI | IL DOGE DI VENEZIA`;
   const description = caso.description.slice(0, 160);
 
   return {
@@ -42,13 +42,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonicalUrl,
       type: "website",
-      siteName: "DOGE di Venezia",
+      siteName: "IL DOGE DI VENEZIA",
       images: [
         {
           url: "/icon/logoB-noBG.png",
           width: 512,
           height: 512,
-          alt: "il Doge di Venezia",
+          alt: "IL DOGE DI VENEZIA",
         },
       ],
     },
@@ -121,7 +121,7 @@ export default async function CasoDusoSlugPage({ params }: Props) {
     url: canonicalUrl,
     provider: {
       "@type": "Organization",
-      name: "DOGE di Venezia",
+      name: "IL DOGE DI VENEZIA",
       url: BASE_URL,
     },
     areaServed: {

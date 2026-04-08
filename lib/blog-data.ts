@@ -247,7 +247,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Il fattore umano che nessuno vuole discutere</h2>
 <p>C'è un aspetto che emerge sistematicamente nelle implementazioni AI di successo e che raramente viene discusso apertamente: la tecnologia non è mai il problema principale.</p>
 <p>Il problema principale è l'adozione culturale. L'AI, per funzionare, deve essere integrata nei processi quotidiani delle persone. Deve diventare uno strumento naturale, non una minaccia o una complicazione.</p>
-<p>Le PMI che stanno ottenendo i risultati migliori sono quelle che hanno investito tanto nella formazione e nel change management quanto nella tecnologia stessa. La regola empirica che abbiamo verificato in DOGE di Venezia è chiara: ogni euro investito in tecnologia AI dovrebbe essere accompagnato da almeno 50 centesimi investiti in formazione e adozione culturale.</p>
+<p>Le PMI che stanno ottenendo i risultati migliori sono quelle che hanno investito tanto nella formazione e nel change management quanto nella tecnologia stessa. La regola empirica che abbiamo verificato in IL DOGE DI VENEZIA è chiara: ogni euro investito in tecnologia AI dovrebbe essere accompagnato da almeno 50 centesimi investiti in formazione e adozione culturale.</p>
 
 <h2>Cosa fare adesso</h2>
 <p>Il primo passo non è scegliere una tecnologia. Il primo passo è fare chiarezza su dove l'AI può creare più valore nella tua specifica azienda.</p>
@@ -313,7 +313,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <h2>Il passo successivo</h2>
 <p>Se hai letto fin qui, probabilmente hai già in mente 2-3 processi nella tua azienda che potrebbero beneficiare dell'automazione. Il passo successivo è sedersi con qualcuno che ha già implementato soluzioni simili e fare una valutazione onesta del potenziale.</p>
-<p>In DOGE di Venezia facciamo esattamente questo: un assessment strutturato dei tuoi processi, un business case quantitativo, e un piano di implementazione realistico. <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">Parlaci della tua situazione</a> - la prima conversazione è gratuita.</p>
+<p>In IL DOGE DI VENEZIA facciamo esattamente questo: un assessment strutturato dei tuoi processi, un business case quantitativo, e un piano di implementazione realistico. <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">Parlaci della tua situazione</a> - la prima conversazione è gratuita.</p>
     `,
   },
   {
@@ -366,7 +366,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>Se non riesci a rispondere a questa domanda prima di iniziare, il progetto AI sarà quasi certamente deludente - non perché la tecnologia non funzioni, ma perché non avrai un benchmark chiaro per misurare il successo.</p>
 
 <h2>Il processo di assessment che consigliamo</h2>
-<p>In DOGE di Venezia, ogni progetto nel manifatturiero inizia con un'analisi strutturata in cinque fasi:</p>
+<p>In IL DOGE DI VENEZIA, ogni progetto nel manifatturiero inizia con un'analisi strutturata in cinque fasi:</p>
 <ol>
   <li>Mappatura dei flussi produttivi e dei punti di attrizione</li>
   <li>Quantificazione del costo di ogni inefficienza identificata</li>
@@ -429,7 +429,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <h2>Dove iniziare</h2>
 <p>Il primo agente AI che implementi in azienda non deve essere il più complesso. Deve essere quello con il rapporto impatto/rischio più favorevole. Spesso è un agente di customer service, un agente di gestione email, o un agente di reporting automatico.</p>
-<p>Se vuoi capire quale agente AI avrebbe più senso per la tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parlaci</a>. In DOGE di Venezia progettiamo e implementiamo agenti AI operativi per PMI italiane.</p>
+<p>Se vuoi capire quale agente AI avrebbe più senso per la tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parlaci</a>. In IL DOGE DI VENEZIA progettiamo e implementiamo agenti AI operativi per PMI italiane.</p>
     `,
   },
   {
@@ -449,7 +449,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Prima regola: misura prima</h2>
 <p>Il ROI dell'AI si misura come qualsiasi altro investimento: confrontando lo stato dopo con lo stato prima. Se non hai misurato lo stato prima, non puoi misurare il miglioramento.</p>
 <p>Questo sembra ovvio, ma nella pratica è il passaggio più spesso saltato. Si implementa la soluzione AI, si vedono miglioramenti percettivi, e si cerca di costruire il business case a posteriori - con dati incompleti e memoria selettiva.</p>
-<p>La regola in DOGE di Venezia è semplice: prima di qualsiasi implementazione, passiamo almeno 2-4 settimane a misurare il processo esistente. Non a stimarlo. A misurarlo.</p>
+<p>La regola in IL DOGE DI VENEZIA è semplice: prima di qualsiasi implementazione, passiamo almeno 2-4 settimane a misurare il processo esistente. Non a stimarlo. A misurarlo.</p>
 
 <h2>Le metriche che contano davvero</h2>
 <h3>Metriche di efficienza operativa</h3>
@@ -598,7 +598,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <h2>Il consiglio pratico</h2>
 <p>Non cercare lo strumento "migliore in assoluto". Cerca quello che la tua azienda può adottare e sfruttare concretamente nei prossimi 12 mesi. Lo strumento usato bene batte sempre lo strumento teoricamente superiore usato male.</p>
-<p>Se vuoi capire quale approccio all'automazione ha più senso per la tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parlaci</a> - in DOGE di Venezia lavoriamo con entrambi gli strumenti e possiamo guidarti nella scelta giusta per il tuo contesto.</p>
+<p>Se vuoi capire quale approccio all'automazione ha più senso per la tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parlaci</a> - in IL DOGE DI VENEZIA lavoriamo con entrambi gli strumenti e possiamo guidarti nella scelta giusta per il tuo contesto.</p>
     `,
   },
   {
@@ -632,7 +632,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>Il middle management è spesso il punto di blocco più critico nelle trasformazioni AI. I responsabili intermedi hanno incentivi strutturali a preservare i processi esistenti: la loro autorità è spesso legata alla conoscenza di come funzionano le cose, e un'AI che automatizza parte dei loro processi rimuove quella base di potere.</p>
 
 <h2>Il Codice del Doge: cultura prima della tecnologia</h2>
-<p>In DOGE di Venezia, il primo passo di qualsiasi progetto di trasformazione AI non è scegliere la tecnologia. È quella che chiamiamo "Fase 0": il buy-in culturale.</p>
+<p>In IL DOGE DI VENEZIA, il primo passo di qualsiasi progetto di trasformazione AI non è scegliere la tecnologia. È quella che chiamiamo "Fase 0": il buy-in culturale.</p>
 <p>Prima di installare una riga di codice o configurare una piattaforma, lavoriamo con il management e i team per rispondere a tre domande:</p>
 <ul>
   <li><strong>Perché stiamo facendo questo?</strong> Non "perché l'AI è il futuro" - ma perché specifica-mente questa azienda, in questo momento, vuole investire in questa trasformazione. La risposta deve essere concreta e condivisa.</li>
@@ -758,7 +758,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>I limiti da conoscere</h2>
 <p>Per onestà intellettuale: il customer service AI non è la soluzione per tutti i tipi di interazione con il cliente. I casi dove l'escalation all'umano è necessaria includono: reclami gravi che richiedono empatia situazionale, negoziazioni complesse, clienti in stato di forte agitazione emotiva, situazioni che richiedono conoscenza profonda e contestuale del cliente.</p>
 <p>Un sistema ben progettato gestisce queste eccezioni con grazia: identifica quando è il momento di coinvolgere un umano e passa la conversazione con tutto il contesto necessario.</p>
-<p>Se vuoi costruire il business case specifico per la tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">contattaci</a> - in DOGE di Venezia abbiamo i dati e l'esperienza per fare proiezioni realistiche sul tuo specifico contesto.</p>
+<p>Se vuoi costruire il business case specifico per la tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">contattaci</a> - in IL DOGE DI VENEZIA abbiamo i dati e l'esperienza per fare proiezioni realistiche sul tuo specifico contesto.</p>
     `,
   },
   {
@@ -876,7 +876,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>Fernandez fa un salto diverso: la decisione rilevante è <strong>chi decide che l'adozione non è opzionale</strong>. Il resto è esecuzione.</p>
 <p>Le organizzazioni che stanno costruendo vantaggio reale non stanno aspettando che i loro team si convincano. Stanno fissando aspettative, investendo in onboarding, e misurando l'adozione come farebbero con qualsiasi altra priorità operativa.</p>
 <p>Il futuro è già qui. Non è distribuito uniformemente, per ora.</p>
-<p><em>Il Doge di Venezia lavora con PMI e fondi per trasformare l'adozione AI da iniziativa individuale a infrastruttura operativa condivisa. Se stai valutando come accelerare questo processo nella tua organizzazione, <a href="https://doge-ai.it/">inizia da qui</a>.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+<p><em>IL DOGE DI VENEZIA lavora con PMI e fondi per trasformare l'adozione AI da iniziativa individuale a infrastruttura operativa condivisa. Se stai valutando come accelerare questo processo nella tua organizzazione, <a href="https://doge-ai.it/">inizia da qui</a>.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
     `,
   },
   {
@@ -910,7 +910,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Il Prerequisito: Sapere Cosa si Vuole</h2>
 <p>Come per tutti gli strumenti AI generativi, la qualità dell'output dipende dalla qualità dell'input. Un brief vago produce un prototipo generico. Un brief che specifica il problema, il contesto visivo, il flusso utente e i criteri di successo produce qualcosa di utilizzabile.</p>
 <p>La skill che questi strumenti richiedono non è tecnica. È la capacità di articolare con precisione cosa si vuole costruire e perché. Un'abilità che i migliori manager già hanno, e che l'AI amplifica in output concreti.</p>
-<p><em><a href="https://doge-ai.it/">Il Doge di Venezia</a> lavora con PMI e fondi per integrare strumenti come Bolt nei flussi di innovazione interna, accelerando il ciclo dall'idea alla validazione.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+<p><em><a href="https://doge-ai.it/">IL DOGE DI VENEZIA</a> lavora con PMI e fondi per integrare strumenti come Bolt nei flussi di innovazione interna, accelerando il ciclo dall'idea alla validazione.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
     `,
   },
   {
@@ -949,7 +949,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>La Domanda per chi Gestisce un'Azienda</h2>
 <p>Quante ore a settimana vengono spese dal tuo team su task che rientrano nella categoria "ricerca, sintesi, produzione di documenti strutturati, analisi di dati esistenti"?</p>
 <p>Quella è la prima stima del potenziale di recupero, non su base teorica, ma su base di quello che strumenti come Co-work già fanno oggi.</p>
-<p><em><a href="https://doge-ai.it/">Il Doge di Venezia</a> aiuta le aziende a identificare i task ad alto volume e basso valore aggiunto che possono essere delegati ad agenti AI, e a costruire il sistema che li gestisce.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+<p><em><a href="https://doge-ai.it/">IL DOGE DI VENEZIA</a> aiuta le aziende a identificare i task ad alto volume e basso valore aggiunto che possono essere delegati ad agenti AI, e a costruire il sistema che li gestisce.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
     `,
   },
   {
@@ -1235,7 +1235,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Per le Organizzazioni: Lo Stesso Meccanismo, Scala Diversa</h2>
 <p>Quello che vale per il singolo professionista vale per le organizzazioni: il vantaggio competitivo nell'era AI non viene dall'accesso agli strumenti, è uguale per tutti, ma dalla capacità di costruire un sistema interno dove le competenze AI si accumulano e si condividono.</p>
 <p>Un team che impara collettivamente, che documenta le pratiche che funzionano, che eleva il livello di adozione da uso individuale a infrastruttura condivisa: questo è il corrispettivo organizzativo delle tre cose descritte sopra.</p>
-<p><em><a href="https://doge-ai.it/">Il Doge di Venezia</a> lavora con PMI e fondi esattamente su questo: costruire la base di competenze e la struttura organizzativa che trasforma l'adozione AI da sperimentazione individuale a vantaggio competitivo misurabile.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+<p><em><a href="https://doge-ai.it/">IL DOGE DI VENEZIA</a> lavora con PMI e fondi esattamente su questo: costruire la base di competenze e la struttura organizzativa che trasforma l'adozione AI da sperimentazione individuale a vantaggio competitivo misurabile.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
     `,
   },
   {
@@ -1268,7 +1268,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>La Domanda Operativa per le PMI</h2>
 <p>Prima di valutare tool specifici, la domanda utile è: quali processi nella tua azienda richiedono che una persona legga qualcosa, prenda una decisione semplice e strutturata, e poi scriva qualcosa da qualche parte?</p>
 <p>Ogni processo con questo pattern è un candidato per un agente Lindy. La lista, quasi invariabilmente, è più lunga di quanto si pensi.</p>
-<p><em><a href="https://doge-ai.it/">Il Doge di Venezia</a> affianca PMI e fondi nell'identificazione dei workflow candidati all'automazione con agenti AI e nella configurazione dei sistemi che li gestiscono.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+<p><em><a href="https://doge-ai.it/">IL DOGE DI VENEZIA</a> affianca PMI e fondi nell'identificazione dei workflow candidati all'automazione con agenti AI e nella configurazione dei sistemi che li gestiscono.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
     `,
   },
   {
@@ -1559,7 +1559,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Il Limite che Rimane</h2>
 <p>L'elemento che Ace sottolinea come permanentemente umano è la curation creativa: qualcuno deve ancora scegliere quale script lanciare all'automazione, valutare quale output è abbastanza buono, fare l'editing finale.</p>
 <p>Non è un limite della tecnologia. È una descrizione di dove il valore umano si concentra: nella direzione creativa, nel giudizio estetico, nella comprensione del brand, non nell'esecuzione tecnica.</p>
-<p><em><a href="https://doge-ai.it/">Il Doge di Venezia</a> aiuta le aziende italiane a identificare dove la produzione AI può sostituire o affiancare la produzione tradizionale, abbattendo i costi di contenuto senza sacrificare la qualità.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
+<p><em><a href="https://doge-ai.it/">IL DOGE DI VENEZIA</a> aiuta le aziende italiane a identificare dove la produzione AI può sostituire o affiancare la produzione tradizionale, abbattendo i costi di contenuto senza sacrificare la qualità.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
     `,
   },
   {

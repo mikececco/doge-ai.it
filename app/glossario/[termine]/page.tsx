@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!term) return {};
 
   const canonicalUrl = `${BASE_URL}/glossario/${term.slug}`;
-  const title = `${term.term} - Glossario AI | Il Doge di Venezia`;
+  const title = `${term.term} - Glossario AI | IL DOGE DI VENEZIA`;
   const description = term.definition.slice(0, 160);
 
   return {
@@ -34,13 +34,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonicalUrl,
       type: "website",
-      siteName: "DOGE di Venezia",
+      siteName: "IL DOGE DI VENEZIA",
       images: [
         {
           url: "/icon/logoB-noBG.png",
           width: 512,
           height: 512,
-          alt: "il Doge di Venezia",
+          alt: "IL DOGE DI VENEZIA",
         },
       ],
     },

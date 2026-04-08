@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import AziendePage from "./AziendePage";
 
 export const metadata: Metadata = {
-  title: "AI Transformation per le Aziende - Il Doge di Venezia",
+  title: "AI Transformation per le Aziende - IL DOGE DI VENEZIA",
   description:
     "Trasformiamo le operazioni delle PMI italiane con AI. Risultati misurabili in 60 giorni.",
   openGraph: {
-    title: "AI Transformation per le Aziende - Il Doge di Venezia",
+    title: "AI Transformation per le Aziende - IL DOGE DI VENEZIA",
     description:
       "Trasformiamo le operazioni delle PMI italiane con AI. Risultati misurabili in 60 giorni.",
     type: "website",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         url: "/icon/logoB-noBG.png",
         width: 512,
         height: 512,
-        alt: "il Doge di Venezia",
+        alt: "IL DOGE DI VENEZIA",
       },
     ],
   },

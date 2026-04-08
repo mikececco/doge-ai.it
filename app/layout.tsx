@@ -23,8 +23,8 @@ const archivo = Archivo({
 
 export const metadata: Metadata = {
   title: {
-    default: "il Doge di Venezia - Consulenza AI per PMI Italiane",
-    template: "%s | il Doge di Venezia",
+    default: "IL DOGE DI VENEZIA - Consulenza AI per PMI Italiane",
+    template: "%s | IL DOGE DI VENEZIA",
   },
   description:
     "Strategia e implementazione AI per PMI e fondi di investimento italiani. Automazione, agenti AI, digital twin. Risultati misurabili in 30 giorni.",
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
     languages: { "it": "https://doge-ai.it" },
   },
   openGraph: {
-    title: "il Doge di Venezia - Consulenza AI per PMI Italiane",
+    title: "IL DOGE DI VENEZIA - Consulenza AI per PMI Italiane",
     description:
       "Strategia e implementazione AI per PMI e fondi di investimento italiani. Automazione, agenti AI, digital twin.",
     url: "https://doge-ai.it",
-    siteName: "il Doge di Venezia",
+    siteName: "IL DOGE DI VENEZIA",
     locale: "it_IT",
     type: "website",
     images: [
@@ -46,13 +46,13 @@ export const metadata: Metadata = {
         url: "/icon/logoB-noBG.png",
         width: 512,
         height: 512,
-        alt: "il Doge di Venezia",
+        alt: "IL DOGE DI VENEZIA",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "il Doge di Venezia - Consulenza AI per PMI Italiane",
+    title: "IL DOGE DI VENEZIA - Consulenza AI per PMI Italiane",
     description:
       "Strategia e implementazione AI per PMI e fondi di investimento italiani.",
   },

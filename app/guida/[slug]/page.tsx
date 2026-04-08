@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!guida) return {};
 
   const canonicalUrl = `${BASE_URL}/guida/${guida.slug}`;
-  const title = `${guida.title} | Il Doge di Venezia`;
+  const title = `${guida.title} | IL DOGE DI VENEZIA`;
   const description = guida.description.slice(0, 160);
 
   return {
@@ -35,13 +35,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: canonicalUrl,
       type: "article",
-      siteName: "DOGE di Venezia",
+      siteName: "IL DOGE DI VENEZIA",
       images: [
         {
           url: "/icon/logoB-noBG.png",
           width: 512,
           height: 512,
-          alt: "il Doge di Venezia",
+          alt: "IL DOGE DI VENEZIA",
         },
       ],
     },
@@ -92,7 +92,7 @@ export default async function GuidaSlugPage({ params }: Props) {
     url: canonicalUrl,
     publisher: {
       "@type": "Organization",
-      name: "DOGE di Venezia",
+      name: "IL DOGE DI VENEZIA",
       url: BASE_URL,
     },
     articleSection: guida.sector,

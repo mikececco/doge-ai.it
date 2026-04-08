@@ -209,7 +209,7 @@ export default function PartnerPage() {
             <div className="grid grid-cols-4 gap-6 relative">
               {STEPS_DESKTOP.map((step, i) => (
                 <div key={i} className="text-center">
-                  <h3 className="text-base font-bold uppercase">
+                  <h3 className="text-xl font-bold uppercase">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">{step.title}</span>
                   </h3>
                   <p className="text-xs uppercase tracking-wider text-nero/60 mt-1">{step.time}</p>
@@ -234,7 +234,7 @@ export default function PartnerPage() {
             {STEPS_MOBILE.map((step, i) => (
               <div key={i} className="relative pb-8 last:pb-0">
                 <div className="absolute left-[-22px] top-1 w-4 h-4 bg-nero rounded-full z-10" />
-                <h3 className="text-base font-bold uppercase">
+                <h3 className="text-xl font-bold uppercase">
                   <span className="underline decoration-giallo decoration-[3px] underline-offset-4">{step.title}</span>
                 </h3>
                 <p className="text-xs uppercase tracking-wider text-nero/60 mt-1">{step.time}</p>
