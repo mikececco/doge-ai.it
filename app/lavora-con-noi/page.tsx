@@ -58,11 +58,11 @@ export default function LavoraConNoi() {
   return (
     <>
       {/* Hero */}
-      <section data-navbar-theme="light" className="pt-40 pb-20 bg-bianco">
+      <section data-navbar-theme="light" className="pt-24 pb-12 md:pt-40 md:pb-20 bg-bianco">
         <div className="container-site">
           <FadeInOnScroll>
             <Label>Lavora con noi</Label>
-            <h1 className="text-hero mt-4 max-w-3xl">
+            <h1 className="text-hero uppercase mt-4 max-w-3xl">
               Costruiamo un team che ridefinisce cosa significa lavorare
               nell&apos;AI.
             </h1>

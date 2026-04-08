@@ -127,7 +127,7 @@ export default async function AICasoCittaPage({ params }: Props) {
             <Label className="text-giallo">AI PER PMI &middot; {caso.department.toUpperCase()}</Label>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <h1 className="text-hero mt-4 max-w-3xl">
+            <h1 className="text-hero uppercase mt-4 max-w-3xl">
               {titleText} a {city.name}
             </h1>
           </FadeInOnScroll>

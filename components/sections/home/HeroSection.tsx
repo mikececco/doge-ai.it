@@ -51,7 +51,7 @@ export default function HeroSection() {
         <TextReveal
           text={"Mentre tutti ne\u00A0parlano.\nNoi la\u00A0implementiamo."}
           as="h1"
-          className="text-hero text-nero mx-auto"
+          className="text-hero-home text-nero mx-auto uppercase"
         />
 
         <motion.p

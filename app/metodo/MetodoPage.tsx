@@ -336,7 +336,8 @@ export default function MetodoPage() {
               {QUICK_WIN_SECTORS.map((sector, i) => (
                 <div
                   key={i}
-                  className={`group relative ${
+                  tabIndex={0}
+                  className={`group relative outline-none ${
                     i < QUICK_WIN_SECTORS.length - 1 ? "border-b border-nero" : ""
                   } ${i % 2 === 0 ? "md:border-r border-nero" : ""}`}
                 >
@@ -347,9 +348,9 @@ export default function MetodoPage() {
                     <span className="text-sm font-bold uppercase tracking-wide text-nero">
                       {sector.title}
                     </span>
-                    <svg className="ml-auto w-5 h-5 text-nero transition-transform group-hover:rotate-90 duration-200 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                    <svg className="ml-auto w-5 h-5 text-nero transition-transform group-hover:rotate-90 group-focus-within:rotate-90 duration-200 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
                   </div>
-                  <div className="max-h-0 overflow-hidden group-hover:max-h-[180px] transition-[max-height] duration-700 ease-in-out">
+                  <div className="max-h-0 overflow-hidden group-hover:max-h-[180px] group-focus-within:max-h-[180px] transition-[max-height] duration-700 ease-in-out">
                     <div className="px-6 pb-5 md:px-8 md:pb-6 pl-16 md:pl-20">
                       <p className="text-sm text-nero/70 leading-relaxed">
                         {sector.content}

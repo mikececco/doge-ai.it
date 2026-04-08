@@ -165,7 +165,7 @@ function NazionalePage({ incentivo }: { incentivo: Incentivo }) {
             <Label className="text-nero/60">INCENTIVO NAZIONALE</Label>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <h1 className="text-hero mt-4 max-w-4xl">{incentivo.title}</h1>
+            <h1 className="text-hero uppercase mt-4 max-w-4xl">{incentivo.title}</h1>
           </FadeInOnScroll>
           <FadeInOnScroll>
             <p className="text-subheadline text-nero/70 mt-6 max-w-[640px] leading-relaxed">
@@ -298,7 +298,7 @@ function RegionalePage({
             <Label className="text-nero/60">INCENTIVI REGIONALI</Label>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <h1 className="text-hero mt-4 max-w-4xl">
+            <h1 className="text-hero uppercase mt-4 max-w-4xl">
               Incentivi AI in {regione.name}
             </h1>
           </FadeInOnScroll>

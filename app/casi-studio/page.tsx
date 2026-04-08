@@ -78,7 +78,7 @@ export default function CasiStudioPage() {
             <Label className="text-bianco/40">CASI STUDIO</Label>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <h1 className="text-hero mt-4 max-w-4xl">
+            <h1 className="text-hero uppercase mt-4 max-w-4xl">
               Risultati reali, misurabili, documentati.
             </h1>
           </FadeInOnScroll>

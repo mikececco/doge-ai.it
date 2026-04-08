@@ -204,7 +204,7 @@ export default async function BlogPostPage({ params }: Props) {
             {post.category}
           </span>
 
-          <h1 className="text-hero mt-4 max-w-4xl">{post.title}</h1>
+          <h1 className="text-hero uppercase mt-4 max-w-4xl">{post.title}</h1>
 
           <p className="text-subheadline text-bianco/70 mt-6 max-w-[640px]">
             {post.excerpt}
@@ -223,7 +223,7 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Article + ToC */}
       <section data-navbar-theme="light" className="bg-bianco py-20" id="article-body">
         <div className="container-site">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-20 items-start">
             {/* Article body */}
             <article
               className="blog-prose max-w-[720px]"
@@ -232,7 +232,7 @@ export default async function BlogPostPage({ params }: Props) {
 
             {/* Table of Contents (sticky sidebar) */}
             {tocItems.length > 0 && (
-              <aside className="hidden lg:block sticky top-24">
+              <aside className="hidden lg:block sticky top-24 pl-6 border-l border-grigio-chiaro">
                 <p className="text-label uppercase text-grigio-medio tracking-widest mb-4">
                   Indice
                 </p>

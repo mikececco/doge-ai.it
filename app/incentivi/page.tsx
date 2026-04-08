@@ -44,7 +44,7 @@ export default function IncentiviPage() {
             <Label className="text-nero/60">INCENTIVI E AGEVOLAZIONI</Label>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <h1 className="text-hero mt-4 max-w-4xl">
+            <h1 className="text-hero uppercase mt-4 max-w-4xl">
               Finanzia la tua trasformazione AI
             </h1>
           </FadeInOnScroll>

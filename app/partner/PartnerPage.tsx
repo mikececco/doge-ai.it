@@ -78,7 +78,7 @@ export default function PartnerPage() {
           <FadeInOnScroll>
             <span className="text-label uppercase text-nero tracking-widest">Programma Partner</span>
             <h1 className="text-hero uppercase mt-4">
-              Porta l&rsquo;AI ai tuoi clienti<br />
+              Porta l&rsquo;AI ai tuoi clienti<span className="hidden md:inline"><br /></span>{" "}
               senza costruirla da zero.
             </h1>
           </FadeInOnScroll>

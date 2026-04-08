@@ -72,7 +72,7 @@ export default function SoluzioniPage() {
             <Label>SOLUZIONI</Label>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <h1 className="text-hero mt-4 max-w-3xl">
+            <h1 className="text-hero uppercase mt-4 max-w-3xl">
               AI su misura per ogni azienda italiana
             </h1>
           </FadeInOnScroll>

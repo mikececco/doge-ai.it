@@ -107,7 +107,7 @@ export default async function ConsulenzaAISettoreCittaPage({ params }: Props) {
             <Label className="text-giallo">CONSULENZA AI &middot; {settore.title.toUpperCase()}</Label>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <h1 className="text-hero mt-4 max-w-3xl">
+            <h1 className="text-hero uppercase mt-4 max-w-3xl">
               Consulenza AI per {settore.title} a {city.name}
             </h1>
           </FadeInOnScroll>

@@ -162,7 +162,7 @@ export default async function ConsulenzaAICittaPage({ params }: Props) {
             <Label className="text-giallo">CONSULENZA AI</Label>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <h1 className="text-hero mt-4 max-w-3xl">
+            <h1 className="text-hero uppercase mt-4 max-w-3xl">
               Consulenza AI a {city.name}
             </h1>
           </FadeInOnScroll>

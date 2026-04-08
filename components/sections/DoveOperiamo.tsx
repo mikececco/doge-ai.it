@@ -35,7 +35,7 @@ export default function DoveOperiamo({ variant = "aziende" }: { variant?: "azien
   const copy = COPY[variant];
 
   return (
-    <SectionWrapper bg="dark" className="min-h-screen flex flex-col justify-center">
+    <SectionWrapper bg="dark" className="md:min-h-screen flex flex-col justify-center">
       <FadeInOnScroll>
         <div className="text-center mb-14">
           <span className="text-label uppercase text-grigio-medio tracking-widest">

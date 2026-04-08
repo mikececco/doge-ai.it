@@ -86,7 +86,7 @@ export default function ChiSiamoPage() {
         </FadeInOnScroll>
 
         <FadeInOnScroll>
-          <div className="border border-nero px-4 py-4 md:px-8 md:py-8">
+          <div className="text-center max-w-[700px] mx-auto">
             <p className="text-body text-nero leading-relaxed">
               Strategia e codice nello stesso team. Non in sequenza, in
               parallelo. Veniamo da fondi VC europei, startup AI

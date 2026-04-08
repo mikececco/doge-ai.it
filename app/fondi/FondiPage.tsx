@@ -40,8 +40,8 @@ export default function FondiPage() {
         <div className="container-site relative z-10 text-center pt-24 pb-20 md:pb-24">
           <FadeInOnScroll>
             <span className="text-label uppercase text-nero tracking-widest">Per i Fondi</span>
-            <h1 className="text-section md:text-hero uppercase mt-4 mx-auto">
-              La leva di value creation pi&ugrave; sottovalutata nel vostro portfolio.
+            <h1 className="text-section uppercase mt-4 mx-auto">
+              La leva di value creation<br />pi&ugrave; sottovalutata nel vostro portfolio.
             </h1>
             <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
               Diventiamo il vostro braccio operativo per la trasformazione AI delle portfolio companies.

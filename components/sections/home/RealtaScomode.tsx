@@ -56,7 +56,7 @@ export default function RealtaScomode() {
                 <div
                   key={i}
                   tabIndex={0}
-                  className={`group relative min-h-[180px] md:aspect-square flex flex-col justify-center px-4 py-4 md:px-6 md:py-6 overflow-hidden outline-none ${i < topRow.length - 1 ? "md:border-r border-nero" : ""}`}
+                  className={`group relative min-h-[180px] md:aspect-square flex flex-col justify-center px-4 py-4 md:px-6 md:py-6 overflow-hidden outline-none ${i < topRow.length - 1 ? "border-b md:border-b-0 md:border-r border-nero" : ""}`}
                 >
                   <h3 className="text-xl md:text-2xl font-bold uppercase leading-snug mb-4">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
@@ -85,7 +85,7 @@ export default function RealtaScomode() {
                 <div
                   key={i}
                   tabIndex={0}
-                  className="group relative min-h-[180px] md:aspect-square flex flex-col justify-center px-4 py-4 md:px-6 md:py-6 overflow-hidden outline-none md:border-r border-nero"
+                  className="group relative min-h-[180px] md:aspect-square flex flex-col justify-center px-4 py-4 md:px-6 md:py-6 overflow-hidden outline-none border-b md:border-b-0 md:border-r border-nero"
                 >
                   <h3 className="text-xl md:text-2xl font-bold uppercase leading-snug mb-4">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
@@ -102,30 +102,26 @@ export default function RealtaScomode() {
               ))}
 
               {/* Special last card - black bg, bigger */}
-              <Link href="/contatti" className="group px-4 py-4 md:px-8 md:py-8 bg-nero text-bianco flex flex-col justify-between min-h-[220px] hover:bg-giallo transition-colors duration-300">
-                <div>
-                  <h3 className="text-2xl font-bold uppercase leading-tight">
-                    <span className="group-hover:hidden">L&apos;AI in azienda non fa paura.</span>
-                    <span className="hidden group-hover:inline text-nero">PRENOTA UNA CALL</span>
-                  </h3>
-                  <p className="text-lg italic text-giallo mt-2 group-hover:text-nero">
-                    <span className="group-hover:hidden">Ignorarla s&igrave;.</span>
-                    <span className="hidden group-hover:inline">Ti diciamo esattamente quanto vale l&apos;AI per la tua azienda.</span>
-                  </p>
-                </div>
-                <div className="flex justify-end">
-                  <svg
-                    width="36"
-                    height="36"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    className="text-bianco group-hover:text-nero transition-colors duration-300"
-                  >
-                    <path d="M7 7l10 10M17 17V7M17 17H7" />
-                  </svg>
-                </div>
+              <Link href="/contatti" className="group relative px-4 py-4 md:px-6 md:py-6 bg-nero text-bianco flex flex-col justify-center min-h-[180px] md:aspect-square hover:bg-giallo transition-colors duration-300">
+                <h3 className="text-xl md:text-2xl font-bold uppercase leading-snug mb-4">
+                  <span className="group-hover:hidden">L&apos;AI in azienda non fa paura.</span>
+                  <span className="hidden group-hover:inline text-nero">PRENOTA UNA CALL</span>
+                </h3>
+                <p className="text-lg italic text-giallo group-hover:text-nero">
+                  <span className="group-hover:hidden">Ignorarla s&igrave;.</span>
+                  <span className="hidden group-hover:inline">Ti diciamo esattamente quanto vale l&apos;AI per la tua azienda.</span>
+                </p>
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="absolute bottom-3 right-3 text-bianco group-hover:text-nero transition-colors duration-300"
+                >
+                  <path d="M7 7l10 10M17 17V7M17 17H7" />
+                </svg>
               </Link>
             </div>
           </div>

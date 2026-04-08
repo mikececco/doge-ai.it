@@ -118,7 +118,7 @@ export default async function CasoStudioPage({ params }: Props) {
             </Label>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <h1 className="text-hero mt-4 max-w-4xl">{cs.title}</h1>
+            <h1 className="text-hero uppercase mt-4 max-w-4xl">{cs.title}</h1>
           </FadeInOnScroll>
           <FadeInOnScroll>
             <p className="text-subheadline text-bianco/60 mt-6 max-w-[640px] leading-relaxed">

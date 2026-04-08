@@ -100,13 +100,13 @@ export default async function SoluzioneSlugPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section data-navbar-theme="dark" className="bg-nero text-bianco pt-40 pb-20">
+      <section data-navbar-theme="dark" className="bg-nero text-bianco pt-24 pb-12 md:pt-40 md:pb-20">
         <div className="container-site">
           <FadeInOnScroll>
             <Label className="text-giallo">SOLUZIONI</Label>
           </FadeInOnScroll>
           <FadeInOnScroll>
-            <h1 className="text-hero mt-4 max-w-3xl">{page.h1}</h1>
+            <h1 className="text-hero uppercase mt-4 max-w-3xl">{page.h1}</h1>
           </FadeInOnScroll>
           <FadeInOnScroll>
             <p className="text-subheadline text-bianco/70 mt-6 max-w-[640px] leading-relaxed">

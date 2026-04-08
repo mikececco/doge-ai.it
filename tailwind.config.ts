@@ -22,10 +22,12 @@ const config: Config = {
         heading: ["var(--font-heading)", "system-ui", "sans-serif"],
       },
       fontSize: {
+        // Home hero (biggest)
+        "hero-home": ["clamp(3rem, 8vw, 6.5rem)", { lineHeight: "1.05", fontWeight: "700" }],
         // Hero
-        "hero": ["clamp(1.5rem, 7vw, 6.5rem)", { lineHeight: "1.05", fontWeight: "700" }],
+        "hero": ["clamp(1.75rem, 5.5vw, 4.5rem)", { lineHeight: "1.05", fontWeight: "700" }],
         // Section title
-        "section": ["clamp(2rem, 5.5vw, 4.5rem)", { lineHeight: "1.1", fontWeight: "700" }],
+        "section": ["clamp(1.75rem, 5.5vw, 4.5rem)", { lineHeight: "1.1", fontWeight: "700" }],
         // Subheadline
         "subheadline": ["clamp(1.35rem, 2.2vw, 1.65rem)", { lineHeight: "1.3", fontWeight: "400" }],
         // Body
@@ -40,7 +42,7 @@ const config: Config = {
       },
       spacing: {
         section: "96px",
-        "section-mobile": "64px",
+        "section-mobile": "48px",
       },
       borderWidth: {
         DEFAULT: "4px",

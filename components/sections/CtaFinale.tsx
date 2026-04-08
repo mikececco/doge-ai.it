@@ -31,7 +31,7 @@ export default function CtaFinale({
             src="/hero/venice-canal.jpeg"
             alt=""
             fill
-            className="object-cover object-center opacity-30"
+            className="object-cover object-top opacity-50"
           />
         </div>
         {/* Dark overlay + gradient that fades to footer black */}
@@ -45,7 +45,7 @@ export default function CtaFinale({
               height={48}
               className="mx-auto mb-6"
             />
-            <h2 className="text-hero text-giallo">
+            <h2 className="text-hero uppercase text-giallo">
               {title}
             </h2>
             <p className="text-subheadline mt-4 text-bianco/70 max-w-[600px] mx-auto">
@@ -67,7 +67,7 @@ export default function CtaFinale({
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(30,40,50,0.8)_0%,_transparent_70%)]" />
         <div className="container-site relative z-10">
           <FadeInOnScroll className="text-center max-w-2xl mx-auto">
-            <h2 className="text-hero text-bianco">
+            <h2 className="text-hero uppercase text-bianco">
               {title}
             </h2>
             <p className="text-subheadline mt-4 text-bianco/70">

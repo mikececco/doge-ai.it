@@ -26,7 +26,7 @@ const NAV_COL_2 = [
 
 export default function Footer() {
   return (
-    <footer className="bg-nero text-bianco border-t border-bianco/10">
+    <footer className="bg-black text-bianco border-t border-bianco/10">
       <div className="container-site py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-12 pb-12 border-b border-bianco/10">
           {/* Col 1: Logo + tagline + doge head + social */}

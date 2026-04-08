@@ -3,7 +3,6 @@
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import DoveOperiamo from "@/components/sections/DoveOperiamo";
-import INumeri from "@/components/sections/home/INumeri";
 import CtaFinale from "@/components/sections/CtaFinale";
 import Button from "@/components/ui/Button";
 import ShieldAnimation from "@/components/animations/ShieldAnimation";
@@ -20,7 +19,7 @@ export default function AziendePage() {
         <FadeInOnScroll>
           <span className="text-label uppercase text-nero tracking-widest">Per le Aziende</span>
           <h1 className="text-section uppercase mt-4 mx-auto">
-            Se potessi avere il triplo dei dipendenti senza aumentare il costo del personale,<span className="hidden md:inline"><br /></span>{" "}cosa faresti?
+            Se potessi avere il triplo dei dipendenti<br />senza aumentare il costo del personale,<span className="hidden md:inline"><br /></span>{" "}cosa faresti?
           </h1>
           <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
             &Egrave; la domanda da cui partiamo con ogni cliente. E oggi, con l&apos;AI,
@@ -108,7 +107,7 @@ export default function AziendePage() {
               Le due modalit&agrave;
             </span>
             <h2 className="text-section uppercase mt-4">
-              Proteggere o espandersi. Entrambi partono da qui.
+              Proteggere o espandersi.<br />Entrambi partono da qui.
             </h2>
             <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
               Alcune aziende hanno margini da proteggere. Altre hanno mercati da conquistare.<span className="hidden md:inline"><br /></span>
@@ -245,9 +244,6 @@ export default function AziendePage() {
 
       {/* ── Dove Operiamo (shared component) ──────────────── */}
       <DoveOperiamo />
-
-      {/* IN NUMERI */}
-      <INumeri />
 
       {/* ── Incentivi e Agevolazioni ─────────────────────── */}
       <SectionWrapper bg="white">

@@ -31,7 +31,7 @@ export default function HeroPage({
         <TextReveal
           text={title}
           as="h1"
-          className="text-hero mt-4 max-w-4xl"
+          className="text-hero uppercase mt-4 max-w-4xl"
         />
         {subtitle && (
           <FadeInOnScroll>
