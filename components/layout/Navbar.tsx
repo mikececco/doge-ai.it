@@ -63,7 +63,7 @@ export default function Navbar() {
       if (sections.length === 0) return;
 
       // Find the section whose top is closest to (but not far below) the navbar
-      let best: HTMLElement | null = null;
+      let best: HTMLElement | null = null as HTMLElement | null;
       let bestTop = -Infinity;
       const navBottom = 64; // navbar height
 
