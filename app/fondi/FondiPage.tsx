@@ -40,7 +40,7 @@ export default function FondiPage() {
         <div className="container-site relative z-10 text-center pt-24 pb-20 md:pb-24">
           <FadeInOnScroll>
             <span className="text-label uppercase text-nero tracking-widest">Per i Fondi</span>
-            <h1 className="text-hero uppercase mt-4 mx-auto">
+            <h1 className="text-section md:text-hero uppercase mt-4 mx-auto">
               La leva di value creation pi&ugrave; sottovalutata nel vostro portfolio.
             </h1>
             <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
@@ -65,9 +65,8 @@ export default function FondiPage() {
               Ogni euro di EBITDA vale 10 volte tanto all&rsquo;exit
             </h2>
             <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
-              Per un fondo, l&rsquo;AI non &egrave; un progetto tecnologico.<br />
-              &Egrave; una leva di value creation con uno dei migliori ROI disponibili oggi.
-            </p>
+              Per un fondo, l&rsquo;AI non &egrave; un progetto tecnologico.<span className="hidden md:inline"><br /></span>
+              &Egrave; una leva di value creation con uno dei migliori ROI disponibili oggi.</p>
           </div>
         </FadeInOnScroll>
 
@@ -126,7 +125,7 @@ export default function FondiPage() {
 
             <div className="px-4 py-6 md:px-8 md:py-8 text-center">
               <p className="text-body font-bold text-nero">
-                Noi colmiamo tutti e tre.<br />
+                Noi colmiamo tutti e tre.<span className="hidden md:inline"><br /></span>
                 End-to-end, dalla due diligence all&rsquo;exit.
               </p>
             </div>
@@ -144,7 +143,7 @@ export default function FondiPage() {
               Il vostro braccio operativo AI in ogni fase del deal.
             </h2>
             <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
-              Diventiamo parte del vostro processo di value creation,<br />
+              Diventiamo parte del vostro processo di value creation,<span className="hidden md:inline"><br /></span>{" "}
               dalla tesi di investimento all&rsquo;exit multiplo.
             </p>
           </div>

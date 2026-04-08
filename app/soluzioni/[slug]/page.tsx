@@ -132,7 +132,7 @@ export default async function SoluzioneSlugPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {page.benefits.map((benefit) => (
               <FadeInOnScroll key={benefit.title}>
-                <div className="border border-grigio-chiaro p-8 h-full">
+                <div className="border border-grigio-chiaro p-5 md:p-8 h-full">
                   <h3 className="text-xl font-bold text-nero mb-3">
                     {benefit.title}
                   </h3>

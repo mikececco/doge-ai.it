@@ -23,9 +23,9 @@ const config: Config = {
       },
       fontSize: {
         // Hero
-        "hero": ["clamp(3.5rem, 7vw, 6.5rem)", { lineHeight: "1.05", fontWeight: "700" }],
+        "hero": ["clamp(1.5rem, 7vw, 6.5rem)", { lineHeight: "1.05", fontWeight: "700" }],
         // Section title
-        "section": ["clamp(2.8rem, 5vw, 4.5rem)", { lineHeight: "1.1", fontWeight: "700" }],
+        "section": ["clamp(2rem, 5.5vw, 4.5rem)", { lineHeight: "1.1", fontWeight: "700" }],
         // Subheadline
         "subheadline": ["clamp(1.35rem, 2.2vw, 1.65rem)", { lineHeight: "1.3", fontWeight: "400" }],
         // Body
@@ -36,7 +36,7 @@ const config: Config = {
         "metric": ["clamp(2.5rem, 4vw, 4rem)", { lineHeight: "1", fontWeight: "700" }],
       },
       maxWidth: {
-        site: "1440px",
+        site: "1680px",
       },
       spacing: {
         section: "96px",

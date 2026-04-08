@@ -14,12 +14,14 @@ const metrics = [
     target: 3,
     suffix: " MESI",
     prefix: "<",
+    suffixSmall: true,
     label: "Payback medio sull'investimento.",
   },
   {
     target: 60,
     suffix: " GIORNI",
     prefix: "<",
+    suffixSmall: true,
     label: "Dal primo audit all'AI in produzione.",
   },
   {
@@ -53,6 +55,7 @@ export default function INumeri() {
                 suffix={metric.suffix}
                 prefix={metric.prefix}
                 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold text-nero leading-none"
+                {...("suffixSmall" in metric && { suffixClassName: "text-[0.45em]" })}
               />
               <p className="text-xs text-nero/70 mt-3 leading-snug">
                 {metric.label}

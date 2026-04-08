@@ -46,9 +46,15 @@
     }
   }
 
-  /* Smooth scroll */
+  /* Smooth scroll + scale-up on desktop via root font-size */
   html {
     scroll-behavior: smooth;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 120%;
+    }
   }
 
   /* Selection */

@@ -77,10 +77,10 @@ export default function BlogSearch({ posts }: { posts: BlogPost[] }) {
             className="w-full bg-nero/50 border border-bianco/10 pl-11 pr-4 py-2 text-sm text-bianco placeholder:text-bianco/40 focus:outline-none focus:border-giallo transition-colors"
           />
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex overflow-x-auto gap-2 md:flex-wrap pb-2 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider border transition-colors ${
+            className={`shrink-0 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider border transition-colors ${
               activeCategory === null
                 ? "bg-giallo text-nero border-giallo"
                 : "bg-transparent text-bianco/60 border-bianco/20 hover:border-giallo hover:text-bianco"
@@ -94,7 +94,7 @@ export default function BlogSearch({ posts }: { posts: BlogPost[] }) {
               onClick={() =>
                 setActiveCategory(activeCategory === cat ? null : cat)
               }
-              className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider border transition-colors ${
+              className={`shrink-0 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider border transition-colors ${
                 activeCategory === cat
                   ? "bg-giallo text-nero border-giallo"
                   : "bg-transparent text-bianco/60 border-bianco/20 hover:border-giallo hover:text-bianco"

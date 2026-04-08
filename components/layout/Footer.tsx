@@ -31,7 +31,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-12 pb-12 border-b border-bianco/10">
           {/* Col 1: Logo + tagline + doge head + social */}
           <div>
-            <div className="flex items-center">
+            <div className="flex items-center gap-2">
+              <Image src="/icon/logoW-noBG.png" alt="Doge icon" width={28} height={28} />
               <DogeLogo light />
             </div>
             <p className="mt-4 text-sm text-bianco/60 max-w-[280px]">

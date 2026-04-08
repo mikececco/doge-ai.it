@@ -232,7 +232,7 @@ export default async function ConsulenzaAICittaPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {SERVICES.map((service) => (
               <FadeInOnScroll key={service.title}>
-                <div className="bg-bianco border border-grigio-chiaro p-8 h-full">
+                <div className="bg-bianco border border-grigio-chiaro p-5 md:p-8 h-full">
                   <h3 className="text-xl font-bold text-nero mb-3">
                     {service.title}
                   </h3>

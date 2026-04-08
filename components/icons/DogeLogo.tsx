@@ -16,7 +16,7 @@ export default function DogeLogo({ className = "", light = false }: LogoProps) {
       alt="Il Doge di Venezia"
       width={240}
       height={80}
-      className={`h-[36px] w-auto ${className}`}
+      className={`h-[28px] w-auto ${className}`}
       priority
     />
   );

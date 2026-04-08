@@ -27,7 +27,7 @@ export default function TextReveal({
         const words = part.split(" ");
         return (
           <span key={p}>
-            {p > 0 && <br />}
+            {p > 0 && <><br className="hidden md:inline" />{" "}</>}
             {words.map((word) => {
               const i = wordIndex++;
               return (

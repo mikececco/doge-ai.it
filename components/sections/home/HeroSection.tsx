@@ -47,11 +47,11 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Content */}
-      <div className="container-site relative z-10 text-center pt-16 pb-32 md:pb-40">
+      <div className="container-site relative z-10 text-center pt-16 pb-32 md:pb-40 !px-4 md:!px-6 lg:!px-8">
         <TextReveal
-          text={"Mentre tutti ne parlano.\nNoi la implementiamo."}
+          text={"Mentre tutti ne\u00A0parlano.\nNoi la\u00A0implementiamo."}
           as="h1"
-          className="text-hero text-nero max-w-[1100px] mx-auto"
+          className="text-hero text-nero mx-auto"
         />
 
         <motion.p
@@ -71,10 +71,10 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: DURATION.normal, delay: 0.8, ease: EASE }}
         >
-          <Button variant="dark" href="/contatti" arrow className="min-w-[220px] justify-center">
+          <Button variant="dark" href="/contatti" arrow className="min-w-full sm:min-w-[220px] justify-center">
             Parla con noi
           </Button>
-          <Button variant="outline" href="/metodo" arrow className="min-w-[220px] justify-center">
+          <Button variant="outline" href="/metodo" arrow className="min-w-full sm:min-w-[220px] justify-center">
             Il Codice del Doge
           </Button>
         </motion.div>

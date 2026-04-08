@@ -10,6 +10,7 @@ type CounterProps = {
   prefix?: string;
   duration?: number;
   className?: string;
+  suffixClassName?: string;
 };
 
 export default function Counter({
@@ -18,6 +19,7 @@ export default function Counter({
   prefix = "",
   duration = DURATION.counter,
   className = "",
+  suffixClassName = "",
 }: CounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -46,7 +48,7 @@ export default function Counter({
 
   return (
     <span ref={ref} className={`text-metric tabular-nums ${className}`}>
-      {prefix}{value}{suffix}
+      {prefix}{value}{suffixClassName ? <span className={suffixClassName}>{suffix}</span> : suffix}
     </span>
   );
 }

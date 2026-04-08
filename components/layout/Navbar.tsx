@@ -63,30 +63,22 @@ export default function Navbar() {
       if (sections.length === 0) return;
 
       // Find the section whose top is closest to (but not far below) the navbar
-      let best: HTMLElement | null = null as HTMLElement | null;
+      let best: HTMLElement | undefined;
       let bestTop = -Infinity;
       const navBottom = 64; // navbar height
 
       sections.forEach((s) => {
         const rect = s.getBoundingClientRect();
         const top = rect.top;
-        // Section is "active" if its top is above the navbar bottom
-        // and it's the closest one (highest top value that's still <= navBottom)
         if (top <= navBottom && top > bestTop) {
           bestTop = top;
           best = s as HTMLElement;
         }
       });
 
-      if (best) {
-        const theme = best.dataset.navbarTheme as NavTheme;
-        if (theme) setNavTheme(theme);
-      } else {
-        // Fallback: use the first section
-        const first = sections[0] as HTMLElement;
-        const theme = first.dataset.navbarTheme as NavTheme;
-        if (theme) setNavTheme(theme);
-      }
+      const target = best ?? (sections[0] as HTMLElement);
+      const theme = target?.dataset.navbarTheme as NavTheme | undefined;
+      if (theme) setNavTheme(theme);
     };
 
     // Run immediately + after paint (for client-side nav)

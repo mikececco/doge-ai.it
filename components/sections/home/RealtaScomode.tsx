@@ -55,19 +55,20 @@ export default function RealtaScomode() {
               {topRow.map((card, i) => (
                 <div
                   key={i}
-                  className={`group relative aspect-square flex flex-col justify-center px-4 py-4 md:px-6 md:py-6 overflow-hidden ${i < topRow.length - 1 ? "md:border-r border-nero" : ""}`}
+                  tabIndex={0}
+                  className={`group relative min-h-[180px] md:aspect-square flex flex-col justify-center px-4 py-4 md:px-6 md:py-6 overflow-hidden outline-none ${i < topRow.length - 1 ? "md:border-r border-nero" : ""}`}
                 >
                   <h3 className="text-xl md:text-2xl font-bold uppercase leading-snug mb-4">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                       {card.title}
                     </span>
                   </h3>
-                  <div className="max-h-0 overflow-hidden group-hover:max-h-[200px] transition-[max-height] duration-500">
+                  <div className="max-h-0 overflow-hidden group-hover:max-h-[200px] group-focus-within:max-h-[200px] transition-[max-height] duration-500">
                     <p className="text-sm text-nero/70 leading-relaxed">
                       {card.body}
                     </p>
                   </div>
-                  <span className="absolute bottom-3 right-3 text-nero/30 text-xl font-light group-hover:opacity-0 transition-opacity duration-300">+</span>
+                  <span className="absolute bottom-3 right-3 text-nero/30 text-xl font-light group-hover:opacity-0 group-focus-within:opacity-0 transition-opacity duration-300">+</span>
                 </div>
               ))}
             </div>
@@ -83,19 +84,20 @@ export default function RealtaScomode() {
               {bottomRow.map((card, i) => (
                 <div
                   key={i}
-                  className="group relative aspect-square flex flex-col justify-center px-4 py-4 md:px-6 md:py-6 overflow-hidden md:border-r border-nero"
+                  tabIndex={0}
+                  className="group relative min-h-[180px] md:aspect-square flex flex-col justify-center px-4 py-4 md:px-6 md:py-6 overflow-hidden outline-none md:border-r border-nero"
                 >
                   <h3 className="text-xl md:text-2xl font-bold uppercase leading-snug mb-4">
                     <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                       {card.title}
                     </span>
                   </h3>
-                  <div className="max-h-0 overflow-hidden group-hover:max-h-[200px] transition-[max-height] duration-500">
+                  <div className="max-h-0 overflow-hidden group-hover:max-h-[200px] group-focus-within:max-h-[200px] transition-[max-height] duration-500">
                     <p className="text-sm text-nero/70 leading-relaxed">
                       {card.body}
                     </p>
                   </div>
-                  <span className="absolute bottom-3 right-3 text-nero/30 text-xl font-light group-hover:opacity-0 transition-opacity duration-300">+</span>
+                  <span className="absolute bottom-3 right-3 text-nero/30 text-xl font-light group-hover:opacity-0 group-focus-within:opacity-0 transition-opacity duration-300">+</span>
                 </div>
               ))}
 

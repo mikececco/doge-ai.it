@@ -43,7 +43,7 @@ export default function DoveOperiamo({ variant = "aziende" }: { variant?: "azien
           </span>
           <h2 className="text-section uppercase mt-4">
             {copy.heading.split("\n").map((line, i) => (
-              <span key={i}>{i > 0 && <br />}{line}</span>
+              <span key={i}>{i > 0 && <span className="hidden md:inline"><br /></span>}{" "}{line}</span>
             ))}
           </h2>
           <p className="text-body text-bianco/70 mt-6 max-w-[600px] mx-auto">
@@ -61,6 +61,7 @@ export default function DoveOperiamo({ variant = "aziende" }: { variant?: "azien
                 <Link
                   key={i}
                   href={`/blog/${s.slug}`}
+                  tabIndex={0}
                   className={`group relative block ${i < 8 ? "border-b border-bianco/20" : ""} ${i % 2 === 1 ? "md:border-l border-bianco/20" : ""}`}
                 >
                   <div className="flex items-center gap-4 px-6 py-5 md:px-8 md:py-6 cursor-pointer">
@@ -72,7 +73,7 @@ export default function DoveOperiamo({ variant = "aziende" }: { variant?: "azien
                     </span>
                     <svg className="ml-auto w-5 h-5 text-bianco transition-transform group-hover:rotate-90 duration-200 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
                   </div>
-                  <div className="max-h-0 overflow-hidden group-hover:max-h-[180px] transition-[max-height] duration-700 ease-in-out">
+                  <div className="max-h-0 overflow-hidden group-hover:max-h-[180px] group-focus-within:max-h-[180px] transition-[max-height] duration-700 ease-in-out">
                     <div className="px-6 pb-5 md:px-8 md:pb-6 pl-16 md:pl-20">
                       <ul className="space-y-2">
                         {settore.useCases.map((uc, j) => (

@@ -44,7 +44,7 @@ export default function EbitdaCalculator() {
             onChange={(e) => setInvestimento(Number(e.target.value))}
             className="w-full accent-giallo cursor-pointer"
           />
-          <div className="text-2xl font-bold text-nero mt-2">
+          <div className="text-xl md:text-2xl font-bold text-nero mt-2">
             &euro;{fmt(investimento)}
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function EbitdaCalculator() {
             onChange={(e) => setSavingPct(Number(e.target.value))}
             className="w-full accent-giallo cursor-pointer"
           />
-          <div className="text-2xl font-bold text-nero mt-2">
+          <div className="text-xl md:text-2xl font-bold text-nero mt-2">
             &euro;{fmt(savingAnnuo)}
           </div>
         </div>
@@ -82,12 +82,12 @@ export default function EbitdaCalculator() {
             onChange={(e) => setMultiplo(Number(e.target.value))}
             className="w-full accent-giallo cursor-pointer"
           />
-          <div className="text-2xl font-bold text-nero mt-2">{multiplo}x</div>
+          <div className="text-xl md:text-2xl font-bold text-nero mt-2">{multiplo}x</div>
         </div>
       </div>
 
       {/* Results */}
-      <div className="grid grid-cols-1 md:grid-cols-4">
+      <div className="grid grid-cols-2 md:grid-cols-4">
         <div className="px-4 py-4 md:px-6 md:py-5 md:border-r border-b md:border-b-0 border-nero text-center">
           <p className="text-xs font-bold uppercase tracking-wider text-nero/60">
             Investimento

@@ -20,7 +20,7 @@ export default function AziendePage() {
         <FadeInOnScroll>
           <span className="text-label uppercase text-nero tracking-widest">Per le Aziende</span>
           <h1 className="text-section uppercase mt-4 mx-auto">
-            Se potessi avere il triplo dei dipendenti senza aumentare il costo del personale,<br />cosa faresti?
+            Se potessi avere il triplo dei dipendenti senza aumentare il costo del personale,<span className="hidden md:inline"><br /></span>{" "}cosa faresti?
           </h1>
           <p className="text-body text-nero/70 mt-6 max-w-[680px] mx-auto">
             &Egrave; la domanda da cui partiamo con ogni cliente. E oggi, con l&apos;AI,
@@ -88,7 +88,7 @@ export default function AziendePage() {
 
           <div className="mt-10 text-center">
             <p className="text-body font-bold text-nero max-w-[700px] mx-auto">
-              Espandere in nuovi mercati? Lanciare nuovi prodotti? Servire pi&ugrave; clienti?<br />
+              Espandere in nuovi mercati? Lanciare nuovi prodotti? Servire pi&ugrave; clienti?<span className="hidden md:inline"><br /></span>
               Quali opportunit&agrave; si aprirebbero con il triplo del personale?
             </p>
             <div className="mt-6">
@@ -111,7 +111,7 @@ export default function AziendePage() {
               Proteggere o espandersi. Entrambi partono da qui.
             </h2>
             <p className="text-body text-nero/70 mt-6 max-w-[700px] mx-auto">
-              Alcune aziende hanno margini da proteggere. Altre hanno mercati da conquistare.<br />
+              Alcune aziende hanno margini da proteggere. Altre hanno mercati da conquistare.<span className="hidden md:inline"><br /></span>
               Le migliori fanno entrambe le cose, in sequenza.
             </p>
           </div>
