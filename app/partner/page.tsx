@@ -4,11 +4,11 @@ import PartnerPage from "./PartnerPage";
 export const metadata: Metadata = {
   title: "Programma Partner - IL DOGE DI VENEZIA",
   description:
-    "Porta l'AI ai tuoi clienti senza costruirla da zero. Revenue share su ogni progetto referenziato.",
+    "Porta l'AI ai tuoi clienti senza costruire niente internamente. Programma partnership per agenzie e consulenti.",
   openGraph: {
     title: "Programma Partner - IL DOGE DI VENEZIA",
     description:
-      "Porta l'AI ai tuoi clienti senza costruirla da zero. Revenue share su ogni progetto referenziato.",
+      "Porta l'AI ai tuoi clienti senza costruire niente internamente. Programma partnership per agenzie e consulenti.",
     type: "website",
     images: [
       {

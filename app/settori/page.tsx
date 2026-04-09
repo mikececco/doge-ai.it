@@ -24,19 +24,6 @@ export const metadata: Metadata = {
   },
 };
 
-const SECTOR_SLUGS: Record<string, string> = {
-  "01": "ai-manifattura-produzione",
-  "02": "ai-distribuzione-b2b",
-  "03": "ai-retail-fashion",
-  "04": "ai-turismo-ospitalita",
-  "05": "ai-logistica-trasporti",
-  "06": "ai-servizi-professionali",
-  "07": "ai-farmaceutica",
-  "08": "ai-food-beverage",
-  "09": "ai-edilizia-immobiliare",
-  "10": "ai-sanita-privata",
-};
-
 export default function SettoriPage() {
   return (
     <>
@@ -64,7 +51,7 @@ export default function SettoriPage() {
       <section data-navbar-theme="dark" className="bg-black text-bianco section-padding">
         <div className="container-site">
         <FadeInOnScroll>
-          <SettoriGrid settori={SETTORI} slugs={SECTOR_SLUGS} />
+          <SettoriGrid settori={SETTORI} />
         </FadeInOnScroll>
         </div>
       </section>

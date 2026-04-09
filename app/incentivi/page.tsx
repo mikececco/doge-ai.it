@@ -45,7 +45,7 @@ export default function IncentiviPage() {
           </FadeInOnScroll>
           <FadeInOnScroll>
             <h1 className="text-hero uppercase mt-4">
-              Finanzia la tua trasformazione AI
+              Accelera la tua trasformazione AI con gli incentivi
             </h1>
           </FadeInOnScroll>
           <FadeInOnScroll>
@@ -133,7 +133,7 @@ export default function IncentiviPage() {
       <CtaFinale
         veniceImage
         title="Non sai quale incentivo fa per te?"
-        subtitle="Ti aiutiamo a identificare le agevolazioni giuste e a preparare la domanda. Gratis, nella prima call."
+        subtitle="Ti aiutiamo a capire quale incentivo è più adatto a te."
         buttonText="Parla con noi"
         buttonHref="/contatti"
       />

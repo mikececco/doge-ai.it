@@ -4,18 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-type Settore = {
-  number: string;
-  title: string;
-  useCases: string[];
-};
+import type { Settore } from "@/lib/settori-data";
 
 type Props = {
   settori: Settore[];
-  slugs: Record<string, string>;
 };
 
-export default function SettoriGrid({ settori, slugs }: Props) {
+export default function SettoriGrid({ settori }: Props) {
   const [expanded, setExpanded] = useState<string | null>(null);
   const router = useRouter();
 
@@ -23,7 +18,6 @@ export default function SettoriGrid({ settori, slugs }: Props) {
     <div className="border border-bianco/20">
       <div className="grid grid-cols-1 md:grid-cols-2">
         {settori.map((settore, i) => {
-          const slug = slugs[settore.number];
           const isExpanded = expanded === settore.number;
 
           return (
@@ -39,7 +33,7 @@ export default function SettoriGrid({ settori, slugs }: Props) {
                   }
                 }
                 // Desktop or already expanded: navigate
-                router.push(`/blog/${slug}`);
+                router.push(`/blog/${settore.slug}`);
               }}
             >
               <div className="flex items-center gap-4 px-6 py-5 md:px-8 md:py-6">
@@ -77,7 +71,7 @@ export default function SettoriGrid({ settori, slugs }: Props) {
                 </ul>
                 {/* Mobile-only article link */}
                 <Link
-                  href={`/blog/${slug}`}
+                  href={`/blog/${settore.slug}`}
                   className="md:hidden inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-giallo mt-4"
                   onClick={(e) => e.stopPropagation()}
                 >

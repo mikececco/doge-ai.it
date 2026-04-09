@@ -14,19 +14,19 @@ const GAPS = [
     number: "01",
     title: "Expertise Gap",
     description:
-      "Il 90% dei Managing Partner non ha background tech/AI. Distinguere hype da opportunit\u00E0 reale \u00E8 difficile. Non si sa da dove iniziare.",
+      "Il 90% dei Managing Partner non ha background AI: distinguere hype da opportunit\u00E0 reale richiede competenze che non si costruiscono in house in tempi utili.",
   },
   {
     number: "02",
     title: "Execution Gap",
     description:
-      "Le portfolio company non hanno le competenze per implementare AI internamente. Le big consulting vendono strategie, non implementazione.",
+      "Le portfolio companies non hanno risorse interne, assumere costa troppo e le grandi consulenze vendono strategie senza implementarle. Risultato: progetti che non partono mai.",
   },
   {
     number: "03",
     title: "Timing Gap",
     description:
-      "I primi 12-18 mesi post-deal sono il momento migliore per la transformation. Ma non c\u2019\u00E8 nessuno che lo fa in modo sistematico per il mid-market PE.",
+      "I primi 12-18 mesi post-deal sono la finestra d\u2019oro per la trasformazione. Lasciarla passare significa rimandare a un momento che non arriva mai.",
   },
 ];
 
@@ -155,10 +155,10 @@ export default function FondiPage() {
           <div className="hidden md:block relative">
             <div className="grid grid-cols-4 gap-6 relative">
               {[
-                { title: "AI Due Diligence", time: "PRE-DEAL", body: "Valutiamo l'AI readiness della target, identifichiamo i quick wins nei primi 100 giorni e quantifichiamo l'EBITDA uplift potenziale." },
-                { title: "100-Day Plan", time: "POST-DEAL", body: "Implementiamo 2-3 quick wins con risultati misurabili. Momentum immediato per il management, validazione della tesi di investimento." },
-                { title: "Full AI Transformation", time: "12-18 MESI", body: "Lavoriamo embedded nella portfolio company su 5-8 use case prioritizzati. Il team interno diventa autonomo." },
-                { title: "Portfolio-Wide Playbook", time: "ONGOING", body: "Dopo 2-3 aziende, costruiamo un playbook replicabile su tutto il portfolio. Ogni nuovo deal parte piu veloce del precedente." },
+                { title: "AI Due Diligence", time: "PRE-DEAL", body: "Valutiamo l\u2019AI readiness della target e quantifichiamo l\u2019EBITDA uplift potenziale." },
+                { title: "100-Day Plan", time: "POST-DEAL", body: "2\u20133 quick wins con risultati misurabili per creare momentum e validare la tesi di investimento." },
+                { title: "Full AI Transformation", time: "12-18 MESI", body: "Lavoro embedded su 5\u20138 use case prioritizzati finch\u00E9 il team interno diventa autonomo." },
+                { title: "Portfolio-Wide Playbook", time: "ONGOING", body: "Dopo 2\u20133 ok replicabile su tutto il portfolio: ogni nuovo deal parte pi\u00F9 veloce del precedente." },
               ].map((step, i) => (
                 <div key={i} className="text-center">
                   <h3 className="text-lg md:text-xl font-bold uppercase">
@@ -184,10 +184,10 @@ export default function FondiPage() {
           <div className="md:hidden relative pl-8">
             <div className="absolute left-3 top-0 bottom-0 w-[2px] bg-nero" />
             {[
-              { title: "AI Due Diligence", time: "PRE-DEAL", body: "Valutiamo l'AI readiness della target, identifichiamo i quick wins nei primi 100 giorni e quantifichiamo l'EBITDA uplift potenziale." },
-              { title: "100-Day Plan", time: "POST-DEAL", body: "Implementiamo 2-3 quick wins con risultati misurabili. Momentum immediato per il management." },
-              { title: "Full AI Transformation", time: "12-18 MESI", body: "Lavoriamo embedded nella portfolio company su 5-8 use case prioritizzati." },
-              { title: "Portfolio-Wide Playbook", time: "ONGOING", body: "Costruiamo un playbook replicabile su tutto il portfolio." },
+              { title: "AI Due Diligence", time: "PRE-DEAL", body: "Valutiamo l\u2019AI readiness della target e quantifichiamo l\u2019EBITDA uplift potenziale." },
+              { title: "100-Day Plan", time: "POST-DEAL", body: "2\u20133 quick wins con risultati misurabili per creare momentum e validare la tesi di investimento." },
+              { title: "Full AI Transformation", time: "12-18 MESI", body: "Lavoro embedded su 5\u20138 use case prioritizzati finch\u00E9 il team interno diventa autonomo." },
+              { title: "Portfolio-Wide Playbook", time: "ONGOING", body: "Dopo 2\u20133 ok replicabile su tutto il portfolio: ogni nuovo deal parte pi\u00F9 veloce del precedente." },
             ].map((step, i) => (
               <div key={i} className="relative pb-8 last:pb-0">
                 <div className="absolute left-[-22px] top-1 w-4 h-4 bg-nero rounded-full z-10" />

@@ -7,17 +7,17 @@ const steps = [
   {
     num: "01",
     title: "MAPPATURA",
-    body: "Partiamo dall'interno. Audit olistico per funzione aziendale, analisi dei flussi di lavoro reali, identificazione immediata dei casi d'uso AI ad alto impatto. Prima di scrivere una riga di codice, sappiamo esattamente dove il tempo si spreca e quanto vale recuperarlo.",
+    body: "Analisi interna completa per identificare dove l'AI ha il massimo impatto, prima di scrivere codice.",
   },
   {
     num: "02",
     title: "TRASFORMAZIONE",
-    body: "Strategia e change management insieme, non in sequenza. Definiamo le metriche di base, scegliamo gli strumenti giusti e accompagniamo le persone nel cambiamento. Il risultato che conta non è \"il sistema funziona\", ma \"il team lo usa davvero\".",
+    body: "Strategia e change management in parallelo, con focus su adozione reale del team, non solo sul funzionamento del sistema.",
   },
   {
     num: "03",
     title: "ENGINEERING",
-    body: "Team tecnico orientato al risultato, non alle ore fatturate. Costruiamo solo quello che serve, off-the-shelf quando basta, custom quando crea vantaggio reale. Dall'audit all'AI in produzione: 30-60 giorni.",
+    body: "Sviluppo tecnico orientato al risultato, con soluzioni su misura o off-the-shelf in 30\u201360 giorni.",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function EntrareCorrereCostruire() {
                   className="flex flex-col border border-nero"
                 >
                   {/* Title with number */}
-                  <div className="border-b border-nero px-4 md:px-8 py-4 md:py-6 flex items-baseline gap-4">
+                  <div className="border-b border-nero px-4 md:px-8 py-4 md:py-6 flex items-center gap-4">
                     <span className="text-4xl font-bold text-nero/10">{step.num}</span>
                     <h3 className="text-2xl font-bold uppercase">
                       <span className="underline decoration-giallo decoration-[3px] underline-offset-4">

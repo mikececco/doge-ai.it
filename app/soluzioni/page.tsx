@@ -150,7 +150,7 @@ export default function SoluzioniPage() {
 
       {/* CTA */}
       <CtaFinale
-        dark
+        veniceImage
         title="Non sai da dove iniziare?"
         subtitle="La prima call è gratuita. Ti diciamo noi dove l'AI vale di più per la tua azienda."
         buttonText="Prenota una call"

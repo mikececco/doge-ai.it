@@ -5,6 +5,7 @@ export const NAV_ITEMS = [
     children: [
       { label: "Per le Aziende", href: "/aziende" },
       { label: "Per i Fondi", href: "/fondi" },
+      { label: "Per i Partner", href: "/partner" },
     ],
   },
   { label: "Il Codice del Doge", href: "/metodo" },

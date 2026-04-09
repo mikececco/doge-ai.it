@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, type ContactFormData } from "@/lib/validations";
+import { CONTACT_INFO } from "@/lib/constants";
 import Button from "@/components/ui/Button";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import { motion, AnimatePresence } from "framer-motion";
@@ -284,7 +285,7 @@ export default function ContattiPage() {
                       )}
                     </div>
 
-                    {watch("contatto_preferito") === "telefono" && (
+                    {["telefono", "whatsapp", "videochiamata"].includes(watch("contatto_preferito")) && (
                       <div>
                         <label htmlFor="telefono" className={labelClass}>
                           Numero di telefono
@@ -325,10 +326,10 @@ export default function ContattiPage() {
                         Qualcosa &egrave; andato storto. Riprova o scrivici
                         direttamente a{" "}
                         <a
-                          href="mailto:dogedivenezia.ai@gmail.com"
+                          href={`mailto:${CONTACT_INFO.email}`}
                           className="underline font-semibold"
                         >
-                          dogedivenezia.ai@gmail.com
+                          {CONTACT_INFO.email}
                         </a>
                       </motion.p>
                     )}
@@ -350,10 +351,10 @@ export default function ContattiPage() {
                       Email
                     </p>
                     <a
-                      href="mailto:dogedivenezia.ai@gmail.com"
+                      href={`mailto:${CONTACT_INFO.email}`}
                       className="text-nero text-lg font-semibold hover:underline mt-1 block"
                     >
-                      dogedivenezia.ai@gmail.com
+                      {CONTACT_INFO.email}
                     </a>
                   </div>
 
@@ -362,10 +363,10 @@ export default function ContattiPage() {
                       Telefono
                     </p>
                     <a
-                      href="tel:+393468889545"
+                      href={`tel:${CONTACT_INFO.phone.replace(/\s/g, "")}`}
                       className="text-nero text-lg font-semibold hover:underline mt-1 block"
                     >
-                      +39 346 8889545
+                      {CONTACT_INFO.phone}
                     </a>
                   </div>
 
@@ -374,9 +375,12 @@ export default function ContattiPage() {
                       Ci puoi trovare a
                     </p>
                     <p className="text-nero text-lg font-semibold mt-1">
-                      Calle Polver del Fuoco 827/A
-                      <br />
-                      VENEZIA
+                      {CONTACT_INFO.address.split("\n").map((line, i) => (
+                        <span key={i}>
+                          {i > 0 && <br />}
+                          {line}
+                        </span>
+                      ))}
                     </p>
                   </div>
                 </div>
