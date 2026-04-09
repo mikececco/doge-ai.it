@@ -45,7 +45,7 @@ export default function IncentiviPage() {
           </FadeInOnScroll>
           <FadeInOnScroll>
             <h1 className="text-hero uppercase mt-4">
-              Accelera la tua trasformazione AI con gli incentivi
+              Finanzia la tua trasformazione AI
             </h1>
           </FadeInOnScroll>
           <FadeInOnScroll>
