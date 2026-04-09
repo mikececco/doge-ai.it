@@ -69,6 +69,26 @@ export default function SettoriGrid({ settori }: Props) {
                     </li>
                   ))}
                 </ul>
+                {/* Sub-sectors */}
+                {settore.subSectors.length > 0 && (
+                  <div className="mt-3 pt-3 border-t border-bianco/10">
+                    <p className="text-[10px] uppercase tracking-widest text-bianco/40 mb-2">Sotto-settori</p>
+                    <ul className="space-y-1">
+                      {settore.subSectors.map((sub) => (
+                        <li key={sub.slug}>
+                          <Link
+                            href={`/blog/${sub.slug}`}
+                            className="flex items-center gap-2 text-xs text-bianco/50 hover:text-giallo transition-colors py-0.5"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <span className="shrink-0">&rsaquo;</span>
+                            {sub.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 {/* Mobile-only article link */}
                 <Link
                   href={`/blog/${settore.slug}`}

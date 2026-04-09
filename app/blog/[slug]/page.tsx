@@ -7,6 +7,7 @@ import CtaFinale from "@/components/sections/CtaFinale";
 import RelatedContent from "@/components/sections/RelatedContent";
 import { BLOG_POSTS, getPostBySlug, getRelatedPosts } from "@/lib/blog-data";
 import { getLinksForBlog, getStrategicLinksForBlog } from "@/lib/internal-links";
+import { SETTORI } from "@/lib/settori-data";
 import RisorseCorrelate from "@/components/sections/RisorseCorrelate";
 import ReadingProgress from "./ReadingProgress";
 
@@ -63,12 +64,29 @@ function getCategoryClass(category: string) {
   return CATEGORY_COLORS[category] ?? "bg-bianco/20 text-bianco";
 }
 
+function getSectorContext(slug: string) {
+  // Check if this is a parent sector article
+  const parentSector = SETTORI.find((s) => s.slug === slug);
+  if (parentSector && parentSector.subSectors.length > 0) {
+    return { type: "parent" as const, sector: parentSector, parent: parentSector };
+  }
+  // Check if this is a niche sub-sector article
+  for (const sector of SETTORI) {
+    const sub = sector.subSectors.find((s) => s.slug === slug);
+    if (sub) {
+      return { type: "niche" as const, sector, parent: sector, currentSub: sub };
+    }
+  }
+  return null;
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
   const related = getRelatedPosts(slug, 3);
+  const sectorCtx = getSectorContext(slug);
   const url = `https://doge-ai.it/blog/${post.slug}`;
 
   const jsonLd = {
@@ -265,6 +283,64 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Sub-sector navigation */}
+      {sectorCtx && (
+        <section data-navbar-theme="light" className="bg-bianco border-t border-grigio-chiaro py-16">
+          <div className="container-site max-w-[720px]">
+            {sectorCtx.type === "parent" ? (
+              <>
+                <p className="text-label uppercase text-grigio-medio tracking-widest mb-6">
+                  Sotto-settori: {sectorCtx.sector.title}
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {sectorCtx.sector.subSectors.map((sub) => (
+                    <Link
+                      key={sub.slug}
+                      href={`/blog/${sub.slug}`}
+                      className="group border border-grigio-chiaro hover:border-nero p-4 transition-colors"
+                    >
+                      <p className="text-sm font-semibold text-nero group-hover:text-giallo-hover transition-colors">
+                        {sub.title}
+                      </p>
+                      <p className="text-xs text-grigio-medio mt-1">{sub.description}</p>
+                    </Link>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <>
+                <Link
+                  href={`/blog/${sectorCtx.parent.slug}`}
+                  className="inline-flex items-center gap-2 text-sm text-grigio-scuro hover:text-nero transition-colors mb-6"
+                >
+                  <span>&larr;</span>
+                  Torna a: {sectorCtx.parent.title}
+                </Link>
+                <p className="text-label uppercase text-grigio-medio tracking-widest mb-4">
+                  Altri sotto-settori
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {sectorCtx.parent.subSectors
+                    .filter((s) => s.slug !== slug)
+                    .map((sub) => (
+                      <Link
+                        key={sub.slug}
+                        href={`/blog/${sub.slug}`}
+                        className="group border border-grigio-chiaro hover:border-nero p-4 transition-colors"
+                      >
+                        <p className="text-sm font-semibold text-nero group-hover:text-giallo-hover transition-colors">
+                          {sub.title}
+                        </p>
+                        <p className="text-xs text-grigio-medio mt-1">{sub.description}</p>
+                      </Link>
+                    ))}
+                </div>
+              </>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Related Posts */}
       {related.length > 0 && (
