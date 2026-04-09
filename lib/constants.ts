@@ -41,8 +41,8 @@ export const FOOTER_LINKS = {
 
 export const CONTACT_INFO = {
   email: "dogedivenezia.ai@gmail.com",
-  phone: "+39 346 8889545",
-  address: "Calle Polver del Fuoco 827/A\nVENEZIA",
+  phone: "+39 345 9656145",
+  address: "Via Giardino Generale, 6\n31017 Pieve del Grappa TV",
   piva: "P.IVA IT04596950248",
 } as const;
 
