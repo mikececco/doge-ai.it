@@ -182,7 +182,7 @@ export default function Navbar() {
               );
             })}
             <div className={`w-0 h-full ${theme.divider}`} />
-            <Button variant="dark" href="/contatti" arrow>
+            <Button variant={navTheme === "dark" ? "primary" : "dark"} href="/contatti" arrow>
               Contattaci
             </Button>
           </div>
