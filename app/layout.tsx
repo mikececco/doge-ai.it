@@ -81,6 +81,32 @@ export default function RootLayout({
   return (
     <html lang="it" className={`${barlowCondensed.variable} ${archivo.variable}`}>
       <head>
+        {/* Consent Mode v2 — default denied, updated on user choice */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  wait_for_update: 500,
+});
+// Restore consent if previously accepted
+try {
+  var c = document.cookie.match(/cookie-consent=([^;]+)/);
+  if (c && c[1] === 'accepted') {
+    gtag('consent', 'update', {
+      analytics_storage: 'granted',
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+    });
+  }
+} catch(e) {}`,
+          }}
+        />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
@@ -95,9 +121,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BB8LL6FVT" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+            __html: `gtag('js', new Date());
 gtag('config', 'G-6BB8LL6FVT');`,
           }}
         />

@@ -18,11 +18,27 @@ export default function CookieBanner() {
 
   const accept = () => {
     Cookies.set(COOKIE_KEY, "accepted", { expires: 365 });
+    if (typeof window.gtag === "function") {
+      window.gtag("consent", "update", {
+        analytics_storage: "granted",
+        ad_storage: "granted",
+        ad_user_data: "granted",
+        ad_personalization: "granted",
+      });
+    }
     setVisible(false);
   };
 
   const reject = () => {
     Cookies.set(COOKIE_KEY, "rejected", { expires: 365 });
+    if (typeof window.gtag === "function") {
+      window.gtag("consent", "update", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+      });
+    }
     setVisible(false);
   };
 
