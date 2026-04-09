@@ -55,36 +55,36 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Nav links */}
-          <div className="md:border-l md:border-bianco/10 md:pl-8">
-            <ul className="space-y-2">
-              {NAV_COL_1.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-bianco/80 hover:text-giallo transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Col 3: Nav links continued */}
-          <div className="md:border-l md:border-bianco/10 md:pl-8">
-            <ul className="space-y-2">
-              {NAV_COL_2.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-bianco/80 hover:text-giallo transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Col 2+3: Nav links in 2-col sub-grid */}
+          <div className="col-span-1 md:col-span-2 grid grid-cols-2 gap-6 md:gap-0">
+            <div className="md:border-l md:border-bianco/10 md:pl-8">
+              <ul className="space-y-2">
+                {NAV_COL_1.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-bianco/80 hover:text-giallo transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="md:border-l md:border-bianco/10 md:pl-8">
+              <ul className="space-y-2">
+                {NAV_COL_2.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-bianco/80 hover:text-giallo transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Col 4: Contacts */}

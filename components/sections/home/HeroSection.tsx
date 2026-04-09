@@ -41,7 +41,7 @@ export default function HeroSection() {
           alt="Venice skyline"
           width={2400}
           height={400}
-          className="w-full h-auto"
+          className="w-full h-auto scale-[1.6] origin-bottom md:scale-100"
           priority
         />
       </motion.div>
@@ -49,7 +49,7 @@ export default function HeroSection() {
       {/* Content */}
       <div className="container-site relative z-10 text-center pt-16 pb-32 md:pb-40 !px-4 md:!px-6 lg:!px-8">
         <motion.span
-          className="text-label uppercase text-nero tracking-widest"
+          className="text-label uppercase text-nero tracking-widest hidden md:inline-block"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: DURATION.normal, ease: EASE }}

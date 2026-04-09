@@ -26,7 +26,7 @@ export default function CtaFinale({
 }: CtaFinaleProps) {
   if (veniceImage) {
     return (
-      <section data-navbar-theme="dark" className="relative bg-nero text-bianco min-h-screen flex items-center overflow-hidden">
+      <section data-navbar-theme="dark" className="relative bg-nero text-bianco md:min-h-screen flex items-center overflow-hidden">
         {/* Venice B&W full background */}
         <div className="absolute inset-0">
           <Image

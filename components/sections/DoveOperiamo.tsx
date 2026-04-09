@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import { SETTORI } from "@/lib/settori-data";
@@ -33,6 +35,8 @@ const COPY = {
 
 export default function DoveOperiamo({ variant = "aziende" }: { variant?: "aziende" | "fondi" }) {
   const copy = COPY[variant];
+  const [expanded, setExpanded] = useState<number | null>(null);
+  const router = useRouter();
 
   return (
     <SectionWrapper bg="dark" className="md:min-h-screen flex flex-col justify-center">
@@ -57,24 +61,66 @@ export default function DoveOperiamo({ variant = "aziende" }: { variant?: "azien
           <div className="grid grid-cols-1 md:grid-cols-2">
             {SETTORI_LIST.map((s, i) => {
               const settore = SETTORI[Math.min(s.idx, SETTORI.length - 1)];
+              const isExpanded = expanded === i;
+
               return (
-                <Link
+                <div
                   key={i}
-                  href={`/blog/${s.slug}`}
-                  tabIndex={0}
-                  className={`group relative block ${i < 8 ? "border-b border-bianco/20" : ""} ${i % 2 === 1 ? "md:border-l border-bianco/20" : ""}`}
+                  className={`group relative cursor-pointer ${i < 8 ? "border-b border-bianco/20" : ""} ${i % 2 === 1 ? "md:border-l border-bianco/20" : ""}`}
+                  onClick={() => {
+                    if (window.innerWidth < 768) {
+                      if (!isExpanded) {
+                        setExpanded(i);
+                        return;
+                      }
+                    }
+                    router.push(`/blog/${s.slug}`);
+                  }}
                 >
-                  <div className="flex items-center gap-4 px-6 py-5 md:px-8 md:py-6 cursor-pointer">
+                  <div className="flex items-center gap-4 px-6 py-5 md:px-8 md:py-6">
                     <span className="text-3xl font-bold text-bianco shrink-0">
                       {s.num}.
                     </span>
-                    <span className="text-sm font-bold uppercase tracking-wide text-bianco">
+                    <span className={`text-sm font-bold uppercase tracking-wide transition-colors group-hover:text-giallo ${isExpanded ? "text-giallo" : "text-bianco"}`}>
                       {s.title}
                     </span>
-                    <svg className="ml-auto w-5 h-5 text-bianco transition-transform group-hover:rotate-90 duration-200 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                    {/* Desktop: arrow */}
+                    <svg className="hidden md:block ml-auto w-5 h-5 text-bianco/40 group-hover:text-giallo transition-all group-hover:translate-x-1 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    {/* Mobile: chevron */}
+                    <svg
+                      className={`md:hidden ml-auto w-5 h-5 shrink-0 transition-all duration-300 ${isExpanded ? "text-giallo rotate-90" : "text-bianco/40"}`}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                    >
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
                   </div>
-                  <div className="max-h-0 overflow-hidden group-hover:max-h-[180px] group-focus-within:max-h-[180px] transition-[max-height] duration-700 ease-in-out">
-                    <div className="px-6 pb-5 md:px-8 md:pb-6 pl-16 md:pl-20">
+
+                  {/* Use cases: always visible on desktop (hover), accordion on mobile */}
+                  <div className={`${isExpanded ? "block" : "hidden"} md:hidden px-6 pb-5 pl-16`}>
+                    <ul className="space-y-2">
+                      {settore.useCases.map((uc, j) => (
+                        <li key={j} className="flex items-start gap-2 text-sm text-bianco/70">
+                          <span className="text-giallo mt-0.5 shrink-0">&rarr;</span>
+                          {uc}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      href={`/blog/${s.slug}`}
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-giallo mt-4"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Leggi l&rsquo;articolo
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </Link>
+                  </div>
+
+                  {/* Desktop: hover expand */}
+                  <div className="hidden md:block max-h-0 overflow-hidden group-hover:max-h-[180px] transition-[max-height] duration-700 ease-in-out">
+                    <div className="px-8 pb-6 pl-20">
                       <ul className="space-y-2">
                         {settore.useCases.map((uc, j) => (
                           <li key={j} className="flex items-start gap-2 text-sm text-bianco/70">
@@ -85,7 +131,7 @@ export default function DoveOperiamo({ variant = "aziende" }: { variant?: "azien
                       </ul>
                     </div>
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>

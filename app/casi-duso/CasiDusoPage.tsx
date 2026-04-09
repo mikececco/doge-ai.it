@@ -186,7 +186,7 @@ export default function CasiDusoPage() {
                       `}
                     >
                       {/* Title with yellow underline */}
-                      <h3 className="text-sm font-bold uppercase leading-tight mb-3">
+                      <h3 className="text-base font-bold uppercase leading-tight mb-3">
                         <span className="underline decoration-giallo decoration-[3px] underline-offset-4">
                           {caso.title}
                         </span>
