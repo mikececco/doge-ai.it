@@ -7,17 +7,18 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import { SETTORI } from "@/lib/settori-data";
 
+// Sequential order — on desktop (2-col) reads left-to-right, top-to-bottom
 const SETTORI_LIST = [
   { idx: 0, num: "01", title: "Manifattura & Produzione", slug: "ai-manifattura-produzione" },
-  { idx: 8, num: "06", title: "Edilizia & Immobiliare", slug: "ai-edilizia-immobiliare" },
-  { idx: 4, num: "02", title: "Logistica & Trasporti", slug: "ai-logistica-trasporti" },
-  { idx: 2, num: "07", title: "Retail, Fashion & Design", slug: "ai-retail-fashion" },
-  { idx: 7, num: "03", title: "Food & Beverage", slug: "ai-food-beverage" },
-  { idx: 6, num: "08", title: "Farmaceutica & Dispositivi Medici", slug: "ai-farmaceutica" },
-  { idx: 1, num: "04", title: "Distribuzione B2B & Grossisti", slug: "ai-distribuzione-b2b" },
-  { idx: 8, num: "09", title: "Sanit\u00e0 Privata", slug: "ai-sanita-privata" },
-  { idx: 9, num: "05", title: "Servizi Professionali", slug: "ai-servizi-professionali" },
-  { idx: 3, num: "10", title: "Turismo & Ospitalit\u00e0", slug: "ai-turismo-ospitalita" },
+  { idx: 1, num: "02", title: "Distribuzione B2B & Grossisti", slug: "ai-distribuzione-b2b" },
+  { idx: 2, num: "03", title: "Retail, Fashion & Design", slug: "ai-retail-fashion" },
+  { idx: 3, num: "04", title: "Turismo & Ospitalit\u00e0", slug: "ai-turismo-ospitalita" },
+  { idx: 4, num: "05", title: "Logistica & Trasporti", slug: "ai-logistica-trasporti" },
+  { idx: 5, num: "06", title: "Servizi Professionali", slug: "ai-servizi-professionali" },
+  { idx: 6, num: "07", title: "Farmaceutica & Dispositivi Medici", slug: "ai-farmaceutica" },
+  { idx: 7, num: "08", title: "Food & Beverage", slug: "ai-food-beverage" },
+  { idx: 8, num: "09", title: "Edilizia & Immobiliare", slug: "ai-edilizia-immobiliare" },
+  { idx: 9, num: "10", title: "Sanit\u00e0 Privata", slug: "ai-sanita-privata" },
 ];
 
 const COPY = {

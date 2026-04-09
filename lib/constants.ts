@@ -8,13 +8,13 @@ export const NAV_ITEMS = [
     ],
   },
   { label: "Il Codice del Doge", href: "/metodo" },
+  { label: "Casi d'Uso", href: "/casi-duso" },
+  { label: "Blog", href: "/blog" },
   {
     label: "Risorse",
     children: [
-      { label: "Casi d'Uso", href: "/casi-duso" },
       { label: "Settori", href: "/settori" },
       { label: "Incentivi", href: "/incentivi" },
-      { label: "Blog", href: "/blog" },
       { label: "Soluzioni", href: "/soluzioni" },
     ],
   },
