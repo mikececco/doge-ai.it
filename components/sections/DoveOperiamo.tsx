@@ -67,7 +67,7 @@ export default function DoveOperiamo({ variant = "aziende" }: { variant?: "azien
               return (
                 <div
                   key={i}
-                  className={`group relative cursor-pointer ${i < 9 ? "border-b border-bianco/20" : ""} ${i % 2 === 1 ? "md:border-l border-bianco/20" : ""}`}
+                  className={`group relative cursor-pointer ${i < 8 ? "border-b border-bianco/20" : i === 8 ? "border-b md:border-b-0 border-bianco/20" : ""} ${i % 2 === 1 ? "md:border-l border-bianco/20" : ""}`}
                   onClick={() => {
                     if (window.innerWidth < 768) {
                       if (!isExpanded) {
