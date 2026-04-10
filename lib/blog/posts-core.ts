@@ -3491,4 +3491,192 @@ export const CORE_POSTS: BlogPost[] = [
 <p>Se vuoi costruire un piano di finanziamento su misura per il tuo progetto di trasformazione AI, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">contattaci</a>. Ti aiutiamo a navigare il sistema degli incentivi e a massimizzare il beneficio per la tua azienda. Per una panoramica completa delle misure disponibili, visita la nostra <a href="/incentivi" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">pagina dedicata agli incentivi</a>.</p>
     `,
   },
+  {
+    slug: "domande-consulente-ai-prima-contratto-checklist",
+    title: "15 domande da fare a un consulente AI prima di firmare il contratto",
+    excerpt:
+      "La checklist operativa per imprenditori italiani: quindici domande scomode che separano un consulente AI serio da un venditore di slide. Se non hai risposte chiare su queste, non firmare.",
+    date: "10 Apr 2026",
+    readTime: "8 min",
+    category: "AI & PMI",
+    tags: ["Consulenza", "PMI", "Strategia", "Contratti"],
+    content: `
+<h2>Perche queste 15 domande valgono piu di 3 meeting di discovery</h2>
+<p>La maggior parte delle PMI italiane che seleziona un consulente AI sbaglia la fase di valutazione. Non per mancanza di tempo, ma per mancanza di domande giuste. Si finisce per chiedere al consulente cose a cui sa rispondere a memoria ("quali sono i vostri servizi?", "con quali tecnologie lavorate?") e a trascurare le domande che lo mettono davvero in difficolta. Il risultato e che si firmano contratti in cui le cose importanti non sono mai state discusse, e si scoprono dopo tre mesi.</p>
+<p>Le quindici domande di questa checklist sono costruite per fare l'opposto: mettere sotto pressione i punti dove i consulenti deboli scivolano, e dare ai consulenti seri l'occasione di distinguersi. Non hanno una risposta "giusta" universale, ma una risposta chiara e documentata deve esistere. Se il candidato evita, diventa vago o cambia discorso, e l'informazione che stavi cercando.</p>
+<p>Portale al primo o al secondo incontro, prendi nota delle risposte in modo strutturato, e confronta i candidati a parita di domande. In due call hai piu informazioni utili che in sei ore di presentazioni commerciali.</p>
+
+<h2>Domande su esperienza e track record</h2>
+<p>Queste cinque domande servono a capire se il consulente ha davvero fatto quello che dice di fare, o se sta rivendendo competenze altrui.</p>
+<h3>1. Quanti progetti AI avete portato in produzione negli ultimi 24 mesi?</h3>
+<p>Non "quanti clienti avete", non "quanti progetti avete iniziato": quanti sono in produzione reale oggi, con utenti che li usano. Un consulente serio ha numeri precisi. Uno debole risponde con "molti", "numerosi", "diversi".</p>
+<h3>2. Posso parlare con due clienti che hanno progetti simili al mio?</h3>
+<p>Due, non uno. E non scelti dal consulente in autonomia: chiedi una rosa di nomi da cui scegliere tu. Chi rifiuta la reference call ha qualcosa da nascondere, e quasi sempre e la mancanza di casi replicabili di successo.</p>
+<h3>3. Raccontatemi l'ultimo progetto AI che avete fatto fallire</h3>
+<p>La risposta "non ne abbiamo avuti" e un segnale rosso: o sta mentendo, o ha lavorato troppo poco per avere statisticamente incontrato fallimenti. Chi risponde con un caso concreto, la causa e l'insegnamento che ne ha tratto, e una persona con esperienza reale e sufficiente auto-consapevolezza.</p>
+<h3>4. Quale percentuale dei vostri clienti rinnova il contratto dopo il primo progetto?</h3>
+<p>Se il tasso di rinnovo e sotto il 50%, qualcosa non funziona nel loro modello di consegna. Se e sopra l'80%, verifica che non sia lock-in mascherato da fidelizzazione.</p>
+<h3>5. Chi, fisicamente, lavorera al mio progetto? Possiamo incontrarli prima di firmare?</h3>
+<p>I venditori di slide organizzano il primo incontro con il commerciale e il founder. Poi spariscono, e il progetto finisce a freelance esterni o junior senza supervisione. Pretendi di incontrare il project manager effettivo e almeno un ingegnere tecnico prima di firmare.</p>
+
+<h2>Domande su metodo e deliverable</h2>
+<p>Queste cinque domande verificano se esiste un processo ripetibile o se ogni progetto e un'improvvisazione.</p>
+<h3>6. Qual e il vostro metodo di lavoro? Potete mostrarmelo scritto?</h3>
+<p>I seri hanno un metodo documentato con fasi, tempi, deliverable e KPI. I deboli parlano di "approccio custom" per mascherare l'assenza di un processo. Un metodo scritto non e burocrazia: e la prova che il consulente ha lavorato abbastanza da standardizzare cosa funziona.</p>
+<h3>7. Quali sono i deliverable concreti di ogni fase del progetto?</h3>
+<p>Deve elencarli: documento X entro la settimana Y, prototipo funzionante entro la settimana Z, modello deployato entro la settimana W. Se la risposta e vaga ("ci adattiamo alle vostre esigenze"), stai comprando aria.</p>
+<h3>8. Come definiamo insieme i KPI di successo prima dell'inizio del progetto?</h3>
+<p>Un consulente serio insiste per fissare baseline e KPI prima del kickoff. Chi non lo fa sta proteggendo se stesso da una valutazione oggettiva del proprio lavoro.</p>
+<h3>9. Quanto tempo del mio team sara richiesto durante il progetto?</h3>
+<p>Deve rispondere con ore stimate per ruolo (es. "4 ore/settimana dal CFO per le prime 4 settimane, 2 ore/settimana dal responsabile operations per tutto il progetto"). Chi dice "pochissimo, ci occupiamo di tutto noi" sta costruendo un sistema che il tuo team non sapra mai gestire.</p>
+<h3>10. Cosa succede se il pilota non raggiunge gli obiettivi?</h3>
+<p>Devono esistere criteri di go/no-go scritti, possibili pivot, condizioni di uscita e rimborso parziale. Un'azienda che evita questa domanda ha il lock-in come modello di business.</p>
+
+<h2>Domande su responsabilita, proprieta e uscita</h2>
+<p>Queste ultime cinque domande sono le piu scomode, e per questo le piu diagnostiche. Le risposte devono essere scritte nel contratto, non solo dichiarate.</p>
+<h3>11. A chi appartengono modelli, prompt, dataset e codice che costruirete?</h3>
+<p>Risposta accettabile: tutto appartiene all'azienda cliente, documentato nel contratto. Risposta inaccettabile: tutto appartiene al consulente e voi avete solo licenza d'uso. Questa e la differenza tra acquistare un asset e affittarlo per sempre.</p>
+<h3>12. Dove vivranno i dati aziendali durante e dopo il progetto?</h3>
+<p>Deve sapere rispondere con precisione: infrastruttura cloud privata, on-premise, regione di hosting, criteri di encryption, politiche di cancellazione. Se tratta il GDPR come un problema tuo non suo, e un segnale rosso.</p>
+<h3>13. Chi sara responsabile del sistema dopo il go-live?</h3>
+<p>La risposta giusta include sempre un referente interno tuo, con un piano di formazione dettagliato. Se la risposta e "noi, per sempre", stai comprando dipendenza non valore.</p>
+<h3>14. Come possiamo uscire dal contratto se decidiamo di cambiare fornitore?</h3>
+<p>Deve esistere una clausola di uscita chiara: preavviso, restituzione di dati e artefatti, documentazione tecnica completa, assistenza alla migrazione. Se il consulente elude la domanda, il lock-in e gia nel contratto.</p>
+<h3>15. Qual e il vostro range di prezzo per un progetto come il mio?</h3>
+<p>Non chiedere il prezzo esatto al primo incontro (sarebbe prematuro), ma chiedi una fascia: 5-10k, 20-40k, 60-120k. Un consulente serio te la da subito perche ha fatto abbastanza progetti da conoscere i range del suo mercato. Chi dice "dipende da tutto" sta cercando di capire quanto puoi pagare.</p>
+
+<h2>Le risposte che devono farti scappare</h2>
+<p>Oltre alle risposte attese, esistono risposte che da sole sono sufficienti a chiudere la trattativa, indipendentemente da quanto bene il candidato risponda alle altre domande.</p>
+<ul>
+  <li><strong>"Noi non abbiamo mai fatto fallire un progetto"</strong> — chi dice questo e un bugiardo o un principiante. Entrambi sono pericolosi.</li>
+  <li><strong>"I modelli li teniamo noi, voi avete solo una licenza"</strong> — stai acquistando lock-in permanente, non un asset aziendale.</li>
+  <li><strong>"Il nostro metodo e completamente custom, non e scritto"</strong> — senza metodo standardizzato ogni progetto e un'improvvisazione, e le improvvisazioni falliscono piu spesso.</li>
+  <li><strong>"Non serve che il vostro team sia coinvolto, facciamo tutto noi"</strong> — il sistema non si radichera mai nell'azienda e morira il giorno in cui il consulente se ne va.</li>
+  <li><strong>"Non possiamo darvi reference perche i clienti sono riservati"</strong> — i clienti soddisfatti autorizzano sempre le reference call. Chi non le da, non le ha.</li>
+</ul>
+<p>Quando senti una di queste risposte, non contrattare: chiudi educatamente e passa al candidato successivo. Il costo di cambiare consulente dopo aver firmato e dieci volte superiore al costo di eliminarlo in shortlist.</p>
+
+<h2>Il prossimo passo</h2>
+<p>Queste quindici domande sono il passaggio finale di un processo piu ampio di selezione che copre filtro iniziale, shortlist, interviste, richiesta proposta e decisione. Se vuoi il metodo completo in 4 settimane, leggi la nostra <a href="/guida/come-scegliere-societa-consulenza-ai-pmi" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">guida su come scegliere una societa di consulenza AI</a>. Una volta superata la fase di valutazione e arrivati alla firma, ci sono poi nove clausole specifiche che devono esistere nel contratto di consulenza AI: le abbiamo analizzate in dettaglio nell'articolo <a href="/blog/contratto-consulenza-ai-clausole-essenziali-pmi" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">sulle clausole essenziali di un contratto di consulenza AI</a>.</p>
+<p>Se preferisci saltare la fase di scouting e parlare direttamente con un consulente che accetta tutte queste domande senza batter ciglio, <a href="/soluzioni/consulente-ai-pmi" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">scopri il nostro servizio di consulenza AI per PMI</a> o <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima call e gratuita.</p>
+    `,
+  },
+  {
+    slug: "contratto-consulenza-ai-clausole-essenziali-pmi",
+    title: "Contratto di consulenza AI: le 9 clausole essenziali per una PMI",
+    excerpt:
+      "Un contratto di consulenza AI non e un contratto IT tradizionale. Ecco le nove clausole che devono esistere, quelle da negoziare con attenzione e i trucchi per evitare il lock-in tecnologico.",
+    date: "10 Apr 2026",
+    readTime: "9 min",
+    category: "AI & PMI",
+    tags: ["Contratti", "Consulenza", "PMI", "Legale", "AI Governance"],
+    content: `
+<h2>Perche un contratto di consulenza AI non e come un contratto IT tradizionale</h2>
+<p>Molte PMI italiane affrontano il primo contratto di consulenza AI come se fosse un contratto IT standard: si copia-incolla il template usato per il gestionale, si mette una scadenza e un prezzo, si firma. Il risultato, qualche mese dopo, e una serie di sorprese: modelli e prompt che non sono di proprieta dell'azienda, dati aziendali finiti su piattaforme pubbliche per training, sistemi impossibili da migrare a un altro fornitore, SLA vaghi che non lasciano margini di negoziazione quando qualcosa si rompe.</p>
+<p>Il motivo e che un progetto AI ha caratteristiche strutturalmente diverse da un progetto software classico. L'AI lavora su dati aziendali sensibili con intensita molto maggiore. I modelli evolvono nel tempo e hanno valore economico autonomo. Le prestazioni sono probabilistiche, non deterministiche, e i KPI devono tenerne conto. Il rischio di lock-in tecnologico e piu alto perche le dipendenze sono meno visibili. E il rischio regolatorio e reale: l'AI Act europeo aggiunge livelli di responsabilita che nel software tradizionale non esistevano.</p>
+<p>Un contratto AI serio copre questi rischi in modo esplicito. Di seguito, le nove clausole che devono esistere — e dove negoziare con attenzione.</p>
+
+<h2>Le 9 clausole che devono esserci (e quelle da negoziare con attenzione)</h2>
+<p>La struttura che proponiamo ai nostri clienti e la seguente. Non e un modello legale da adottare senza la revisione di un avvocato, ma e il checklist di cio che il tuo avvocato deve verificare prima di far firmare qualsiasi cosa.</p>
+<ul>
+  <li><strong>1. Oggetto del contratto specifico</strong> — descrizione dettagliata del sistema da costruire, non generica. "Implementazione di soluzioni AI" e troppo vago. "Agente AI per la gestione automatica delle email commerciali della casella sales@, integrato con HubSpot, in lingua italiana" e accettabile.</li>
+  <li><strong>2. Proprieta intellettuale</strong> — a chi appartengono modelli, prompt, dataset e codice. Da negoziare con attenzione: vedi sezione dedicata piu avanti.</li>
+  <li><strong>3. Gestione dei dati e privacy</strong> — dove vivono i dati, chi ne e responsabile, cosa succede in caso di data breach. Vedi sezione dedicata.</li>
+  <li><strong>4. SLA e KPI di performance</strong> — metriche di successo misurabili e penali in caso di mancato raggiungimento. Vedi sezione dedicata.</li>
+  <li><strong>5. Milestone e condizioni di pagamento</strong> — tranche di pagamento legate a deliverable concreti, non a date fisse. Se il deliverable slitta, anche il pagamento slitta.</li>
+  <li><strong>6. Clausola di uscita</strong> — come uscire dal contratto senza lock-in tecnologico. Vedi sezione dedicata.</li>
+  <li><strong>7. Responsabilita e limitazioni</strong> — chi risponde se l'AI fa un errore che causa danni al cliente finale. Da negoziare con attenzione: i consulenti tendono a limitare al massimo, i clienti devono resistere.</li>
+  <li><strong>8. Compliance AI Act e normativa applicabile</strong> — chi e responsabile di garantire che il sistema rispetti l'AI Act europeo nel periodo di vigenza del contratto.</li>
+  <li><strong>9. Non concorrenza e non solicitation</strong> — limiti ragionevoli sulla capacita del consulente di offrire sistemi identici a concorrenti diretti, e sulla tua capacita di assumere il loro personale.</li>
+</ul>
+<p>Ognuna di queste clausole merita attenzione, ma le quattro piu critiche — quelle dove i consulenti scivolano e dove le PMI perdono piu valore economico — sono proprieta intellettuale, dati, SLA e exit. Le analizziamo singolarmente.</p>
+
+<h2>Proprieta intellettuale: chi possiede modelli, prompt e dataset?</h2>
+<p>Questa e la clausola piu importante e la piu fraintesa. In un progetto AI si creano quattro tipi di asset intellettuali, ognuno con una logica di proprieta diversa.</p>
+<p><strong>Modelli proprietari fine-tuned.</strong> Se il consulente fa fine-tuning di un modello base (Claude, GPT, Llama) usando i tuoi dati, il modello risultante contiene informazioni sulla tua azienda e ha valore economico autonomo. La proprieta deve essere dell'azienda cliente, non del consulente. Se il consulente mantiene la proprieta, puo rivendere varianti del modello a tuoi concorrenti e tu sei legato alla sua infrastruttura per sempre.</p>
+<p><strong>Prompt e catene di prompt.</strong> I prompt aziendali contengono know-how operativo: come rispondere ai clienti, quali informazioni estrarre dai documenti, come strutturare le decisioni. Devono essere di proprieta dell'azienda cliente e documentati in modo leggibile, non nascosti in un sistema proprietario del consulente.</p>
+<p><strong>Dataset di training e knowledge base.</strong> Questi sono chiaramente dell'azienda cliente: sono i tuoi dati. La clausola deve pero specificare che il consulente non puo usarli per addestrare modelli pubblici o per altri clienti, neanche in forma aggregata o anonimizzata.</p>
+<p><strong>Codice di integrazione e infrastruttura.</strong> Il codice che integra il sistema AI con CRM, ERP, email e altri strumenti aziendali deve essere di proprieta dell'azienda cliente e consegnato in forma sorgente al termine del progetto. Non e accettabile ricevere solo "accesso tramite licenza" a codice che gira sui server del consulente.</p>
+<p>La regola pratica: al termine del contratto devi poter prendere tutti gli asset (modelli, prompt, dati, codice, documentazione) e farli girare su un'altra infrastruttura con un altro fornitore senza perdere nulla. Se questa portabilita non e garantita per iscritto, stai comprando dipendenza non valore.</p>
+
+<h2>Clausole sui dati: GDPR, training e residency</h2>
+<p>I contratti IT tradizionali hanno clausole GDPR generiche. Un contratto AI deve avere clausole molto piu precise, perche l'intensita con cui un sistema AI processa dati aziendali e incomparabile con quella di un gestionale.</p>
+<p><strong>Divieto di training su modelli pubblici.</strong> Il consulente deve garantire per iscritto che i tuoi dati non saranno mai usati per addestrare modelli resi disponibili a terzi. Questo include i dati delle conversazioni, dei documenti, dei log di utilizzo. La clausola deve essere esplicita: non basta "rispettiamo il GDPR".</p>
+<p><strong>Data residency.</strong> Dove vivono fisicamente i dati? In quale paese? Su quale cloud? Chi ha accesso amministrativo? Per PMI italiane, la preferenza e per infrastrutture in UE o in Italia. Per aziende con dati particolarmente sensibili (sanita, legale, finanza) on-premise o cloud privato dedicato sono spesso obbligatori.</p>
+<p><strong>Nomina a responsabile del trattamento.</strong> Il consulente deve essere formalmente nominato come responsabile del trattamento ex art. 28 GDPR, con un DPA (Data Processing Agreement) allegato al contratto principale. Questo e il minimo normativo.</p>
+<p><strong>Procedura di data breach.</strong> In caso di incidente, il consulente deve notificare entro 24-48 ore con informazioni specifiche (cosa e successo, quali dati sono coinvolti, quali azioni ha intrapreso). Le clausole generiche che parlano di "notifica tempestiva" non sono sufficienti.</p>
+<p><strong>Cancellazione a fine contratto.</strong> Entro 30 giorni dalla fine del contratto, tutti i dati aziendali devono essere restituiti in formato strutturato e poi cancellati definitivamente dai sistemi del consulente, con attestazione scritta di avvenuta cancellazione.</p>
+
+<h2>SLA, milestone, penali: come legare il pagamento al risultato</h2>
+<p>Negli SLA dei contratti software tradizionali si parla di uptime, tempi di risposta e bug fix. Questi elementi esistono anche nei contratti AI, ma sono insufficienti. L'AI ha una dimensione di performance che il software deterministico non ha.</p>
+<p><strong>KPI di qualita del modello.</strong> Precisione, recall, tasso di errore sui casi standard, tasso di escalation corretta su casi complessi. Questi KPI vanno definiti prima del kickoff, con baseline misurabili e soglie minime accettabili. Esempio: "l'agente deve rispondere correttamente al 90% delle richieste standard misurato su un campione di 200 casi definito dal cliente".</p>
+<p><strong>KPI di impatto business.</strong> Ore risparmiate, tempo medio di risposta, tasso di conversione, numero di ticket chiusi in autonomia. Questi sono i KPI che contano davvero perche misurano il valore effettivo. Il consulente deve accettare di farsi valutare su questi, non solo su metriche tecniche.</p>
+<p><strong>Milestone legate a pagamento.</strong> Il pagamento deve essere diviso in tranche legate a deliverable concreti: kickoff (10-20%), primo prototipo funzionante (20-30%), go-live in produzione (30-40%), verifica KPI a 30/60/90 giorni (20-30%). Se il deliverable slitta, la tranche slitta. Niente pagamenti anticipati senza deliverable consegnato.</p>
+<p><strong>Penali per mancato raggiungimento.</strong> Se i KPI non sono raggiunti entro le soglie concordate, deve esistere una penale proporzionale o un impegno a correzione a costo zero. Questa clausola e quella che i consulenti deboli rifiutano piu spesso. Se il consulente non accetta di legare il proprio compenso al risultato che promette, non crede al risultato che promette.</p>
+
+<h2>Exit clause: come uscire senza lock-in tecnologico</h2>
+<p>Il lock-in tecnologico e la trappola principale dei contratti AI. Se fatto bene, un progetto AI costruisce un asset che e tuo e che puoi far evolvere. Se fatto male, costruisce una dipendenza permanente da un fornitore che non puoi cambiare senza distruggere tutto.</p>
+<p>La clausola di uscita deve coprire cinque elementi concreti. <strong>Preavviso ragionevole:</strong> 60-90 giorni sono ragionevoli, oltre i 6 mesi e sospetto. <strong>Restituzione di tutti gli asset:</strong> modelli, prompt, dataset, codice, documentazione tecnica, runbook operativi. Tutto deve essere consegnato in formato aperto e riutilizzabile, non in formato proprietario. <strong>Assistenza alla migrazione:</strong> il consulente deve garantire almeno 30-60 ore di assistenza tecnica al fornitore successivo per facilitare la transizione, a un tariffario concordato. <strong>Continuita di servizio:</strong> durante il periodo di preavviso, il consulente deve mantenere il servizio attivo agli standard concordati, senza scaricare risorse o abbassare la qualita. <strong>Accesso ai dati operativi:</strong> log di utilizzo, metriche di performance e storico delle conversazioni devono essere accessibili e esportabili dal cliente per tutta la durata del contratto e al suo termine.</p>
+<p>La prova del nove per capire se una clausola di uscita e forte: leggila e chiediti "se decidessi domani di cambiare fornitore, in quanto tempo e con quanto sforzo il nuovo fornitore potrebbe prendere il controllo del sistema?". Se la risposta e "in poche settimane", la clausola funziona. Se la risposta e "mesi di ricostruzione" o "impossibile", stai firmando il lock-in.</p>
+
+<h2>Il modello che usiamo con i nostri clienti</h2>
+<p>Il template che IL DOGE DI VENEZIA usa con i clienti segue tutte le regole di questa checklist. Proprieta intellettuale completa in capo all'azienda cliente, dati su infrastruttura privata, SLA con KPI business, pagamenti legati a milestone, clausola di uscita chiara e senza lock-in. Non perche ci piace vincolarci, ma perche e l'unico modo per costruire partnership di lungo periodo: i clienti rimangono non perche sono bloccati, ma perche continuiamo a generare valore.</p>
+<p>Se vuoi capire come arrivare alla firma del contratto con un consulente serio (e come filtrare quelli che non lo sono), leggi la <a href="/guida/come-scegliere-societa-consulenza-ai-pmi" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">guida completa su come scegliere una societa di consulenza AI per la tua PMI</a>. Se vuoi la checklist delle domande da fare al primo incontro, trovi tutto nell'articolo <a href="/blog/domande-consulente-ai-prima-contratto-checklist" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">con le 15 domande essenziali prima di firmare</a>.</p>
+<p>Se vuoi parlare con noi e vedere il nostro template di contratto, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">scrivici</a>. Lo condividiamo senza problemi, anche se poi non lavoreremo insieme: e il modo con cui il mercato italiano diventa piu maturo, e alla lunga e un vantaggio per tutti.</p>
+    `,
+  },
+  {
+    slug: "perche-fallisce-progetto-ai-pmi-cause-rimedi",
+    title: "Perche il 95% dei progetti AI fallisce nelle PMI: le 5 cause reali",
+    excerpt:
+      "Gartner e Casaleggio lo dicono da anni: la stragrande maggioranza dei progetti AI aziendali fallisce. Abbiamo analizzato le cause reali nelle PMI italiane — e il framework in 5 check per evitarle.",
+    date: "10 Apr 2026",
+    readTime: "10 min",
+    category: "AI & PMI",
+    tags: ["ROI", "PMI", "Strategia", "Fallimento", "Governance"],
+    content: `
+<h2>Il dato: il 95% dei progetti AI fallisce, e non e un'esagerazione</h2>
+<p>La statistica circola da tempo nei report di settore: tra il 70% e il 95% dei progetti AI aziendali non raggiunge gli obiettivi di business originari. Gartner lo ripete anno dopo anno. In Italia, studi come quelli di iKN, Casaleggio Associati e dell'Osservatorio Artificial Intelligence del Politecnico di Milano confermano lo stesso pattern. Il numero esatto varia — 70%, 80%, 95% a seconda della metodologia — ma la direzione e inequivocabile: la maggior parte delle aziende che avvia un progetto AI non ne trae il valore che si aspettava.</p>
+<p>Nelle PMI italiane la situazione e anche peggiore, per un motivo strutturale: mancano i team IT dedicati, la capacita di supervisione tecnica e le risorse interne per riparare errori di execution del fornitore. Un'azienda da 500 dipendenti con un CIO puo rimediare a un consulente mediocre. Una PMI da 40 dipendenti si ritrova con un sistema che non funziona e nessuno dentro in grado di aggiustarlo.</p>
+<p>La buona notizia e che il fallimento non e casuale. Abbiamo analizzato decine di progetti AI in PMI italiane — nostri e di consulenti con cui abbiamo incrociato — e le cause di fallimento si riducono a cinque pattern ricorrenti. Ognuno ha sintomi riconoscibili in anticipo e contromisure operative. Questa analisi e il framework in cinque check che usiamo con i nostri clienti per prevenire il fallimento invece di spiegarlo dopo.</p>
+
+<h2>Causa #1 — Nessun problema chiaro da risolvere</h2>
+<p>La causa numero uno, e anche la piu sottovalutata, e strategica: l'azienda avvia il progetto senza avere un problema concreto da risolvere. Il progetto nasce da pressione ("tutti parlano di AI, dobbiamo fare qualcosa"), da un incentivo fiscale disponibile ("c'e il credito 4.0, sfruttiamolo") o da una demo impressionante vista in fiera ("quel chatbot era fantastico, ne vogliamo uno anche noi"). Nessuna di queste e una ragione valida.</p>
+<p>Il sintomo riconoscibile in anticipo e questo: quando chiedi all'imprenditore "qual e il problema che vuoi risolvere", la risposta e "vogliamo usare l'AI per migliorare i processi". Quando chiedi "quali processi specifici, quanto tempo consumano oggi, quanto costano in errori", la risposta e vaga. Quando chiedi "se questo progetto riesce perfettamente, cosa cambia in azienda tra 6 mesi", la risposta e "saremo piu innovativi". Nessuno di questi e un problema: sono aspirazioni senza substrato operativo.</p>
+<p>La contromisura e lavorare all'inverso. Prima di scegliere qualsiasi tecnologia o fornitore, l'azienda deve produrre una singola pagina che contenga: il processo specifico da trasformare (con nome e proprietario interno), il costo attuale di questo processo (ore/settimana, costo orario, errori), l'obiettivo misurabile post-progetto (es. "ridurre da 40 a 10 ore/settimana il tempo dedicato alla preventivazione"), la metrica con cui verra verificato il successo, la data entro cui la metrica deve essere raggiunta. Se questa pagina non si riesce a scrivere, il progetto non va avviato. Non e un esercizio formale: e il test che distingue un progetto con ROI prevedibile da un'iniziativa destinata a morire nel cassetto.</p>
+
+<h2>Causa #2 — Dati sporchi, inesistenti o frammentati</h2>
+<p>La seconda causa di fallimento e tecnica e banale ma quasi sempre sottovalutata: i dati aziendali non sono pronti per essere usati da un sistema AI. Sono sporchi (duplicati, errori, campi mancanti), frammentati (Excel sul portatile di Maria, gestionale del 2015, CRM mai aggiornato dopo il 2022), o semplicemente non esistono (il processo e interamente cartaceo o gestito via email).</p>
+<p>Il sintomo riconoscibile e un rituale classico: il consulente fa una demo con dati sintetici, tutto funziona meravigliosamente, si firma il contratto, si arriva alla fase di integrazione e si scopre che i dati reali sono inutilizzabili. Il progetto si blocca tre mesi sulla "pulizia dei dati", il budget viene eroso da lavoro che nessuno aveva preventivato e il go-live slitta continuamente. Alla fine il sistema va in produzione con dati parzialmente sporchi e i risultati sono mediocri.</p>
+<p>La contromisura e un assessment dei dati prima del contratto, non dopo. Il consulente serio lo chiede lui stesso come primo step di discovery: "mostratemi i dati reali, non la descrizione del gestionale". Guarda i campi, verifica la consistenza, stima il tempo di pulizia. Se l'azienda non ha dati utilizzabili, il progetto non parte: prima si fa un mini-progetto di data foundation (anche 2-4 settimane bastano per casi semplici), poi si costruisce l'AI sopra. Avviare un progetto AI su dati inconsistenti e come costruire una casa sulla sabbia: il sistema ci sara, ma crollera al primo carico reale. Vedi anche la nostra analisi <a href="/blog/roi-ai-come-misurarlo" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">su come misurare il ROI dell'AI</a> per capire perche senza dati puliti non esiste nemmeno il ROI misurabile.</p>
+
+<h2>Causa #3 — Nessun owner interno (il consulente se ne va, il sistema muore)</h2>
+<p>La terza causa e organizzativa e letale: nessuno dentro l'azienda possiede il sistema dopo il go-live. Il consulente costruisce tutto in autonomia, il team interno guarda da lontano, al go-live tutti sono contenti, e poi il consulente esce dalla relazione o cambia il livello di supporto. Nei 3-6 mesi successivi il sistema comincia a degradare: piccoli bug non vengono aggiustati, i prompt non vengono aggiornati quando cambiano i prodotti, le integrazioni si rompono al primo aggiornamento del CRM. Nessuno sa intervenire. Dopo 12 mesi il sistema e spento.</p>
+<p>Il sintomo riconoscibile in anticipo e una frase che si sente spesso nei primi incontri: "non serve che il nostro team sia coinvolto, facciamo tutto noi". Viene presentata come un vantaggio ("vi togliamo il peso"), ma in realta e la strategia di lock-in piu efficace: piu il tuo team e escluso, piu sei dipendente dal fornitore. Alla lunga non funziona neanche per il fornitore, perche i clienti si accorgono del lock-in e smettono di proporre nuovi progetti.</p>
+<p>La contromisura ha due livelli. Primo: ogni progetto AI deve avere un owner interno nominato dal giorno zero. Non serve che sia tecnico — un responsabile operations, un capo ufficio, un referente amministrativo va bene — ma deve essere una persona che partecipa ai meeting settimanali, riceve tutta la documentazione tecnica, impara a gestire le operazioni quotidiane del sistema. Secondo: il contratto deve includere trasferimento di competenze esplicito, con ore di formazione dedicate a questa persona, runbook scritti per le operazioni piu comuni, e un periodo di shadowing in cui l'owner gestisce il sistema con il consulente che fa da backup. Dopo 3 mesi l'owner deve essere autonomo sulle operazioni ordinarie. Il consulente rimane solo per evolutive e problemi straordinari. Questo vale anche per progetti piu complessi come gli <a href="/soluzioni/agenti-ai-per-aziende" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">agenti AI autonomi</a>: se non hai un referente interno che li supervisiona, non vanno in produzione.</p>
+
+<h2>Causa #4 — KPI assenti o sbagliati</h2>
+<p>La quarta causa e una questione di governance: il progetto parte senza KPI misurabili, oppure con KPI che misurano la cosa sbagliata. Alla fine del progetto nessuno sa dire se e andato bene. Si guarda la demo, il sistema sembra funzionare, nessuno ha dati reali di impatto, e il progetto viene archiviato come "successo" senza che abbia generato valore reale. L'azienda poi fatica a giustificare il progetto successivo perche non ha numeri del primo.</p>
+<p>Il sintomo riconoscibile in anticipo e semplice: quando chiedi al team "qual e il KPI di successo del progetto", la risposta e "innovazione", "efficienza", "trasformazione digitale" — termini senza unita di misura. Oppure c'e un KPI nominale ("riduzione del 30% del tempo") ma nessuna baseline prima del progetto, quindi dopo il go-live e impossibile dire se il 30% e stato raggiunto o no.</p>
+<p>La contromisura e rigorosa: prima di firmare qualsiasi contratto, si fissano due-tre KPI quantitativi con baseline misurata su dati reali. Esempio: "oggi la preventivazione richiede mediamente 3.2 ore misurate su 50 preventivi del trimestre scorso; dopo il go-live deve scendere sotto 1.2 ore misurate su 50 preventivi post-lancio". La baseline non si stima, si misura. I KPI si verificano a 30, 60 e 90 giorni dal go-live, con review scritta e decisione esplicita: il progetto ha funzionato, ha funzionato parzialmente, non ha funzionato. Se non ha funzionato, si documenta perche e si decide come intervenire. Senza questa disciplina il progetto AI diventa una scatola nera di cui nessuno puo dire nulla di oggettivo.</p>
+
+<h2>Causa #5 — Big-bang invece di pilota in 6 settimane</h2>
+<p>La quinta causa e di architettura dell'iniziativa: l'azienda sceglie un approccio big-bang al primo progetto AI invece di un pilota piccolo e focalizzato. Vuole "una piattaforma AI aziendale completa", "un agente che gestisce tutto", "una trasformazione end-to-end". Il progetto parte ambizioso, il budget e grande, le aspettative sono enormi. Dopo 6-9 mesi il progetto e ancora in fase di sviluppo, il team e esausto, il management chiede risultati che ancora non ci sono, e la fiducia interna nell'AI comincia a erodersi. Qualche volta il progetto si trascina fino al go-live, ma arriva in ritardo, sopra budget, e con ambizioni ridotte. Altre volte viene sospeso e l'azienda conclude che "l'AI non e pronta per noi" — quando in realta era la scelta iniziale ad essere sbagliata.</p>
+<p>Il sintomo riconoscibile in anticipo e il budget. Se il primo progetto AI di un'azienda supera i 80-100k di investimento, la probabilita di fallimento sale vertiginosamente. Il motivo non e il denaro in se, ma la complessita: un progetto da 100k ha tipicamente una superficie di integrazioni, deliverable, persone coinvolte e decisioni da prendere che e troppo grande per un'organizzazione che non ha mai fatto AI prima. E come chiedere a qualcuno che non ha mai corso di iniziare con una maratona.</p>
+<p>La contromisura e una regola semplice: il primo progetto AI deve essere un pilota in 6-8 settimane, con budget sotto i 20-30k, su un singolo processo ben definito, con un obiettivo misurabile. Lo scopo del pilota non e risolvere tutti i problemi aziendali. Lo scopo e imparare come si fa un progetto AI nella tua specifica azienda, con il tuo specifico team, con il tuo specifico fornitore. Il primo pilota e una scuola. Dopo il primo pilota di successo, il secondo progetto puo essere piu ambizioso perche il team sa cosa aspettarsi. Dopo il terzo progetto di successo, si puo parlare di trasformazione piu ampia. Chi salta questa sequenza quasi sempre paga il salto con un fallimento.</p>
+
+<h2>Il framework in 5 check che usiamo per evitare il fallimento</h2>
+<p>Queste cinque cause sono la base del framework che usiamo con ogni nuovo cliente prima di iniziare un progetto AI. E una checklist di 5 domande a cui rispondiamo insieme al cliente nella prima sessione, e che decide se il progetto puo partire o se va ristrutturato prima di iniziare.</p>
+<ul>
+  <li><strong>Check 1 - Problema:</strong> abbiamo un problema specifico con costo misurato oggi e obiettivo misurabile post-progetto? Se no, il progetto non parte. Si lavora prima sulla definizione.</li>
+  <li><strong>Check 2 - Dati:</strong> abbiamo dati utilizzabili, puliti e accessibili? Se no, il primo mini-progetto e data foundation, non AI.</li>
+  <li><strong>Check 3 - Owner:</strong> c'e un owner interno nominato, con tempo allocato e impegno al trasferimento di competenze? Se no, si nomina prima di firmare.</li>
+  <li><strong>Check 4 - KPI:</strong> abbiamo baseline misurate e KPI quantitativi concordati per 30/60/90 giorni? Se no, si misurano prima di iniziare il progetto.</li>
+  <li><strong>Check 5 - Scope:</strong> il primo progetto e un pilota in 6-8 settimane su un singolo processo, sotto i 30k di budget? Se no, si ridimensiona prima di partire.</li>
+</ul>
+<p>Questi cinque check applicati in modo rigoroso eliminano la maggior parte delle cause di fallimento dei progetti AI nelle PMI. Non eliminano tutto il rischio — alcuni fallimenti sono tecnici, altri sono dovuti a cambiamenti di mercato — ma spostano la probabilita di successo dal 5-20% del mercato generale all'80% circa dei progetti che seguono questa disciplina. E una differenza che vale la pena.</p>
+<p>Se vuoi capire dove l'AI puo generare piu valore nella tua azienda specifica e strutturare un primo progetto secondo questo framework, leggi la nostra analisi <a href="/soluzioni/roi-intelligenza-artificiale-pmi" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">sul ROI reale dell'AI nelle PMI italiane</a>. Se vuoi il metodo completo per scegliere il consulente giusto che accettera questa disciplina, leggi la <a href="/guida/come-scegliere-societa-consulenza-ai-pmi" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">guida su come scegliere una societa di consulenza AI per la tua PMI</a>.</p>
+<p>Se preferisci saltare la fase di scouting e parlare direttamente con noi, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">scrivici</a>. La prima call e gratuita e serve esattamente a passare i cinque check sul tuo caso specifico: se qualcuno non passa, te lo diciamo onestamente prima di qualsiasi proposta commerciale.</p>
+    `,
+  },
 ];

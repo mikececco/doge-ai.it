@@ -46,6 +46,14 @@ const SOLUZIONE_KEYWORDS: Record<string, string[]> = {
   "formazione-ai-team-aziendale": ["Formazione", "PMI"],
   "audit-processi-ai-azienda": ["Automazione", "PMI", "ROI", "Compliance"],
   "ai-per-ecommerce-italiano": ["Ecommerce", "Marketing", "Moda", "Retail", "Abbigliamento"],
+  "agente-ai-risposta-email-commerciali": ["Customer service", "Agenti AI", "Automazione", "PMI", "Vendite"],
+  "agente-ai-bandi-finanziamenti-pmi": ["Bandi", "Finanziamenti", "PNRR", "Transizione 5.0", "Credito imposta", "Agenti AI", "PMI"],
+  "automazione-preventivi-ai-pmi": ["Automazione", "Preventivi", "Vendite", "PMI", "Agenti AI"],
+  "agente-ai-lead-qualification-b2b": ["Lead generation", "Vendite", "B2B", "Agenti AI", "PMI"],
+  "ai-due-diligence-fondi-investimento": ["Private Equity", "Due Diligence", "Family Office", "Fondi", "Venture Capital"],
+  "ai-portfolio-monitoring-private-equity": ["Private Equity", "Portfolio", "Family Office", "Fondi", "ROI"],
+  "consulenza-ai-club-deal-investitori": ["Private Equity", "Club Deal", "Family Office", "Investimenti", "Fondi"],
+  "consulenza-ai-manifattura-lombardia": ["Manifattura", "Lombardia", "Milano", "Bergamo", "Brescia", "Strategia", "Automazione industriale"],
 };
 
 export function getLinksForCity(citySlug: string): {

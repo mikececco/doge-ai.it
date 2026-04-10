@@ -7,6 +7,7 @@ import { CASI_DUSO } from "@/lib/casi-duso-data";
 import { INCENTIVI_SETTORIALI } from "@/lib/incentivi-settoriali-data";
 import { CASI_STUDIO } from "@/lib/casi-studio-data";
 import { SETTORI_WITH_SLUGS } from "@/lib/settore-slugs";
+import { GUIDE } from "@/lib/guide-data";
 
 export const dynamic = "force-static";
 
@@ -18,7 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/chi-siamo",
     "/aziende",
     "/fondi",
-    "/partner",
     "/metodo",
     "/casi-duso",
     "/blog",
@@ -59,6 +59,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.8,
+  }));
+
+  const guidePages: MetadataRoute.Sitemap = GUIDE.map((guide) => ({
+    url: `${BASE_URL}/guida/${guide.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
   }));
 
   const consulenzaAIIndex: MetadataRoute.Sitemap = [
@@ -149,6 +156,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticPages,
     ...blogPosts,
     ...soluzioniPages,
+    ...guidePages,
     ...consulenzaAIIndex,
     ...consulenzaAICities,
     ...consulenzaAISettori,
