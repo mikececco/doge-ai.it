@@ -54,6 +54,9 @@ const SOLUZIONE_KEYWORDS: Record<string, string[]> = {
   "ai-portfolio-monitoring-private-equity": ["Private Equity", "Portfolio", "Family Office", "Fondi", "ROI"],
   "consulenza-ai-club-deal-investitori": ["Private Equity", "Club Deal", "Family Office", "Investimenti", "Fondi"],
   "consulenza-ai-manifattura-lombardia": ["Manifattura", "Lombardia", "Milano", "Bergamo", "Brescia", "Strategia", "Automazione industriale"],
+  "agente-ai-vendite-b2b-italiano": ["Vendite", "B2B", "Agenti AI", "CRM", "HubSpot", "Pipedrive", "Salesforce", "Lead generation", "PMI"],
+  "consulenza-ai-logistica-veneto": ["Logistica", "Veneto", "Padova", "Verona", "Venezia", "Trasporti", "Magazzino", "Flotta", "Distribuzione B2B"],
+  "ai-per-holding-industriale": ["Holding", "Private Equity", "Family Office", "Fondi", "M&A", "Governance", "Portfolio", "Consolidato"],
 };
 
 export function getLinksForCity(citySlug: string): {

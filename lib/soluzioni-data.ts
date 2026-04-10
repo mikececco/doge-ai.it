@@ -1893,4 +1893,175 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
       },
     ],
   },
+  {
+    slug: "agente-ai-vendite-b2b-italiano",
+    targetQuery: "agente AI vendite B2B italiano",
+    category: "PMI",
+    title: "Agente AI Vendite B2B Italiano - IL DOGE DI VENEZIA",
+    h1: "L'agente AI che lavora a fianco dei tuoi venditori B2B, in italiano",
+    metaDescription:
+      "Agente AI per vendite B2B in italiano: lead enrichment, outreach personalizzato, follow-up e CRM aggiornato in automatico. Integrato con HubSpot, Pipedrive e Salesforce. IL DOGE DI VENEZIA.",
+    intro:
+      "I commerciali B2B italiani passano meta della giornata a fare tutto tranne vendere: cercano contatti su LinkedIn, copiano dati nel CRM, scrivono email di follow-up, aggiornano pipeline, preparano call. Il risultato e che le PMI italiane sottoutilizzano i loro migliori venditori, bruciano lead caldi per mancanza di reattivita e hanno forecast inaffidabili. IL DOGE DI VENEZIA costruisce agenti AI verticali sulle vendite B2B che lavorano in italiano e parlano la lingua del tuo settore: non un chatbot generico, ma un sistema che fa lead enrichment da LinkedIn Sales Navigator e Apollo, qualifica i contatti secondo i tuoi criteri ICP, genera sequenze di cold outreach personalizzate sul sito del prospect e sulle news dell'azienda, aggiorna HubSpot, Pipedrive o Salesforce in automatico, gestisce cadence di follow-up e prenota meeting direttamente sul calendario del commerciale. L'agente si integra con lo stack che usi gia - n8n o Zapier per l'orchestrazione, Claude per la generazione testi, il tuo CRM come fonte unica di verita - senza sostituire nessuno in azienda. I venditori smettono di fare data entry e tornano a chiudere deal, il sales manager ha una pipeline pulita aggiornata in tempo reale e il direttore commerciale vede finalmente forecast realistici. Lavoriamo con budget tipici tra 12k e 35k per il setup iniziale piu un costo mensile contenuto per l'operativita, e il primo agente va in produzione in 4-6 settimane. Niente POC infiniti, niente licenze SaaS che nessuno usa: solo un sistema che il giorno dopo il go-live fa piu lavoro del tuo miglior BDR.",
+    benefits: [
+      {
+        title: "Agente che parla italiano B2B",
+        description:
+          "Scrive email di outreach e follow-up in italiano naturale, calibrato sul tono del tuo settore. Niente traduzioni goffe da template americani.",
+      },
+      {
+        title: "Integrato con il tuo CRM",
+        description:
+          "HubSpot, Pipedrive, Salesforce: l'agente aggiorna deal, contatti e attivita in automatico. Il CRM torna ad essere fonte unica di verita.",
+      },
+      {
+        title: "Augmentation, non sostituzione",
+        description:
+          "I venditori non vengono rimpiazzati: l'agente fa il lavoro ripetitivo e lascia al commerciale le conversazioni che chiudono i deal.",
+      },
+      {
+        title: "In produzione in 4-6 settimane",
+        description:
+          "Primo agente operativo entro un mese e mezzo. Setup 12-35k una tantum, operativita mensile contenuta, ROI misurabile dal secondo mese.",
+      },
+    ],
+    useCases: [
+      "Lead enrichment automatico da LinkedIn Sales Navigator e Apollo con scoring ICP personalizzato sul tuo target",
+      "Sequenze di cold outreach in italiano personalizzate sul sito e sulle news dell'azienda prospect",
+      "Aggiornamento automatico di HubSpot, Pipedrive o Salesforce dopo ogni interazione del commerciale",
+      "Follow-up cadence intelligenti che si adattano alle risposte del prospect senza intervento umano",
+      "Prenotazione meeting sul calendario del commerciale con qualifica preliminare del lead via chat",
+    ],
+    faq: [
+      {
+        question: "L'agente sostituisce i miei commerciali?",
+        answer:
+          "No. L'agente fa enrichment, outreach freddo, follow-up e data entry. I commerciali mantengono le conversazioni di qualifica avanzata, negoziazione e chiusura. E augmentation, non sostituzione.",
+      },
+      {
+        question: "Con quali CRM si integra?",
+        answer:
+          "HubSpot, Pipedrive e Salesforce nativamente. Per altri CRM usiamo n8n o Zapier come livello di orchestrazione. L'aggiornamento dei record avviene in tempo reale dopo ogni interazione.",
+      },
+      {
+        question: "Quanto costa e in quanto tempo va live?",
+        answer:
+          "Setup tipico tra 12k e 35k in base a complessita e integrazioni, piu un canone mensile contenuto per l'operativita. Primo agente in produzione in 4-6 settimane dalla firma.",
+      },
+    ],
+  },
+  {
+    slug: "consulenza-ai-logistica-veneto",
+    targetQuery: "consulenza AI logistica Veneto",
+    category: "Geo",
+    title: "Consulenza AI Logistica Veneto - IL DOGE DI VENEZIA",
+    h1: "Consulenza AI per la logistica in Veneto: dentro i magazzini, non nelle slide",
+    metaDescription:
+      "Consulenza AI per aziende di logistica e trasporti in Veneto. Padova, Verona, Venezia, Vicenza, Treviso, Rovigo. Route optimization, OCR DDT, demand forecasting. IL DOGE DI VENEZIA.",
+    intro:
+      "Il Veneto e uno dei baricentri logistici d'Europa: l'Interporto di Padova tra i primi del continente, il Quadrante Europa di Verona snodo strategico del corridoio scandinavo-mediterraneo, il porto di Marghera come gateway adriatico, i distretti manifatturieri di Vicenza e Treviso che generano flussi costanti di merci verso Germania, Austria e Francia. Eppure molte aziende di trasporto, spedizione e magazzinaggio venete lavorano ancora con fogli Excel, centralini telefonici per lo smistamento ordini e data entry manuale di DDT e fatture. IL DOGE DI VENEZIA affianca le aziende logistiche del Veneto - Padova, Verona, Venezia, Marghera, Vicenza, Treviso, Rovigo - con interventi on-site e progetti AI calibrati sulla realta operativa del settore: route optimization per flotte di camion e furgoni multi-consegna, automazione del magazzino con computer vision per controllo carichi e picking, OCR intelligente su DDT, CMR e fatture fornitori, demand forecasting per gestione stock e previsione picchi stagionali, manutenzione predittiva su flotte long-haul per ridurre fermi imprevisti. Lavoriamo sia con spedizionieri strutturati che con corrieri locali, sia con terzisti del magazzinaggio che con operatori di trasporto dedicato. Il nostro approccio e operativo: venite in piazzale, parlate con i driver e i capi magazzino, mappate i processi reali e costruite sistemi AI che entrano in produzione in 30-60 giorni. Strutturiamo i progetti per essere compatibili con Transizione 5.0, credito d'imposta 4.0 e linee PNRR dedicate alla logistica sostenibile, riducendo l'esborso netto dell'azienda. Per il contesto piu ampio del settore vedi anche la nostra pagina /soluzioni/ai-per-logistica-distribuzione.",
+    benefits: [
+      {
+        title: "Conoscenza dei nodi logistici veneti",
+        description:
+          "Interporto Padova, Quadrante Europa Verona, porto di Marghera: conosciamo flussi, operatori e terminologia specifica del tessuto logistico regionale.",
+      },
+      {
+        title: "On-site in tutto il Veneto",
+        description:
+          "Interveniamo direttamente in magazzino e piazzale a Padova, Verona, Venezia, Vicenza, Treviso, Rovigo. Discovery, deployment e training senza video call.",
+      },
+      {
+        title: "Progetti finanziabili",
+        description:
+          "Strutturiamo gli interventi per Transizione 5.0, credito imposta 4.0 e bandi PNRR logistica. L'esborso netto puo scendere del 30-50%.",
+      },
+      {
+        title: "Dal pilota alla produzione in 30-60 giorni",
+        description:
+          "Niente studi di fattibilita infiniti. Primo sistema operativo su flotta, magazzino o ufficio spedizioni entro due mesi dal kick-off.",
+      },
+    ],
+    useCases: [
+      "Route optimization per flotte multi-consegna di corrieri e padroncini tra Padova, Verona e Treviso",
+      "OCR intelligente su DDT, CMR e fatture fornitori per spedizionieri dell'Interporto di Padova",
+      "Computer vision per controllo carichi e picking in magazzini terzisti dell'area di Verona",
+      "Demand forecasting per gestione stock stagionali e picchi legati ai flussi manifatturieri vicentini",
+      "Manutenzione predittiva su flotte long-haul che operano sul corridoio Marghera-Brennero",
+    ],
+    faq: [
+      {
+        question: "Lavorate in tutto il Veneto o solo su Padova e Venezia?",
+        answer:
+          "Tutto il Veneto: Padova, Verona, Venezia, Marghera, Vicenza, Treviso, Rovigo e Belluno. On-site in magazzino e piazzale senza costi aggiuntivi di trasferta nelle province principali.",
+      },
+      {
+        question: "Conoscete l'Interporto di Padova e il Quadrante Europa?",
+        answer:
+          "Si. Lavoriamo con operatori e spedizionieri attivi su entrambi i nodi, conosciamo i flussi tipici, gli operatori di handling e le tempistiche operative del corridoio scandinavo-mediterraneo.",
+      },
+      {
+        question: "I progetti sono finanziabili con Transizione 5.0 o PNRR logistica?",
+        answer:
+          "Si. Strutturiamo gli interventi per essere compatibili con Transizione 5.0, credito imposta 4.0 e bandi PNRR dedicati alla logistica. Collaboriamo con consulenti di finanza agevolata per le pratiche.",
+      },
+    ],
+  },
+  {
+    slug: "ai-per-holding-industriale",
+    targetQuery: "AI per holding industriale italiana",
+    category: "PE/Family Office",
+    title: "AI per Holding Industriale Italiana - IL DOGE DI VENEZIA",
+    h1: "AI per holding industriali: vista di portafoglio, esecuzione per azienda",
+    metaDescription:
+      "AI per holding industriali italiane: reporting consolidato, benchmarking KPI intercompany, scouting M&A, procurement centralizzato e governance automatizzata. IL DOGE DI VENEZIA.",
+    intro:
+      "Le holding industriali italiane vivono una doppia vita: a livello di capogruppo servono dashboard consolidate, reporting puntuali, benchmarking tra societa operative e una vista chiara sulle leve di creazione di valore; a livello di singola operativa servono sistemi AI che lavorano dentro i processi - produzione, vendite, finance, acquisti. Il problema e che la maggior parte delle holding italiane gestisce questa doppia vita con PowerPoint e file Excel che rimbalzano tra CFO delle controllate e direzione del gruppo, con chiusure consolidate che arrivano 45-60 giorni dopo il periodo e decisioni di allocazione capitale prese su dati vecchi. IL DOGE DI VENEZIA costruisce sistemi AI verticali per holding industriali italiane che bridgiano il livello portafoglio con l'operativita delle singole aziende: reporting finanziario consolidato automatico che legge ERP eterogenei delle controllate e normalizza i dati a livello gruppo, benchmarking KPI intercompany che evidenzia dove una operativa sotto-performa rispetto alle sorelle, scouting M&A continuo sul territorio italiano ed europeo con dealflow qualificato secondo la tesi di investimento del gruppo, pianificazione del passaggio generazionale e della governance familiare per holding ancora in mano alla famiglia fondatrice, procurement intelligence centralizzata che aggrega i volumi di acquisto tra le controllate per ottenere leva contrattuale sui fornitori comuni, automazione della governance di gruppo con estrazione e monitoraggio di delibere, patti parasociali e compliance. Il differenziale e che non vendiamo una piattaforma SaaS uguale per tutti: costruiamo un livello AI di gruppo che si innesta sopra gli ERP e i CRM gia esistenti nelle controllate, senza imporre rip-and-replace. Lavoriamo con holding che gestiscono 3-20 societa operative italiane, con ricavi aggregati tipicamente tra 50M e 500M. Per approfondire approcci adiacenti vedi anche /soluzioni/ai-per-private-equity e /soluzioni/ai-per-family-office.",
+    benefits: [
+      {
+        title: "Vista portafoglio, esecuzione operativa",
+        description:
+          "Livello AI di gruppo sopra gli ERP delle controllate. Consolidato automatico e benchmarking KPI senza imporre un rip-and-replace alle operative.",
+      },
+      {
+        title: "Dealflow M&A continuo",
+        description:
+          "Scouting AI di target italiani ed europei calibrato sulla tesi di investimento della holding. Dealflow qualificato in ingresso, non liste generiche.",
+      },
+      {
+        title: "Procurement intelligence centralizzata",
+        description:
+          "Aggregazione volumi di acquisto tra controllate per leva contrattuale sui fornitori comuni. Identifica sovrapposizioni e margini di sconto reali.",
+      },
+      {
+        title: "Governance e passaggio generazionale",
+        description:
+          "Automazione monitoraggio delibere, patti parasociali e compliance. Supporto alla pianificazione del passaggio generazionale per holding familiari.",
+      },
+    ],
+    useCases: [
+      "Reporting finanziario consolidato automatico che legge ERP eterogenei delle controllate e normalizza a livello gruppo",
+      "Benchmarking KPI intercompany per evidenziare operative sotto-performanti rispetto alle sorelle di portafoglio",
+      "Scouting M&A continuo di target italiani ed europei allineati alla tesi di investimento della holding",
+      "Procurement intelligence che aggrega volumi su fornitori comuni e identifica leve contrattuali di gruppo",
+      "Automazione governance: estrazione delibere, monitoraggio patti parasociali e compliance di gruppo",
+    ],
+    faq: [
+      {
+        question: "Dobbiamo sostituire gli ERP delle nostre controllate?",
+        answer:
+          "No. Costruiamo un livello AI di gruppo che si innesta sopra gli ERP esistenti delle operative via connettori e data pipeline. Niente rip-and-replace, niente resistenza dei CFO locali.",
+      },
+      {
+        question: "Lavorate anche con holding familiari di prima generazione?",
+        answer:
+          "Si. Molti nostri clienti sono holding familiari italiane in fase di passaggio generazionale. Costruiamo sistemi che rendono la governance tracciabile e supportano la transizione ai figli o al management.",
+      },
+      {
+        question: "Quante societa operative gestite tipicamente?",
+        answer:
+          "Lavoriamo con holding che controllano tra 3 e 20 societa operative, con ricavi aggregati tipicamente tra 50M e 500M. Il modello scala su strutture piu grandi con progetti dedicati.",
+      },
+    ],
+  },
 ];
