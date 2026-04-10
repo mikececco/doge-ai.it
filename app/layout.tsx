@@ -81,6 +81,48 @@ export default function RootLayout({
   return (
     <html lang="it" className={`${barlowCondensed.variable} ${archivo.variable}`}>
       <head>
+        {/* Organization JSON-LD — structured data for search engines & AI crawlers */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "IL DOGE DI VENEZIA",
+              url: "https://doge-ai.it",
+              logo: "https://doge-ai.it/icon/logoB-noBG.png",
+              description:
+                "Consulenza AI per PMI italiane. Strategia e implementazione di automazione, agenti AI e digital twin con risultati misurabili in 30 giorni.",
+              foundingDate: "2024",
+              areaServed: {
+                "@type": "Country",
+                name: "Italy",
+              },
+              serviceType: [
+                "AI Consulting",
+                "Business Automation",
+                "Digital Transformation",
+                "AI Agent Development",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+39-345-9656145",
+                contactType: "sales",
+                email: "dogedivenezia.ai@gmail.com",
+                availableLanguage: ["Italian", "English"],
+              },
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Via Giardino Generale, 6",
+                addressLocality: "Pieve del Grappa",
+                postalCode: "31017",
+                addressRegion: "TV",
+                addressCountry: "IT",
+              },
+              sameAs: [],
+            }),
+          }}
+        />
         {/* Consent Mode v2 — default denied, updated on user choice */}
         <script
           dangerouslySetInnerHTML={{
