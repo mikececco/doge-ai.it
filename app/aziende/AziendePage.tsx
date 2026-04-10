@@ -253,7 +253,7 @@ export default function AziendePage() {
               Incentivi e agevolazioni
             </span>
             <h2 className="text-section uppercase mt-4">
-              Accelera la tua trasformazione AI<br />con gli incentivi
+              L&apos;AI che si paga<br />(in parte) da sola
             </h2>
             <p className="text-body text-nero/70 mt-6 leading-relaxed max-w-[800px] mx-auto">
               La trasformazione AI di un&apos;azienda pu&ograve; essere finanziata - in parte o

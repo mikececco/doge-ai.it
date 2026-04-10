@@ -4,6 +4,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import FadeInOnScroll from "@/components/animations/FadeInOnScroll";
 import CtaFinale from "@/components/sections/CtaFinale";
 import Button from "@/components/ui/Button";
+import PasswordGate from "@/components/PasswordGate";
 
 /* ─── Data ─────────────────────────────────────────────── */
 
@@ -55,7 +56,7 @@ const SERVICES = [
 
 export default function PartnerPage() {
   return (
-    <>
+    <PasswordGate>
       {/* ── Section 1: Hero (giallo) ───── */}
       <section
         data-navbar-theme="giallo"
@@ -251,6 +252,6 @@ export default function PartnerPage() {
         buttonText="Prenota una call"
         buttonHref="/contatti"
       />
-    </>
+    </PasswordGate>
   );
 }
