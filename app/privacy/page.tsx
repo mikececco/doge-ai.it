@@ -31,8 +31,8 @@ export default function Privacy() {
             P.IVA: IT04596950248
             <br />
             Email:{" "}
-            <a href="mailto:dogedivenezia.ai@gmail.com">
-              dogedivenezia.ai@gmail.com
+            <a href="mailto:info@doge-ai.it">
+              info@doge-ai.it
             </a>
             <br />
             Telefono: <a href="tel:+393468889545">+39 346 8889545</a>
@@ -225,8 +225,8 @@ export default function Privacy() {
           <p>
             Per esercitare tali diritti, è possibile contattare il Titolare
             all&apos;indirizzo email{" "}
-            <a href="mailto:dogedivenezia.ai@gmail.com">
-              dogedivenezia.ai@gmail.com
+            <a href="mailto:info@doge-ai.it">
+              info@doge-ai.it
             </a>
             .
           </p>

@@ -214,8 +214,8 @@ export default function CookiePolicy() {
             Calle Polver del Fuoco 827/A, VENEZIA (VE), Italia
             <br />
             Email:{" "}
-            <a href="mailto:dogedivenezia.ai@gmail.com">
-              dogedivenezia.ai@gmail.com
+            <a href="mailto:info@doge-ai.it">
+              info@doge-ai.it
             </a>
             <br />
             Sito web:{" "}

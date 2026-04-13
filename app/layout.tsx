@@ -104,7 +104,7 @@ export default function RootLayout({
                 "@type": "ContactPoint",
                 telephone: "+39-345-9656145",
                 contactType: "sales",
-                email: "dogedivenezia.ai@gmail.com",
+                email: "info@doge-ai.it",
                 availableLanguage: ["Italian", "English"],
               },
               address: {

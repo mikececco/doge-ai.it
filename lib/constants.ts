@@ -39,7 +39,7 @@ export const FOOTER_LINKS = {
 } as const;
 
 export const CONTACT_INFO = {
-  email: "dogedivenezia.ai@gmail.com",
+  email: "info@doge-ai.it",
   phone: "+39 345 9656145",
   address: "Via Giardino Generale, 6\n31017 Pieve del Grappa TV",
   piva: "P.IVA IT04596950248",

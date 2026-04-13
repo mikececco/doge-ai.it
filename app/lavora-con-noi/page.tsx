@@ -105,7 +105,7 @@ export default function LavoraConNoi() {
                   </ul>
                 </div>
                 <Button
-                  href={`mailto:dogedivenezia.ai@gmail.com?subject=Candidatura: ${pos.title}`}
+                  href={`mailto:info@doge-ai.it?subject=Candidatura: ${pos.title}`}
                   external
                   className="mt-6 self-start"
                 >

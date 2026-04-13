@@ -43,7 +43,7 @@ const organizationJsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+39-346-888-9545",
-    email: "dogedivenezia.ai@gmail.com",
+    email: "info@doge-ai.it",
     contactType: "sales",
   },
   sameAs: ["https://www.linkedin.com/company/il-doge-di-venezia"],
