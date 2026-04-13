@@ -98,6 +98,18 @@ export default async function SoluzioneSlugPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+            { "@type": "ListItem", position: 2, name: "Soluzioni", item: `${BASE_URL}/soluzioni` },
+            { "@type": "ListItem", position: 3, name: page.h1, item: canonicalUrl },
+          ],
+        }) }}
+      />
 
       {/* Hero */}
       <section data-navbar-theme="dark" className="bg-nero text-bianco pt-24 pb-12 md:pt-40 md:pb-20">

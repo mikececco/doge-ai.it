@@ -123,6 +123,18 @@ export default async function IncentivoSettorialePage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+            { "@type": "ListItem", position: 2, name: "Incentivi Settoriali", item: `${BASE_URL}/incentivi-settoriali` },
+            { "@type": "ListItem", position: 3, name: item.title, item: canonicalUrl },
+          ],
+        }) }}
+      />
 
       {/* Hero - Yellow */}
       <section data-navbar-theme="giallo" className="relative bg-giallo text-nero pt-40 pb-20 overflow-hidden">

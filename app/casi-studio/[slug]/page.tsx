@@ -106,6 +106,18 @@ export default async function CasoStudioPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+            { "@type": "ListItem", position: 2, name: "Casi Studio", item: `${BASE_URL}/casi-studio` },
+            { "@type": "ListItem", position: 3, name: cs.title, item: canonicalUrl },
+          ],
+        }) }}
+      />
 
       {/* Hero */}
       <section className="relative bg-nero text-bianco pt-40 pb-20 overflow-hidden">

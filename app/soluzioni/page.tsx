@@ -6,9 +6,9 @@ import CtaFinale from "@/components/sections/CtaFinale";
 import { SOLUZIONI_PAGES } from "@/lib/soluzioni-data";
 
 export const metadata: Metadata = {
-  title: "Soluzioni AI per Aziende Italiane - IL DOGE DI VENEZIA",
+  title: "Soluzioni AI per Aziende Italiane: PMI, Manifattura, PE | IL DOGE DI VENEZIA",
   description:
-    "Esplora tutte le soluzioni AI di IL DOGE DI VENEZIA per PMI, manifattura, PE/Family Office e settori specifici. Dall'automazione processi agli agenti AI personalizzati.",
+    "30+ soluzioni AI concrete per aziende italiane: automazione processi, agenti AI, due diligence, customer service e molto altro. Risultati misurabili in 30 giorni.",
   alternates: {
     canonical: "https://doge-ai.it/soluzioni",
   },

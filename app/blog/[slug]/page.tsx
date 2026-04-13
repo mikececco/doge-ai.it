@@ -89,9 +89,7 @@ export default async function BlogPostPage({ params }: Props) {
   const sectorCtx = getSectorContext(slug);
   const url = `https://doge-ai.it/blog/${post.slug}`;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
+  const jsonLdGraph: Record<string, unknown>[] = [
       {
         "@type": "Article",
         "@id": url,
@@ -139,7 +137,25 @@ export default async function BlogPostPage({ params }: Props) {
           },
         ],
       },
-    ],
+    ];
+
+  if (post.faq && post.faq.length > 0) {
+    jsonLdGraph.push({
+      "@type": "FAQPage",
+      mainEntity: post.faq.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    });
+  }
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": jsonLdGraph,
   };
 
   // Extract h2 headings for ToC

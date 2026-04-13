@@ -415,10 +415,10 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
     slug: "ai-per-private-equity",
     targetQuery: "AI per private equity",
     category: "PE/Family Office",
-    title: "AI per Private Equity - IL DOGE DI VENEZIA",
+    title: "AI per Private Equity: Deal Flow, Due Diligence e Portfolio | IL DOGE DI VENEZIA",
     h1: "AI per il private equity: dal deal flow alla gestione del portafoglio",
     metaDescription:
-      "Soluzioni AI per fondi di private equity italiani. Screening deal flow, due diligence AI, monitoraggio portafoglio e reporting LP. IL DOGE DI VENEZIA - AI per il PE italiano.",
+      "Come i fondi PE italiani usano l'AI per screening deal flow 10x più veloce, due diligence automatizzata e monitoraggio portafoglio in tempo reale. Scopri le soluzioni di IL DOGE DI VENEZIA.",
     intro:
       "I fondi PE italiani operano in un mercato sempre più competitivo dove la velocità e la qualità dell'analisi possono fare la differenza tra aggiudicarsi una transazione e perderla. L'AI applicata al workflow del private equity accelera lo screening, approfondisce la due diligence e migliora il monitoraggio del portafoglio - liberando i professionisti per il lavoro ad alto valore che solo loro possono fare.",
     benefits: [
@@ -2061,6 +2061,471 @@ export const SOLUZIONI_PAGES: SoluzionePage[] = [
         question: "Quante societa operative gestite tipicamente?",
         answer:
           "Lavoriamo con holding che controllano tra 3 e 20 societa operative, con ricavi aggregati tipicamente tra 50M e 500M. Il modello scala su strutture piu grandi con progetti dedicati.",
+      },
+    ],
+  },
+  // ──────────────────────────────────────────────────────────────────────
+  // TIER S — BUYER-INTENT KEYWORDS (Finance cluster)
+  // ──────────────────────────────────────────────────────────────────────
+  {
+    slug: "ai-due-diligence-fondi-investimento",
+    targetQuery: "AI due diligence fondo investimento",
+    category: "PE/Family Office",
+    title: "AI per Due Diligence nei Fondi di Investimento | IL DOGE DI VENEZIA",
+    h1: "AI per la due diligence: analisi più rapida, decisioni più sicure",
+    metaDescription:
+      "Automatizza la due diligence del tuo fondo con l'AI: analisi documentale 10x più veloce, red flag detection e report strutturati. Scopri come IL DOGE DI VENEZIA supporta fondi PE e VC italiani.",
+    intro:
+      "La due diligence è il momento in cui si decide se un deal vale l'investimento. Oggi i team di analisti passano settimane a spulciare bilanci, contratti, documenti legali e dati di mercato. L'AI comprime questo processo da settimane a giorni, senza sacrificare profondità. IL DOGE DI VENEZIA costruisce sistemi AI di due diligence calibrati sul workflow specifico del tuo fondo — non tool generici, ma pipeline su misura.",
+    benefits: [
+      {
+        title: "Analisi documentale automatizzata",
+        description:
+          "L'AI legge e analizza centinaia di documenti (bilanci, contratti, verbali CdA) in ore, non settimane. Estrae KPI, identifica clausole critiche e genera una sintesi strutturata per il team.",
+      },
+      {
+        title: "Red flag detection",
+        description:
+          "Algoritmi addestrati su pattern di rischio rilevano incongruenze nei numeri, clausole contrattuali problematiche e segnali di allarme nascosti nella documentazione target.",
+      },
+      {
+        title: "Benchmark automatico",
+        description:
+          "Confronto automatico del target con comparable italiane ed europee su margini, crescita, EBITDA e multipli. Dati aggiornati, non basati su report statici.",
+      },
+      {
+        title: "Report per il comitato investimenti",
+        description:
+          "Output strutturato pronto per la presentazione al CdA: executive summary, analisi SWOT, proiezioni e raccomandazione — generato dall'AI, validato dal team.",
+      },
+    ],
+    useCases: [
+      "Screening iniziale di 50+ CIM in una settimana con scoring automatico",
+      "Estrazione automatica di KPI finanziari da bilanci PDF non strutturati",
+      "Cross-referencing tra dichiarazioni del management e dati oggettivi nei documenti",
+      "Analisi contrattuale automatica per clausole di change of control, tag-along e drag-along",
+      "Generazione di Q&A list per la management presentation basata sull'analisi documentale",
+    ],
+    faq: [
+      {
+        question: "L'AI può sostituire il team di due diligence?",
+        answer:
+          "No, e non è l'obiettivo. L'AI accelera l'analisi documentale e il data crunching, liberando gli analisti per il lavoro ad alto valore: giudizio qualitativo, relazioni con il management, negoziazione. Il risultato è una DD più profonda nello stesso tempo, non un team più piccolo.",
+      },
+      {
+        question: "Funziona anche con documenti in italiano?",
+        answer:
+          "Sì. I modelli che utilizziamo (Claude, GPT-4) gestiscono perfettamente l'italiano, inclusa la terminologia giuridica e finanziaria specifica del mercato italiano. Testiamo ogni pipeline su documenti reali in italiano.",
+      },
+      {
+        question: "Come gestite la riservatezza dei dati del target?",
+        answer:
+          "I dati vengono processati in ambienti isolati, senza condivisione con terze parti. Utilizziamo API con zero data retention e, quando richiesto, deployment on-premise o su cloud privato del fondo.",
+      },
+    ],
+  },
+  {
+    slug: "ai-portfolio-monitoring-private-equity",
+    targetQuery: "AI portfolio monitoring private equity",
+    category: "PE/Family Office",
+    title: "AI per il Monitoraggio Portafoglio Private Equity | IL DOGE DI VENEZIA",
+    h1: "Monitoraggio portafoglio PE con AI: visibilità in tempo reale sulle partecipate",
+    metaDescription:
+      "Monitora le performance delle tue partecipate con AI: dashboard automatiche, early warning su KPI critici e reporting LP in tempo reale. IL DOGE DI VENEZIA per fondi PE italiani.",
+    intro:
+      "Dopo il closing, inizia il lavoro vero: far crescere le partecipate. Ma la maggior parte dei fondi PE italiani monitora il portafoglio con Excel, email e call trimestrali. L'AI trasforma il monitoraggio da esercizio retrospettivo a sistema di early warning proattivo. IL DOGE DI VENEZIA costruisce dashboard AI che aggregano dati da tutte le partecipate e segnalano deviazioni prima che diventino problemi.",
+    benefits: [
+      {
+        title: "Dashboard portafoglio unificata",
+        description:
+          "Tutti i KPI delle partecipate in un'unica vista — fatturato, EBITDA, cash burn, headcount, NPS — aggiornati automaticamente dai sistemi delle aziende senza data entry manuale.",
+      },
+      {
+        title: "Early warning AI",
+        description:
+          "Algoritmi predittivi che rilevano trend negativi nei KPI (calo margini, rallentamento pipeline, turnover anomalo) e avvisano il deal team settimane prima del report trimestrale.",
+      },
+      {
+        title: "Reporting LP automatizzato",
+        description:
+          "Generazione automatica di report per i Limited Partner: performance per deal, IRR, MOIC, comparabili e narrativa — in formato professionale, pronto per l'invio.",
+      },
+      {
+        title: "Benchmarking tra partecipate",
+        description:
+          "Confronto automatico delle metriche operative tra le aziende in portafoglio per identificare best practice replicabili e aree di intervento prioritario.",
+      },
+    ],
+    useCases: [
+      "Consolidamento automatico dei dati finanziari da 8 partecipate con ERP diversi",
+      "Alert automatico quando il cash runway di una partecipata scende sotto i 6 mesi",
+      "Generazione trimestrale del report LP con confronto piano-consuntivo e narrativa AI",
+      "Identificazione automatica di sinergie di costo tra partecipate dello stesso settore",
+      "Tracking della pipeline commerciale delle partecipate con scoring predittivo",
+    ],
+    faq: [
+      {
+        question: "Come collegate i dati delle partecipate se usano sistemi diversi?",
+        answer:
+          "Costruiamo connettori specifici per ogni ERP/CRM usato dalle partecipate (SAP, Zucchetti, TeamSystem, Salesforce, HubSpot). I dati vengono normalizzati in un data layer comune senza richiedere cambio di sistemi alle aziende.",
+      },
+      {
+        question: "Quanto tempo serve per avere la dashboard operativa?",
+        answer:
+          "4-6 settimane per il setup iniziale con 3-5 partecipate. Ogni partecipata aggiuntiva richiede 1-2 settimane per il connettore e la validazione dati.",
+      },
+      {
+        question: "Il sistema funziona anche per fondi con partecipazioni di minoranza?",
+        answer:
+          "Sì, adattiamo il livello di dettaglio al grado di accesso ai dati. Per partecipazioni di minoranza lavoriamo con i dati disponibili da board pack e reporting periodici.",
+      },
+    ],
+  },
+  {
+    slug: "consulenza-ai-club-deal-investitori",
+    targetQuery: "consulenza AI club deal italia",
+    category: "PE/Family Office",
+    title: "Consulenza AI per Club Deal e Co-Investimenti | IL DOGE DI VENEZIA",
+    h1: "AI per club deal: analisi, coordinamento e monitoraggio per investitori italiani",
+    metaDescription:
+      "Consulenza AI per club deal e co-investimenti italiani. Screening target, coordinamento tra investitori e monitoraggio post-deal con intelligenza artificiale. IL DOGE DI VENEZIA.",
+    intro:
+      "I club deal italiani stanno crescendo come alternativa ai fondi tradizionali, ma il coordinamento tra investitori multipli e la due diligence condivisa restano sfide concrete. L'AI semplifica il workflow del club deal: dallo screening dei target al coordinamento tra co-investitori, fino al monitoraggio post-deal con visibilità condivisa. IL DOGE DI VENEZIA supporta club deal e family office con strumenti AI pensati per la governance multi-investitore.",
+    benefits: [
+      {
+        title: "Screening target accelerato",
+        description:
+          "AI che filtra e valuta opportunità di investimento in base ai criteri del club: settore, dimensione, geografia, margini e potenziale di crescita. Deal flow qualificato, non liste generiche.",
+      },
+      {
+        title: "Data room AI-powered",
+        description:
+          "Analisi automatica dei documenti in data room con estrazione KPI, red flag e sintesi per ogni co-investitore. Ogni membro del club riceve gli insight rilevanti per la propria expertise.",
+      },
+      {
+        title: "Coordinamento multi-investitore",
+        description:
+          "Dashboard condivisa tra i membri del club con stato del deal, documenti analizzati, decisioni pendenti e timeline. Governance tracciabile senza catene di email.",
+      },
+      {
+        title: "Monitoraggio post-deal condiviso",
+        description:
+          "Report periodici automatici sull'andamento della partecipata, accessibili a tutti i co-investitori con il livello di dettaglio appropriato al ruolo di ciascuno.",
+      },
+    ],
+    useCases: [
+      "Screening di 100+ aziende target per un club deal nel settore food & beverage",
+      "Analisi parallela della data room con distribuzione automatica dei finding ai 5 co-investitori",
+      "Dashboard di governance del club deal con tracking decisioni e prossimi step",
+      "Report trimestrale automatico sulla partecipata per tutti i membri del club",
+      "Confronto automatico del business plan con l'andamento effettivo post-acquisizione",
+    ],
+    faq: [
+      {
+        question: "Come gestite la riservatezza tra i co-investitori?",
+        answer:
+          "Ogni co-investitore ha accesso solo ai dati e alle analisi pertinenti al proprio ruolo nel club. I permessi sono configurabili per deal e per fase. Il sistema è progettato per la governance multi-party.",
+      },
+      {
+        question: "Lavorate solo con club deal strutturati o anche con co-investimenti informali?",
+        answer:
+          "Entrambi. Adattiamo il livello di formalizzazione degli strumenti alla struttura del club. Per co-investimenti più informali offriamo soluzioni più leggere ma comunque con governance tracciabile.",
+      },
+      {
+        question: "Che dimensione minima deve avere il club deal?",
+        answer:
+          "Lavoriamo con club deal da 2-3 investitori fino a strutture più complesse con 10+ partecipanti. Il costo del setup è proporzionato alla complessità e al numero di investitori coinvolti.",
+      },
+    ],
+  },
+  // ──────────────────────────────────────────────────────────────────────
+  // TIER S — BUYER-INTENT KEYWORDS (PMI agents cluster)
+  // ──────────────────────────────────────────────────────────────────────
+  {
+    slug: "agente-ai-risposta-email-commerciali",
+    targetQuery: "agente AI rispondere email commerciali",
+    category: "PMI",
+    title: "Agente AI per Rispondere alle Email Commerciali | IL DOGE DI VENEZIA",
+    h1: "Agente AI per le email commerciali: risposte professionali in secondi",
+    metaDescription:
+      "Un agente AI che risponde alle email commerciali della tua azienda in secondi, nel tono giusto, con le informazioni corrette. Setup in 2 settimane. IL DOGE DI VENEZIA.",
+    intro:
+      "Le email commerciali sono il cuore della relazione con i clienti, ma anche il collo di bottiglia più sottovalutato. Il team commerciale passa ore a rispondere a richieste di preventivo, informazioni prodotto e follow-up — spesso con tempi di risposta che allontanano il cliente. Un agente AI addestrato sui tuoi dati aziendali risponde in secondi con il tono della tua azienda, le informazioni corrette dal catalogo e i prezzi aggiornati. IL DOGE DI VENEZIA costruisce agenti AI email su misura per PMI italiane.",
+    benefits: [
+      {
+        title: "Risposte in secondi, non ore",
+        description:
+          "L'agente AI genera bozze di risposta immediate per richieste di preventivo, informazioni prodotto, stato ordine e follow-up. Il commerciale approva con un click o personalizza prima dell'invio.",
+      },
+      {
+        title: "Tono e stile della tua azienda",
+        description:
+          "L'agente impara il tono delle tue comunicazioni reali: formale o informale, tecnico o commerciale. Le risposte suonano come le scriverebbe il tuo miglior commerciale.",
+      },
+      {
+        title: "Dati sempre aggiornati",
+        description:
+          "Collegato al catalogo prodotti, listino prezzi e CRM, l'agente ha sempre le informazioni corrette. Niente più errori di prezzo o disponibilità nelle risposte ai clienti.",
+      },
+      {
+        title: "Escalation intelligente",
+        description:
+          "Le richieste complesse, le trattative sensibili e i clienti VIP vengono automaticamente indirizzate al commerciale giusto con il contesto completo della conversazione.",
+      },
+    ],
+    useCases: [
+      "Risposta automatica a richieste di preventivo con prezzi e disponibilità dal gestionale",
+      "Follow-up automatico dopo 48 ore di silenzio su preventivi aperti",
+      "Classificazione e smistamento email in arrivo per urgenza e tipologia",
+      "Generazione bozze di risposta per richieste tecniche con dati dalle schede prodotto",
+      "Report settimanale automatico su volumi email, tempi di risposta e conversion rate",
+    ],
+    faq: [
+      {
+        question: "L'agente risponde da solo o serve approvazione?",
+        answer:
+          "Dipende dal livello di confidenza che vuoi impostare. Nella fase iniziale raccomandiamo approvazione umana su ogni risposta (1 click). Dopo il rodaggio, puoi attivare risposte automatiche per le categorie a basso rischio (info prodotto, stato ordine) mantenendo l'approvazione per preventivi e trattative.",
+      },
+      {
+        question: "Funziona con il nostro sistema email / CRM?",
+        answer:
+          "Sì. Ci integriamo con Gmail, Outlook, PEC italiana, e i principali CRM (HubSpot, Salesforce, Pipedrive, TeamSystem). L'agente legge e scrive direttamente nella casella email esistente.",
+      },
+      {
+        question: "Come addestrate l'agente sul nostro stile?",
+        answer:
+          "Analizziamo le vostre ultime 500-1000 email commerciali per estrarre tono, struttura e pattern di risposta. L'agente genera risposte in linea con il vostro stile comunicativo reale, non con template generici.",
+      },
+    ],
+  },
+  {
+    slug: "agente-ai-bandi-finanziamenti-pmi",
+    targetQuery: "agente AI ricerca bandi finanziamenti PMI",
+    category: "PMI",
+    title: "Agente AI per Ricerca Bandi e Finanziamenti PMI | IL DOGE DI VENEZIA",
+    h1: "Agente AI che trova bandi e finanziamenti per la tua PMI",
+    metaDescription:
+      "Un agente AI che monitora bandi, incentivi e finanziamenti agevolati per la tua PMI — PNRR, Transizione 5.0, regionali e camerali. Non perdi più un'opportunità. IL DOGE DI VENEZIA.",
+    intro:
+      "Ogni anno vengono pubblicati migliaia di bandi e incentivi per le PMI italiane: PNRR, Transizione 5.0, bandi regionali, camerali, europei. Il problema non è la mancanza di opportunità — è trovarle, valutarle e candidarsi in tempo. Un agente AI monitora continuamente tutte le fonti, filtra le opportunità compatibili con la tua azienda e ti avvisa quando c'è un bando che fa per te. IL DOGE DI VENEZIA costruisce agenti di scouting bandi personalizzati per PMI italiane.",
+    benefits: [
+      {
+        title: "Monitoraggio continuo",
+        description:
+          "L'agente scansiona quotidianamente tutte le fonti di bandi e finanziamenti: Invitalia, regioni, camere di commercio, MISE, fondi europei. Nessuna opportunità sfugge.",
+      },
+      {
+        title: "Matching automatico",
+        description:
+          "Filtra automaticamente i bandi compatibili con la tua azienda in base a settore, dimensione, localizzazione e tipo di investimento previsto. Niente più lettura di bandi irrilevanti.",
+      },
+      {
+        title: "Alert e sintesi",
+        description:
+          "Ricevi alert via email o Slack con una sintesi leggibile: importo, requisiti, deadline, probabilità di successo stimata e prossimi passi per candidarsi.",
+      },
+      {
+        title: "Supporto alla candidatura",
+        description:
+          "L'AI genera una prima bozza della documentazione di candidatura basandosi sui dati aziendali e sui requisiti specifici del bando, riducendo il tempo di preparazione del 60%.",
+      },
+    ],
+    useCases: [
+      "Monitoraggio giornaliero di bandi Transizione 5.0 e crediti d'imposta per innovazione",
+      "Alert automatico su bandi regionali aperti nella tua regione con budget > 50K",
+      "Generazione automatica della bozza di progetto per bando PNRR digitalizzazione",
+      "Confronto tra bandi concorrenti per scegliere quello con le migliori condizioni",
+      "Tracking delle deadline e dei documenti necessari per le candidature in corso",
+    ],
+    faq: [
+      {
+        question: "Da quante fonti monitorate i bandi?",
+        answer:
+          "Monitoriamo oltre 50 fonti tra enti nazionali (Invitalia, MISE, MIMIT), tutte le 20 regioni italiane, le principali camere di commercio, e i programmi europei diretti (Horizon, Digital Europe). L'agente viene aggiornato quando emergono nuove fonti.",
+      },
+      {
+        question: "Quanto è accurato il matching?",
+        answer:
+          "Il matching si basa sul profilo dettagliato della tua azienda: settore ATECO, dimensione, localizzazione, investimenti pianificati. L'accuratezza migliora nel tempo perché l'agente impara quali bandi sono effettivamente rilevanti in base al tuo feedback.",
+      },
+      {
+        question: "L'agente prepara anche la domanda di finanziamento?",
+        answer:
+          "L'agente genera una bozza strutturata della documentazione di candidatura. Per bandi complessi, lavoriamo con partner specializzati in finanza agevolata per la finalizzazione. Il nostro obiettivo è ridurre il lavoro di preparazione, non sostituire il consulente finanziario.",
+      },
+    ],
+  },
+  {
+    slug: "automazione-preventivi-ai-pmi",
+    targetQuery: "automatizzare preventivi con AI",
+    category: "PMI",
+    title: "Automatizzare i Preventivi con AI per PMI | IL DOGE DI VENEZIA",
+    h1: "Preventivi automatici con AI: dalla richiesta al documento in minuti",
+    metaDescription:
+      "Automatizza la creazione dei preventivi con l'AI: il cliente chiede, l'AI genera il preventivo con prezzi, tempi e condizioni corrette. Per PMI italiane. IL DOGE DI VENEZIA.",
+    intro:
+      "Nella maggior parte delle PMI italiane, creare un preventivo richiede dai 30 minuti a mezza giornata: raccogliere le informazioni dal cliente, cercare i prezzi nel listino, calcolare sconti e margini, formattare il documento, farlo approvare. Con l'AI, il preventivo viene generato in minuti a partire dalla richiesta del cliente — con i prezzi corretti, le condizioni aggiornate e nel formato della tua azienda. IL DOGE DI VENEZIA automatizza il ciclo preventivi per PMI manifatturiere, di servizi e distribuzione.",
+    benefits: [
+      {
+        title: "Da richiesta a preventivo in minuti",
+        description:
+          "L'AI analizza la richiesta del cliente (email, form, telefonata trascritta), la incrocia con listino e disponibilità, e genera il preventivo completo. Il commerciale verifica e invia.",
+      },
+      {
+        title: "Pricing intelligente",
+        description:
+          "L'AI suggerisce il prezzo ottimale considerando storico cliente, margini target, concorrenza e volumi. Niente più preventivi sottocosto o fuori mercato.",
+      },
+      {
+        title: "Template e branding aziendali",
+        description:
+          "Ogni preventivo viene generato nel formato della tua azienda: logo, layout, termini e condizioni, disclaimer — identico a quelli che il team produce manualmente.",
+      },
+      {
+        title: "Tracking e follow-up automatico",
+        description:
+          "Ogni preventivo viene tracciato: apertura, visualizzazione, accettazione o decadenza. L'AI invia follow-up automatici personalizzati quando il preventivo è prossimo alla scadenza.",
+      },
+    ],
+    useCases: [
+      "Generazione automatica preventivi da email di richiesta per azienda manifatturiera",
+      "Calcolo automatico sconti volume e condizioni speciali per clienti storici",
+      "Preventivo multi-prodotto con check disponibilità magazzino in tempo reale",
+      "Follow-up automatico a 3, 7 e 14 giorni su preventivi non ancora accettati",
+      "Report mensile su tasso di conversione preventivi per commerciale e per prodotto",
+    ],
+    faq: [
+      {
+        question: "Funziona con il nostro gestionale / ERP?",
+        answer:
+          "Ci integriamo con i principali ERP italiani (SAP, Zucchetti, TeamSystem, Mago, Ad Hoc) e con sistemi CRM (HubSpot, Salesforce, Pipedrive). L'AI legge listini e disponibilità direttamente dal gestionale.",
+      },
+      {
+        question: "Come gestite prodotti configurabili o preventivi complessi?",
+        answer:
+          "Per prodotti con molte varianti o configurazioni su misura, l'AI genera un preventivo base che il commerciale perfeziona. La complessità del prodotto determina quanto del processo è automatizzato (tipicamente 60-80%).",
+      },
+      {
+        question: "Quanto tempo serve per implementare il sistema?",
+        answer:
+          "3-4 settimane per il setup base con integrazione al listino e template. 6-8 settimane per l'integrazione completa con ERP e CRM. Il sistema è operativo gradualmente: prima i prodotti standard, poi quelli configurabili.",
+      },
+    ],
+  },
+  {
+    slug: "agente-ai-lead-qualification-b2b",
+    targetQuery: "agente AI lead qualification italiano",
+    category: "PMI",
+    title: "Agente AI per Lead Qualification B2B | IL DOGE DI VENEZIA",
+    h1: "Lead qualification B2B con AI: concentra il team vendite sui prospect giusti",
+    metaDescription:
+      "Un agente AI che qualifica i lead B2B in automatico: scoring, enrichment e routing al commerciale giusto. Per PMI italiane che vendono B2B. IL DOGE DI VENEZIA.",
+    intro:
+      "Il team vendite della tua PMI passa il 60% del tempo su lead che non convertiranno mai. Il problema non è la quantità di lead — è la qualità. Un agente AI di lead qualification analizza ogni lead in ingresso, lo arricchisce con dati aziendali, assegna uno score di propensione all'acquisto e lo inoltra al commerciale giusto. Il risultato: il team si concentra sui prospect ad alta probabilità, i tempi di risposta crollano e il tasso di conversione sale. IL DOGE DI VENEZIA costruisce agenti di lead qualification per PMI B2B italiane.",
+    benefits: [
+      {
+        title: "Scoring predittivo",
+        description:
+          "L'AI assegna un punteggio a ogni lead basandosi su settore, dimensione aziendale, ruolo del contatto, comportamento sul sito e storico di conversione di lead simili.",
+      },
+      {
+        title: "Enrichment automatico",
+        description:
+          "Per ogni lead, l'agente raccoglie automaticamente dati aziendali: fatturato, dipendenti, settore ATECO, sede, presenza online. Il commerciale riceve un profilo completo, non solo un nome e una email.",
+      },
+      {
+        title: "Routing intelligente",
+        description:
+          "I lead qualificati vengono assegnati automaticamente al commerciale più adatto in base a territorio, settore, dimensione del deal e carico di lavoro corrente.",
+      },
+      {
+        title: "Nurturing automatizzato",
+        description:
+          "I lead non ancora pronti all'acquisto entrano in sequenze di nurturing personalizzate: contenuti rilevanti, case study del loro settore, inviti a webinar — fino a quando lo score raggiunge la soglia di qualificazione.",
+      },
+    ],
+    useCases: [
+      "Qualificazione automatica di lead da form sito, LinkedIn e fiere con scoring 0-100",
+      "Enrichment con dati da Registro Imprese, LinkedIn e fonti aperte per ogni lead in ingresso",
+      "Routing automatico al commerciale di zona per lead da campagne Google Ads",
+      "Sequenza di nurturing email personalizzata per lead con score 40-70 (interessati ma non pronti)",
+      "Report settimanale su qualità dei lead per canale di acquisizione e conversion rate per score",
+    ],
+    faq: [
+      {
+        question: "Come si integra con il nostro CRM?",
+        answer:
+          "Nativamente con HubSpot, Salesforce e Pipedrive. Per altri CRM (TeamSystem, Zoho, custom) costruiamo il connettore in fase di setup. L'agente scrive direttamente nel CRM senza duplicare i dati.",
+      },
+      {
+        question: "Su quali dati si basa lo scoring?",
+        answer:
+          "Lo scoring combina dati espliciti (settore, dimensione, ruolo) con dati comportamentali (pagine visitate, contenuti scaricati, email aperte) e dati storici (tasso di conversione di lead simili). Il modello si affina nel tempo con i dati reali delle tue conversioni.",
+      },
+      {
+        question: "Quanti lead servono per avere uno scoring affidabile?",
+        answer:
+          "Iniziamo con un modello basato su regole e dati di settore. Dopo 200-300 lead qualificati manualmente, il modello predittivo personalizzato raggiunge un'accuratezza del 75-85%. Più dati storici hai, più veloce è il training iniziale.",
+      },
+    ],
+  },
+  // ──────────────────────────────────────────────────────────────────────
+  // TIER S — BUYER-INTENT KEYWORDS (Manifattura Lombardia)
+  // ──────────────────────────────────────────────────────────────────────
+  {
+    slug: "consulenza-ai-manifattura-lombardia",
+    targetQuery: "consulenza AI manifattura Lombardia",
+    category: "Manifattura",
+    title: "Consulenza AI per la Manifattura in Lombardia | IL DOGE DI VENEZIA",
+    h1: "Consulenza AI per aziende manifatturiere lombarde",
+    metaDescription:
+      "Consulenza AI specializzata per la manifattura lombarda: manutenzione predittiva, controllo qualità, ottimizzazione produzione. Da Milano a Brescia, Bergamo e oltre. IL DOGE DI VENEZIA.",
+    intro:
+      "La Lombardia è il cuore della manifattura italiana: da sola rappresenta oltre il 25% del valore aggiunto manifatturiero nazionale. Dalle meccaniche di precisione di Bergamo al tessile di Como, dalla chimica di Milano all'acciaio di Brescia — ogni distretto ha sfide specifiche che l'AI può affrontare. IL DOGE DI VENEZIA lavora con aziende manifatturiere lombarde per implementare AI dove serve davvero: manutenzione predittiva, controllo qualità, ottimizzazione scheduling e gestione supply chain.",
+    benefits: [
+      {
+        title: "Conoscenza del tessuto manifatturiero lombardo",
+        description:
+          "Lavoriamo con aziende nei principali distretti industriali lombardi. Conosciamo le sfide specifiche del settore meccanico, chimico, tessile e alimentare di questa regione.",
+      },
+      {
+        title: "Integrazione con macchinari esistenti",
+        description:
+          "Non serve sostituire i macchinari. Aggiungiamo sensori IoT e AI a linee di produzione esistenti — CNC, presse, linee di assemblaggio — per ottenere dati e insight senza fermi produttivi.",
+      },
+      {
+        title: "Incentivi Transizione 5.0",
+        description:
+          "Supporto nell'accesso ai crediti d'imposta Transizione 5.0 per investimenti AI in manifattura. Molte soluzioni che implementiamo rientrano nei requisiti per il credito fino al 45%.",
+      },
+      {
+        title: "Presenza sul territorio",
+        description:
+          "Operiamo in tutta la Lombardia con interventi on-site quando necessario. L'implementazione AI in manifattura richiede spesso sopralluoghi in stabilimento — ci siamo.",
+      },
+    ],
+    useCases: [
+      "Manutenzione predittiva su linea CNC per azienda meccanica di Bergamo: -40% fermi non pianificati",
+      "Controllo qualità visivo con AI su linea tessile a Como: rilevamento difetti 30x più veloce",
+      "Ottimizzazione scheduling produzione per PMI chimica a Milano: +18% throughput",
+      "Automazione documentale (DDT, fatture, certificati qualità) per distributore B2B a Brescia",
+      "Sistema AI di demand forecasting per azienda alimentare della Brianza: -25% sprechi",
+    ],
+    faq: [
+      {
+        question: "Lavorate solo con grandi aziende manifatturiere?",
+        answer:
+          "No. Il nostro focus sono le PMI manifatturiere dai 20 ai 250 dipendenti — il cuore del tessuto industriale lombardo. Le soluzioni AI che implementiamo sono calibrate su budget e complessità realistiche per questa fascia.",
+      },
+      {
+        question: "Quanto costa un primo progetto AI in manifattura?",
+        answer:
+          "Un POC (proof of concept) su un singolo caso d'uso (es. manutenzione predittiva su una linea) parte da 15-30K EUR. Il progetto completo con deployment in produzione si colloca tipicamente tra 40-80K EUR. Il payback è normalmente sotto i 6 mesi.",
+      },
+      {
+        question: "Ci aiutate anche con i finanziamenti?",
+        answer:
+          "Sì. Molti dei nostri progetti in Lombardia sono parzialmente finanziati con Transizione 5.0, bandi regionali e camerali. Vi supportiamo nell'identificazione dell'incentivo migliore e nella preparazione della documentazione tecnica.",
       },
     ],
   },

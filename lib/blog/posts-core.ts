@@ -3,9 +3,9 @@ import type { BlogPost } from "./types";
 export const CORE_POSTS: BlogPost[] = [
   {
     slug: "ai-pmi-italiane-2026",
-    title: "Come l'AI sta trasformando le PMI italiane nel 2026",
+    title: "AI per PMI Italiane nel 2026: Casi Reali, ROI e Come Iniziare",
     excerpt:
-      "L'intelligenza artificiale non è più un privilegio delle grandi corporation. Le PMI italiane che stanno adottando l'AI oggi stanno costruendo un vantaggio competitivo difficile da colmare.",
+      "Nel 2026 le PMI italiane che usano l'AI tagliano i costi del 40-60% sulle attività ripetitive. Casi concreti di manifattura, logistica e servizi — e il framework per iniziare nella tua azienda.",
     date: "10 Mar 2026",
     readTime: "7 min",
     category: "AI & PMI",
@@ -689,9 +689,9 @@ export const CORE_POSTS: BlogPost[] = [
   },
   {
     slug: "bolt-prototipazione-rapida-ai-manager",
-    title: "Dall'Idea al Prototipo in Minuti: Come i Manager Usano l'AI per Ottenere Budget e Approvazioni",
+    title: "Come i Product Manager Usano l'AI per Costruire Prototipi in Minuti (con Bolt)",
     excerpt:
-      "In qualsiasi organizzazione strutturata, il ciclo di vita di un'idea segue un percorso che può durare mesi: proposta informale, discussione con il manager, richiesta di risorse al design, attesa del prototipo, presentazione al leadership, approvazion...",
+      "I product manager stanno usando strumenti AI come Bolt per passare dall'idea al prototipo funzionante in minuti, non settimane. Ecco come ottenere budget e approvazioni più velocemente con la prototipazione rapida AI.",
     date: "1 Feb 2026",
     readTime: "3 min",
     category: "Automazione",
@@ -1372,9 +1372,9 @@ export const CORE_POSTS: BlogPost[] = [
   },
   {
     slug: "cosa-e-claude-guida-imprenditori",
-    title: "Cos'è Claude: La Guida per Chi Deve Decidere, Non per Chi Vuole Impressionarsi",
+    title: "Cos'è Claude AI? Guida Completa per Imprenditori Italiani [2026]",
     excerpt:
-      "Tutti ne parlano, pochi sanno rispondere alla domanda base. Cos'è Claude, chi lo ha fatto, come funziona davvero, e perché la distinzione con ChatGPT conta per le aziende italiane.",
+      "Cos'è Claude AI, chi lo ha creato (Anthropic), come funziona e perché è diverso da ChatGPT. La guida pratica per imprenditori e manager che devono scegliere quale AI usare in azienda.",
     date: "26 Mar 2026",
     readTime: "6 min",
     category: "Tecnologia",

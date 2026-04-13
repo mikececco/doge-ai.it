@@ -88,6 +88,18 @@ export default async function GlossarioTermPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+            { "@type": "ListItem", position: 2, name: "Glossario", item: `${BASE_URL}/glossario` },
+            { "@type": "ListItem", position: 3, name: term.term, item: canonicalUrl },
+          ],
+        }) }}
+      />
 
       {/* Hero */}
       <section data-navbar-theme="giallo" className="relative bg-giallo text-nero pt-40 pb-20 overflow-hidden">

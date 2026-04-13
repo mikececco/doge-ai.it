@@ -99,6 +99,19 @@ export default async function ConsulenzaAISettoreCittaPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+            { "@type": "ListItem", position: 2, name: "Consulenza AI", item: `${BASE_URL}/consulenza-ai` },
+            { "@type": "ListItem", position: 3, name: city.name, item: `${BASE_URL}/consulenza-ai/${city.slug}` },
+            { "@type": "ListItem", position: 4, name: settore.title, item: canonicalUrl },
+          ],
+        }) }}
+      />
 
       {/* Hero */}
       <section data-navbar-theme="dark" className="bg-nero text-bianco pt-40 pb-20">

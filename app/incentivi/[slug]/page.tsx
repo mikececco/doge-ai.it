@@ -157,6 +157,18 @@ function NazionalePage({ incentivo }: { incentivo: Incentivo }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+            { "@type": "ListItem", position: 2, name: "Incentivi", item: `${BASE_URL}/incentivi` },
+            { "@type": "ListItem", position: 3, name: incentivo.title, item: canonicalUrl },
+          ],
+        }) }}
+      />
 
       {/* Hero - Yellow */}
       <section data-navbar-theme="giallo" className="relative bg-giallo text-nero pt-40 pb-20 overflow-hidden">
@@ -288,9 +300,23 @@ function RegionalePage({
   regione: (typeof REGIONI)[number];
 }) {
   const nazionali = INCENTIVI.filter((i) => i.category === "nazionale");
+  const regioneCanonicalUrl = `${BASE_URL}/incentivi/${regione.slug}`;
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+            { "@type": "ListItem", position: 2, name: "Incentivi", item: `${BASE_URL}/incentivi` },
+            { "@type": "ListItem", position: 3, name: `Incentivi AI ${regione.name}`, item: regioneCanonicalUrl },
+          ],
+        }) }}
+      />
+
       {/* Hero - Yellow */}
       <section data-navbar-theme="giallo" className="relative bg-giallo text-nero pt-40 pb-20 overflow-hidden">
         <div className="container-site relative z-10">
