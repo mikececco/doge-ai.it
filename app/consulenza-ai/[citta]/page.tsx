@@ -45,10 +45,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "IL DOGE DI VENEZIA",
       images: [
         {
-          url: "/icon/logoB-noBG.png",
-          width: 512,
-          height: 512,
-          alt: "IL DOGE DI VENEZIA",
+          url: "https://doge-ai.it/og/consulenza-ai.jpg",
+          width: 1200,
+          height: 630,
+          alt: `Consulenza AI a ${city.name}`,
         },
       ],
     },
@@ -56,6 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
+      images: ["https://doge-ai.it/og/consulenza-ai.jpg"],
     },
   };
 }

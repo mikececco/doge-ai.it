@@ -7,5 +7,6 @@ export type BlogPost = {
   category: string;
   tags: string[];
   content: string;
+  image?: string;
   faq?: { question: string; answer: string }[];
 };

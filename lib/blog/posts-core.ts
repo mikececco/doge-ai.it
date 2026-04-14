@@ -10,6 +10,7 @@ export const CORE_POSTS: BlogPost[] = [
     readTime: "7 min",
     category: "AI & PMI",
     tags: ["PMI", "Manifattura", "Automazione", "ROI"],
+    image: "/og/ai-pmi.jpg",
     content: `
 <h2>Il cambiamento è già in atto</h2>
 <p>Nel 2026, l'adozione dell'intelligenza artificiale nelle piccole e medie imprese italiane ha superato il punto di non ritorno. Non si parla più di sperimentazione o di piloti isolati: si parla di trasformazione operativa reale, misurabile, con impatti diretti su costi, produttività e competitività.</p>
@@ -710,6 +711,7 @@ export const CORE_POSTS: BlogPost[] = [
     readTime: "3 min",
     category: "Automazione",
     tags: ["Automazione", "PMI", "Tecnologia"],
+    image: "/og/bolt-prototipazione.jpg",
     content: `
 <h2>Il Collo di Bottiglia che Blocca l'Innovazione Interna</h2>
 <p>In qualsiasi organizzazione strutturata, il ciclo di vita di un'idea segue un percorso che può durare mesi: proposta informale, discussione con il manager, richiesta di risorse al design, attesa del prototipo, presentazione al leadership, approvazione (o no), assegnazione al team di sviluppo.</p>
@@ -1407,6 +1409,7 @@ export const CORE_POSTS: BlogPost[] = [
     readTime: "6 min",
     category: "Tecnologia",
     tags: ["Tecnologia", "PMI", "Agenti AI"],
+    image: "/og/claude-ai.jpg",
     content: `
 <h2>Perché ne parlano tutti (e perché molti non sanno rispondere alla domanda base)</h2>
 <p>Se lavori in un'azienda e segui anche solo di striscio le conversazioni sull'AI, hai sentito il nome "Claude" con crescente frequenza. Nel 2026 è diventato uno dei tre nomi che chiunque nel settore pronuncia - insieme a ChatGPT e Gemini.</p>

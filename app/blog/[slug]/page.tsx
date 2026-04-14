@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   const url = `https://doge-ai.it/blog/${post.slug}`;
+  const ogImage = `https://doge-ai.it${post.image ?? "/og/default.jpg"}`;
 
   return {
     title: post.title,
@@ -36,11 +37,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       authors: ["IL DOGE DI VENEZIA"],
       siteName: "IL DOGE DI VENEZIA",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
+      images: [ogImage],
     },
   };
 }
@@ -88,6 +91,7 @@ export default async function BlogPostPage({ params }: Props) {
   const related = getRelatedPosts(slug, 3);
   const sectorCtx = getSectorContext(slug);
   const url = `https://doge-ai.it/blog/${post.slug}`;
+  const ogImage = `https://doge-ai.it${post.image ?? "/og/default.jpg"}`;
 
   const jsonLdGraph: Record<string, unknown>[] = [
       {
@@ -113,6 +117,7 @@ export default async function BlogPostPage({ params }: Props) {
           },
         },
         mainEntityOfPage: { "@type": "WebPage", "@id": url },
+        image: ogImage,
       },
       {
         "@type": "BreadcrumbList",
@@ -150,6 +155,44 @@ export default async function BlogPostPage({ params }: Props) {
           text: item.answer,
         },
       })),
+    });
+  }
+
+  // HowTo schema for the Bolt prototyping article
+  if (post.slug === "bolt-prototipazione-rapida-ai-manager") {
+    jsonLdGraph.push({
+      "@type": "HowTo",
+      name: "Come creare un prototipo AI con Bolt in 10 minuti",
+      description: "Guida passo-passo per product manager: da idea a prototipo funzionante con Bolt AI, senza competenze di programmazione.",
+      totalTime: "PT10M",
+      estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "0" },
+      tool: [{ "@type": "HowToTool", name: "Bolt (bolt.new)" }],
+      step: [
+        {
+          "@type": "HowToStep",
+          position: 1,
+          name: "Definisci il problema e il flusso utente",
+          text: "Scrivi un brief chiaro: quale problema risolve il prototipo, chi lo userà, e qual è il flusso principale. Più sei specifico, migliore sarà l'output di Bolt.",
+        },
+        {
+          "@type": "HowToStep",
+          position: 2,
+          name: "Apri Bolt e descrivi il prototipo",
+          text: "Vai su bolt.new e descrivi in linguaggio naturale cosa vuoi costruire. Includi il contesto visivo, le funzionalità chiave e i criteri di successo.",
+        },
+        {
+          "@type": "HowToStep",
+          position: 3,
+          name: "Itera e raffina con feedback",
+          text: "Bolt genera il prototipo in pochi minuti. Rivedi il risultato, dai feedback specifici e chiedi modifiche fino a ottenere una demo presentabile.",
+        },
+        {
+          "@type": "HowToStep",
+          position: 4,
+          name: "Presenta al management per approvazione",
+          text: "Usa il prototipo funzionante per mostrare l'idea al leadership. Un demo interattivo è più convincente di qualsiasi slide deck.",
+        },
+      ],
     });
   }
 
