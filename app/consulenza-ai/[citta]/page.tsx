@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!city) return {};
 
   const canonicalUrl = `${BASE_URL}/consulenza-ai/${city.slug}`;
-  const title = `Consulenza AI a ${city.name} | IL DOGE DI VENEZIA`;
-  const description = `Consulenza AI per le PMI di ${city.name} (${city.region}). Specializzati in ${city.industries.join(", ")}. Strategia, implementazione agenti e automazione processi con tecnologia Anthropic/Claude.`;
+  const title = `Consulenza AI ${city.name}: Strategia e Implementazione per PMI | DOGE`;
+  const description = `Consulenza AI su misura per le PMI di ${city.name}. Implementiamo agenti AI e automazioni con Claude/Anthropic nei settori ${city.industries.join(", ")}. Primo incontro gratuito.`;
 
   return {
     title,

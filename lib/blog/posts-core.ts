@@ -3,9 +3,9 @@ import type { BlogPost } from "./types";
 export const CORE_POSTS: BlogPost[] = [
   {
     slug: "ai-pmi-italiane-2026",
-    title: "AI per PMI Italiane nel 2026: Casi Reali, ROI e Come Iniziare",
+    title: "AI per PMI: 3 Casi Italiani con ROI Misurato [2026]",
     excerpt:
-      "Nel 2026 le PMI italiane che usano l'AI tagliano i costi del 40-60% sulle attività ripetitive. Casi concreti di manifattura, logistica e servizi — e il framework per iniziare nella tua azienda.",
+      "PMI italiane che usano l'AI risparmiano il 40-60% sulle attività ripetitive. Tre casi reali da manifattura, logistica e servizi — con numeri e framework per partire.",
     date: "10 Mar 2026",
     readTime: "7 min",
     category: "AI & PMI",
@@ -689,9 +689,9 @@ export const CORE_POSTS: BlogPost[] = [
   },
   {
     slug: "bolt-prototipazione-rapida-ai-manager",
-    title: "Come i Product Manager Usano l'AI per Costruire Prototipi in Minuti (con Bolt)",
+    title: "Bolt AI: Da Idea a Prototipo in 10 Minuti — Guida Pratica",
     excerpt:
-      "I product manager stanno usando strumenti AI come Bolt per passare dall'idea al prototipo funzionante in minuti, non settimane. Ecco come ottenere budget e approvazioni più velocemente con la prototipazione rapida AI.",
+      "Con Bolt crei prototipi funzionanti in 10 minuti, non settimane. Guida passo-passo per PM e manager: come ottenere budget e approvazioni più velocemente.",
     date: "1 Feb 2026",
     readTime: "3 min",
     category: "Automazione",
@@ -1372,9 +1372,9 @@ export const CORE_POSTS: BlogPost[] = [
   },
   {
     slug: "cosa-e-claude-guida-imprenditori",
-    title: "Cos'è Claude AI? Guida Completa per Imprenditori Italiani [2026]",
+    title: "Claude AI: Cos'è, Come Funziona e Perché Sceglierlo nel 2026",
     excerpt:
-      "Cos'è Claude AI, chi lo ha creato (Anthropic), come funziona e perché è diverso da ChatGPT. La guida pratica per imprenditori e manager che devono scegliere quale AI usare in azienda.",
+      "Claude AI spiegato in modo semplice: differenze con ChatGPT, casi d'uso reali per aziende italiane, e quando conviene sceglierlo. Guida aggiornata 2026.",
     date: "26 Mar 2026",
     readTime: "6 min",
     category: "Tecnologia",
