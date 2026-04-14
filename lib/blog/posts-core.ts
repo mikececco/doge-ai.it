@@ -12,6 +12,7 @@ export const CORE_POSTS: BlogPost[] = [
     tags: ["PMI", "Manifattura", "Automazione", "ROI"],
     image: "/og/ai-pmi.jpg",
     content: `
+<p class="tldr">Le PMI italiane che hanno implementato l'AI nel 2026 riducono i costi operativi del 40-60% sulle attività ripetitive, con un ROI medio del 250% e payback in meno di 5 mesi. I settori con risultati più immediati sono manifattura, logistica e customer service.</p>
 <h2>Il cambiamento è già in atto</h2>
 <p>Nel 2026, l'adozione dell'intelligenza artificiale nelle piccole e medie imprese italiane ha superato il punto di non ritorno. Non si parla più di sperimentazione o di piloti isolati: si parla di trasformazione operativa reale, misurabile, con impatti diretti su costi, produttività e competitività.</p>
 <p>I dati parlano chiaro: secondo l'Osservatorio Artificial Intelligence del Politecnico di Milano, il mercato italiano dell'AI ha superato 760 milioni di euro nel 2024, con una crescita del 52% rispetto all'anno precedente. E la quota delle PMI, storicamente marginalizzata, ha iniziato a crescere in modo significativo.</p>
@@ -713,6 +714,7 @@ export const CORE_POSTS: BlogPost[] = [
     tags: ["Automazione", "PMI", "Tecnologia"],
     image: "/og/bolt-prototipazione.jpg",
     content: `
+<p class="tldr">Bolt è uno strumento AI gratuito (bolt.new) che permette a product manager e non-tecnici di creare prototipi funzionanti in circa 10 minuti, senza scrivere codice. Si descrive l'idea in linguaggio naturale e Bolt genera l'applicazione completa.</p>
 <h2>Il Collo di Bottiglia che Blocca l'Innovazione Interna</h2>
 <p>In qualsiasi organizzazione strutturata, il ciclo di vita di un'idea segue un percorso che può durare mesi: proposta informale, discussione con il manager, richiesta di risorse al design, attesa del prototipo, presentazione al leadership, approvazione (o no), assegnazione al team di sviluppo.</p>
 <p>In ognuno di questi step, l'idea perde momentum, si trasforma, o scompare del tutto.</p>
@@ -800,6 +802,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "Strategia",
     tags: ["Strategia", "PMI", "Tecnologia"],
     content: `
+<p class="tldr">Se l'AI rende ogni vantaggio competitivo temporaneo, i multipli di valutazione delle aziende crollano. Un business con il 20% di probabilità annuale di disruzione AI vale circa 3.9x FCF invece di 10-12x. Per fondi PE e family office, la due diligence AI non è più opzionale: è la variabile dominante nella stima del terminal value.</p>
 <h2>L'Assunzione che Nessuno Interroga</h2>
 <p>L'intera architettura dei mercati di capitali moderni poggia su un'assunzione raramente messa in discussione: i vantaggi competitivi si accumulano nel tempo. I moat persistono. I brand durano. Gli effetti di rete difendono.</p>
 <p>Rimuovete quell'assunzione e non state solo riprezzando alcune azioni. State smontando il fondamento filosofico su cui è stata allocata la capitale per un secolo.</p>
@@ -982,6 +985,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "Strategia",
     tags: ["Marketing", "Strategia", "Automazione"],
     content: `
+<p class="tldr">Il GTM engineering è l'approccio che tratta il go-to-market come un prodotto software: un singolo professionista con strumenti AI può oggi generare, qualificare e attivare lead con la stessa efficacia di un team di 20 persone. La chiave è l'automazione dell'intero ciclo outbound — dalla ricerca prospect alla personalizzazione del messaggio.</p>
 <h2>Cosa Sta Succedendo nel Go-to-Market</h2>
 <p>Nel 2023, GTM engineering significava una cosa: trattare l'outbound come software: sprint settimanali, dati, processi replicabili invece di campagne episodiche.</p>
 <p>Oggi quella definizione è obsoleta. GTM engineering tocca tutto: inbound, paid, organic SEO, content, operations. Non c'è funzione di revenue che non stia venendo riscritta dagli strumenti AI.</p>
@@ -1411,6 +1415,7 @@ export const CORE_POSTS: BlogPost[] = [
     tags: ["Tecnologia", "PMI", "Agenti AI"],
     image: "/og/claude-ai.jpg",
     content: `
+<p class="tldr">Claude AI è un assistente di intelligenza artificiale creato da Anthropic, progettato per essere sicuro, accurato e utile. Si distingue da ChatGPT per la capacità di elaborare documenti fino a 200.000 parole, la qualità superiore dell'italiano e il ragionamento su contesti complessi. Per le aziende italiane che lavorano con contratti, documenti e analisi, Claude richiede meno correzioni.</p>
 <h2>Perché ne parlano tutti (e perché molti non sanno rispondere alla domanda base)</h2>
 <p>Se lavori in un'azienda e segui anche solo di striscio le conversazioni sull'AI, hai sentito il nome "Claude" con crescente frequenza. Nel 2026 è diventato uno dei tre nomi che chiunque nel settore pronuncia - insieme a ChatGPT e Gemini.</p>
 <p>Eppure, quando si chiede alle persone cosa sia Claude concretamente, le risposte oscillano tra "un chatbot come gli altri" e vaghi riferimenti a qualcosa di "più sicuro" o "più intelligente". Né l'una né l'altra risposta è utile per prendere decisioni aziendali.</p>
@@ -1515,6 +1520,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "Tecnologia",
     tags: ["Agenti AI", "Tecnologia", "Automazione"],
     content: `
+<p class="tldr">Claude di Anthropic può controllare un Mac da remoto tramite la funzione "computer use": naviga il desktop, apre applicazioni, compila moduli e completa task autonomamente. Funziona bene per ricerche web, compilazione documenti e data entry. Non va usato per operazioni finanziarie, comunicazioni con clienti o accesso a sistemi critici senza supervisione.</p>
 <h2>La funzione che ha fatto girare la testa a tutti</h2>
 <p>A fine marzo 2026, Anthropic ha lanciato una funzione che ha immediatamente generato video virali e titoli da tabloid: Claude può ora controllare il tuo computer da remoto.</p>
 <p>Non è un'esagerazione. Funziona esattamente come sembra: dai a Claude accesso al tuo Mac, assegni un task dal tuo telefono, e Claude - usando il desktop della tua macchina - esegue il lavoro: apre applicazioni, usa il browser, clicca, digita, scarica file, li elabora, li sposta.</p>

@@ -115,7 +115,19 @@ export default function RootLayout({
                 addressRegion: "TV",
                 addressCountry: "IT",
               },
-              sameAs: [],
+              knowsAbout: [
+                "Artificial Intelligence",
+                "Intelligenza Artificiale",
+                "Business Automation",
+                "Digital Transformation for SMEs",
+                "AI Agents",
+                "Anthropic Claude",
+                "Private Equity AI",
+                "Italian SME Consulting",
+              ],
+              sameAs: [
+                "https://www.linkedin.com/company/il-doge-di-venezia",
+              ],
             }),
           }}
         />

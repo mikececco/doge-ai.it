@@ -118,6 +118,10 @@ export default async function BlogPostPage({ params }: Props) {
         },
         mainEntityOfPage: { "@type": "WebPage", "@id": url },
         image: ogImage,
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: [".tldr", "h1"],
+        },
       },
       {
         "@type": "BreadcrumbList",

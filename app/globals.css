@@ -46,6 +46,15 @@
     }
   }
 
+  /* TL;DR block for AEO — direct answer paragraphs */
+  .tldr {
+    border-left: 4px solid #C5A44E;
+    padding-left: 1rem;
+    font-weight: 600;
+    font-size: 1.05em;
+    margin-bottom: 2rem;
+  }
+
   /* Smooth scroll + scale-up on desktop via root font-size */
   html {
     scroll-behavior: smooth;

@@ -2,6 +2,8 @@
 
 > Consulenza AI per PMI italiane. Strategia, implementazione e formazione con tecnologia Anthropic/Claude.
 
+> Per informazioni dettagliate su servizi, prezzi, FAQ e articoli: [llms-full.txt](https://doge-ai.it/llms-full.txt)
+
 ## Chi siamo
 
 DOGE di Venezia e una societa di consulenza AI specializzata nel supportare le piccole e medie imprese italiane nell'adozione dell'intelligenza artificiale. Lavoriamo esclusivamente con PMI e family office italiani.

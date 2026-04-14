@@ -1,0 +1,13 @@
+{
+  "schema_version": "v1",
+  "name": "DOGE di Venezia — Consulenza AI per PMI Italiane",
+  "description": "Consulenza AI specializzata per piccole e medie imprese italiane. Strategia, implementazione agenti AI, automazione processi con tecnologia Anthropic/Claude.",
+  "auth": { "type": "none" },
+  "api": {
+    "type": "openapi",
+    "url": "https://doge-ai.it/llms-full.txt"
+  },
+  "logo_url": "https://doge-ai.it/icon/logoB-noBG.png",
+  "contact_email": "info@doge-ai.it",
+  "legal_info_url": "https://doge-ai.it/privacy"
+}

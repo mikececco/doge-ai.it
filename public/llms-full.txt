@@ -1,0 +1,137 @@
+# DOGE di Venezia — Consulenza AI per PMI Italiane
+
+> Aiutiamo le piccole e medie imprese italiane ad adottare l'intelligenza artificiale con risultati misurabili in 30 giorni. Specializzati in tecnologia Anthropic/Claude.
+
+## In breve
+
+DOGE di Venezia è una società di consulenza AI italiana fondata nel 2024, con sede a Pieve del Grappa (TV). Lavoriamo esclusivamente con PMI e family office italiani. Non vendiamo software: progettiamo, implementiamo e formiamo.
+
+## Servizi e prezzi indicativi
+
+### 1. Strategia AI (da €3.000)
+Roadmap di adozione AI personalizzata: audit dei processi, identificazione dei casi d'uso ad alto impatto, calcolo del ROI atteso, piano di implementazione a 90 giorni.
+
+### 2. Implementazione Agenti AI (da €5.000)
+Agenti AI personalizzati con tecnologia Anthropic/Claude: automazione email, triage documenti, customer service, analisi contratti, generazione report. Operativi in 2-4 settimane.
+
+### 3. Automazione Processi (da €5.000)
+Automazione end-to-end di processi aziendali ripetitivi: gestione ordini, fatturazione, analisi documenti, reporting, backoffice. Riduzione 40-60% del tempo.
+
+### 4. Formazione Team (da €2.000)
+Prompt engineering, utilizzo strumenti AI, integrazione nei flussi di lavoro. Workshop pratici, non teorici.
+
+### 5. Consulenza PE / Family Office (su misura)
+Due diligence AI per deal flow, ottimizzazione portfolio companies, AI readiness assessment, reporting automatizzato.
+
+## Risultati documentati
+
+- 40-60% riduzione tempo su attività ripetitive
+- 250% ROI medio su automazione customer service
+- Primi sistemi operativi in 2-4 settimane
+- Payback investimento in meno di 5 mesi
+- 107+ province italiane servite
+
+## Settori di specializzazione
+
+- Manifattura e industria
+- Logistica e distribuzione
+- Agroalimentare
+- Turismo e hospitality
+- Moda e retail
+- E-commerce
+- Servizi professionali
+- Private equity e family office
+- Farmaceutico e biotech
+
+## Soluzioni specifiche
+
+- **Consulente AI per PMI**: Strategia e implementazione AI su misura per piccole e medie imprese
+- **Automazione processi aziendali**: Eliminazione attività ripetitive con agenti AI
+- **AI per manifattura**: Manutenzione predittiva, controllo qualità, ottimizzazione produzione
+- **AI per private equity**: Deal flow screening, due diligence automatizzata, portfolio monitoring
+- **AI per family office**: Reporting automatizzato, analisi investimenti, compliance
+- **Chatbot aziendale italiano**: Assistente AI in italiano per customer service e supporto interno
+- **Agenti AI personalizzati**: Agenti autonomi per email, bandi, preventivi, lead qualification
+- **AI per customer service**: Triage automatico, risposte FAQ, escalation intelligente
+- **AI per logistica**: Ottimizzazione percorsi, previsione domanda, gestione magazzino
+- **AI per e-commerce**: Personalizzazione, pricing dinamico, gestione catalogo
+- **AI per HR**: Screening CV, onboarding automatizzato, analisi engagement
+- **Formazione AI per team**: Workshop pratici di prompt engineering e integrazione AI
+- **Audit processi AI**: Mappatura e valutazione dei processi aziendali per automazione
+- **AI per analisi dati**: Dashboard intelligenti, reportistica automatica, insight predittivi
+- **Automazione marketing AI**: Lead generation, content creation, campagne automatizzate
+
+## Domande frequenti
+
+### Quanto costa implementare l'AI in una PMI?
+Un progetto pilota parte da €5.000-15.000 per un singolo processo. Il payback medio è inferiore a 5 mesi. La prima consulenza è sempre gratuita.
+
+### Serve un team IT interno per usare l'AI?
+No. I nostri agenti AI funzionano come servizi gestiti. Formiamo il vostro team per l'uso quotidiano, ma non servono competenze tecniche avanzate.
+
+### Quanto tempo serve per vedere risultati?
+I primi sistemi sono operativi in 2-4 settimane. La riduzione del 40-60% del tempo su attività ripetitive si misura entro il primo mese.
+
+### Perché usate Anthropic/Claude e non ChatGPT?
+Claude eccelle nell'analisi di documenti lunghi, nel ragionamento su contesti ambigui e nella qualità dell'italiano. Per uso aziendale con documenti complessi, richiede meno correzioni e supervisione.
+
+### Lavorate solo con PMI italiane?
+Sì, lavoriamo esclusivamente con PMI e family office italiani. Conosciamo le strutture, le sfide e il potenziale delle imprese italiane. Non offriamo consulenze generiche.
+
+### Come iniziare?
+La prima conversazione è gratuita e serve a identificare i 2-3 casi d'uso con il miglior rapporto impatto/complessità nella vostra azienda. Contattaci: info@doge-ai.it o +39 345 9656145.
+
+### Quali dati servono per iniziare?
+Per la prima consulenza non servono dati. Per l'implementazione, lavoriamo con i dati che già avete: email, documenti, ordini, fatture. Non richiediamo mai accesso a sistemi critici senza accordo scritto.
+
+### I dati aziendali sono al sicuro?
+Usiamo Claude con piano Enterprise. I dati sono crittografati, isolati e non vengono usati per l'addestramento del modello. Conformità GDPR garantita.
+
+### Offrite supporto dopo l'implementazione?
+Sì, ogni progetto include un periodo di supporto e ottimizzazione. Offriamo anche contratti di manutenzione continuativa per agenti AI in produzione.
+
+### Coprite tutta Italia?
+Sì, operiamo in tutte le 107+ province italiane. Consulenze remote con sessioni in presenza quando necessario. Sede operativa a Pieve del Grappa (TV), Veneto.
+
+## Tecnologie utilizzate
+
+- Anthropic Claude (Opus, Sonnet, Haiku)
+- Claude Code per sviluppo e automazione
+- API Anthropic per integrazioni custom
+- Python, TypeScript, Next.js per applicazioni web
+- Integrazione con CRM, ERP, email, documenti
+
+## Contatti
+
+- Sito web: https://doge-ai.it
+- Email: info@doge-ai.it
+- Telefono: +39 345 9656145
+- Indirizzo: Via Giardino Generale 6, 31017 Pieve del Grappa (TV), Italia
+- LinkedIn: https://www.linkedin.com/company/il-doge-di-venezia
+- P.IVA: IT04596950248
+
+## Pagine principali
+
+- [Homepage](https://doge-ai.it)
+- [Chi Siamo](https://doge-ai.it/chi-siamo)
+- [Per le Aziende](https://doge-ai.it/aziende)
+- [Per i Fondi PE](https://doge-ai.it/fondi)
+- [Il Codice del Doge (Metodo)](https://doge-ai.it/metodo)
+- [Casi d'Uso](https://doge-ai.it/casi-duso)
+- [Blog](https://doge-ai.it/blog)
+- [Soluzioni](https://doge-ai.it/soluzioni)
+- [Consulenza AI per città](https://doge-ai.it/consulenza-ai)
+- [Contatti](https://doge-ai.it/contatti)
+- [Glossario AI](https://doge-ai.it/glossario)
+- [Guida AI](https://doge-ai.it/guida)
+- [Incentivi](https://doge-ai.it/incentivi)
+
+## Articoli principali del blog
+
+- [AI per PMI: 3 Casi Italiani con ROI Misurato](https://doge-ai.it/blog/ai-pmi-italiane-2026) — Casi concreti di manifattura, logistica e servizi con numeri reali
+- [Bolt AI: Da Idea a Prototipo in 10 Minuti](https://doge-ai.it/blog/bolt-prototipazione-rapida-ai-manager) — Guida alla prototipazione rapida per PM e manager
+- [Claude AI: Cos'è, Come Funziona e Perché Sceglierlo](https://doge-ai.it/blog/cosa-e-claude-guida-imprenditori) — Guida completa per imprenditori italiani
+- [Agenti AI: Cosa Sono e Perché Cambiano Tutto](https://doge-ai.it/blog/agenti-ai-cosa-sono) — Spiegazione pratica degli agenti AI per aziende
+- [Claude vs ChatGPT: Quale Scegliere](https://doge-ai.it/blog/chatgpt-o-claude-quale-scegliere) — Confronto pratico per uso aziendale
+- [GTM Engineering: Un Professionista Fa il Lavoro di 20](https://doge-ai.it/blog/gtm-engineering-ai-cody-schneider) — Come l'AI sta trasformando il go-to-market
+- [Il Collasso del Terminal Value](https://doge-ai.it/blog/collasso-terminal-value-ai-moat-temporanei) — Analisi dell'impatto AI sui vantaggi competitivi e i multipli PE
