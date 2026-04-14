@@ -63,6 +63,20 @@ export const CORE_POSTS: BlogPost[] = [
 <p>Il secondo passo è non aspettare. Ogni mese di ritardo è un mese in cui i tuoi competitor più aggressivi costruiscono vantaggi difficili da recuperare.</p>
 <p>Se vuoi capire dove iniziare nella tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
     `,
+    faq: [
+      {
+        question: "Quanto costa implementare l'AI in una PMI italiana?",
+        answer: "L'investimento iniziale per una PMI parte da 5.000-15.000€ per un progetto pilota su un singolo processo. Il payback medio è inferiore a 5 mesi, con ROI del 250% sull'automazione del customer service.",
+      },
+      {
+        question: "Quali sono i casi d'uso AI più efficaci per le PMI?",
+        answer: "I tre casi d'uso con il miglior rapporto impatto/complessità sono: automazione della gestione ordini e fatturazione, classificazione e risposta automatica alle email dei clienti, e analisi predittiva delle scorte di magazzino.",
+      },
+      {
+        question: "Quanto tempo serve per vedere risultati dall'AI in azienda?",
+        answer: "I primi sistemi AI sono operativi in 2-4 settimane. Le PMI che automatizzano attività ripetitive vedono una riduzione del 40-60% del tempo dedicato a queste attività entro il primo mese di utilizzo.",
+      },
+    ],
   },
   {
     slug: "automazione-dove-iniziare",
@@ -720,6 +734,20 @@ export const CORE_POSTS: BlogPost[] = [
 <p>La skill che questi strumenti richiedono non è tecnica. È la capacità di articolare con precisione cosa si vuole costruire e perché. Un'abilità che i migliori manager già hanno, e che l'AI amplifica in output concreti.</p>
 <p><em><a href="https://doge-ai.it/">IL DOGE DI VENEZIA</a> lavora con PMI e fondi per integrare strumenti come Bolt nei flussi di innovazione interna, accelerando il ciclo dall'idea alla validazione.</em> Per approfondire come questo si applica alla tua azienda, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
     `,
+    faq: [
+      {
+        question: "Cos'è Bolt AI e a cosa serve?",
+        answer: "Bolt è uno strumento di prototipazione rapida basato su AI che permette di trasformare un'idea in un prototipo funzionante in circa 10 minuti. I product manager lo usano per creare demo interattive senza bisogno di designer o sviluppatori.",
+      },
+      {
+        question: "Serve saper programmare per usare Bolt?",
+        answer: "No, Bolt non richiede competenze di programmazione. La skill principale è saper descrivere con precisione cosa si vuole costruire: il problema, il flusso utente e i criteri di successo. L'AI genera il codice automaticamente.",
+      },
+      {
+        question: "Come si usa Bolt per ottenere budget e approvazioni?",
+        answer: "Invece di presentare slide o documenti, con Bolt crei un prototipo funzionante che il management può toccare e provare. Questo riduce drasticamente il ciclo di approvazione perché mostra l'idea concretamente, non la descrive.",
+      },
+    ],
   },
   {
     slug: "claude-cowork-dipendente-digitale-h24",
@@ -1413,6 +1441,20 @@ export const CORE_POSTS: BlogPost[] = [
 <p>Quella lista è il punto di partenza. Claude, in quei contesti, è spesso lo strumento che richiede meno lavoro di correzione e supervisione.</p>
 <p>Se vuoi capire dove Claude può fare la differenza nella tua organizzazione, <a href="/contatti" class="text-nero underline underline-offset-4 hover:text-giallo-hover transition-colors">parla con noi</a>. La prima conversazione è gratuita.</p>
     `,
+    faq: [
+      {
+        question: "Cos'è Claude AI?",
+        answer: "Claude è un assistente AI creato da Anthropic, progettato per essere sicuro, accurato e utile. Si distingue per la capacità di elaborare documenti lunghi (fino a 200.000 parole), la qualità dell'italiano e il ragionamento su contesti complessi.",
+      },
+      {
+        question: "Qual è la differenza tra Claude e ChatGPT?",
+        answer: "Claude eccelle nell'analisi di documenti lunghi, nel ragionamento su contesti ambigui e nella qualità dell'output in italiano. ChatGPT ha un ecosistema di plugin più ampio e genera immagini. Per uso aziendale con documenti complessi, Claude richiede meno correzioni.",
+      },
+      {
+        question: "Claude AI è sicuro per i dati aziendali?",
+        answer: "Sì, Anthropic non usa i dati delle conversazioni per addestrare i modelli. Con il piano Team o Enterprise, i dati sono crittografati e isolati. Per documenti sensibili come contratti o dati finanziari, Claude offre garanzie di privacy superiori alla media.",
+      },
+    ],
   },
   {
     slug: "claude-code-tasks-cowork-ai-che-agisce",

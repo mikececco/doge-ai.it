@@ -144,6 +144,37 @@ export default async function ConsulenzaAICittaPage({ params }: Props) {
     serviceType: "Consulenza AI",
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `Quanto costa la consulenza AI a ${city.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Un progetto pilota di consulenza AI per PMI a ${city.name} parte da 5.000-15.000€. Il payback medio è inferiore a 5 mesi. La prima consulenza è gratuita e serve a identificare i casi d'uso più promettenti per la tua azienda.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Quali settori servite a ${city.name}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `A ${city.name} siamo specializzati nei settori ${city.industries.join(", ")}. Implementiamo agenti AI e automazioni con tecnologia Anthropic/Claude per ottimizzare i processi specifici di ogni settore.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Quanto tempo serve per implementare l'AI in azienda?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "I primi sistemi AI sono operativi in 2-4 settimane. Partiamo da un singolo processo ad alto impatto, misuriamo i risultati e poi estendiamo. Le PMI vedono una riduzione del 40-60% del tempo su attività ripetitive entro il primo mese.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -153,6 +184,10 @@ export default async function ConsulenzaAICittaPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <script
         type="application/ld+json"
