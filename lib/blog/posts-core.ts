@@ -90,6 +90,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "Automazione",
     tags: ["Automazione", "PMI", "Procurement", "Customer service"],
     content: `
+<p class="tldr">Per iniziare ad automatizzare con l'AI, scegli processi ad alto volume, alta ripetitività e bassa variabilità. Evita i processi che richiedono troppo giudizio umano. I migliori candidati sono gestione ordini, triage email, reportistica e data entry — attività dove l'AI genera ROI misurabile entro 30 giorni.</p>
 <h2>La trappola del progetto pilota infinito</h2>
 <p>Molte PMI italiane si trovano bloccate in una fase di "esplorazione perpetua". Hanno capito che l'AI e l'automazione possono fare la differenza, ma faticano a passare dall'interesse all'azione concreta. Il risultato è una serie di piloti che non scalano, demo che non diventano produzione, investimenti che non generano ROI misurabile.</p>
 <p>Il problema, quasi sempre, non è la tecnologia. È la scelta dei processi sbagliati da automatizzare.</p>
@@ -212,6 +213,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "Tecnologia",
     tags: ["Agenti AI", "Tecnologia", "PMI"],
     content: `
+<p class="tldr">Un agente AI è un sistema autonomo composto da tre elementi: un trigger (evento che lo attiva), un loop agente (ragionamento e decisione) e un insieme di tool (azioni concrete). A differenza di un chatbot che risponde a domande, un agente AI completa obiettivi in autonomia — come monitorare email, classificare richieste, rispondere alle FAQ e scalare i casi complessi al team umano.</p>
 <h2>La differenza che conta</h2>
 <p>Quando la maggior parte delle persone pensa all'AI in azienda, pensa a un chatbot. Qualcosa che risponde alle domande, genera testi, riassume documenti. Utile, certo - ma limitato.</p>
 <p>Gli agenti AI sono qualcosa di fondamentalmente diverso. Non rispondono: <em>agiscono</em>. Non aspettano istruzioni per ogni passaggio: <em>completano task complessi in autonomia</em>.</p>
@@ -266,6 +268,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "Strategia",
     tags: ["ROI", "PMI", "Strategia"],
     content: `
+<p class="tldr">Per misurare il ROI dell'AI servono tre cose: una baseline dei costi prima dell'implementazione, metriche chiare (ore risparmiate, errori evitati, velocità di risposta) e un periodo di confronto di almeno 30 giorni. Il ROI medio delle PMI italiane che automatizzano il customer service con AI è del 250%, con payback in meno di 5 mesi.</p>
 <h2>Il problema della misurazione</h2>
 <p>Molte PMI italiane si trovano in una situazione paradossale: hanno implementato soluzioni AI, percepiscono che funzionano, ma non riescono a quantificare con precisione il valore generato. Questo crea problemi su due fronti: rende difficile giustificare investimenti aggiuntivi all'interno dell'azienda, e impedisce di ottimizzare ciò che si è già costruito.</p>
 <p>Il problema è quasi sempre nello stesso posto: mancanza di baseline.</p>
@@ -535,6 +538,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "Automazione",
     tags: ["Customer service", "PMI", "Automazione"],
     content: `
+<p class="tldr">Il customer service è il caso d'uso AI con il ROI più alto per le PMI: 250% medio, documentato. La ragione è strutturale: l'80% delle richieste clienti sono ricorrenti, il costo del ritardo è misurabile e l'AI scala senza costi aggiuntivi per operatore. Un agente AI gestisce triage, risposte FAQ e escalation 24/7.</p>
 <h2>Il numero che sorprende tutti</h2>
 <p>Quando condividiamo i dati sul ROI dei sistemi di customer service AI, la reazione più comune è scetticismo. "250% ROI? Impossibile." "Sembra marketing."</p>
 <p>Non è marketing. È il risultato documentato di implementazioni reali in aziende con profili simili a migliaia di PMI italiane. E c'è una ragione strutturale per cui questi numeri sono plausibili - una ragione che ha a che fare con la natura del customer service come processo.</p>
@@ -844,6 +848,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "Tecnologia",
     tags: ["Formazione", "PMI", "Tecnologia"],
     content: `
+<p class="tldr">Un prompt AI efficace ha tre elementi: contesto (chi sei, cosa fai), istruzione specifica (cosa vuoi ottenere) e formato dell'output (come lo vuoi). La differenza tra un prompt mediocre e uno eccellente è la stessa che c'è tra "scrivimi una email" e "scrivi una email di follow-up a un cliente B2B del settore manifatturiero che non ha risposto al preventivo da 7 giorni, tono professionale ma diretto, massimo 150 parole."</p>
 <h2>Il Problema che Nessuno Ammette</h2>
 <p>Dario Amodei, CEO di Anthropic, al World Economic Forum di Davos 2026:</p>
 <blockquote>"Siamo a 6-12 mesi da quando il modello farà la maggior parte, forse tutto, ciò che fa un ingegnere software end-to-end."</blockquote>
@@ -915,6 +920,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "AI & PMI",
     tags: ["Agenti AI", "PMI", "Formazione"],
     content: `
+<p class="tldr">Un agente AI è un sistema composto da tre elementi: un trigger (l'evento che lo attiva, come una email ricevuta), un loop agente (il ragionamento che decide cosa fare) e un insieme di tool (le azioni che può compiere, come leggere un database o inviare una risposta). A differenza di un chatbot, un agente AI non aspetta domande: completa obiettivi in autonomia.</p>
 <h2>Il Problema con la Parola "Agente"</h2>
 <p>"Agente AI" è diventata una di quelle espressioni che significano tutto e quindi niente. Zapier lo usa. Salesforce lo usa. Chiunque stia costruendo qualcosa su un LLM lo chiama agente.</p>
 <p>Questa confusione non è innocua: rende difficile valutare cosa effettivamente compra o costruisce un'azienda quando investe in "soluzioni agentic AI", e ancora più difficile capire dove stia il valore reale.</p>
@@ -1123,6 +1129,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "Tecnologia",
     tags: ["Tecnologia", "PMI", "Agenti AI"],
     content: `
+<p class="tldr">Per PMI italiane: Claude è migliore per analisi documenti lunghi (contratti, report, gare d'appalto), ragionamento complesso e output in italiano di qualità. ChatGPT è migliore per task multimodali (immagini, voce, analisi dati) e ha più integrazioni. Entrambi costano ~20€/mese. Per chi lavora con documenti e testi in italiano, Claude richiede meno correzioni.</p>
 <h2>Prima di tutto: cosa sono, in poche parole</h2>
 <p>Sia Claude (fatto da Anthropic) sia ChatGPT (fatto da OpenAI) sono assistenti AI basati su modelli linguistici avanzati. Puoi parlarci in italiano, dargli documenti da analizzare, farti scrivere testi, rispondere a domande complesse.</p>
 <p>La versione gratuita di entrambi esiste, ma per uso aziendale serio si parla di abbonamenti a pagamento: circa 20 euro al mese per utente nella versione Pro/Plus.</p>
@@ -1311,6 +1318,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "AI & PMI",
     tags: ["PMI", "ROI", "Strategia"],
     content: `
+<p class="tldr">Implementare l'AI in una PMI italiana costa tra €5.000 e €25.000 per il primo progetto, diviso in quattro voci: abbonamenti AI (€200-800/mese), consulenza esterna (€3.000-15.000 una tantum), tempo interno del team (2-4 ore/settimana per 4-6 settimane) e manutenzione (€500-2.000/mese). Il payback medio è inferiore a 5 mesi.</p>
 <h2>I quattro costi da mettere in conto</h2>
 <p>Implementare l'AI in azienda ha quattro componenti di costo. Ignorarne uno significa arrivare al progetto con aspettative sbagliate. Eccoli tutti e quattro, con numeri reali.</p>
 
@@ -1618,6 +1626,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "AI & PMI",
     tags: ["PMI", "Tecnologia", "Formazione"],
     content: `
+<p class="tldr">Per usare Claude in una PMI, segui tre livelli: settimana 1-2 uso individuale (email, contratti, report), settimana 3-4 integrazione team (Projects condivisi, template prompt), settimana 5+ workflow automatizzati (API, agenti). Abbonamento Pro: 20€/mese per utente. I primi 5 task da provare: email difficile, analisi contratto, costruzione report, ricerca competitiva, preparazione meeting.</p>
 <h2>Il problema con "inizia a usare l'AI"</h2>
 <p>"Inizia a usare l'AI" è un consiglio inutile. Come iniziare, con quale obiettivo, su quali task, con quale approccio: queste sono le domande che nessuno risponde in modo concreto, soprattutto per chi gestisce un'azienda e non ha ore da dedicare alla sperimentazione casuale.</p>
 <p>Questa guida risponde a quelle domande per Claude specificamente, con un percorso in tre livelli: uso individuale, integrazione nel team, workflow automatizzati.</p>
@@ -1680,6 +1689,7 @@ export const CORE_POSTS: BlogPost[] = [
     category: "Tecnologia",
     tags: ["Tecnologia", "PMI", "Agenti AI"],
     content: `
+<p class="tldr">ChatGPT o Claude? Dipende dal task. Scegli ChatGPT per generazione immagini, analisi dati con Code Interpreter e integrazioni con app di terze parti. Scegli Claude per analisi di documenti lunghi (contratti, capitolati, report), scrittura in italiano di qualità e ragionamento su contesti complessi. Entrambi costano ~20€/mese. Per la maggior parte delle PMI italiane che lavorano con documenti, Claude è la scelta migliore.</p>
 <h2>La domanda che arriva quasi sempre</h2>
 <p>Ogni imprenditore italiano che inizia a guardare seriamente all'AI per la sua azienda prima o poi arriva alla stessa domanda: ChatGPT o Claude?</p>
 <p>È una domanda legittima, ma formulata nel modo sbagliato. Il modo giusto è: <em>per fare cosa?</em> Non esiste la risposta universale. Esiste la risposta giusta per il tuo caso d'uso specifico.</p>
