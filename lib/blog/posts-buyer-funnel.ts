@@ -28,6 +28,7 @@ export const BUYER_FUNNEL_POSTS: BlogPost[] = [
       },
     ],
     content: `
+<p class="tldr">Prima di firmare un contratto con un consulente AI, fai queste 12 domande: chi lavorerà sul progetto, che esperienza hanno nel tuo settore, come misurano il ROI, chi è il proprietario dei dati e del codice, e cosa succede se il progetto non funziona. Le risposte ti diranno se stai parlando con un esperto o con un venditore.</p>
 <h2>Perché le domande giuste valgono più di qualsiasi demo</h2>
 <p>Il mercato della consulenza AI in Italia è esploso. Nel 2026, decine di società — dalle boutique specializzate alle Big4 — offrono servizi di "trasformazione AI" per le imprese. Il problema: la qualità varia enormemente, e un imprenditore senza competenze tecniche specifiche fatica a distinguere chi sa davvero implementare l'AI da chi sa solo venderla.</p>
 <p>Le domande che fai prima di firmare sono il tuo filtro più efficace. Non servono competenze tecniche per farle — serve solo sapere cosa chiedere e come interpretare le risposte.</p>
@@ -148,6 +149,7 @@ export const BUYER_FUNNEL_POSTS: BlogPost[] = [
       },
     ],
     content: `
+<p class="tldr">Un contratto di consulenza AI deve includere clausole su proprietà intellettuale del codice e dei modelli, trattamento dati (GDPR), metriche di performance misurabili, piano di uscita e trasferimento know-how. Le PMI che firmano senza queste clausole rischiano lock-in tecnologico e perdita di controllo sui propri dati.</p>
 <h2>Perché il contratto AI merita un'attenzione speciale</h2>
 <p>Un contratto di consulenza AI non è un normale contratto di servizi IT. L'AI introduce complessità specifiche che i contratti tradizionali non coprono: la proprietà dei modelli addestrati sui tuoi dati, la protezione di informazioni aziendali sensibili usate per il training, la responsabilità quando l'AI prende decisioni sbagliate, i costi ricorrenti delle API che possono crescere con l'utilizzo.</p>
 <p>Molte PMI italiane firmano contratti di consulenza AI con le stesse clausole che userebbero per lo sviluppo di un sito web. È un errore che può costare caro — dalla perdita del codice sviluppato con i propri soldi, alla dipendenza perpetua dal fornitore, fino a problemi di compliance GDPR sui dati aziendali.</p>
@@ -258,6 +260,7 @@ export const BUYER_FUNNEL_POSTS: BlogPost[] = [
       },
     ],
     content: `
+<p class="tldr">L'80% dei progetti AI non raggiunge gli obiettivi di business (Gartner). Le 7 cause principali: obiettivi vaghi, dati insufficienti, aspettative irrealistiche, mancanza di sponsor interno, scelta del processo sbagliato, sottovalutazione del change management e assenza di metriche. Tutte sono prevenibili con una fase di assessment strutturata.</p>
 <h2>Il dato che nessuno vuole sentire</h2>
 <p>Secondo Gartner, l'80% dei progetti AI non raggiunge gli obiettivi di business. McKinsey stima che solo il 20% delle sperimentazioni AI passa in produzione. E nelle PMI italiane, dove le risorse sono limitate e la tolleranza per gli errori è bassa, un progetto AI fallito può significare non solo budget bruciato, ma fiducia persa — del management, del team, e degli investitori nell'intera categoria "AI".</p>
 <p>La buona notizia: le cause del fallimento sono note, documentate e in larga parte prevenibili. Non servono competenze tecniche per evitarle — serve consapevolezza di quali errori si commettono più spesso e come prevenirli.</p>
