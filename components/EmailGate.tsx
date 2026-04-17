@@ -16,7 +16,6 @@ export default function EmailGate({ children, preview }: EmailGateProps) {
   const [unlocked, setUnlocked] = useState(false);
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
-  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     if (Cookies.get(GATE_COOKIE) || localStorage.getItem(GATE_COOKIE)) {
@@ -24,7 +23,7 @@ export default function EmailGate({ children, preview }: EmailGateProps) {
     }
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
@@ -43,18 +42,18 @@ export default function EmailGate({ children, preview }: EmailGateProps) {
       return;
     }
 
-    setSubmitting(true);
-
     // Save to cookie (365 days) + localStorage as backup
     Cookies.set(GATE_COOKIE, trimmed, { expires: 365 });
     localStorage.setItem(GATE_COOKIE, trimmed);
 
-    // TODO: Send email to your CRM/Notion/webhook here
-    // For now just unlock
-    setTimeout(() => {
-      setUnlocked(true);
-      setSubmitting(false);
-    }, 500);
+    // Fire-and-forget — unlock immediately, email sends in background
+    fetch("https://doge-contact.hellosupalabs.workers.dev", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "codice-del-doge", email: trimmed }),
+    }).catch(() => {});
+
+    setUnlocked(true);
   };
 
   if (unlocked) {
@@ -93,8 +92,8 @@ export default function EmailGate({ children, preview }: EmailGateProps) {
                   onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 px-4 py-2 border-2 border-nero/20 text-sm focus:border-nero focus:outline-none transition-colors"
                 />
-                <Button variant="dark" size="md" uppercase type="submit" disabled={submitting} className="shrink-0">
-                  {submitting ? "..." : "Accedi"}
+                <Button variant="dark" size="md" uppercase type="submit" className="shrink-0">
+                  Accedi
                 </Button>
               </div>
               {error && (
